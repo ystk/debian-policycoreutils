@@ -1,0 +1,2397 @@
+# translation of ta.po to Tamil
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+#
+# Felix <ifelix@redhat.com>, 2006.
+# I felix <ifelix@redhat.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: ta\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-06-24 10:53-0400\n"
+"PO-Revision-Date: 2007-09-24 17:51+0530\n"
+"Last-Translator: I felix <ifelix@redhat.com>\n"
+"Language-Team: Tamil <fedora-trans-ta@redhat.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+
+#: ../run_init/run_init.c:67
+msgid ""
+"USAGE: run_init <script> <args ...>\n"
+"  where: <script> is the name of the init script to run,\n"
+"         <args ...> are the arguments to that script."
+msgstr ""
+"பயன்பாடு: run_init <script> <args ...>\n"
+"  எங்கு: <script> ஆரம்ப உரையின் பெயரை இயக்க வேண்டும்,\n"
+"         <args ...> இவை அந்த உரையின் மதிப்புகள் ஆகும்."
+
+#: ../run_init/run_init.c:126 ../newrole/newrole.c:1187
+#, c-format
+msgid "failed to initialize PAM\n"
+msgstr "PAM ஐ துவக்க முடியவில்லை\n"
+
+#: ../run_init/run_init.c:139
+#, c-format
+msgid "failed to get account information\n"
+msgstr "கணக்கு விவரங்களை எடுக்க முடியவில்லை.\n"
+
+#: ../run_init/run_init.c:162 ../newrole/newrole.c:338
+msgid "Password:"
+msgstr "கடவுச்சொல்:"
+
+#: ../run_init/run_init.c:197 ../newrole/newrole.c:363
+#, c-format
+msgid "Cannot find your entry in the shadow passwd file.\n"
+msgstr "நிழல் கடவுச்சொல் கோப்பில் உங்கள் உள்ளீடை காண முடியவில்லை.\n"
+
+#: ../run_init/run_init.c:203 ../newrole/newrole.c:370
+#, c-format
+msgid "getpass cannot open /dev/tty\n"
+msgstr "getpass /dev/ttyஐ திறக்க முடியவில்லை\n"
+
+#: ../run_init/run_init.c:275
+#, c-format
+msgid "run_init: incorrect password for %s\n"
+msgstr "run_init: %sக்கு தவறான கடவுச்சொல்\n"
+
+#: ../run_init/run_init.c:309
+#, c-format
+msgid "Could not open file %s\n"
+msgstr "%s கோப்பினை திறக்க முடியவில்லை\n"
+
+#: ../run_init/run_init.c:336
+#, c-format
+msgid "No context in file %s\n"
+msgstr "%s கோப்பில் சூழல் இல்லை\n"
+
+#: ../run_init/run_init.c:361
+#, c-format
+msgid "Sorry, run_init may be used only on a SELinux kernel.\n"
+msgstr "மன்னிக்கவும், run_init SELinux கர்னலில் மட்டுமே பயன்படுத்தப்படும்.\n"
+
+#: ../run_init/run_init.c:380
+#, c-format
+msgid "authentication failed.\n"
+msgstr "அங்கீகரிக்கப்படவில்லை.\n"
+
+#: ../run_init/run_init.c:405 ../newrole/newrole.c:1321
+#, c-format
+msgid "Could not set exec context to %s.\n"
+msgstr "%sக்கு exec சூழலை அமைக்க முடியவில்லை.\n"
+
+#: ../audit2allow/audit2allow:217
+msgid "******************** IMPORTANT ***********************\n"
+msgstr "******************** முக்கியமானது ***********************\n"
+
+#: ../audit2allow/audit2allow:218
+msgid "To make this policy package active, execute:"
+msgstr ""
+
+#: ../semanage/seobject.py:48
+msgid "Could not create semanage handle"
+msgstr "semanage கையாளுதலை உருவாக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:55
+msgid "SELinux policy is not managed or store cannot be accessed."
+msgstr "SELinux பாலிசி பராமரிக்கப்படாத அல்லது சேமிக்கப்படாததை அணுக முடியாது."
+
+#: ../semanage/seobject.py:60
+msgid "Cannot read policy store."
+msgstr "பாலிசி ஸ்டோரை படிக்க முடியவில்லை."
+
+#: ../semanage/seobject.py:65
+msgid "Could not establish semanage connection"
+msgstr "semanage இணைப்பினை ஏற்படுத்த முடியவில்லை"
+
+#: ../semanage/seobject.py:70
+#, fuzzy
+msgid "Could not test MLS enabled status"
+msgstr "MLS வரையறையை %sக்கு அமைக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:142 ../semanage/seobject.py:146
+msgid "global"
+msgstr ""
+
+#: ../semanage/seobject.py:206
+#, fuzzy, python-format
+msgid "Unable to open %s: translations not supported on non-MLS machines: %s"
+msgstr ""
+"%sஐ திறக்க முடியவில்லை: MLS இல்லா கணினிகளில் மொழிபெயர்ப்பிற்கு துணை புரிவதில்லை"
+
+#: ../semanage/seobject.py:239
+msgid "Level"
+msgstr "நிலை"
+
+#: ../semanage/seobject.py:239
+msgid "Translation"
+msgstr "மொழிபெயர்ப்பு"
+
+#: ../semanage/seobject.py:247 ../semanage/seobject.py:261
+#, python-format
+msgid "Translations can not contain spaces '%s' "
+msgstr "மொழிபெயர்ப்புகள் இடைவெளியை கொண்டிருக்கக்கூடாது '%s' "
+
+#: ../semanage/seobject.py:250
+#, python-format
+msgid "Invalid Level '%s' "
+msgstr "தவறான நிலை '%s' "
+
+#: ../semanage/seobject.py:253
+#, python-format
+msgid "%s already defined in translations"
+msgstr "%s ஏற்கனவே மொழிபெயர்ப்புகளில் குறிப்பிடப்பட்டுள்ளது"
+
+#: ../semanage/seobject.py:265
+#, python-format
+msgid "%s not defined in translations"
+msgstr "%s மொழிபெயர்ப்பில் குறிப்பிடப்படவில்லை"
+
+#: ../semanage/seobject.py:290
+msgid "Not yet implemented"
+msgstr ""
+
+#: ../semanage/seobject.py:294
+msgid "Semanage transaction already in progress"
+msgstr ""
+
+#: ../semanage/seobject.py:303
+msgid "Could not start semanage transaction"
+msgstr "semanage பரிமாற்றத்தை ஆரம்பிக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:309
+#, fuzzy
+msgid "Could not commit semanage transaction"
+msgstr "semanage பரிமாற்றத்தை ஆரம்பிக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:313
+msgid "Semanage transaction not in progress"
+msgstr ""
+
+#: ../semanage/seobject.py:325
+#, fuzzy
+msgid "Could not list SELinux modules"
+msgstr "SELinux பயனர்களை பட்டியலிட முடியவில்லை"
+
+#: ../semanage/seobject.py:336
+#, fuzzy
+msgid "Permissive Types"
+msgstr "ஏற்கத்தக்கது"
+
+#: ../semanage/seobject.py:378
+#, python-format
+msgid "Could not set permissive domain %s (module installation failed)"
+msgstr ""
+
+#: ../semanage/seobject.py:384
+#, python-format
+msgid "Could not remove permissive domain %s (remove failed)"
+msgstr ""
+
+#: ../semanage/seobject.py:410 ../semanage/seobject.py:470
+#: ../semanage/seobject.py:516 ../semanage/seobject.py:598
+#: ../semanage/seobject.py:665 ../semanage/seobject.py:723
+#: ../semanage/seobject.py:933 ../semanage/seobject.py:1506
+#: ../semanage/seobject.py:1570 ../semanage/seobject.py:1582
+#: ../semanage/seobject.py:1663 ../semanage/seobject.py:1714
+#, python-format
+msgid "Could not create a key for %s"
+msgstr "%sக்கு விசையை உருவாக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:414 ../semanage/seobject.py:474
+#: ../semanage/seobject.py:520 ../semanage/seobject.py:526
+#, python-format
+msgid "Could not check if login mapping for %s is defined"
+msgstr "%sக்கு அனுமதி ஒப்பீடு குறிப்பிடப்பட்டால், சோதிக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:416
+#, python-format
+msgid "Login mapping for %s is already defined"
+msgstr "அனுமதி ஒப்பீடு %sக்கு ஏற்கனவே குறிப்பிடப்பட்டுள்ளது"
+
+#: ../semanage/seobject.py:421
+#, fuzzy, python-format
+msgid "Linux Group %s does not exist"
+msgstr "லினக்ஸ் பயனர் %s இல்லை"
+
+#: ../semanage/seobject.py:426
+#, python-format
+msgid "Linux User %s does not exist"
+msgstr "லினக்ஸ் பயனர் %s இல்லை"
+
+#: ../semanage/seobject.py:430
+#, python-format
+msgid "Could not create login mapping for %s"
+msgstr "%s க்கு அனுமதி ஒப்பீடு உருவாக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:434 ../semanage/seobject.py:612
+#, python-format
+msgid "Could not set name for %s"
+msgstr "%sக்கு பெயர் அமைக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:439 ../semanage/seobject.py:622
+#, python-format
+msgid "Could not set MLS range for %s"
+msgstr "MLS வரையறையை %sக்கு அமைக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:443
+#, python-format
+msgid "Could not set SELinux user for %s"
+msgstr "SELinux பயனரை %sக்கு அமைக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:447
+#, python-format
+msgid "Could not add login mapping for %s"
+msgstr "%sக்கு அனுமதி ஒப்பீடு சேர்க்க முடியவில்லை"
+
+#: ../semanage/seobject.py:459 ../semanage/seobject.py:462
+msgid "add SELinux user mapping"
+msgstr "SELinux பயனர் ஒப்பீட்டை சேர்த்தல்"
+
+#: ../semanage/seobject.py:466
+msgid "Requires seuser or serange"
+msgstr "seuser அல்லது serange தேவைப்படுகிறது"
+
+#: ../semanage/seobject.py:476 ../semanage/seobject.py:522
+#, python-format
+msgid "Login mapping for %s is not defined"
+msgstr "%sக்கு அனுமதி ஒப்பீடு குறிப்பிடப்படவில்லை"
+
+#: ../semanage/seobject.py:480
+#, python-format
+msgid "Could not query seuser for %s"
+msgstr "seuser %sக்கு வினா எழுப்ப முடியவில்லை"
+
+#: ../semanage/seobject.py:496
+#, python-format
+msgid "Could not modify login mapping for %s"
+msgstr "%sக்கு அனுமதி ஒப்பீடுகளை மாற்ற முடியவில்லை"
+
+#: ../semanage/seobject.py:528
+#, python-format
+msgid "Login mapping for %s is defined in policy, cannot be deleted"
+msgstr "அனுமதி ஒப்பீடு %s பாலிசியில் குறிப்பிடப்பட்டுள்ளது, அழிக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:532
+#, python-format
+msgid "Could not delete login mapping for %s"
+msgstr "%sக்கு அனுமதி ஒப்பீடுகளை அழிக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:555
+msgid "Could not list login mappings"
+msgstr "அனுமதி ஒப்பீடுகளை பட்டியலிட முடியவில்லை"
+
+#: ../semanage/seobject.py:568 ../semanage/seobject.py:573
+msgid "Login Name"
+msgstr "புகுபதிவு பெயர்"
+
+#: ../semanage/seobject.py:568 ../semanage/seobject.py:573
+#: ../semanage/seobject.py:782 ../semanage/seobject.py:787
+msgid "SELinux User"
+msgstr "SELinux பயனர்"
+
+#: ../semanage/seobject.py:568
+msgid "MLS/MCS Range"
+msgstr "MLS/MCS வரையறை"
+
+#: ../semanage/seobject.py:594
+#, fuzzy, python-format
+msgid "You must add at least one role for %s"
+msgstr "%sக்கு கோப்பு சூழலை சேர்க்க முடியவில்லை"
+
+#: ../semanage/seobject.py:602 ../semanage/seobject.py:669
+#: ../semanage/seobject.py:727 ../semanage/seobject.py:733
+#, python-format
+msgid "Could not check if SELinux user %s is defined"
+msgstr "SELinux பயனர் %s குறிப்பிடப்பட்டால், சோதிக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:604
+#, python-format
+msgid "SELinux user %s is already defined"
+msgstr "SELinux பயனர் %s ஏற்கனவே குறிப்பிடப்பட்டுள்ளது"
+
+#: ../semanage/seobject.py:608
+#, python-format
+msgid "Could not create SELinux user for %s"
+msgstr " SELinux பயனரை %sக்கு உருவாக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:617
+#, python-format
+msgid "Could not add role %s for %s"
+msgstr "%s க்கு %s பாத்திரத்தை சேர்க்க முடியவில்லை"
+
+#: ../semanage/seobject.py:626
+#, python-format
+msgid "Could not set MLS level for %s"
+msgstr "%sக்கு MLS நிலையை அமைக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:629
+#, python-format
+msgid "Could not add prefix %s for %s"
+msgstr "%s க்கு %sல் முன்னொட்டினை சேர்க்க முடியவில்லை"
+
+#: ../semanage/seobject.py:632
+#, python-format
+msgid "Could not extract key for %s"
+msgstr "%sக்கு விசையை பிரிக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:636
+#, python-format
+msgid "Could not add SELinux user %s"
+msgstr "SELinux பயனர் %sஐ சேர்க்க முடியவில்லை"
+
+#: ../semanage/seobject.py:659
+msgid "Requires prefix, roles, level or range"
+msgstr "முன்னொட்டு, பாத்திரங்கள், நிலை அல்லது வரையறை தேவைப்படுகிறது"
+
+#: ../semanage/seobject.py:661
+msgid "Requires prefix or roles"
+msgstr "முன்னொட்டு அல்லது பாத்திரம் தேவைப்படுகிறது"
+
+#: ../semanage/seobject.py:671 ../semanage/seobject.py:729
+#, python-format
+msgid "SELinux user %s is not defined"
+msgstr "SELinux பயனர் %s குறிப்பிடப்படவில்லை"
+
+#: ../semanage/seobject.py:675
+#, python-format
+msgid "Could not query user for %s"
+msgstr "%sக்கு பயனரை வினா எழுப்ப முடியவில்லை"
+
+#: ../semanage/seobject.py:702
+#, python-format
+msgid "Could not modify SELinux user %s"
+msgstr "SELinux பயனர் %sஐ மாற்ற முடியவில்லை"
+
+#: ../semanage/seobject.py:735
+#, python-format
+msgid "SELinux user %s is defined in policy, cannot be deleted"
+msgstr "SELinux பயனர் %s பாலிசியில் குறிப்பிடப்பட்டுள்ளது, அழிக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:739
+#, python-format
+msgid "Could not delete SELinux user %s"
+msgstr "SELinux பயனர் %sஐ அழிக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:762
+msgid "Could not list SELinux users"
+msgstr "SELinux பயனர்களை பட்டியலிட முடியவில்லை"
+
+#: ../semanage/seobject.py:768
+#, python-format
+msgid "Could not list roles for user %s"
+msgstr "பயனர் %sக்கு பாத்திரங்களை பட்டியலிட முடியவில்லை"
+
+#: ../semanage/seobject.py:781
+msgid "Labeling"
+msgstr "பெயரிடல்"
+
+#: ../semanage/seobject.py:781
+msgid "MLS/"
+msgstr "MLS/"
+
+#: ../semanage/seobject.py:782
+msgid "Prefix"
+msgstr "முன்னொட்டு"
+
+#: ../semanage/seobject.py:782
+msgid "MCS Level"
+msgstr "MCS நிலை"
+
+#: ../semanage/seobject.py:782
+msgid "MCS Range"
+msgstr "MCS வரையறை"
+
+#: ../semanage/seobject.py:782 ../semanage/seobject.py:787
+msgid "SELinux Roles"
+msgstr "SELinux பங்குகள்"
+
+#: ../semanage/seobject.py:802
+msgid "Protocol udp or tcp is required"
+msgstr "நெறிமுறை udp அல்லது tcp தேவைப்படுகிறது"
+
+#: ../semanage/seobject.py:804
+msgid "Port is required"
+msgstr "துறை தேவைப்படுகிறது"
+
+#: ../semanage/seobject.py:815
+#, python-format
+msgid "Could not create a key for %s/%s"
+msgstr "%s/%sக்கு விசையை உருவாக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:826
+msgid "Type is required"
+msgstr "வகை தேவைப்படுகிறது"
+
+#: ../semanage/seobject.py:832 ../semanage/seobject.py:891
+#: ../semanage/seobject.py:946 ../semanage/seobject.py:952
+#, python-format
+msgid "Could not check if port %s/%s is defined"
+msgstr "துறை %s/%s குறிப்பிடப்பட்டால் சோதிக்கப்படுவதில்லை"
+
+#: ../semanage/seobject.py:834
+#, python-format
+msgid "Port %s/%s already defined"
+msgstr "துறை %s/%s ஏற்கனவே குறிப்பிடப்பட்டுள்ளது"
+
+#: ../semanage/seobject.py:838
+#, python-format
+msgid "Could not create port for %s/%s"
+msgstr "%s/%s க்கு துறையை உருவாக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:844
+#, python-format
+msgid "Could not create context for %s/%s"
+msgstr "%s/%sக்கு சூழலை உருவாக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:848
+#, python-format
+msgid "Could not set user in port context for %s/%s"
+msgstr "%s/%s க்கு துறை சூழலில் பயனரை அமைக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:852
+#, python-format
+msgid "Could not set role in port context for %s/%s"
+msgstr "%s/%s க்கு துறை சூழலில் பாத்திரங்களை அமைக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:856
+#, python-format
+msgid "Could not set type in port context for %s/%s"
+msgstr "%s/%s க்கு துறை சூழலில் வகையை அமைக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:861
+#, python-format
+msgid "Could not set mls fields in port context for %s/%s"
+msgstr "%s/%s க்கு துறை சூழலில் mls புலங்களை அமைக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:865
+#, python-format
+msgid "Could not set port context for %s/%s"
+msgstr "%s/%s க்கு துறை சூழலை அமைக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:869
+#, python-format
+msgid "Could not add port %s/%s"
+msgstr "துறை %s/%sயை சேர்க்க முடியவில்லை"
+
+#: ../semanage/seobject.py:883 ../semanage/seobject.py:1129
+#: ../semanage/seobject.py:1317
+msgid "Requires setype or serange"
+msgstr "setype அல்லது serange தேவைப்படுகிறது"
+
+#: ../semanage/seobject.py:885
+msgid "Requires setype"
+msgstr "setype தேவைப்படுகிறது"
+
+#: ../semanage/seobject.py:893 ../semanage/seobject.py:948
+#, python-format
+msgid "Port %s/%s is not defined"
+msgstr "துறை %s/%s குறிப்பிடப்படவில்லை"
+
+#: ../semanage/seobject.py:897
+#, python-format
+msgid "Could not query port %s/%s"
+msgstr "துறை %s/%sஐ வினா எழுப்ப முடியாது"
+
+#: ../semanage/seobject.py:908
+#, python-format
+msgid "Could not modify port %s/%s"
+msgstr "துறை %s/%sஐ மாற்ற முடியவில்லை"
+
+#: ../semanage/seobject.py:921
+#, fuzzy
+msgid "Could not list the ports"
+msgstr "துறைகளை பட்டியலிட முடியவில்லை"
+
+#: ../semanage/seobject.py:937
+#, fuzzy, python-format
+msgid "Could not delete the port %s"
+msgstr "துறைகளை அழிக்க முடியவில்லை %s/%s"
+
+#: ../semanage/seobject.py:954
+#, python-format
+msgid "Port %s/%s is defined in policy, cannot be deleted"
+msgstr "துறை %s/%s பாலிசியில் குறிப்பிடப்பட்டுள்ளது, அழிக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:958
+#, python-format
+msgid "Could not delete port %s/%s"
+msgstr "துறைகளை அழிக்க முடியவில்லை %s/%s"
+
+#: ../semanage/seobject.py:974 ../semanage/seobject.py:996
+msgid "Could not list ports"
+msgstr "துறைகளை பட்டியலிட முடியவில்லை"
+
+#: ../semanage/seobject.py:1017
+msgid "SELinux Port Type"
+msgstr "SELinux துறை வகை"
+
+#: ../semanage/seobject.py:1017
+msgid "Proto"
+msgstr "Proto"
+
+#: ../semanage/seobject.py:1017
+msgid "Port Number"
+msgstr "துறை எண்"
+
+#: ../semanage/seobject.py:1034 ../semanage/seobject.py:1116
+#: ../semanage/seobject.py:1166
+#, fuzzy
+msgid "Node Address is required"
+msgstr "துறை தேவைப்படுகிறது"
+
+#: ../semanage/seobject.py:1037 ../semanage/seobject.py:1119
+#: ../semanage/seobject.py:1169
+#, fuzzy
+msgid "Node Netmask is required"
+msgstr "துறை தேவைப்படுகிறது"
+
+#: ../semanage/seobject.py:1044 ../semanage/seobject.py:1125
+#: ../semanage/seobject.py:1176
+msgid "Unknown or missing protocol"
+msgstr ""
+
+#: ../semanage/seobject.py:1054 ../semanage/seobject.py:1256
+#: ../semanage/seobject.py:1445
+msgid "SELinux Type is required"
+msgstr "SELinux வகை தேவைப்படுகிறது"
+
+#: ../semanage/seobject.py:1058 ../semanage/seobject.py:1133
+#: ../semanage/seobject.py:1180 ../semanage/seobject.py:1260
+#: ../semanage/seobject.py:1321 ../semanage/seobject.py:1355
+#: ../semanage/seobject.py:1449
+#, python-format
+msgid "Could not create key for %s"
+msgstr "%sக்கு விசையை உருவாக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:1060 ../semanage/seobject.py:1137
+#: ../semanage/seobject.py:1184 ../semanage/seobject.py:1190
+#, fuzzy, python-format
+msgid "Could not check if addr %s is defined"
+msgstr "துறை %s/%s குறிப்பிடப்பட்டால் சோதிக்கப்படுவதில்லை"
+
+#: ../semanage/seobject.py:1064
+#, fuzzy, python-format
+msgid "Addr %s already defined"
+msgstr "துறை %s/%s ஏற்கனவே குறிப்பிடப்பட்டுள்ளது"
+
+#: ../semanage/seobject.py:1068
+#, fuzzy, python-format
+msgid "Could not create addr for %s"
+msgstr "%sக்கு விசையை உருவாக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:1073 ../semanage/seobject.py:1275
+#: ../semanage/seobject.py:1415
+#, python-format
+msgid "Could not create context for %s"
+msgstr "%s க்கு சூழலை உருவாக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:1077
+#, fuzzy, python-format
+msgid "Could not set mask for %s"
+msgstr "%sக்கு பெயர் அமைக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:1082
+#, fuzzy, python-format
+msgid "Could not set user in addr context for %s"
+msgstr "%s க்கு கோப்பு சூழலில் பயனரை அமைக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:1086
+#, fuzzy, python-format
+msgid "Could not set role in addr context for %s"
+msgstr "%s க்கு கோப்பு சூழலில் பாத்திரத்தை அமைக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:1090
+#, fuzzy, python-format
+msgid "Could not set type in addr context for %s"
+msgstr "%s க்கு கோப்பு சூழலில் வகையை அமைக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:1095
+#, fuzzy, python-format
+msgid "Could not set mls fields in addr context for %s"
+msgstr "%sக்கு கோப்பு சூழலில் mls புலங்களை அமைக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:1099
+#, fuzzy, python-format
+msgid "Could not set addr context for %s"
+msgstr "%s க்கு கோப்பு சூழலை அமைக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:1103
+#, fuzzy, python-format
+msgid "Could not add addr %s"
+msgstr "துறை %s/%sயை சேர்க்க முடியவில்லை"
+
+#: ../semanage/seobject.py:1139 ../semanage/seobject.py:1186
+#, fuzzy, python-format
+msgid "Addr %s is not defined"
+msgstr "துறை %s/%s குறிப்பிடப்படவில்லை"
+
+#: ../semanage/seobject.py:1143
+#, fuzzy, python-format
+msgid "Could not query addr %s"
+msgstr "துறை %s/%sஐ வினா எழுப்ப முடியாது"
+
+#: ../semanage/seobject.py:1154
+#, fuzzy, python-format
+msgid "Could not modify addr %s"
+msgstr "துறை %s/%sஐ மாற்ற முடியவில்லை"
+
+#: ../semanage/seobject.py:1192
+#, fuzzy, python-format
+msgid "Addr %s is defined in policy, cannot be deleted"
+msgstr "துறை %s/%s பாலிசியில் குறிப்பிடப்பட்டுள்ளது, அழிக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:1196
+#, fuzzy, python-format
+msgid "Could not delete addr %s"
+msgstr "இடைமுகம் %s ஐ அழிக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:1212
+#, fuzzy
+msgid "Could not list addrs"
+msgstr "துறைகளை பட்டியலிட முடியவில்லை"
+
+#: ../semanage/seobject.py:1264 ../semanage/seobject.py:1325
+#: ../semanage/seobject.py:1359 ../semanage/seobject.py:1365
+#, python-format
+msgid "Could not check if interface %s is defined"
+msgstr "இடைமுகம் %s குறிப்பிடப்பட்டால் சோதிக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:1266
+#, python-format
+msgid "Interface %s already defined"
+msgstr "இடைமுகம் %s ஏற்கனவே குறிப்பிடப்பட்டுள்ளது"
+
+#: ../semanage/seobject.py:1270
+#, python-format
+msgid "Could not create interface for %s"
+msgstr "%sக்கு இடைமுகம் உருவாக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:1279
+#, python-format
+msgid "Could not set user in interface context for %s"
+msgstr "%s க்கு இடைமுக சூழலில் பயனரை அமைக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:1283
+#, python-format
+msgid "Could not set role in interface context for %s"
+msgstr "%s க்கு இடைமுக சூழலில் பாத்திரத்தை அமைக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:1287
+#, python-format
+msgid "Could not set type in interface context for %s"
+msgstr "%s க்கு இடைமுக சூழலில் வகையை அமைக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:1292
+#, python-format
+msgid "Could not set mls fields in interface context for %s"
+msgstr "%s க்கு இடைமுக சூழலில் mls புலங்களை அமைக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:1296
+#, python-format
+msgid "Could not set interface context for %s"
+msgstr "%s க்கு இடைமுக சூழலை அமைக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:1300
+#, python-format
+msgid "Could not set message context for %s"
+msgstr "%s க்கு செய்தி சூழலை அமைக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:1304
+#, python-format
+msgid "Could not add interface %s"
+msgstr "இடைமுகத்தை சேர்க்க முடியவில்லை %s"
+
+#: ../semanage/seobject.py:1327 ../semanage/seobject.py:1361
+#, python-format
+msgid "Interface %s is not defined"
+msgstr "இடைமுகம் %s குறிப்பிடப்படவில்லை"
+
+#: ../semanage/seobject.py:1331
+#, python-format
+msgid "Could not query interface %s"
+msgstr "இடைமுகம் %sஐ வினா எழுப்ப முடியவில்லை"
+
+#: ../semanage/seobject.py:1342
+#, python-format
+msgid "Could not modify interface %s"
+msgstr "இடைமுகம் %sஐ மாற்ற முடியவில்லை"
+
+#: ../semanage/seobject.py:1367
+#, python-format
+msgid "Interface %s is defined in policy, cannot be deleted"
+msgstr "இடைமுகம் %s பாலிசியில் குறிப்பிடப்பட்டுள்ளது, அழிக்க முடியாது"
+
+#: ../semanage/seobject.py:1371
+#, python-format
+msgid "Could not delete interface %s"
+msgstr "இடைமுகம் %s ஐ அழிக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:1387
+msgid "Could not list interfaces"
+msgstr "இடைமுகங்களை பட்டியலிட முடியவில்லை"
+
+#: ../semanage/seobject.py:1397
+msgid "SELinux Interface"
+msgstr "SELinux முகப்பு"
+
+#: ../semanage/seobject.py:1397 ../semanage/seobject.py:1636
+msgid "Context"
+msgstr "சூழல்"
+
+#: ../semanage/seobject.py:1421
+#, python-format
+msgid "Could not set user in file context for %s"
+msgstr "%s க்கு கோப்பு சூழலில் பயனரை அமைக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:1425
+#, python-format
+msgid "Could not set role in file context for %s"
+msgstr "%s க்கு கோப்பு சூழலில் பாத்திரத்தை அமைக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:1430 ../semanage/seobject.py:1478
+#, python-format
+msgid "Could not set mls fields in file context for %s"
+msgstr "%sக்கு கோப்பு சூழலில் mls புலங்களை அமைக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:1436
+#, fuzzy
+msgid "Invalid file specification"
+msgstr "கோப்பு குறிப்பிடல்"
+
+#: ../semanage/seobject.py:1453 ../semanage/seobject.py:1458
+#: ../semanage/seobject.py:1510 ../semanage/seobject.py:1586
+#: ../semanage/seobject.py:1590
+#, python-format
+msgid "Could not check if file context for %s is defined"
+msgstr "%s க்கு கோப்பு சூழல் குறிப்பிடப்பட்டால் சோதிக்கப்படுவதில்லை"
+
+#: ../semanage/seobject.py:1461
+#, python-format
+msgid "File context for %s already defined"
+msgstr "%sலின் கோப்பு சூழல் ஏற்கனவே குறிப்பிடப்பட்டுள்ளது"
+
+#: ../semanage/seobject.py:1465
+#, python-format
+msgid "Could not create file context for %s"
+msgstr "%s க்கு கோப்பு சூழலை உருவாக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:1473
+#, python-format
+msgid "Could not set type in file context for %s"
+msgstr "%s க்கு கோப்பு சூழலில் வகையை அமைக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:1481 ../semanage/seobject.py:1538
+#: ../semanage/seobject.py:1542
+#, python-format
+msgid "Could not set file context for %s"
+msgstr "%s க்கு கோப்பு சூழலை அமைக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:1487
+#, python-format
+msgid "Could not add file context for %s"
+msgstr "%sக்கு கோப்பு சூழலை சேர்க்க முடியவில்லை"
+
+#: ../semanage/seobject.py:1501
+msgid "Requires setype, serange or seuser"
+msgstr "setype, serange அல்லது seuser தேவைப்படுகிறது"
+
+#: ../semanage/seobject.py:1514 ../semanage/seobject.py:1594
+#, python-format
+msgid "File context for %s is not defined"
+msgstr "%sக்கு கோப்பு சூழல் குறிப்பிடப்படவில்லை"
+
+#: ../semanage/seobject.py:1520
+#, python-format
+msgid "Could not query file context for %s"
+msgstr "%sக்கு கோப்பு சூழலை வினா எழுப்ப முடியாது"
+
+#: ../semanage/seobject.py:1546
+#, python-format
+msgid "Could not modify file context for %s"
+msgstr "%sக்கு கோப்பு சூழலை மாற்ற முடியாது"
+
+#: ../semanage/seobject.py:1560
+#, fuzzy
+msgid "Could not list the file contexts"
+msgstr "கோப்பு சூழல் பட்டியலிட முடியவில்லை."
+
+#: ../semanage/seobject.py:1574
+#, fuzzy, python-format
+msgid "Could not delete the file context %s"
+msgstr "%sக்கு கோப்பு சூழலை அழிக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:1592
+#, python-format
+msgid "File context for %s is defined in policy, cannot be deleted"
+msgstr "கோப்பு சூழல் %sக்கு பாலிசியில் குறிக்கப்பட்டுள்ளது, அழிக்க முடியாது"
+
+#: ../semanage/seobject.py:1598
+#, python-format
+msgid "Could not delete file context for %s"
+msgstr "%sக்கு கோப்பு சூழலை அழிக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:1613
+msgid "Could not list file contexts"
+msgstr "கோப்பு சூழல் பட்டியலிட முடியவில்லை."
+
+#: ../semanage/seobject.py:1617
+msgid "Could not list local file contexts"
+msgstr "உள்ளமை கோப்பு சூழல்களை பட்டியலிட முடியவில்லை."
+
+#: ../semanage/seobject.py:1636
+msgid "SELinux fcontext"
+msgstr "SELinux fcontext"
+
+#: ../semanage/seobject.py:1636
+msgid "type"
+msgstr "வகை"
+
+#: ../semanage/seobject.py:1666 ../semanage/seobject.py:1717
+#: ../semanage/seobject.py:1723
+#, python-format
+msgid "Could not check if boolean %s is defined"
+msgstr "பூலியன் %s குறிப்பிடப்பட்டால், சோதிக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:1668 ../semanage/seobject.py:1719
+#, python-format
+msgid "Boolean %s is not defined"
+msgstr "பூலியன் %s குறிப்பிடப்படவில்லை"
+
+#: ../semanage/seobject.py:1672
+#, python-format
+msgid "Could not query file context %s"
+msgstr "கோப்பு சூழல் %sஐ வினா எழுப்ப முடியாது"
+
+#: ../semanage/seobject.py:1677
+#, fuzzy, python-format
+msgid "You must specify one of the following values: %s"
+msgstr "நீங்கள் ஒரு பெயரை உள்ளிட வேண்டும்"
+
+#: ../semanage/seobject.py:1681
+#, fuzzy, python-format
+msgid "Could not set active value of boolean %s"
+msgstr "பூலியன் %sஐ அழிக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:1684
+#, python-format
+msgid "Could not modify boolean %s"
+msgstr "பூலியன் %sஐ மாற்ற முடியவில்லை"
+
+#: ../semanage/seobject.py:1702
+#, python-format
+msgid "Bad format %s: Record %s"
+msgstr ""
+
+#: ../semanage/seobject.py:1725
+#, python-format
+msgid "Boolean %s is defined in policy, cannot be deleted"
+msgstr "பூலியன் %s பாலிசியில் குறிப்பிடப்பட்டுள்ளது, அழிக்க முடியாது"
+
+#: ../semanage/seobject.py:1729
+#, python-format
+msgid "Could not delete boolean %s"
+msgstr "பூலியன் %sஐ அழிக்க முடியவில்லை"
+
+#: ../semanage/seobject.py:1741 ../semanage/seobject.py:1758
+msgid "Could not list booleans"
+msgstr "பூலியன்களை பட்டியலிட முடியவில்லை"
+
+#: ../semanage/seobject.py:1777
+msgid "unknown"
+msgstr ""
+
+#: ../semanage/seobject.py:1780
+msgid "off"
+msgstr ""
+
+#: ../semanage/seobject.py:1780
+#, fuzzy
+msgid "on"
+msgstr "Cron"
+
+#: ../semanage/seobject.py:1789
+msgid "SELinux boolean"
+msgstr "SELinux பூலியன்"
+
+#: ../semanage/seobject.py:1789
+msgid "Description"
+msgstr ""
+
+#: ../newrole/newrole.c:198
+#, c-format
+msgid "failed to set PAM_TTY\n"
+msgstr "PAM_TTYஐ அமைக்க முடியவில்லை\n"
+
+#: ../newrole/newrole.c:287
+#, c-format
+msgid "newrole: service name configuration hashtable overflow\n"
+msgstr ""
+
+#: ../newrole/newrole.c:297
+#, c-format
+msgid "newrole:  %s:  error on line %lu.\n"
+msgstr ""
+
+#: ../newrole/newrole.c:436
+#, c-format
+msgid "cannot find valid entry in the passwd file.\n"
+msgstr "சரியான உள்ளீடை கடவுச்சொல் கோப்பில் பார்க்க முடியவில்லை.\n"
+
+#: ../newrole/newrole.c:447
+#, c-format
+msgid "Out of memory!\n"
+msgstr "நினைவகம் போதவில்லை!\n"
+
+#: ../newrole/newrole.c:452
+#, c-format
+msgid "Error!  Shell is not valid.\n"
+msgstr "பிழை!  ஷெல் தவறாக உள்ளது.\n"
+
+#: ../newrole/newrole.c:509
+#, c-format
+msgid "Unable to clear environment\n"
+msgstr "சூழலை துடைக்க முடியவில்லை\n"
+
+#: ../newrole/newrole.c:556 ../newrole/newrole.c:634
+#, fuzzy, c-format
+msgid "Error initializing capabilities, aborting.\n"
+msgstr "capabilityகளை துவக்குவதில் பிழை, வெளியேறுகிறது.\n"
+
+#: ../newrole/newrole.c:564 ../newrole/newrole.c:640
+#, c-format
+msgid "Error setting capabilities, aborting\n"
+msgstr "செயல்திறன்களை அமைப்பதில் பிழை, வெளியேறுகிறது.\n"
+
+#: ../newrole/newrole.c:570
+#, c-format
+msgid "Error setting KEEPCAPS, aborting\n"
+msgstr "KEEPCAPS அமைப்பதில் பிழை, வெளியேறுகிறது\n"
+
+#: ../newrole/newrole.c:578 ../newrole/newrole.c:652
+#, c-format
+msgid "Error dropping capabilities, aborting\n"
+msgstr "capabilityகளை விடுவதில் பிழை, வெளியேறுகிறது.\n"
+
+#: ../newrole/newrole.c:584 ../newrole/newrole.c:683
+#, c-format
+msgid "Error changing uid, aborting.\n"
+msgstr "uid ஐ மாற்றுவதில் பிழை, வெளியேறுகிறது.\n"
+
+#: ../newrole/newrole.c:590 ../newrole/newrole.c:646 ../newrole/newrole.c:678
+#, c-format
+msgid "Error resetting KEEPCAPS, aborting\n"
+msgstr "KEEPCAPS மறுஅமைப்பதில் பிழை, வெளியேறுகிறது\n"
+
+#: ../newrole/newrole.c:597
+#, c-format
+msgid "Error dropping SETUID capability, aborting\n"
+msgstr "SETUID  திறனை விடுவதில் பிழை, வெளியேறுகிறது\n"
+
+#: ../newrole/newrole.c:602 ../newrole/newrole.c:657
+#, c-format
+msgid "Error freeing caps\n"
+msgstr "capsஐ விடுவதில் பிழை\n"
+
+#: ../newrole/newrole.c:701
+#, c-format
+msgid "Error connecting to audit system.\n"
+msgstr "தணிக்கை அமைப்புடன் இணைப்பதில் பிழை.\n"
+
+#: ../newrole/newrole.c:707
+#, c-format
+msgid "Error allocating memory.\n"
+msgstr "நினைவகம் ஒதுக்குவதில் பிழை.\n"
+
+#: ../newrole/newrole.c:714
+#, c-format
+msgid "Error sending audit message.\n"
+msgstr "தணிக்கை செய்தியை அனுப்புவதில் பிழை.\n"
+
+#: ../newrole/newrole.c:758 ../newrole/newrole.c:1122
+#, c-format
+msgid "Could not determine enforcing mode.\n"
+msgstr "கட்டாயப்படுத்தும் முறையை குறிப்பிட முடியவில்லை.\n"
+
+#: ../newrole/newrole.c:765
+#, c-format
+msgid "Error!  Could not open %s.\n"
+msgstr "பிழை!  %sஐ திறக்க முடியவில்லை.\n"
+
+#: ../newrole/newrole.c:771
+#, c-format
+msgid "%s!  Could not get current context for %s, not relabeling tty.\n"
+msgstr "%s! %sக்கு நடப்பு சூழலை பெற முடியவில்லை, ttyஐ மறு பெயர் இட முடியவில்லை.\n"
+
+#: ../newrole/newrole.c:781
+#, c-format
+msgid "%s!  Could not get new context for %s, not relabeling tty.\n"
+msgstr "%s! %sக்கு புதிய சூழலை பெற முடியவில்லை, ttyஐ மறு பெயர் இட முடியவில்லை.\n"
+
+#: ../newrole/newrole.c:791
+#, c-format
+msgid "%s!  Could not set new context for %s\n"
+msgstr "%s!  %sக்கு புதிய சூழலை அமைக்க முடியவில்லை\n"
+
+#: ../newrole/newrole.c:838
+#, c-format
+msgid "%s changed labels.\n"
+msgstr "%s மாற்றப்பட்ட பெயர்கள்.\n"
+
+#: ../newrole/newrole.c:844
+#, c-format
+msgid "Warning! Could not restore context for %s\n"
+msgstr "எச்சரிக்கை! %sக்கு சூழலை மறு சேமிக்க முடியவில்லை\n"
+
+#: ../newrole/newrole.c:901
+#, c-format
+msgid "Error: multiple roles specified\n"
+msgstr "பிழை: பல பாத்திரங்கள் குறிப்பிடப்பட்டுள்ளன\n"
+
+#: ../newrole/newrole.c:909
+#, c-format
+msgid "Error: multiple types specified\n"
+msgstr "பிழை: பல வகைகள் குறிப்பிடப்பட்டுள்ளன\n"
+
+#: ../newrole/newrole.c:916
+#, c-format
+msgid "Sorry, -l may be used with SELinux MLS support.\n"
+msgstr "மன்னிக்கவும், -SELinux MLS துணையை பயன்படுத்தி இருக்கலாம்.\n"
+
+#: ../newrole/newrole.c:921
+#, c-format
+msgid "Error: multiple levels specified\n"
+msgstr "பிழை: பல நிலைகள் குறிப்பிடப்பட்டுள்ளன\n"
+
+#: ../newrole/newrole.c:931
+#, c-format
+msgid "Error: you are not allowed to change levels on a non secure terminal \n"
+msgstr ""
+
+#: ../newrole/newrole.c:957
+#, c-format
+msgid "Couldn't get default type.\n"
+msgstr "முன்னிருப்பு வகையை எடுக்க முடியவில்லை.\n"
+
+#: ../newrole/newrole.c:967
+#, c-format
+msgid "failed to get new context.\n"
+msgstr "புதிய சூழலை எடுக்க முடியவில்லை.\n"
+
+#: ../newrole/newrole.c:974
+#, c-format
+msgid "failed to set new role %s\n"
+msgstr "புதிய பாத்திரத்தை அமைக்க முடியவில்லை %s\n"
+
+#: ../newrole/newrole.c:981
+#, c-format
+msgid "failed to set new type %s\n"
+msgstr "புதிய வகையை அமைக்க முடியவில்லை %s\n"
+
+#: ../newrole/newrole.c:991
+#, c-format
+msgid "failed to build new range with level %s\n"
+msgstr "%s நிலைகளுடன் புதிய வரையறையை உருவாக்க முடியவில்லை\n"
+
+#: ../newrole/newrole.c:996
+#, c-format
+msgid "failed to set new range %s\n"
+msgstr "புதிய வரையறையை உருவாக்க முடியவில்லை %s\n"
+
+#: ../newrole/newrole.c:1004
+#, c-format
+msgid "failed to convert new context to string\n"
+msgstr "புதிய சூழலை சரமாக மாற்ற முடியவில்லை\n"
+
+#: ../newrole/newrole.c:1009
+#, c-format
+msgid "%s is not a valid context\n"
+msgstr "%s சரியான சூழல் இல்லை\n"
+
+#: ../newrole/newrole.c:1016
+#, c-format
+msgid "Unable to allocate memory for new_context"
+msgstr "புதிய சூழலுக்கு நினைவகத்தை ஒதுக்க முடியவில்லை (_c)"
+
+#: ../newrole/newrole.c:1042
+#, c-format
+msgid "Unable to obtain empty signal set\n"
+msgstr "வெற்று சமிக்ஞை அமைப்பதை பெற முடியவில்லை\n"
+
+#: ../newrole/newrole.c:1050
+#, c-format
+msgid "Unable to set SIGHUP handler\n"
+msgstr "SIGHUP கையாளியை அமைக்க முடியவில்லை\n"
+
+#: ../newrole/newrole.c:1116
+#, c-format
+msgid "Sorry, newrole may be used only on a SELinux kernel.\n"
+msgstr "SELinux கர்னலில் மட்டுமே புதிய பாத்திரம் பயன்படுத்தப்படும்.\n"
+
+#: ../newrole/newrole.c:1133
+#, c-format
+msgid "failed to get old_context.\n"
+msgstr "பழைய சூழலை எடுக்க முடியவில்லை.\n"
+
+#: ../newrole/newrole.c:1140
+#, fuzzy, c-format
+msgid "Warning!  Could not retrieve tty information.\n"
+msgstr "பிழை!  tty விவரத்தினை எடுக்க முடியவில்லை.\n"
+
+#: ../newrole/newrole.c:1161
+#, c-format
+msgid "error on reading PAM service configuration.\n"
+msgstr ""
+
+#: ../newrole/newrole.c:1196
+#, c-format
+msgid "newrole: incorrect password for %s\n"
+msgstr "புதிய பாத்திரம்: %sக்கு தவறான கடவுச்சொல்\n"
+
+#: ../newrole/newrole.c:1223
+#, c-format
+msgid "newrole: failure forking: %s"
+msgstr "புதிய பாத்திரம்: கிளைப்படுத்த முடியவில்லை: %s"
+
+#: ../newrole/newrole.c:1226 ../newrole/newrole.c:1249
+#, c-format
+msgid "Unable to restore tty label...\n"
+msgstr "tty பெயரை மறு சேமிக்க முடியவில்லை...\n"
+
+#: ../newrole/newrole.c:1228 ../newrole/newrole.c:1255
+#, c-format
+msgid "Failed to close tty properly\n"
+msgstr "ttyஐ சரியாக மூட முடியவில்லை\n"
+
+#: ../newrole/newrole.c:1287
+#, c-format
+msgid "Could not close descriptors.\n"
+msgstr "விவரிப்பிகளை மூட முடியவில்லை.\n"
+
+#: ../newrole/newrole.c:1314
+#, c-format
+msgid "Error allocating shell's argv0.\n"
+msgstr "ஷெல்லுடைய argv0ஐ ஒதுக்குவதில் பிழை.\n"
+
+#: ../newrole/newrole.c:1346
+#, c-format
+msgid "Unable to restore the environment, aborting\n"
+msgstr "சூழலை மறு சேமிக்க முடியவில்லை, வெளியேறுகிறது\n"
+
+#: ../newrole/newrole.c:1357
+msgid "failed to exec shell\n"
+msgstr "ஷெல்லை செயல்படுத்த முடியவில்லை\n"
+
+#: ../load_policy/load_policy.c:22
+#, fuzzy, c-format
+msgid "usage:  %s [-qi]\n"
+msgstr "பயன்பாடு:  %s [-q]\n"
+
+#: ../load_policy/load_policy.c:71
+#, c-format
+msgid "%s:  Policy is already loaded and initial load requested\n"
+msgstr ""
+
+#: ../load_policy/load_policy.c:80
+#, fuzzy, c-format
+msgid "%s:  Can't load policy and enforcing mode requested:  %s\n"
+msgstr "%s:  பாலிசியை ஏற்ற முடியவில்லை:  %s\n"
+
+#: ../load_policy/load_policy.c:90
+#, c-format
+msgid "%s:  Can't load policy:  %s\n"
+msgstr "%s:  பாலிசியை ஏற்ற முடியவில்லை:  %s\n"
+
+#: ../scripts/chcat:92 ../scripts/chcat:169
+msgid "Requires at least one category"
+msgstr "ஒரு வகையாவது தேவைப்படுகிறது"
+
+#: ../scripts/chcat:106 ../scripts/chcat:183
+#, c-format
+msgid "Can not modify sensitivity levels using '+' on %s"
+msgstr "%sல் '+' ஐ பயன்படுத்தும் அறிவார்ந்த நிலைகளை மாற்ற முடியாது"
+
+#: ../scripts/chcat:110
+#, c-format
+msgid "%s is already in %s"
+msgstr "%s ஏற்கனவே %sல் இருக்கிறது"
+
+#: ../scripts/chcat:188 ../scripts/chcat:198
+#, c-format
+msgid "%s is not in %s"
+msgstr "%s %sல் இல்லை"
+
+#: ../scripts/chcat:267 ../scripts/chcat:272
+msgid "Can not combine +/- with other types of categories"
+msgstr "+/-வைகளை மற்ற வகையின் வகையுடன் இணைக்க முடியாது"
+
+#: ../scripts/chcat:319
+msgid "Can not have multiple sensitivities"
+msgstr "பல அறிவார்ந்தவைகளை கொண்டிருக்கவில்லை"
+
+#: ../scripts/chcat:325
+#, c-format
+msgid "Usage %s CATEGORY File ..."
+msgstr "பயன்பாடு %s CATEGORY கோப்பு ..."
+
+#: ../scripts/chcat:326
+#, c-format
+msgid "Usage %s -l CATEGORY user ..."
+msgstr "பயன்பாடு %s -l CATEGORY பயனர் ..."
+
+#: ../scripts/chcat:327
+#, c-format
+msgid "Usage %s [[+|-]CATEGORY],...]q File ..."
+msgstr "பயன்பாடு %s [[+|-]CATEGORY],...]q கோப்பு ..."
+
+#: ../scripts/chcat:328
+#, c-format
+msgid "Usage %s -l [[+|-]CATEGORY],...]q user ..."
+msgstr "பயன்பாடு %s -l [[+|-]CATEGORY],...]q பயனர் ..."
+
+#: ../scripts/chcat:329
+#, c-format
+msgid "Usage %s -d File ..."
+msgstr "பயன்பாடு %s -d கோப்பு ..."
+
+#: ../scripts/chcat:330
+#, c-format
+msgid "Usage %s -l -d user ..."
+msgstr "பயன்பாடு %s -l -d பயனர் ..."
+
+#: ../scripts/chcat:331
+#, c-format
+msgid "Usage %s -L"
+msgstr "பயன்பாடு %s -L"
+
+#: ../scripts/chcat:332
+#, c-format
+msgid "Usage %s -L -l user"
+msgstr "பயன்பாடு %s -L -l பயனர்"
+
+#: ../scripts/chcat:333
+msgid "Use -- to end option list.  For example"
+msgstr "Use -- விருப்ப பட்டியலை முடிக்க.  எடுத்துக்காட்டாக"
+
+#: ../scripts/chcat:334
+msgid "chcat -- -CompanyConfidential /docs/businessplan.odt"
+msgstr "chcat -- -CompanyConfidential /docs/businessplan.odt"
+
+#: ../scripts/chcat:335
+msgid "chcat -l +CompanyConfidential juser"
+msgstr "chcat -l +CompanyConfidential juser"
+
+#: ../scripts/chcat:399
+#, c-format
+msgid "Options Error %s "
+msgstr "விருப்பங்கள் பிழை %s "
+
+#~ msgid "translations not supported on non-MLS machines"
+#~ msgstr "non-MLS கணினிகளில் மொழிபெயர்க்க முடியாது"
+
+#~ msgid "Boolean"
+#~ msgstr "பூலியன்"
+
+#, fuzzy
+#~ msgid "all"
+#~ msgstr "அனைத்து"
+
+#~ msgid "File Labeling"
+#~ msgstr "கோப்பு பெயரிடல்"
+
+#~ msgid ""
+#~ "File\n"
+#~ "Specification"
+#~ msgstr ""
+#~ "கோப்பு\n"
+#~ "குறிப்பிடல்"
+
+#, fuzzy
+#~ msgid ""
+#~ "Selinux\n"
+#~ "File Type"
+#~ msgstr ""
+#~ "Selinux\n"
+#~ "கோப்பு சூழல்"
+
+#~ msgid ""
+#~ "File\n"
+#~ "Type"
+#~ msgstr ""
+#~ "கோப்பு\n"
+#~ "வகை"
+
+#~ msgid "User Mapping"
+#~ msgstr "பயனர் ஒப்பிடல்"
+
+#~ msgid ""
+#~ "Login\n"
+#~ "Name"
+#~ msgstr ""
+#~ "புகுபதிவு\n"
+#~ "பெயர்"
+
+#~ msgid ""
+#~ "SELinux\n"
+#~ "User"
+#~ msgstr ""
+#~ "SELinux\n"
+#~ "பயனர்"
+
+#~ msgid ""
+#~ "MLS/\n"
+#~ "MCS Range"
+#~ msgstr ""
+#~ "MLS/\n"
+#~ "MCS வரையறை"
+
+#~ msgid "Login '%s' is required"
+#~ msgstr "புகுபதிவு '%s' தேவைப்படுகிறது"
+
+#~ msgid "Policy Module"
+#~ msgstr "கொள்கை தொகுதி"
+
+#~ msgid "Module Name"
+#~ msgstr "தொகுதி பெயர்"
+
+#~ msgid "Version"
+#~ msgstr "பதிப்பு"
+
+#~ msgid "Disable Audit"
+#~ msgstr "Audit செயல்நீக்கவும்"
+
+#~ msgid "Enable Audit"
+#~ msgstr "Auditஐ செயல்படுத்தவும்"
+
+#~ msgid "Load Policy Module"
+#~ msgstr "கொள்கை தொகுதியை ஏற்றவும்"
+
+#~ msgid "Polgen"
+#~ msgstr "Polgen"
+
+#~ msgid "Red Hat 2007"
+#~ msgstr "Red Hat 2007"
+
+#~ msgid "GPL"
+#~ msgstr "GPL"
+
+#~ msgid "translator-credits"
+#~ msgstr "I. Felix <ifelix25@gmail.com>"
+
+#~ msgid "<b>Applications</b>"
+#~ msgstr "<b>பயன்பாடுகள்</b>"
+
+#~ msgid "User Application"
+#~ msgstr "பயனர் பயன்பாடு"
+
+#, fuzzy
+#~ msgid "<b>Login Users</b>"
+#~ msgstr "<b>பயனர்கள்</b>"
+
+#, fuzzy
+#~ msgid "User Role"
+#~ msgstr "பங்கு"
+
+#, fuzzy
+#~ msgid "<b>Root Users</b>"
+#~ msgstr "<b>பயனர்கள்</b>"
+
+#, fuzzy
+#~ msgid "Root Admin User Role"
+#~ msgstr "ரூட் பயனர்"
+
+#~ msgid "Name"
+#~ msgstr "பெயர்"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Executable"
+#~ msgstr "இயங்கக்கூடியது"
+
+#~ msgid "Init script"
+#~ msgstr "Init script"
+
+#~ msgid "<b>TCP Ports</b>"
+#~ msgstr "<b>TCP துறைகள்</b>"
+
+#~ msgid "All"
+#~ msgstr "அனைத்து"
+
+#~ msgid "600-1024"
+#~ msgstr "600-1024"
+
+#~ msgid "Unreserved Ports (>1024)"
+#~ msgstr "பதிவு செய்யப்பட்ட துறைகள் (>1024)"
+
+#~ msgid "Select Ports"
+#~ msgstr "துறைகளை தேர்ந்தெடுக்கவும்"
+
+#~ msgid "<b>UDP Ports</b>"
+#~ msgstr "<b>UDP துறைகள்</b>"
+
+#, fuzzy
+#~ msgid "Sends audit messages"
+#~ msgstr "தணிக்கை செய்தியை அனுப்புவதில் பிழை.\n"
+
+#~ msgid "Policy Directory"
+#~ msgstr "கொள்கை அடைவு"
+
+#~ msgid "Generated Policy Files"
+#~ msgstr "உருவாக்கப்பட்ட கொள்கை கோப்புகள்"
+
+#, fuzzy
+#~ msgid "Boolean Name"
+#~ msgstr "பூலியன்"
+
+#~ msgid "Role"
+#~ msgstr "பங்கு"
+
+#~ msgid "Application"
+#~ msgstr "பயன்பாடு"
+
+#, fuzzy
+#~ msgid "You must select a user"
+#~ msgstr "நீங்கள் ஒரு பெயரை உள்ளிட வேண்டும்"
+
+#~ msgid "You must enter a name"
+#~ msgstr "நீங்கள் ஒரு பெயரை உள்ளிட வேண்டும்"
+
+#~ msgid "You must enter a executable"
+#~ msgstr "நீங்கள் ஒரு இயக்கத்தக்கத்தை உள்ளிட வேண்டும்"
+
+#~ msgid "Configue SELinux"
+#~ msgstr "SELinuxஐ கட்டமைக்கவும்"
+
+#, fuzzy
+#~ msgid "Type Enforcement file"
+#~ msgstr "வகை enforcment கோப்பு"
+
+#~ msgid "Interface file"
+#~ msgstr "முகப்பு கோப்பு"
+
+#~ msgid "File Contexts file"
+#~ msgstr "கோப்பு சூழல்கள் கோப்பு"
+
+#~ msgid "Setup Script"
+#~ msgstr "அமைவு உரை"
+
+#~ msgid ""
+#~ "SELinux Port\n"
+#~ "Type"
+#~ msgstr ""
+#~ "SELinux துறை\n"
+#~ "வகை"
+
+#~ msgid "Protocol"
+#~ msgstr "நெறிமுறை"
+
+#~ msgid ""
+#~ "MLS/MCS\n"
+#~ "Level"
+#~ msgstr ""
+#~ "MLS/MCS\n"
+#~ "நிலை"
+
+#~ msgid "Port"
+#~ msgstr "துறை"
+
+#~ msgid "Port number \"%s\" is not valid.  0 < PORT_NUMBER < 65536 "
+#~ msgstr "துறை எண் \"%s\" தவறானது.  0 < PORT_NUMBER < 65536 "
+
+#~ msgid "Group View"
+#~ msgstr "குழு பார்வை"
+
+#~ msgid "SELinux Service Protection"
+#~ msgstr "SELinux சேவை பாதுகாப்பு"
+
+#~ msgid "Admin"
+#~ msgstr "நிர்வாகம்"
+
+#~ msgid "User Privs"
+#~ msgstr "பயனர் Privs"
+
+#~ msgid "Memory Protection"
+#~ msgstr "நினைவக பாதுகாப்பு"
+
+#~ msgid "Mount"
+#~ msgstr "ஏற்றம்"
+
+#~ msgid "SSH"
+#~ msgstr "SSH"
+
+#~ msgid "Network Configuration"
+#~ msgstr "பிணைய கட்டமைப்பு"
+
+#~ msgid "Databases"
+#~ msgstr "தரவுத்தளங்கள்"
+
+#~ msgid "XServer"
+#~ msgstr "XServer"
+
+#~ msgid "NIS"
+#~ msgstr "NIS"
+
+#~ msgid "Web Applications"
+#~ msgstr "இணைய பயன்பாடுகள்"
+
+#~ msgid "Disable SELinux protection for amanda"
+#~ msgstr "amandaக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for amavis"
+#~ msgstr "amavisக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for apmd daemon"
+#~ msgstr "apmd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for arpwatch daemon"
+#~ msgstr "arpwatch daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for auditd daemon"
+#~ msgstr "auditd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for automount daemon"
+#~ msgstr "automount daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for avahi"
+#~ msgstr "avahiக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for bluetooth daemon"
+#~ msgstr "bluetooth daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for canna daemon"
+#~ msgstr "canna daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for cardmgr daemon"
+#~ msgstr "cardmgr daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for Cluster Server"
+#~ msgstr "Cluster சேவையகத்திற்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for ciped daemon"
+#~ msgstr "ciped daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for clamd daemon"
+#~ msgstr "clamd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for clamscan"
+#~ msgstr "clamscanக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for clvmd"
+#~ msgstr "clvmdக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for comsat daemon"
+#~ msgstr "comsat daemon SELinuxக்கு பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for courier daemon"
+#~ msgstr "courier daemon SELinuxக்கு பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for cpucontrol daemon"
+#~ msgstr "cpucontrol daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for cpuspeed daemon"
+#~ msgstr "cpuspeed daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Cron"
+#~ msgstr "Cron"
+
+#~ msgid "Disable SELinux protection for crond daemon"
+#~ msgstr "crond daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Printing"
+#~ msgstr "அச்சடித்தல்"
+
+#, fuzzy
+#~ msgid "Disable SELinux protection for cupsd back end server"
+#~ msgstr "cupsd backend சேவையகத்திற்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for cupsd daemon"
+#~ msgstr "cupsd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for cupsd_lpd"
+#~ msgstr "cupsd_lpdக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "CVS"
+#~ msgstr "CVS"
+
+#~ msgid "Disable SELinux protection for cvs daemon"
+#~ msgstr "cvs daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for cyrus daemon"
+#~ msgstr "cyrus daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for dbskkd daemon"
+#~ msgstr "dbskkd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for dbusd daemon"
+#~ msgstr "dbusd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for dccd"
+#~ msgstr "dccdக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for dccifd"
+#~ msgstr "dccifdக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for dccm"
+#~ msgstr "dccmக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for ddt daemon"
+#~ msgstr "ddt daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for devfsd daemon"
+#~ msgstr "devfsd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for dhcpc daemon"
+#~ msgstr "dhcpc daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for dhcpd daemon"
+#~ msgstr "dhcpd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for dictd daemon"
+#~ msgstr "dictd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for Evolution"
+#~ msgstr "Evolutionக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Games"
+#~ msgstr "விளையாட்டுகள்"
+
+#~ msgid "Disable SELinux protection for games"
+#~ msgstr "விளையாட்டுகளுக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for the web browsers"
+#~ msgstr "இணைய உலாவிகளுக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for Thunderbird"
+#~ msgstr "Thunderbirdக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for distccd daemon"
+#~ msgstr "distccd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for dmesg daemon"
+#~ msgstr "dmesg daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for dnsmasq daemon"
+#~ msgstr "dnsmasq daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for dovecot daemon"
+#~ msgstr "dovecot daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for entropyd daemon"
+#~ msgstr "entropyd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for fetchmail"
+#~ msgstr "fetchmailக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for fingerd daemon"
+#~ msgstr "fingerd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for freshclam daemon"
+#~ msgstr "freshclam daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for fsdaemon daemon"
+#~ msgstr "fsdaemon daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for gpm daemon"
+#~ msgstr "gpm daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "NFS"
+#~ msgstr "NFS"
+
+#~ msgid "Disable SELinux protection for gss daemon"
+#~ msgstr "gss daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#, fuzzy
+#~ msgid "Disable SELinux protection for Hal daemon"
+#~ msgstr "hal daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Compatibility"
+#~ msgstr "உகந்தவை"
+
+#~ msgid "Disable SELinux protection for hostname daemon"
+#~ msgstr "hostname daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for hotplug daemon"
+#~ msgstr "hotplug daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for howl daemon"
+#~ msgstr "howl daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for cups hplip daemon"
+#~ msgstr "cups hplip daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for httpd rotatelogs"
+#~ msgstr "httpd rotatelogsக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "HTTPD Service"
+#~ msgstr "HTTPD சேவை"
+
+#~ msgid "Disable SELinux protection for http suexec"
+#~ msgstr "http suexecக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for hwclock daemon"
+#~ msgstr "hwclock daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for i18n daemon"
+#~ msgstr "i18n daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for imazesrv daemon"
+#~ msgstr "imazesrv daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for inetd child daemons"
+#~ msgstr "inetd child daemonsக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for inetd daemon"
+#~ msgstr "inetd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for innd daemon"
+#~ msgstr "innd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for iptables daemon"
+#~ msgstr "iptables daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for ircd daemon"
+#~ msgstr "ircd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for irqbalance daemon"
+#~ msgstr "irqbalance daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for iscsi daemon"
+#~ msgstr "iscsi daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for jabberd daemon"
+#~ msgstr "jabberd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Kerberos"
+#~ msgstr "Kerberos"
+
+#~ msgid "Disable SELinux protection for kadmind daemon"
+#~ msgstr "kadmind daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for klogd daemon"
+#~ msgstr "klogd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for krb5kdc daemon"
+#~ msgstr "krb5kdc daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for ktalk daemons"
+#~ msgstr "ktalk daemonsக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for kudzu daemon"
+#~ msgstr "kudzu daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for locate daemon"
+#~ msgstr "locate daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for lpd daemon"
+#~ msgstr "lpd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for lrrd daemon"
+#~ msgstr "lrrd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for lvm daemon"
+#~ msgstr "lvm daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for mailman"
+#~ msgstr "mailmanக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for mdadm daemon"
+#~ msgstr "mdadm daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for monopd daemon"
+#~ msgstr "monopd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for mrtg daemon"
+#~ msgstr "mrtg daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for mysqld daemon"
+#~ msgstr "mysqld daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for nagios daemon"
+#~ msgstr "nagios daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Name Service"
+#~ msgstr "பெயர் சேவை"
+
+#~ msgid "Disable SELinux protection for named daemon"
+#~ msgstr "named daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for nessusd daemon"
+#~ msgstr "nessusd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for NetworkManager"
+#~ msgstr "NetworkManagerக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for nfsd daemon"
+#~ msgstr "nfsd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Samba"
+#~ msgstr "சம்பா"
+
+#~ msgid "Disable SELinux protection for nmbd daemon"
+#~ msgstr "nmbd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for nrpe daemon"
+#~ msgstr "nrpe daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for nscd daemon"
+#~ msgstr "nscd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for nsd daemon"
+#~ msgstr "nsd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for ntpd daemon"
+#~ msgstr "ntpd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for oddjob"
+#~ msgstr "oddjobக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for oddjob_mkhomedir"
+#~ msgstr "oddjob_mkhomedirக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for openvpn daemon"
+#~ msgstr "openvpn daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for pam daemon"
+#~ msgstr "pam daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for pegasus"
+#~ msgstr "pegasusக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for perdition daemon"
+#~ msgstr "perdition daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for portmap daemon"
+#~ msgstr "portmap daemon க்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for portslave daemon"
+#~ msgstr "daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for postfix"
+#~ msgstr "postfixக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for postgresql daemon"
+#~ msgstr "postgresql daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "pppd"
+#~ msgstr "pppd"
+
+#~ msgid "Disable SELinux protection for pptp"
+#~ msgstr "pptpக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for prelink daemon"
+#~ msgstr "prelink daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for privoxy daemon"
+#~ msgstr "privoxy daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for ptal daemon"
+#~ msgstr "ptal daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for pxe daemon"
+#~ msgstr "pxe daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for pyzord"
+#~ msgstr "pyzordக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for quota daemon"
+#~ msgstr "quota daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for radiusd daemon"
+#~ msgstr "radiusd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for radvd daemon"
+#~ msgstr "radvd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for rdisc"
+#~ msgstr "rdiscக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for readahead"
+#~ msgstr "readaheadக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for restorecond"
+#~ msgstr "restorecondக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for rhgb daemon"
+#~ msgstr "rhgb daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for ricci"
+#~ msgstr "ricciக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for ricci_modclusterd"
+#~ msgstr "ricci_modclusterdக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for rlogind daemon"
+#~ msgstr "rlogind daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for rpcd daemon"
+#~ msgstr "rpcd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for rshd"
+#~ msgstr "rshdக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "rsync"
+#~ msgstr "rsync"
+
+#~ msgid "Disable SELinux protection for rsync daemon"
+#~ msgstr "rsync daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "SASL authentication server"
+#~ msgstr "SASL அங்கீகார சேவையகம்"
+
+#~ msgid "Disable SELinux protection for saslauthd daemon"
+#~ msgstr "saslauthd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for scannerdaemon daemon"
+#~ msgstr "scannerdaemon daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for sendmail daemon"
+#~ msgstr "sendmail daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for setrans"
+#~ msgstr "setransக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#, fuzzy
+#~ msgid "Disable SELinux protection for setroubleshoot daemon"
+#~ msgstr "setroublesoot daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for slapd daemon"
+#~ msgstr "slapd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for slrnpull daemon"
+#~ msgstr "slrnpull daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for smbd daemon"
+#~ msgstr "smbd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for snmpd daemon"
+#~ msgstr "snmpd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for snort daemon"
+#~ msgstr "snort daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for soundd daemon"
+#~ msgstr "soundd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for sound daemon"
+#~ msgstr "sound daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#, fuzzy
+#~ msgid "Spam Protection"
+#~ msgstr "ஸ்பேம் பாதுகாப்பு"
+
+#~ msgid "Disable SELinux protection for spamd daemon"
+#~ msgstr "spamd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for speedmgmt daemon"
+#~ msgstr "speedmgmt daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Squid"
+#~ msgstr "Squid"
+
+#~ msgid "Disable SELinux protection for squid daemon"
+#~ msgstr "squid daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for ssh daemon"
+#~ msgstr "ssh daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Universal SSL tunnel"
+#~ msgstr "உலகளாவிய SSL குகை"
+
+#~ msgid "Disable SELinux protection for stunnel daemon"
+#~ msgstr "stunnel daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for swat daemon"
+#~ msgstr "swat daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for sxid daemon"
+#~ msgstr "sxid daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for syslogd daemon"
+#~ msgstr "syslogd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for system cron jobs"
+#~ msgstr "system cron பணிக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for tcp daemon"
+#~ msgstr "tcp daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for telnet daemon"
+#~ msgstr "telnet daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for tftpd daemon"
+#~ msgstr "tftpd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for transproxy daemon"
+#~ msgstr "transproxy daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for udev daemon"
+#~ msgstr "udev daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for uml daemon"
+#~ msgstr "uml daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for updfstab daemon"
+#~ msgstr "updfstab daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for uptimed daemon"
+#~ msgstr "uptimed daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for uucpd daemon"
+#~ msgstr "uucpd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for vmware daemon"
+#~ msgstr "vmware daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for watchdog daemon"
+#~ msgstr "watchdog daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for winbind daemon"
+#~ msgstr "winbind daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for xdm daemon"
+#~ msgstr "xdm daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for xen daemon"
+#~ msgstr "xen daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "XEN"
+#~ msgstr "XEN"
+
+#~ msgid "Disable SELinux protection for xfs daemon"
+#~ msgstr "xfs daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#, fuzzy
+#~ msgid "Disable SELinux protection for xen control"
+#~ msgstr "xen constrolக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for ypbind daemon"
+#~ msgstr "ypbind daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for NIS Password Daemon"
+#~ msgstr "NIS Password Daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for ypserv daemon"
+#~ msgstr "ypserv daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for NIS Transfer Daemon"
+#~ msgstr "NIS Transfer Daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Are you sure you want to delete %s '%s'?"
+#~ msgstr "%s '%s'ஐ அழிக்க வேண்டுமா?"
+
+#~ msgid "Delete %s"
+#~ msgstr "%sஐ அழிக்கவும்"
+
+#~ msgid "Add %s"
+#~ msgstr "%sஐ சேர்க்கவும்"
+
+#~ msgid "Modify %s"
+#~ msgstr "%sஐ மாற்றவும்"
+
+#~ msgid "Permissive"
+#~ msgstr "ஏற்கத்தக்கது"
+
+#~ msgid "Enforcing"
+#~ msgstr "கட்டாயப்படுத்தல்"
+
+#~ msgid "Disabled"
+#~ msgstr "செயல்நீக்கப்பட்டது"
+
+#~ msgid "Status"
+#~ msgstr "நிலை"
+
+#~ msgid "system-config-selinux"
+#~ msgstr "system-config-selinux"
+
+#~ msgid ""
+#~ "Copyright (c)2006 Red Hat, Inc.\n"
+#~ "Copyright (c) 2006 Dan Walsh <dwalsh@redhat.com>"
+#~ msgstr ""
+#~ "காப்புரிமை (c)2006 Red Hat, Inc.\n"
+#~ "காப்புரிமை (c) 2006 Dan Walsh <dwalsh@redhat.com>"
+
+#~ msgid "Add SELinux Login Mapping"
+#~ msgstr "SELinux புகுபதிவு ஒப்பீட்டை சேர்த்தல்"
+
+#~ msgid "Add SELinux Network Ports"
+#~ msgstr "SELinux பிணைய துறைகளை சேர்த்தல்"
+
+#~ msgid "SELinux Type"
+#~ msgstr "SELinux வகை"
+
+#~ msgid ""
+#~ "tcp\n"
+#~ "udp"
+#~ msgstr ""
+#~ "tcp\n"
+#~ "udp"
+
+#~ msgid ""
+#~ "SELinux MLS/MCS\n"
+#~ "Level"
+#~ msgstr ""
+#~ "SELinux MLS/MCS\n"
+#~ "நிலை"
+
+#~ msgid "File Specification"
+#~ msgstr "கோப்பு குறிப்பிடல்"
+
+#~ msgid "File Type"
+#~ msgstr "கோப்பு வகை"
+
+#~ msgid ""
+#~ "all files\n"
+#~ "regular file\n"
+#~ "directory\n"
+#~ "character device\n"
+#~ "block device\n"
+#~ "socket\n"
+#~ "symbolic link\n"
+#~ "named pipe\n"
+#~ msgstr ""
+#~ "அனைத்து கோப்புகள்\n"
+#~ "இயல்பான கோப்பு\n"
+#~ "அடைவு\n"
+#~ "எழுத்து சாதனம்\n"
+#~ "தடுப்பு சாதனம்\n"
+#~ "சாக்கெட்\n"
+#~ "குறியீடு இணைப்பு\n"
+#~ "பெயரிடப்பட்ட பைப்\n"
+
+#~ msgid "MLS"
+#~ msgstr "MLS"
+
+#~ msgid "Add SELinux User"
+#~ msgstr "SELinux பயனர் சேர்த்தல்"
+
+#~ msgid "SELinux Administration"
+#~ msgstr "SELinux நிர்வாகம்"
+
+#~ msgid "Add"
+#~ msgstr "சேர்த்தல்"
+
+#~ msgid "_Properties"
+#~ msgstr "பண்புகள் (_P)"
+
+#~ msgid "_Delete"
+#~ msgstr "அழித்தல் (_D)"
+
+#~ msgid "Select Management Object"
+#~ msgstr "மேலாண்மை பொருளை தேர்ந்தெடுக்கவும்"
+
+#~ msgid "<b>Select:</b>"
+#~ msgstr "<b>தேர்ந்தெடுத்தல்:</b>"
+
+#~ msgid "System Default Enforcing Mode"
+#~ msgstr "கணினி முன்னிருப்பு கட்டாயப்படுத்தல் முறை"
+
+#~ msgid "Current Enforcing Mode"
+#~ msgstr "நடப்பு கட்டாயப்படுத்தும் முறை"
+
+#~ msgid "System Default Policy Type: "
+#~ msgstr "கணினி முன்னிருப்பு கொள்கை வகை:"
+
+#~ msgid "Relabel on next reboot."
+#~ msgstr "அடுத்த மறுதுவக்கத்தில் மறு பெயரிடவும்."
+
+#~ msgid "label37"
+#~ msgstr "label37"
+
+#~ msgid "Filter"
+#~ msgstr "வடிப்பி"
+
+#~ msgid "label50"
+#~ msgstr "label50"
+
+#~ msgid "Add File Context"
+#~ msgstr "கோப்பு சூழலை சேர்த்தல்"
+
+#~ msgid "Modify File Context"
+#~ msgstr "கோப்பு சூழலை மாற்றவும்"
+
+#~ msgid "Delete File Context"
+#~ msgstr "கோப்பு சூழலை அழிக்கவும்"
+
+#~ msgid "label38"
+#~ msgstr "label38"
+
+#~ msgid "Add SELinux User Mapping"
+#~ msgstr "SELinux பயனர் ஒப்பீட்டை சேர்த்தல்"
+
+#~ msgid "Modify SELinux User Mapping"
+#~ msgstr "SELinux பயனர் ஒப்பீட்டை மாற்றவும்"
+
+#~ msgid "Delete SELinux User Mapping"
+#~ msgstr "SELinux பயனர் ஒப்பீட்டை அழிக்கவும்"
+
+#~ msgid "label39"
+#~ msgstr "label39"
+
+#~ msgid "Add Translation"
+#~ msgstr "மொழிபெயர்ப்பை சேர்த்தல்"
+
+#~ msgid "Modify Translation"
+#~ msgstr "மொழிபெயர்ப்பை மாற்றுதல்"
+
+#~ msgid "Delete Translation"
+#~ msgstr "மொழிபெயர்ப்பை அழித்தல்"
+
+#~ msgid "label41"
+#~ msgstr "label41"
+
+#~ msgid "Modify SELinux User"
+#~ msgstr "SELinux பயனரை மாற்றவும்"
+
+#~ msgid "label40"
+#~ msgstr "label40"
+
+#~ msgid "Add Network Port"
+#~ msgstr "பிணைய துறையை சேர்த்தல்"
+
+#~ msgid "Edit Network Port"
+#~ msgstr "பிணைய துறையை திருத்தவும்"
+
+#~ msgid "Delete Network Port"
+#~ msgstr "பிணைய துறையை அழிக்கவும்"
+
+#~ msgid "label42"
+#~ msgstr "label42"
+
+#~ msgid "Generate new policy module"
+#~ msgstr "புதிய கொள்கை தொகுதியை உருவாக்கவும்"
+
+#~ msgid "Load policy module"
+#~ msgstr "கொள்கை தொகுதியை ஏற்றவும்"
+
+#~ msgid "Remove loadable policy module"
+#~ msgstr "ஏற்றக்கூடிய கொள்கை தொகுதியை நீக்கவும்"
+
+#~ msgid "label44"
+#~ msgstr "label44"
+
+#~ msgid "Sensitvity Level"
+#~ msgstr "உணர்வுள்ள நிலை"
+
+#~ msgid "SELinux user '%s' is required"
+#~ msgstr "SELinux பயனர் '%s' தேவைப்படுகிறது"
+
+#~ msgid "Requires value"
+#~ msgstr "மதிப்பு தேவைப்படுகிறது"
+
+#~ msgid "Invalid prefix %s"
+#~ msgstr "தவறான முன்னொட்டு %s"
+
+#~ msgid "label25"
+#~ msgstr "label25"
+
+#~ msgid "label26"
+#~ msgstr "label26"
+
+#~ msgid "label28"
+#~ msgstr "label28"
+
+#~ msgid "label30"
+#~ msgstr "label30"
+
+#~ msgid "label31"
+#~ msgstr "label31"
+
+#~ msgid "label32"
+#~ msgstr "label32"
+
+#~ msgid "label33"
+#~ msgstr "label33"
+
+#~ msgid "Unreserved Ports  (> 1024)"
+#~ msgstr "பதிவு செய்யப்படாத துறைகள்  (> 1024)"
+
+#~ msgid "label34"
+#~ msgstr "label34"
+
+#~ msgid "label35"
+#~ msgstr "label35"
+
+#, fuzzy
+#~ msgid "label51"
+#~ msgstr "label25"
+
+#~ msgid ""
+#~ "Enforcing\n"
+#~ "Permissive\n"
+#~ "Disabled\n"
+#~ msgstr ""
+#~ "கட்டாயப்படுத்தல்\n"
+#~ "ஏற்கத்தக்கது\n"
+#~ "செயல்நீக்கப்பட்டது\n"
+
+#~ msgid "value"
+#~ msgstr "மதிப்பு"
+
+#~ msgid "Other"
+#~ msgstr "வேறு"
+
+#~ msgid "XWindows Login User"
+#~ msgstr "XWindows புகுபதிவு பயனர்"
+
+#~ msgid "Terminal Login User"
+#~ msgstr "முனைய புகுபதிவு பயனர்"
+
+#~ msgid "Files and Directories"
+#~ msgstr "கோப்புகள் மற்றும் அடைவுகள்"
+
+#~ msgid "Login"
+#~ msgstr "புகுபதிவு"
+
+#~ msgid "FTP"
+#~ msgstr "FTP"
+
+#~ msgid "Zebra"
+#~ msgstr "Zebra"
+
+#~ msgid "Disable SELinux protection for ftpd daemon"
+#~ msgstr "ftpd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for httpd daemon"
+#~ msgstr "httpd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for pppd daemon"
+#~ msgstr "pppd daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Disable SELinux protection for the mozilla ppp daemon"
+#~ msgstr "mozilla ppp daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Spam Assassin"
+#~ msgstr "Spam Assassin"
+
+#~ msgid "Disable SELinux protection for zebra daemon"
+#~ msgstr "zebra daemonக்கு SELinux பாதுகாப்பை செயல்நீக்கவும்"
+
+#~ msgid "Label Prefix"
+#~ msgstr "முன்னொட்டு பெயர்"
+
+#~ msgid "MLS/MCS Level"
+#~ msgstr "MLS/MCS நிலை"
+
+#~ msgid ""
+#~ "Labeling\n"
+#~ "Prefix"
+#~ msgstr ""
+#~ "பெயரிடல்\n"
+#~ "முன்னொட்டு"
+
+#~ msgid ""
+#~ "MLS/\n"
+#~ "MCS Level"
+#~ msgstr ""
+#~ "MLS/\n"
+#~ "MCS நிலை"

@@ -1,0 +1,1398 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: policycoreutils\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-06-24 10:53-0400\n"
+"PO-Revision-Date: 2007-07-27 23:11+0800\n"
+"Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
+"Language-Team: Malay <translation-team-ms@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../run_init/run_init.c:67
+msgid ""
+"USAGE: run_init <script> <args ...>\n"
+"  where: <script> is the name of the init script to run,\n"
+"         <args ...> are the arguments to that script."
+msgstr ""
+
+#: ../run_init/run_init.c:126 ../newrole/newrole.c:1187
+#, fuzzy, c-format
+msgid "failed to initialize PAM\n"
+msgstr "PAM: gagal untuk melepaskan pengesah."
+
+#: ../run_init/run_init.c:139
+#, fuzzy, c-format
+msgid "failed to get account information\n"
+msgstr "Gagal menukar maklumat usia untuk %s: %s\n"
+
+#: ../run_init/run_init.c:162 ../newrole/newrole.c:338
+msgid "Password:"
+msgstr "Katalaluan:"
+
+#: ../run_init/run_init.c:197 ../newrole/newrole.c:363
+#, c-format
+msgid "Cannot find your entry in the shadow passwd file.\n"
+msgstr ""
+
+#: ../run_init/run_init.c:203 ../newrole/newrole.c:370
+#, c-format
+msgid "getpass cannot open /dev/tty\n"
+msgstr ""
+
+#: ../run_init/run_init.c:275
+#, c-format
+msgid "run_init: incorrect password for %s\n"
+msgstr ""
+
+#: ../run_init/run_init.c:309
+#, fuzzy, c-format
+msgid "Could not open file %s\n"
+msgstr "tidak dapat membuka fail tetapan `%s': %s"
+
+#: ../run_init/run_init.c:336
+#, fuzzy, c-format
+msgid "No context in file %s\n"
+msgstr "akhir fail tidak dijangka dalam %s\n"
+
+#: ../run_init/run_init.c:361
+#, c-format
+msgid "Sorry, run_init may be used only on a SELinux kernel.\n"
+msgstr ""
+
+#: ../run_init/run_init.c:380
+#, fuzzy, c-format
+msgid "authentication failed.\n"
+msgstr "Pengesahan gagal"
+
+#: ../run_init/run_init.c:405 ../newrole/newrole.c:1321
+#, fuzzy, c-format
+msgid "Could not set exec context to %s.\n"
+msgstr "Tidak dapat menetapkan konteks exec ke %s.\n"
+
+#: ../audit2allow/audit2allow:217
+#, fuzzy
+msgid "******************** IMPORTANT ***********************\n"
+msgstr ""
+"\n"
+"******************** PENTING ************************\n"
+
+#: ../audit2allow/audit2allow:218
+msgid "To make this policy package active, execute:"
+msgstr ""
+
+#: ../semanage/seobject.py:48
+#, fuzzy
+msgid "Could not create semanage handle"
+msgstr "Tidak dapat menetapkan konteks default untuk %s untuk program %s.\n"
+
+#: ../semanage/seobject.py:55
+msgid "SELinux policy is not managed or store cannot be accessed."
+msgstr ""
+
+#: ../semanage/seobject.py:60
+#, fuzzy
+msgid "Cannot read policy store."
+msgstr "gagal baca fail menu:%s"
+
+#: ../semanage/seobject.py:65
+#, fuzzy
+msgid "Could not establish semanage connection"
+msgstr "Tidak dapat menetapkan konteks default untuk %s untuk program %s.\n"
+
+#: ../semanage/seobject.py:70
+#, fuzzy
+msgid "Could not test MLS enabled status"
+msgstr "Tidak dapat menetapkan konteks fail untuk %s"
+
+#: ../semanage/seobject.py:142 ../semanage/seobject.py:146
+msgid "global"
+msgstr ""
+
+#: ../semanage/seobject.py:206
+#, python-format
+msgid "Unable to open %s: translations not supported on non-MLS machines: %s"
+msgstr ""
+
+#: ../semanage/seobject.py:239
+msgid "Level"
+msgstr ""
+
+#: ../semanage/seobject.py:239
+msgid "Translation"
+msgstr ""
+
+#: ../semanage/seobject.py:247 ../semanage/seobject.py:261
+#, fuzzy, python-format
+msgid "Translations can not contain spaces '%s' "
+msgstr "Nama Perkongsian tidak boleh mengandungi ruang"
+
+#: ../semanage/seobject.py:250
+#, fuzzy, python-format
+msgid "Invalid Level '%s' "
+msgstr "_Aras RAID:"
+
+#: ../semanage/seobject.py:253
+#, fuzzy, python-format
+msgid "%s already defined in translations"
+msgstr "Simpan masih dalam process"
+
+#: ../semanage/seobject.py:265
+#, fuzzy, python-format
+msgid "%s not defined in translations"
+msgstr "%s: %s: bukan dalam format a.out\n"
+
+#: ../semanage/seobject.py:290
+msgid "Not yet implemented"
+msgstr ""
+
+#: ../semanage/seobject.py:294
+msgid "Semanage transaction already in progress"
+msgstr ""
+
+#: ../semanage/seobject.py:303
+#, fuzzy
+msgid "Could not start semanage transaction"
+msgstr "Tidak dapat menetapkan konteks default untuk %s untuk program %s.\n"
+
+#: ../semanage/seobject.py:309
+#, fuzzy
+msgid "Could not commit semanage transaction"
+msgstr "Tidak dapat menetapkan konteks default untuk %s untuk program %s.\n"
+
+#: ../semanage/seobject.py:313
+msgid "Semanage transaction not in progress"
+msgstr ""
+
+#: ../semanage/seobject.py:325
+#, fuzzy
+msgid "Could not list SELinux modules"
+msgstr "Tidak dapat menyenaraikan pengguna SELinux"
+
+#: ../semanage/seobject.py:336
+msgid "Permissive Types"
+msgstr ""
+
+#: ../semanage/seobject.py:378
+#, python-format
+msgid "Could not set permissive domain %s (module installation failed)"
+msgstr ""
+
+#: ../semanage/seobject.py:384
+#, python-format
+msgid "Could not remove permissive domain %s (remove failed)"
+msgstr ""
+
+#: ../semanage/seobject.py:410 ../semanage/seobject.py:470
+#: ../semanage/seobject.py:516 ../semanage/seobject.py:598
+#: ../semanage/seobject.py:665 ../semanage/seobject.py:723
+#: ../semanage/seobject.py:933 ../semanage/seobject.py:1506
+#: ../semanage/seobject.py:1570 ../semanage/seobject.py:1582
+#: ../semanage/seobject.py:1663 ../semanage/seobject.py:1714
+#, fuzzy, python-format
+msgid "Could not create a key for %s"
+msgstr "Tidak dapat mencipta konteks fail untuk %s"
+
+#: ../semanage/seobject.py:414 ../semanage/seobject.py:474
+#: ../semanage/seobject.py:520 ../semanage/seobject.py:526
+#, fuzzy, python-format
+msgid "Could not check if login mapping for %s is defined"
+msgstr "Tidak dapat memeriksa jika konteks fail untuk %s telah dinyatakan"
+
+#: ../semanage/seobject.py:416
+#, fuzzy, python-format
+msgid "Login mapping for %s is already defined"
+msgstr "Tiada 'Mountpoints' dikenalpasti"
+
+#: ../semanage/seobject.py:421
+#, fuzzy, python-format
+msgid "Linux Group %s does not exist"
+msgstr "Partisyen Diminta Tidak Wujud"
+
+#: ../semanage/seobject.py:426
+#, fuzzy, python-format
+msgid "Linux User %s does not exist"
+msgstr "Partisyen Diminta Tidak Wujud"
+
+#: ../semanage/seobject.py:430
+#, fuzzy, python-format
+msgid "Could not create login mapping for %s"
+msgstr "Tidak dapat mencipta konteks fail untuk %s"
+
+#: ../semanage/seobject.py:434 ../semanage/seobject.py:612
+#, fuzzy, python-format
+msgid "Could not set name for %s"
+msgstr "Tidak dapat menetapkan konteks fail untuk %s"
+
+#: ../semanage/seobject.py:439 ../semanage/seobject.py:622
+#, fuzzy, python-format
+msgid "Could not set MLS range for %s"
+msgstr "Tidak dapat menetapkan konteks fail untuk %s"
+
+#: ../semanage/seobject.py:443
+#, fuzzy, python-format
+msgid "Could not set SELinux user for %s"
+msgstr "Tidak dapat menetapkan pengguna dalam konteks fail untuk %s"
+
+#: ../semanage/seobject.py:447
+#, fuzzy, python-format
+msgid "Could not add login mapping for %s"
+msgstr "Tidak dapat menambah konteks fail untuk %s"
+
+#: ../semanage/seobject.py:459 ../semanage/seobject.py:462
+#, fuzzy
+msgid "add SELinux user mapping"
+msgstr "Pengguna %s tidak dapat dipadam: %s.\n"
+
+#: ../semanage/seobject.py:466
+#, fuzzy
+msgid "Requires seuser or serange"
+msgstr "Memerlukan setype, serange atau seuser"
+
+#: ../semanage/seobject.py:476 ../semanage/seobject.py:522
+#, fuzzy, python-format
+msgid "Login mapping for %s is not defined"
+msgstr "Konteks fail %s tidak dinyatakan"
+
+#: ../semanage/seobject.py:480
+#, fuzzy, python-format
+msgid "Could not query seuser for %s"
+msgstr "Tidak dapat menyoal konteks fail untuk %s"
+
+#: ../semanage/seobject.py:496
+#, fuzzy, python-format
+msgid "Could not modify login mapping for %s"
+msgstr "Tidak dapat mengubahsuai konteks fail untuk %s"
+
+#: ../semanage/seobject.py:528
+#, python-format
+msgid "Login mapping for %s is defined in policy, cannot be deleted"
+msgstr ""
+
+#: ../semanage/seobject.py:532
+#, fuzzy, python-format
+msgid "Could not delete login mapping for %s"
+msgstr "Tidak dapat memadam konteks fail untuk %s"
+
+#: ../semanage/seobject.py:555
+#, fuzzy
+msgid "Could not list login mappings"
+msgstr "Tidak dapat menyenaraikan konteks fail"
+
+#: ../semanage/seobject.py:568 ../semanage/seobject.py:573
+msgid "Login Name"
+msgstr ""
+
+#: ../semanage/seobject.py:568 ../semanage/seobject.py:573
+#: ../semanage/seobject.py:782 ../semanage/seobject.py:787
+#, fuzzy
+msgid "SELinux User"
+msgstr "Jenis SELinux diperlukan"
+
+#: ../semanage/seobject.py:568
+msgid "MLS/MCS Range"
+msgstr ""
+
+#: ../semanage/seobject.py:594
+#, fuzzy, python-format
+msgid "You must add at least one role for %s"
+msgstr "Tidak dapat menambah konteks fail untuk %s"
+
+#: ../semanage/seobject.py:602 ../semanage/seobject.py:669
+#: ../semanage/seobject.py:727 ../semanage/seobject.py:733
+#, fuzzy, python-format
+msgid "Could not check if SELinux user %s is defined"
+msgstr "Tidak dapat memeriksa jika konteks fail untuk %s telah dinyatakan"
+
+#: ../semanage/seobject.py:604
+#, fuzzy, python-format
+msgid "SELinux user %s is already defined"
+msgstr "$file bukan milik \"$user\""
+
+#: ../semanage/seobject.py:608
+#, fuzzy, python-format
+msgid "Could not create SELinux user for %s"
+msgstr "Tidak dapat mencipta konteks fail untuk %s"
+
+#: ../semanage/seobject.py:617
+#, fuzzy, python-format
+msgid "Could not add role %s for %s"
+msgstr "Tidak dapat menambah konteks fail untuk %s"
+
+#: ../semanage/seobject.py:626
+#, fuzzy, python-format
+msgid "Could not set MLS level for %s"
+msgstr "Tidak dapat menetapkan konteks fail untuk %s"
+
+#: ../semanage/seobject.py:629
+#, fuzzy, python-format
+msgid "Could not add prefix %s for %s"
+msgstr "Tidak dapat menambah konteks fail untuk %s"
+
+#: ../semanage/seobject.py:632
+#, fuzzy, python-format
+msgid "Could not extract key for %s"
+msgstr "Tidak dapat membuka %s untuk salinan: %s"
+
+#: ../semanage/seobject.py:636
+#, fuzzy, python-format
+msgid "Could not add SELinux user %s"
+msgstr "Pengguna %s tidak dapat dipadam: %s.\n"
+
+#: ../semanage/seobject.py:659
+msgid "Requires prefix, roles, level or range"
+msgstr ""
+
+#: ../semanage/seobject.py:661
+#, fuzzy
+msgid "Requires prefix or roles"
+msgstr "Memerlukan setype, serange atau seuser"
+
+#: ../semanage/seobject.py:671 ../semanage/seobject.py:729
+#, fuzzy, python-format
+msgid "SELinux user %s is not defined"
+msgstr "Jenis terminal `%s' tidak ditakrifkan."
+
+#: ../semanage/seobject.py:675
+#, fuzzy, python-format
+msgid "Could not query user for %s"
+msgstr "Tidak dapat menyoal konteks fail untuk %s"
+
+#: ../semanage/seobject.py:702
+#, fuzzy, python-format
+msgid "Could not modify SELinux user %s"
+msgstr "Pengguna %s tidak dapat dipadam: %s.\n"
+
+#: ../semanage/seobject.py:735
+#, fuzzy, python-format
+msgid "SELinux user %s is defined in policy, cannot be deleted"
+msgstr "$file bukan milik \"$user\""
+
+#: ../semanage/seobject.py:739
+#, fuzzy, python-format
+msgid "Could not delete SELinux user %s"
+msgstr "Pengguna %s tidak dapat dipadam: %s.\n"
+
+#: ../semanage/seobject.py:762
+msgid "Could not list SELinux users"
+msgstr "Tidak dapat menyenaraikan pengguna SELinux"
+
+#: ../semanage/seobject.py:768
+#, python-format
+msgid "Could not list roles for user %s"
+msgstr "Tidak dapat menyenaraikan peranan untuk pengguna %s"
+
+#: ../semanage/seobject.py:781
+msgid "Labeling"
+msgstr ""
+
+#: ../semanage/seobject.py:781
+msgid "MLS/"
+msgstr ""
+
+#: ../semanage/seobject.py:782
+msgid "Prefix"
+msgstr ""
+
+#: ../semanage/seobject.py:782
+msgid "MCS Level"
+msgstr ""
+
+#: ../semanage/seobject.py:782
+msgid "MCS Range"
+msgstr ""
+
+#: ../semanage/seobject.py:782 ../semanage/seobject.py:787
+msgid "SELinux Roles"
+msgstr ""
+
+#: ../semanage/seobject.py:802
+msgid "Protocol udp or tcp is required"
+msgstr "Protokol udp atau tcp diperlukan"
+
+#: ../semanage/seobject.py:804
+msgid "Port is required"
+msgstr "Port diperlukan"
+
+#: ../semanage/seobject.py:815
+#, python-format
+msgid "Could not create a key for %s/%s"
+msgstr "Tidak dapat mencipta kekunci untuk %s/%s"
+
+#: ../semanage/seobject.py:826
+msgid "Type is required"
+msgstr "Jenis diperlukan"
+
+#: ../semanage/seobject.py:832 ../semanage/seobject.py:891
+#: ../semanage/seobject.py:946 ../semanage/seobject.py:952
+#, python-format
+msgid "Could not check if port %s/%s is defined"
+msgstr "Tidak dapat memeriksa sama ada port %s/%s telah dinyatakan"
+
+#: ../semanage/seobject.py:834
+#, python-format
+msgid "Port %s/%s already defined"
+msgstr "Port %s/%s telah ditakrif"
+
+#: ../semanage/seobject.py:838
+#, python-format
+msgid "Could not create port for %s/%s"
+msgstr "Tidak dapat mencipta port untuk %s/%s"
+
+#: ../semanage/seobject.py:844
+#, python-format
+msgid "Could not create context for %s/%s"
+msgstr "Tidak dapat mencipta konteks untuk %s/%s"
+
+#: ../semanage/seobject.py:848
+#, python-format
+msgid "Could not set user in port context for %s/%s"
+msgstr "Tidak dapat menetapkan pengguna dalam konteks port untuk %s/%s"
+
+#: ../semanage/seobject.py:852
+#, python-format
+msgid "Could not set role in port context for %s/%s"
+msgstr "Tidak dapat menetapkan tugas dalam konteks port untuk %s/%s"
+
+#: ../semanage/seobject.py:856
+#, python-format
+msgid "Could not set type in port context for %s/%s"
+msgstr "Tidak dapat menetapkan jenis dalam konteks port untuk %s/%s"
+
+#: ../semanage/seobject.py:861
+#, python-format
+msgid "Could not set mls fields in port context for %s/%s"
+msgstr "Tidak dapat menetapkan medan mls dalam konteks port untuk %s/%s"
+
+#: ../semanage/seobject.py:865
+#, python-format
+msgid "Could not set port context for %s/%s"
+msgstr "Tidak dapat menetapkan konteks port untuk %s/%s"
+
+#: ../semanage/seobject.py:869
+#, python-format
+msgid "Could not add port %s/%s"
+msgstr "Tidak dapat menambah port %s/%s"
+
+#: ../semanage/seobject.py:883 ../semanage/seobject.py:1129
+#: ../semanage/seobject.py:1317
+msgid "Requires setype or serange"
+msgstr "Memerlukan setype atau serange"
+
+#: ../semanage/seobject.py:885
+msgid "Requires setype"
+msgstr "Memerlukan setype"
+
+#: ../semanage/seobject.py:893 ../semanage/seobject.py:948
+#, python-format
+msgid "Port %s/%s is not defined"
+msgstr "Port %s/%s tidak dinyatakan"
+
+#: ../semanage/seobject.py:897
+#, python-format
+msgid "Could not query port %s/%s"
+msgstr "Tidak dapat menyoal port %s/%s"
+
+#: ../semanage/seobject.py:908
+#, python-format
+msgid "Could not modify port %s/%s"
+msgstr "Tidak dapat mengubah port %s/%s"
+
+#: ../semanage/seobject.py:921
+#, fuzzy
+msgid "Could not list the ports"
+msgstr "Tidak dapat menyenaraikan port"
+
+#: ../semanage/seobject.py:937
+#, fuzzy, python-format
+msgid "Could not delete the port %s"
+msgstr "Tidak dapat memadam port %s/%s"
+
+#: ../semanage/seobject.py:954
+#, python-format
+msgid "Port %s/%s is defined in policy, cannot be deleted"
+msgstr "Port %s/%s dinyatakan dalam polisi, tidak boleh dipadam"
+
+#: ../semanage/seobject.py:958
+#, python-format
+msgid "Could not delete port %s/%s"
+msgstr "Tidak dapat memadam port %s/%s"
+
+#: ../semanage/seobject.py:974 ../semanage/seobject.py:996
+msgid "Could not list ports"
+msgstr "Tidak dapat menyenaraikan port"
+
+#: ../semanage/seobject.py:1017
+msgid "SELinux Port Type"
+msgstr ""
+
+#: ../semanage/seobject.py:1017
+msgid "Proto"
+msgstr ""
+
+#: ../semanage/seobject.py:1017
+msgid "Port Number"
+msgstr ""
+
+#: ../semanage/seobject.py:1034 ../semanage/seobject.py:1116
+#: ../semanage/seobject.py:1166
+#, fuzzy
+msgid "Node Address is required"
+msgstr "Port diperlukan"
+
+#: ../semanage/seobject.py:1037 ../semanage/seobject.py:1119
+#: ../semanage/seobject.py:1169
+#, fuzzy
+msgid "Node Netmask is required"
+msgstr "Port diperlukan"
+
+#: ../semanage/seobject.py:1044 ../semanage/seobject.py:1125
+#: ../semanage/seobject.py:1176
+msgid "Unknown or missing protocol"
+msgstr ""
+
+#: ../semanage/seobject.py:1054 ../semanage/seobject.py:1256
+#: ../semanage/seobject.py:1445
+msgid "SELinux Type is required"
+msgstr "Jenis SELinux diperlukan"
+
+#: ../semanage/seobject.py:1058 ../semanage/seobject.py:1133
+#: ../semanage/seobject.py:1180 ../semanage/seobject.py:1260
+#: ../semanage/seobject.py:1321 ../semanage/seobject.py:1355
+#: ../semanage/seobject.py:1449
+#, python-format
+msgid "Could not create key for %s"
+msgstr "Tidak dapat mencipta kekunci untuk %s"
+
+#: ../semanage/seobject.py:1060 ../semanage/seobject.py:1137
+#: ../semanage/seobject.py:1184 ../semanage/seobject.py:1190
+#, fuzzy, python-format
+msgid "Could not check if addr %s is defined"
+msgstr "Tidak dapat memeriksa sama ada port %s/%s telah dinyatakan"
+
+#: ../semanage/seobject.py:1064
+#, fuzzy, python-format
+msgid "Addr %s already defined"
+msgstr "Port %s/%s telah ditakrif"
+
+#: ../semanage/seobject.py:1068
+#, fuzzy, python-format
+msgid "Could not create addr for %s"
+msgstr "Tidak dapat mencipta konteks fail untuk %s"
+
+#: ../semanage/seobject.py:1073 ../semanage/seobject.py:1275
+#: ../semanage/seobject.py:1415
+#, python-format
+msgid "Could not create context for %s"
+msgstr "Tidak dapat mencipta konteks untuk %s"
+
+#: ../semanage/seobject.py:1077
+#, fuzzy, python-format
+msgid "Could not set mask for %s"
+msgstr "Tidak dapat menetapkan konteks fail untuk %s"
+
+#: ../semanage/seobject.py:1082
+#, fuzzy, python-format
+msgid "Could not set user in addr context for %s"
+msgstr "Tidak dapat menetapkan pengguna dalam konteks fail untuk %s"
+
+#: ../semanage/seobject.py:1086
+#, fuzzy, python-format
+msgid "Could not set role in addr context for %s"
+msgstr "Tidak dapat menetapkan tugas dalam konteks fail untuk %s"
+
+#: ../semanage/seobject.py:1090
+#, fuzzy, python-format
+msgid "Could not set type in addr context for %s"
+msgstr "Tidak dapat menetapkan jenis dalam konteks fail untuk %s"
+
+#: ../semanage/seobject.py:1095
+#, fuzzy, python-format
+msgid "Could not set mls fields in addr context for %s"
+msgstr "Tidak dapat menetapkan medan mls dalam konteks fail untuk %s"
+
+#: ../semanage/seobject.py:1099
+#, fuzzy, python-format
+msgid "Could not set addr context for %s"
+msgstr "Tidak dapat menetapkan konteks fail untuk %s"
+
+#: ../semanage/seobject.py:1103
+#, fuzzy, python-format
+msgid "Could not add addr %s"
+msgstr "Tidak dapat menambah port %s/%s"
+
+#: ../semanage/seobject.py:1139 ../semanage/seobject.py:1186
+#, fuzzy, python-format
+msgid "Addr %s is not defined"
+msgstr "Port %s/%s tidak dinyatakan"
+
+#: ../semanage/seobject.py:1143
+#, fuzzy, python-format
+msgid "Could not query addr %s"
+msgstr "Tidak dapat menyoal port %s/%s"
+
+#: ../semanage/seobject.py:1154
+#, fuzzy, python-format
+msgid "Could not modify addr %s"
+msgstr "Tidak dapat mengubah port %s/%s"
+
+#: ../semanage/seobject.py:1192
+#, fuzzy, python-format
+msgid "Addr %s is defined in policy, cannot be deleted"
+msgstr "Port %s/%s dinyatakan dalam polisi, tidak boleh dipadam"
+
+#: ../semanage/seobject.py:1196
+#, fuzzy, python-format
+msgid "Could not delete addr %s"
+msgstr "Tidak dapat memadam antaramuka %s"
+
+#: ../semanage/seobject.py:1212
+#, fuzzy
+msgid "Could not list addrs"
+msgstr "Tidak dapat menyenaraikan port"
+
+#: ../semanage/seobject.py:1264 ../semanage/seobject.py:1325
+#: ../semanage/seobject.py:1359 ../semanage/seobject.py:1365
+#, python-format
+msgid "Could not check if interface %s is defined"
+msgstr "Tidak dapat memeriksa sama ada antaramuka %s dinyatakan"
+
+#: ../semanage/seobject.py:1266
+#, python-format
+msgid "Interface %s already defined"
+msgstr "Antaramuka %s telah ditakrif"
+
+#: ../semanage/seobject.py:1270
+#, python-format
+msgid "Could not create interface for %s"
+msgstr "Tidak dapat mencipta antaramuka untuk %s"
+
+#: ../semanage/seobject.py:1279
+#, python-format
+msgid "Could not set user in interface context for %s"
+msgstr "Tidak dapat menetapkan pengguna dalam konteks antaramuka untuk %s"
+
+#: ../semanage/seobject.py:1283
+#, python-format
+msgid "Could not set role in interface context for %s"
+msgstr "Tidak dapat menetapkan tugas dalam konteks antaramuka untuk %s"
+
+#: ../semanage/seobject.py:1287
+#, python-format
+msgid "Could not set type in interface context for %s"
+msgstr "Tidak dapat menetapkan jenis dalam konteks antaramuka untuk %s"
+
+#: ../semanage/seobject.py:1292
+#, python-format
+msgid "Could not set mls fields in interface context for %s"
+msgstr "Tidak dapat menetapkan medan mls dalam konteks antaramuka untuk %s"
+
+#: ../semanage/seobject.py:1296
+#, python-format
+msgid "Could not set interface context for %s"
+msgstr "Tidak dapat menetapkan konteks antaramuka untuk %s"
+
+#: ../semanage/seobject.py:1300
+#, python-format
+msgid "Could not set message context for %s"
+msgstr "Tidak dapat menetapkan konteks mesej untuk %s"
+
+#: ../semanage/seobject.py:1304
+#, python-format
+msgid "Could not add interface %s"
+msgstr "Tidak dapat menambah antaramuka %s"
+
+#: ../semanage/seobject.py:1327 ../semanage/seobject.py:1361
+#, python-format
+msgid "Interface %s is not defined"
+msgstr "Antaramuka %s tidak dinyatakan"
+
+#: ../semanage/seobject.py:1331
+#, python-format
+msgid "Could not query interface %s"
+msgstr "Tidak dapat menyoal antaramuka %s"
+
+#: ../semanage/seobject.py:1342
+#, python-format
+msgid "Could not modify interface %s"
+msgstr "Tidak dapat mengubah antaramuka %s"
+
+#: ../semanage/seobject.py:1367
+#, python-format
+msgid "Interface %s is defined in policy, cannot be deleted"
+msgstr "Antaramuka %s dinyatakan dalam polisi, tidak boleh dipadam"
+
+#: ../semanage/seobject.py:1371
+#, python-format
+msgid "Could not delete interface %s"
+msgstr "Tidak dapat memadam antaramuka %s"
+
+#: ../semanage/seobject.py:1387
+msgid "Could not list interfaces"
+msgstr "Tidak dapat menyenaraikan antaramuka"
+
+#: ../semanage/seobject.py:1397
+msgid "SELinux Interface"
+msgstr ""
+
+#: ../semanage/seobject.py:1397 ../semanage/seobject.py:1636
+msgid "Context"
+msgstr ""
+
+#: ../semanage/seobject.py:1421
+#, python-format
+msgid "Could not set user in file context for %s"
+msgstr "Tidak dapat menetapkan pengguna dalam konteks fail untuk %s"
+
+#: ../semanage/seobject.py:1425
+#, python-format
+msgid "Could not set role in file context for %s"
+msgstr "Tidak dapat menetapkan tugas dalam konteks fail untuk %s"
+
+#: ../semanage/seobject.py:1430 ../semanage/seobject.py:1478
+#, python-format
+msgid "Could not set mls fields in file context for %s"
+msgstr "Tidak dapat menetapkan medan mls dalam konteks fail untuk %s"
+
+#: ../semanage/seobject.py:1436
+msgid "Invalid file specification"
+msgstr ""
+
+#: ../semanage/seobject.py:1453 ../semanage/seobject.py:1458
+#: ../semanage/seobject.py:1510 ../semanage/seobject.py:1586
+#: ../semanage/seobject.py:1590
+#, python-format
+msgid "Could not check if file context for %s is defined"
+msgstr "Tidak dapat memeriksa jika konteks fail untuk %s telah dinyatakan"
+
+#: ../semanage/seobject.py:1461
+#, python-format
+msgid "File context for %s already defined"
+msgstr "Konteks fail %s telah dinyatakan"
+
+#: ../semanage/seobject.py:1465
+#, python-format
+msgid "Could not create file context for %s"
+msgstr "Tidak dapat mencipta konteks fail untuk %s"
+
+#: ../semanage/seobject.py:1473
+#, python-format
+msgid "Could not set type in file context for %s"
+msgstr "Tidak dapat menetapkan jenis dalam konteks fail untuk %s"
+
+#: ../semanage/seobject.py:1481 ../semanage/seobject.py:1538
+#: ../semanage/seobject.py:1542
+#, python-format
+msgid "Could not set file context for %s"
+msgstr "Tidak dapat menetapkan konteks fail untuk %s"
+
+#: ../semanage/seobject.py:1487
+#, python-format
+msgid "Could not add file context for %s"
+msgstr "Tidak dapat menambah konteks fail untuk %s"
+
+#: ../semanage/seobject.py:1501
+msgid "Requires setype, serange or seuser"
+msgstr "Memerlukan setype, serange atau seuser"
+
+#: ../semanage/seobject.py:1514 ../semanage/seobject.py:1594
+#, python-format
+msgid "File context for %s is not defined"
+msgstr "Konteks fail %s tidak dinyatakan"
+
+#: ../semanage/seobject.py:1520
+#, python-format
+msgid "Could not query file context for %s"
+msgstr "Tidak dapat menyoal konteks fail untuk %s"
+
+#: ../semanage/seobject.py:1546
+#, python-format
+msgid "Could not modify file context for %s"
+msgstr "Tidak dapat mengubahsuai konteks fail untuk %s"
+
+#: ../semanage/seobject.py:1560
+#, fuzzy
+msgid "Could not list the file contexts"
+msgstr "Tidak dapat menyenaraikan konteks fail"
+
+#: ../semanage/seobject.py:1574
+#, fuzzy, python-format
+msgid "Could not delete the file context %s"
+msgstr "Tidak dapat memadam konteks fail untuk %s"
+
+#: ../semanage/seobject.py:1592
+#, python-format
+msgid "File context for %s is defined in policy, cannot be deleted"
+msgstr ""
+
+#: ../semanage/seobject.py:1598
+#, python-format
+msgid "Could not delete file context for %s"
+msgstr "Tidak dapat memadam konteks fail untuk %s"
+
+#: ../semanage/seobject.py:1613
+msgid "Could not list file contexts"
+msgstr "Tidak dapat menyenaraikan konteks fail"
+
+#: ../semanage/seobject.py:1617
+msgid "Could not list local file contexts"
+msgstr "Tidak dapat menyenaraikan konteks fail tempatan"
+
+#: ../semanage/seobject.py:1636
+msgid "SELinux fcontext"
+msgstr ""
+
+#: ../semanage/seobject.py:1636
+msgid "type"
+msgstr ""
+
+#: ../semanage/seobject.py:1666 ../semanage/seobject.py:1717
+#: ../semanage/seobject.py:1723
+#, python-format
+msgid "Could not check if boolean %s is defined"
+msgstr "Tidak dapat memeriksa sama ada boolean %s dinyatakan"
+
+#: ../semanage/seobject.py:1668 ../semanage/seobject.py:1719
+#, python-format
+msgid "Boolean %s is not defined"
+msgstr "Boolean %s tidak dinyatakan"
+
+#: ../semanage/seobject.py:1672
+#, python-format
+msgid "Could not query file context %s"
+msgstr "Tidak dapat menyoal fail konteks %s"
+
+#: ../semanage/seobject.py:1677
+#, fuzzy, python-format
+msgid "You must specify one of the following values: %s"
+msgstr "Anda mesti nyatakan peranti."
+
+#: ../semanage/seobject.py:1681
+#, fuzzy, python-format
+msgid "Could not set active value of boolean %s"
+msgstr "Tidak dapat memadam boolean %s"
+
+#: ../semanage/seobject.py:1684
+#, python-format
+msgid "Could not modify boolean %s"
+msgstr "Tidak dapat mengubah boolean %s"
+
+#: ../semanage/seobject.py:1702
+#, python-format
+msgid "Bad format %s: Record %s"
+msgstr ""
+
+#: ../semanage/seobject.py:1725
+#, python-format
+msgid "Boolean %s is defined in policy, cannot be deleted"
+msgstr "Boolean %s dinyatakan dalam polisi, tidak boleh dipadam"
+
+#: ../semanage/seobject.py:1729
+#, python-format
+msgid "Could not delete boolean %s"
+msgstr "Tidak dapat memadam boolean %s"
+
+#: ../semanage/seobject.py:1741 ../semanage/seobject.py:1758
+msgid "Could not list booleans"
+msgstr "Tidak dapat menyenaraikan boolean"
+
+#: ../semanage/seobject.py:1777
+msgid "unknown"
+msgstr ""
+
+#: ../semanage/seobject.py:1780
+msgid "off"
+msgstr ""
+
+#: ../semanage/seobject.py:1780
+msgid "on"
+msgstr ""
+
+#: ../semanage/seobject.py:1789
+msgid "SELinux boolean"
+msgstr ""
+
+#: ../semanage/seobject.py:1789
+msgid "Description"
+msgstr ""
+
+#: ../newrole/newrole.c:198
+#, fuzzy, c-format
+msgid "failed to set PAM_TTY\n"
+msgstr "PAM: gagal untuk melepaskan pengesah."
+
+#: ../newrole/newrole.c:287
+#, c-format
+msgid "newrole: service name configuration hashtable overflow\n"
+msgstr ""
+
+#: ../newrole/newrole.c:297
+#, c-format
+msgid "newrole:  %s:  error on line %lu.\n"
+msgstr ""
+
+#: ../newrole/newrole.c:436
+#, c-format
+msgid "cannot find valid entry in the passwd file.\n"
+msgstr ""
+
+#: ../newrole/newrole.c:447
+#, fuzzy, c-format
+msgid "Out of memory!\n"
+msgstr "Memori tidak cukup."
+
+#: ../newrole/newrole.c:452
+#, fuzzy, c-format
+msgid "Error!  Shell is not valid.\n"
+msgstr "Ralat - nama kumpulan volum %s adalah tidak sah."
+
+#: ../newrole/newrole.c:509
+#, fuzzy, c-format
+msgid "Unable to clear environment\n"
+msgstr "RALAT: Tidak boleh menginitialisasikan persekitaran grafikal."
+
+#: ../newrole/newrole.c:556 ../newrole/newrole.c:634
+#, fuzzy, c-format
+msgid "Error initializing capabilities, aborting.\n"
+msgstr "ralat menetapkan sifat terminal"
+
+#: ../newrole/newrole.c:564 ../newrole/newrole.c:640
+#, fuzzy, c-format
+msgid "Error setting capabilities, aborting\n"
+msgstr "ralat menetapkan sifat terminal"
+
+#: ../newrole/newrole.c:570
+#, fuzzy, c-format
+msgid "Error setting KEEPCAPS, aborting\n"
+msgstr "ralat menetapkan sifat terminal"
+
+#: ../newrole/newrole.c:578 ../newrole/newrole.c:652
+#, c-format
+msgid "Error dropping capabilities, aborting\n"
+msgstr ""
+
+#: ../newrole/newrole.c:584 ../newrole/newrole.c:683
+#, c-format
+msgid "Error changing uid, aborting.\n"
+msgstr ""
+
+#: ../newrole/newrole.c:590 ../newrole/newrole.c:646 ../newrole/newrole.c:678
+#, c-format
+msgid "Error resetting KEEPCAPS, aborting\n"
+msgstr ""
+
+#: ../newrole/newrole.c:597
+#, c-format
+msgid "Error dropping SETUID capability, aborting\n"
+msgstr ""
+
+#: ../newrole/newrole.c:602 ../newrole/newrole.c:657
+#, fuzzy, c-format
+msgid "Error freeing caps\n"
+msgstr "Amaran: Cap dikunci"
+
+#: ../newrole/newrole.c:701
+#, c-format
+msgid "Error connecting to audit system.\n"
+msgstr ""
+
+#: ../newrole/newrole.c:707
+#, fuzzy, c-format
+msgid "Error allocating memory.\n"
+msgstr "Ralat membaca maklumat memori sistem:"
+
+#: ../newrole/newrole.c:714
+#, fuzzy, c-format
+msgid "Error sending audit message.\n"
+msgstr "Terdapat ralat RPM.  Mesejnya ialah:\n"
+
+#: ../newrole/newrole.c:758 ../newrole/newrole.c:1122
+#, c-format
+msgid "Could not determine enforcing mode.\n"
+msgstr ""
+
+#: ../newrole/newrole.c:765
+#, fuzzy, c-format
+msgid "Error!  Could not open %s.\n"
+msgstr "Tidak Dapat Membuka Pakej"
+
+#: ../newrole/newrole.c:771
+#, c-format
+msgid "%s!  Could not get current context for %s, not relabeling tty.\n"
+msgstr ""
+
+#: ../newrole/newrole.c:781
+#, c-format
+msgid "%s!  Could not get new context for %s, not relabeling tty.\n"
+msgstr ""
+
+#: ../newrole/newrole.c:791
+#, fuzzy, c-format
+msgid "%s!  Could not set new context for %s\n"
+msgstr "Tidak dapat menetapkan konteks fail untuk %s"
+
+#: ../newrole/newrole.c:838
+#, fuzzy, c-format
+msgid "%s changed labels.\n"
+msgstr "Label Berulang"
+
+#: ../newrole/newrole.c:844
+#, fuzzy, c-format
+msgid "Warning! Could not restore context for %s\n"
+msgstr "Tidak dapat menyoal konteks fail untuk %s"
+
+#: ../newrole/newrole.c:901
+#, fuzzy, c-format
+msgid "Error: multiple roles specified\n"
+msgstr "banyak opsyen -l or -t dinyatakan"
+
+#: ../newrole/newrole.c:909
+#, fuzzy, c-format
+msgid "Error: multiple types specified\n"
+msgstr "banyak opsyen -l or -t dinyatakan"
+
+#: ../newrole/newrole.c:916
+#, c-format
+msgid "Sorry, -l may be used with SELinux MLS support.\n"
+msgstr ""
+
+#: ../newrole/newrole.c:921
+#, fuzzy, c-format
+msgid "Error: multiple levels specified\n"
+msgstr "banyak opsyen -l or -t dinyatakan"
+
+#: ../newrole/newrole.c:931
+#, c-format
+msgid "Error: you are not allowed to change levels on a non secure terminal \n"
+msgstr ""
+
+#: ../newrole/newrole.c:957
+#, fuzzy, c-format
+msgid "Couldn't get default type.\n"
+msgstr "tidak dapat menetapkan konteks keselamatan bagi `%s': %s"
+
+#: ../newrole/newrole.c:967
+#, fuzzy, c-format
+msgid "failed to get new context.\n"
+msgstr ""
+"Gagal menghantar konteks alchemist: \n"
+"%s"
+
+#: ../newrole/newrole.c:974
+#, fuzzy, c-format
+msgid "failed to set new role %s\n"
+msgstr "Gagal menyimpan direktori baru dalam %s"
+
+#: ../newrole/newrole.c:981
+#, fuzzy, c-format
+msgid "failed to set new type %s\n"
+msgstr "Gagal menyimpan direktori baru dalam %s"
+
+#: ../newrole/newrole.c:991
+#, c-format
+msgid "failed to build new range with level %s\n"
+msgstr ""
+
+#: ../newrole/newrole.c:996
+#, fuzzy, c-format
+msgid "failed to set new range %s\n"
+msgstr "Gagal menyimpan direktori baru dalam %s"
+
+#: ../newrole/newrole.c:1004
+#, c-format
+msgid "failed to convert new context to string\n"
+msgstr ""
+
+#: ../newrole/newrole.c:1009
+#, fuzzy, c-format
+msgid "%s is not a valid context\n"
+msgstr "%s adalah nama hos yang tidak sah"
+
+#: ../newrole/newrole.c:1016
+#, c-format
+msgid "Unable to allocate memory for new_context"
+msgstr ""
+
+#: ../newrole/newrole.c:1042
+#, c-format
+msgid "Unable to obtain empty signal set\n"
+msgstr ""
+
+#: ../newrole/newrole.c:1050
+#, fuzzy, c-format
+msgid "Unable to set SIGHUP handler\n"
+msgstr "%s: tidak dapat menetapkan lengahan kegagalan: %s\n"
+
+#: ../newrole/newrole.c:1116
+#, c-format
+msgid "Sorry, newrole may be used only on a SELinux kernel.\n"
+msgstr ""
+
+#: ../newrole/newrole.c:1133
+#, fuzzy, c-format
+msgid "failed to get old_context.\n"
+msgstr ""
+"Gagal menghantar konteks alchemist: \n"
+"%s"
+
+#: ../newrole/newrole.c:1140
+#, fuzzy, c-format
+msgid "Warning!  Could not retrieve tty information.\n"
+msgstr "Tidak dapat menyoal konteks fail untuk %s"
+
+#: ../newrole/newrole.c:1161
+#, c-format
+msgid "error on reading PAM service configuration.\n"
+msgstr ""
+
+#: ../newrole/newrole.c:1196
+#, fuzzy, c-format
+msgid "newrole: incorrect password for %s\n"
+msgstr "Sila tetapkan katalaluan bagi %s."
+
+#: ../newrole/newrole.c:1223
+#, fuzzy, c-format
+msgid "newrole: failure forking: %s"
+msgstr "Kegagalan rangkaian hos %1"
+
+#: ../newrole/newrole.c:1226 ../newrole/newrole.c:1249
+#, c-format
+msgid "Unable to restore tty label...\n"
+msgstr ""
+
+#: ../newrole/newrole.c:1228 ../newrole/newrole.c:1255
+#, fuzzy, c-format
+msgid "Failed to close tty properly\n"
+msgstr "Gagal menyimpan direktori baru dalam %s"
+
+#: ../newrole/newrole.c:1287
+#, fuzzy, c-format
+msgid "Could not close descriptors.\n"
+msgstr "Tidak dapat memperuntukkan partisyen"
+
+#: ../newrole/newrole.c:1314
+#, fuzzy, c-format
+msgid "Error allocating shell's argv0.\n"
+msgstr "Ralat membaca maklumat memori sistem:"
+
+#: ../newrole/newrole.c:1346
+#, fuzzy, c-format
+msgid "Unable to restore the environment, aborting\n"
+msgstr "tidak dapat mengambil pakej asal, batal"
+
+#: ../newrole/newrole.c:1357
+#, fuzzy
+msgid "failed to exec shell\n"
+msgstr "Gagal untuk melekapkan partisyen."
+
+#: ../load_policy/load_policy.c:22
+#, fuzzy, c-format
+msgid "usage:  %s [-qi]\n"
+msgstr "penggunaan: %s [pilihan]"
+
+#: ../load_policy/load_policy.c:71
+#, c-format
+msgid "%s:  Policy is already loaded and initial load requested\n"
+msgstr ""
+
+#: ../load_policy/load_policy.c:80
+#, fuzzy, c-format
+msgid "%s:  Can't load policy and enforcing mode requested:  %s\n"
+msgstr "Tentutetap Polisi SELinux"
+
+#: ../load_policy/load_policy.c:90
+#, fuzzy, c-format
+msgid "%s:  Can't load policy:  %s\n"
+msgstr "Tentutetap Polisi SELinux"
+
+#: ../scripts/chcat:92 ../scripts/chcat:169
+#, fuzzy
+msgid "Requires at least one category"
+msgstr "Peranti RAID jenis  %s memerlukan sekurang-kurangnya %s ahli."
+
+#: ../scripts/chcat:106 ../scripts/chcat:183
+#, c-format
+msgid "Can not modify sensitivity levels using '+' on %s"
+msgstr ""
+
+#: ../scripts/chcat:110
+#, fuzzy, c-format
+msgid "%s is already in %s"
+msgstr "gid %s telah digunakan."
+
+#: ../scripts/chcat:188 ../scripts/chcat:198
+#, fuzzy, c-format
+msgid "%s is not in %s"
+msgstr "%s tidak dilaksanakan.\n"
+
+#: ../scripts/chcat:267 ../scripts/chcat:272
+msgid "Can not combine +/- with other types of categories"
+msgstr ""
+
+#: ../scripts/chcat:319
+#, fuzzy
+msgid "Can not have multiple sensitivities"
+msgstr "Profil \"%s\" tidak dapat dipadam!"
+
+#: ../scripts/chcat:325
+#, fuzzy, c-format
+msgid "Usage %s CATEGORY File ..."
+msgstr "Penggunaan: %s [PILIHAN]... FAIL\n"
+
+#: ../scripts/chcat:326
+#, fuzzy, c-format
+msgid "Usage %s -l CATEGORY user ..."
+msgstr "Nama Pengguna Teruk"
+
+#: ../scripts/chcat:327
+#, fuzzy, c-format
+msgid "Usage %s [[+|-]CATEGORY],...]q File ..."
+msgstr "Penggunaan: %s [PILIHAN]... FAIL\n"
+
+#: ../scripts/chcat:328
+#, fuzzy, c-format
+msgid "Usage %s -l [[+|-]CATEGORY],...]q user ..."
+msgstr "Nama Pengguna Teruk"
+
+#: ../scripts/chcat:329
+#, fuzzy, c-format
+msgid "Usage %s -d File ..."
+msgstr "Penggunaan: %s [PILIHAN]... FAIL\n"
+
+#: ../scripts/chcat:330
+#, fuzzy, c-format
+msgid "Usage %s -l -d user ..."
+msgstr "Edit Pengguna"
+
+#: ../scripts/chcat:331
+#, fuzzy, c-format
+msgid "Usage %s -L"
+msgstr "Penggunaan: %s"
+
+#: ../scripts/chcat:332
+#, fuzzy, c-format
+msgid "Usage %s -L -l user"
+msgstr "Edit Pengguna"
+
+#: ../scripts/chcat:333
+msgid "Use -- to end option list.  For example"
+msgstr ""
+
+#: ../scripts/chcat:334
+msgid "chcat -- -CompanyConfidential /docs/businessplan.odt"
+msgstr ""
+
+#: ../scripts/chcat:335
+msgid "chcat -l +CompanyConfidential juser"
+msgstr ""
+
+#: ../scripts/chcat:399
+#, fuzzy, c-format
+msgid "Options Error %s "
+msgstr "Ralat Pilihan: %s"
+
+#, fuzzy
+#~ msgid ""
+#~ "Selinux\n"
+#~ "File Type"
+#~ msgstr "Jenis SELinux diperlukan"
+
+#, fuzzy
+#~ msgid "Login '%s' is required"
+#~ msgstr "Jenis SELinux diperlukan"
+
+#, fuzzy
+#~ msgid "Sends audit messages"
+#~ msgstr "Terdapat ralat RPM.  Mesejnya ialah:\n"
+
+#, fuzzy
+#~ msgid "You must select a user"
+#~ msgstr "Anda mesti nyatakan peranti."
+
+#, fuzzy
+#~ msgid "You must enter a name"
+#~ msgstr "Anda mesti nyatakan peranti."
+
+#, fuzzy
+#~ msgid "You must enter a executable"
+#~ msgstr "Anda mesti nyatakan peranti."
+
+#, fuzzy
+#~ msgid "Interface file"
+#~ msgstr "Antaramuka %s tidak dinyatakan"
+
+#, fuzzy
+#~ msgid "File Contexts file"
+#~ msgstr "Konteks fail %s tidak dinyatakan"
+
+#, fuzzy
+#~ msgid "SELinux Service Protection"
+#~ msgstr "Jenis terminal `%s' tidak ditakrifkan."
+
+#, fuzzy
+#~ msgid "Compatibility"
+#~ msgstr "Menghimpun polisi"
+
+#, fuzzy
+#~ msgid "SASL authentication server"
+#~ msgstr "Pengesahan gagal"
+
+#, fuzzy
+#~ msgid "SELinux Type"
+#~ msgstr "Jenis SELinux diperlukan"
+
+#, fuzzy
+#~ msgid "Add SELinux User"
+#~ msgstr "Pengguna %s tidak dapat dipadam: %s.\n"
+
+#, fuzzy
+#~ msgid "Modify SELinux User Mapping"
+#~ msgstr "Pengguna %s tidak dapat dipadam: %s.\n"
+
+#, fuzzy
+#~ msgid "Delete SELinux User Mapping"
+#~ msgstr "Pengguna %s tidak dapat dipadam: %s.\n"
+
+#, fuzzy
+#~ msgid "Modify SELinux User"
+#~ msgstr "Pengguna %s tidak dapat dipadam: %s.\n"
+
+#, fuzzy
+#~ msgid "Load policy module"
+#~ msgstr "gagal baca fail menu:%s"
+
+#, fuzzy
+#~ msgid "SELinux user '%s' is required"
+#~ msgstr "Jenis SELinux diperlukan"
+
+#~ msgid "Requires value"
+#~ msgstr "Memerlukan nilai"
+
+#, fuzzy
+#~ msgid "Invalid prefix %s"
+#~ msgstr "prefix tidak dikenali: %s"
+
+#, fuzzy
+#~ msgid "Requires 2 or more arguments"
+#~ msgstr "64 MB atau lebih"
+
+#, fuzzy
+#~ msgid "%s not defined"
+#~ msgstr "tidak ditakrif"
+
+#, fuzzy
+#~ msgid "%s not valid for %s objects\n"
+#~ msgstr "$0: konfigurasi bagi ${1} tidak dijumpai."
+
+#, fuzzy
+#~ msgid "Invalid value %s"
+#~ msgstr "Nilai tidak sah"
+
+#~ msgid "Options Error: %s "
+#~ msgstr "Ralat Pilihan: %s"

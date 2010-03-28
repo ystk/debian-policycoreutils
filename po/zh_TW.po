@@ -1,0 +1,2954 @@
+# translation of policycoreutils.HEAD.po to Traditional Chinese
+# translation of zh_TW.po to
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+#
+# Chester Cheng <ccheng@redhat.com>, 2006.
+# Chester Cheng <ccheng@brisbane.redhat.com>, 2006.
+# Terry Chuang <tchuang@redhat.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: policycoreutils.HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-06-24 10:53-0400\n"
+"PO-Revision-Date: 2008-09-09 11:34+1000\n"
+"Last-Translator: Terry Chuang <tchuang@redhat.com>\n"
+"Language-Team: Traditional Chinese <zh@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: ../run_init/run_init.c:67
+msgid ""
+"USAGE: run_init <script> <args ...>\n"
+"  where: <script> is the name of the init script to run,\n"
+"         <args ...> are the arguments to that script."
+msgstr ""
+"USAGE: run_init <script> <args ...>\n"
+"  其中：<script> 是要執行的 init 程序檔，\n"
+"         <args ...> 是程序檔的參數。"
+
+#: ../run_init/run_init.c:126 ../newrole/newrole.c:1187
+#, c-format
+msgid "failed to initialize PAM\n"
+msgstr "初始化 PAM 失敗\n"
+
+#: ../run_init/run_init.c:139
+#, c-format
+msgid "failed to get account information\n"
+msgstr "取得帳號資訊時失敗\n"
+
+#: ../run_init/run_init.c:162 ../newrole/newrole.c:338
+msgid "Password:"
+msgstr "密碼："
+
+#: ../run_init/run_init.c:197 ../newrole/newrole.c:363
+#, c-format
+msgid "Cannot find your entry in the shadow passwd file.\n"
+msgstr "在 shadow passwd 檔案中，找不到您的紀錄。\n"
+
+#: ../run_init/run_init.c:203 ../newrole/newrole.c:370
+#, c-format
+msgid "getpass cannot open /dev/tty\n"
+msgstr "getpass 無法開啟 /dev/tty\n"
+
+#: ../run_init/run_init.c:275
+#, c-format
+msgid "run_init: incorrect password for %s\n"
+msgstr "run_init：給 %s 的密碼不正確\n"
+
+#: ../run_init/run_init.c:309
+#, c-format
+msgid "Could not open file %s\n"
+msgstr "無法開啟 %s 檔案\n"
+
+#: ../run_init/run_init.c:336
+#, c-format
+msgid "No context in file %s\n"
+msgstr "檔案 %s 中沒有內文\n"
+
+#: ../run_init/run_init.c:361
+#, c-format
+msgid "Sorry, run_init may be used only on a SELinux kernel.\n"
+msgstr "對不起，run_init 可能只能用在 SELinux 的核心上。\n"
+
+#: ../run_init/run_init.c:380
+#, c-format
+msgid "authentication failed.\n"
+msgstr "認證失敗。\n"
+
+#: ../run_init/run_init.c:405 ../newrole/newrole.c:1321
+#, c-format
+msgid "Could not set exec context to %s.\n"
+msgstr "無法將 exec 內文設定至 %s。\n"
+
+#: ../audit2allow/audit2allow:217
+msgid "******************** IMPORTANT ***********************\n"
+msgstr "******************** 重要 ***********************\n"
+
+#: ../audit2allow/audit2allow:218
+msgid "To make this policy package active, execute:"
+msgstr "若要啟用此政策套件，請執行："
+
+#: ../semanage/seobject.py:48
+msgid "Could not create semanage handle"
+msgstr "無法建立 semanage 處理器"
+
+#: ../semanage/seobject.py:55
+msgid "SELinux policy is not managed or store cannot be accessed."
+msgstr "SELinux 政策並不受管理，或無法存取 store。"
+
+#: ../semanage/seobject.py:60
+msgid "Cannot read policy store."
+msgstr "無法讀取政策 store。"
+
+#: ../semanage/seobject.py:65
+msgid "Could not establish semanage connection"
+msgstr "無法建立 semanage 連線"
+
+#: ../semanage/seobject.py:70
+#, fuzzy
+msgid "Could not test MLS enabled status"
+msgstr "無法為 %s 設定 MLS 範圍"
+
+#: ../semanage/seobject.py:142 ../semanage/seobject.py:146
+msgid "global"
+msgstr "全域"
+
+#: ../semanage/seobject.py:206
+#, python-format
+msgid "Unable to open %s: translations not supported on non-MLS machines: %s"
+msgstr "無法開啟 %s：非 MLS 的機器上並不支援轉譯：%s"
+
+#: ../semanage/seobject.py:239
+msgid "Level"
+msgstr "等級"
+
+#: ../semanage/seobject.py:239
+msgid "Translation"
+msgstr "轉譯"
+
+#: ../semanage/seobject.py:247 ../semanage/seobject.py:261
+#, python-format
+msgid "Translations can not contain spaces '%s' "
+msgstr "轉譯不能包含空格「%s」"
+
+#: ../semanage/seobject.py:250
+#, python-format
+msgid "Invalid Level '%s' "
+msgstr "無效的等級「%s」"
+
+#: ../semanage/seobject.py:253
+#, python-format
+msgid "%s already defined in translations"
+msgstr "%s 已經在轉譯中定義"
+
+#: ../semanage/seobject.py:265
+#, python-format
+msgid "%s not defined in translations"
+msgstr "%s 在轉譯中未定義"
+
+#: ../semanage/seobject.py:290
+msgid "Not yet implemented"
+msgstr "未實施"
+
+#: ../semanage/seobject.py:294
+msgid "Semanage transaction already in progress"
+msgstr ""
+
+#: ../semanage/seobject.py:303
+msgid "Could not start semanage transaction"
+msgstr "無法開始 semanage 交易"
+
+#: ../semanage/seobject.py:309
+msgid "Could not commit semanage transaction"
+msgstr "無法提交 semanage 交易"
+
+#: ../semanage/seobject.py:313
+msgid "Semanage transaction not in progress"
+msgstr ""
+
+#: ../semanage/seobject.py:325
+msgid "Could not list SELinux modules"
+msgstr "無法列出 SELinux 模組"
+
+#: ../semanage/seobject.py:336
+msgid "Permissive Types"
+msgstr "寬鬆型"
+
+#: ../semanage/seobject.py:378
+#, python-format
+msgid "Could not set permissive domain %s (module installation failed)"
+msgstr "無法設定寬鬆型網域 %s（模組安裝失敗）"
+
+#: ../semanage/seobject.py:384
+#, python-format
+msgid "Could not remove permissive domain %s (remove failed)"
+msgstr "無法移除寬鬆型網域 %s（移除失敗）"
+
+#: ../semanage/seobject.py:410 ../semanage/seobject.py:470
+#: ../semanage/seobject.py:516 ../semanage/seobject.py:598
+#: ../semanage/seobject.py:665 ../semanage/seobject.py:723
+#: ../semanage/seobject.py:933 ../semanage/seobject.py:1506
+#: ../semanage/seobject.py:1570 ../semanage/seobject.py:1582
+#: ../semanage/seobject.py:1663 ../semanage/seobject.py:1714
+#, python-format
+msgid "Could not create a key for %s"
+msgstr "無法為 %s 建立金鑰"
+
+#: ../semanage/seobject.py:414 ../semanage/seobject.py:474
+#: ../semanage/seobject.py:520 ../semanage/seobject.py:526
+#, python-format
+msgid "Could not check if login mapping for %s is defined"
+msgstr "無法檢查 %s 的登入對映是否已經定義"
+
+#: ../semanage/seobject.py:416
+#, python-format
+msgid "Login mapping for %s is already defined"
+msgstr "%s 的登入對映已經定義"
+
+#: ../semanage/seobject.py:421
+#, python-format
+msgid "Linux Group %s does not exist"
+msgstr "Linux 群組 %s 不存在"
+
+#: ../semanage/seobject.py:426
+#, python-format
+msgid "Linux User %s does not exist"
+msgstr "Linux 使用者 %s 不存在"
+
+#: ../semanage/seobject.py:430
+#, python-format
+msgid "Could not create login mapping for %s"
+msgstr "無法為 %s 建立登入對映"
+
+#: ../semanage/seobject.py:434 ../semanage/seobject.py:612
+#, python-format
+msgid "Could not set name for %s"
+msgstr "無法為 %s 設定名稱"
+
+#: ../semanage/seobject.py:439 ../semanage/seobject.py:622
+#, python-format
+msgid "Could not set MLS range for %s"
+msgstr "無法為 %s 設定 MLS 範圍"
+
+#: ../semanage/seobject.py:443
+#, python-format
+msgid "Could not set SELinux user for %s"
+msgstr "無法為 %s 設定 SELinux 使用者"
+
+#: ../semanage/seobject.py:447
+#, python-format
+msgid "Could not add login mapping for %s"
+msgstr "無法為 %s 新增登入對映"
+
+#: ../semanage/seobject.py:459 ../semanage/seobject.py:462
+msgid "add SELinux user mapping"
+msgstr "新增 SELinux 使用者對映"
+
+#: ../semanage/seobject.py:466
+msgid "Requires seuser or serange"
+msgstr "需要 seuser 或 serange"
+
+#: ../semanage/seobject.py:476 ../semanage/seobject.py:522
+#, python-format
+msgid "Login mapping for %s is not defined"
+msgstr "%s 的登入對映並未定義"
+
+#: ../semanage/seobject.py:480
+#, python-format
+msgid "Could not query seuser for %s"
+msgstr "無法為 %s 查詢 seuser"
+
+#: ../semanage/seobject.py:496
+#, python-format
+msgid "Could not modify login mapping for %s"
+msgstr "無法為 %s 修改登入對映"
+
+#: ../semanage/seobject.py:528
+#, python-format
+msgid "Login mapping for %s is defined in policy, cannot be deleted"
+msgstr "%s 的登入對映定義在政策中，無法刪除"
+
+#: ../semanage/seobject.py:532
+#, python-format
+msgid "Could not delete login mapping for %s"
+msgstr "無法為 %s 刪除登入對映"
+
+#: ../semanage/seobject.py:555
+msgid "Could not list login mappings"
+msgstr "無法列出登入對映"
+
+#: ../semanage/seobject.py:568 ../semanage/seobject.py:573
+msgid "Login Name"
+msgstr "登錄名稱"
+
+#: ../semanage/seobject.py:568 ../semanage/seobject.py:573
+#: ../semanage/seobject.py:782 ../semanage/seobject.py:787
+msgid "SELinux User"
+msgstr "SELinux 使用者"
+
+#: ../semanage/seobject.py:568
+msgid "MLS/MCS Range"
+msgstr "MLS/MCS 範圍"
+
+#: ../semanage/seobject.py:594
+#, python-format
+msgid "You must add at least one role for %s"
+msgstr "您必須為 %s 新增至少一個角色"
+
+#: ../semanage/seobject.py:602 ../semanage/seobject.py:669
+#: ../semanage/seobject.py:727 ../semanage/seobject.py:733
+#, python-format
+msgid "Could not check if SELinux user %s is defined"
+msgstr "無法檢查 SELinux 使用者 %s 是否已經定義"
+
+#: ../semanage/seobject.py:604
+#, python-format
+msgid "SELinux user %s is already defined"
+msgstr "SELinux 使用者 %s 已經定義"
+
+#: ../semanage/seobject.py:608
+#, python-format
+msgid "Could not create SELinux user for %s"
+msgstr "無法為 %s 建立 SELinux 使用者"
+
+#: ../semanage/seobject.py:617
+#, python-format
+msgid "Could not add role %s for %s"
+msgstr "無法新增 %s 角色給 %s"
+
+#: ../semanage/seobject.py:626
+#, python-format
+msgid "Could not set MLS level for %s"
+msgstr "無法為 %s 設定 MLS 等級"
+
+#: ../semanage/seobject.py:629
+#, python-format
+msgid "Could not add prefix %s for %s"
+msgstr "無法新增前綴 %s 到 %s"
+
+#: ../semanage/seobject.py:632
+#, python-format
+msgid "Could not extract key for %s"
+msgstr "無法為 %s 擷取金鑰"
+
+#: ../semanage/seobject.py:636
+#, python-format
+msgid "Could not add SELinux user %s"
+msgstr "無法新增 SELinux 使用者 %s"
+
+#: ../semanage/seobject.py:659
+msgid "Requires prefix, roles, level or range"
+msgstr "需要前綴、角色、等級或範圍"
+
+#: ../semanage/seobject.py:661
+msgid "Requires prefix or roles"
+msgstr "需要前綴或角色"
+
+#: ../semanage/seobject.py:671 ../semanage/seobject.py:729
+#, python-format
+msgid "SELinux user %s is not defined"
+msgstr "SELinux 使用者 %s 未定義"
+
+#: ../semanage/seobject.py:675
+#, python-format
+msgid "Could not query user for %s"
+msgstr "無法為 %s 查詢使用者"
+
+#: ../semanage/seobject.py:702
+#, python-format
+msgid "Could not modify SELinux user %s"
+msgstr "無法修改 SELinux 使用者 %s"
+
+#: ../semanage/seobject.py:735
+#, python-format
+msgid "SELinux user %s is defined in policy, cannot be deleted"
+msgstr "SELinux 使用者 %s 定義在政策中，無法刪除"
+
+#: ../semanage/seobject.py:739
+#, python-format
+msgid "Could not delete SELinux user %s"
+msgstr "無法刪除 SELinux 使用者 %s"
+
+#: ../semanage/seobject.py:762
+msgid "Could not list SELinux users"
+msgstr "無法列出 SELinux 使用者"
+
+#: ../semanage/seobject.py:768
+#, python-format
+msgid "Could not list roles for user %s"
+msgstr "無法列出使用者 %s 的角色"
+
+#: ../semanage/seobject.py:781
+msgid "Labeling"
+msgstr "標記"
+
+#: ../semanage/seobject.py:781
+msgid "MLS/"
+msgstr "MLS/"
+
+#: ../semanage/seobject.py:782
+msgid "Prefix"
+msgstr "前綴字元"
+
+#: ../semanage/seobject.py:782
+msgid "MCS Level"
+msgstr "MCS 等級"
+
+#: ../semanage/seobject.py:782
+msgid "MCS Range"
+msgstr "MCS 範圍"
+
+#: ../semanage/seobject.py:782 ../semanage/seobject.py:787
+msgid "SELinux Roles"
+msgstr "SELinux 角色"
+
+#: ../semanage/seobject.py:802
+msgid "Protocol udp or tcp is required"
+msgstr "需要 udp 或 tcp 通訊協定"
+
+#: ../semanage/seobject.py:804
+msgid "Port is required"
+msgstr "需要連接埠"
+
+#: ../semanage/seobject.py:815
+#, python-format
+msgid "Could not create a key for %s/%s"
+msgstr "無法為 %s/%s 建立金鑰"
+
+#: ../semanage/seobject.py:826
+msgid "Type is required"
+msgstr "需要類型"
+
+#: ../semanage/seobject.py:832 ../semanage/seobject.py:891
+#: ../semanage/seobject.py:946 ../semanage/seobject.py:952
+#, python-format
+msgid "Could not check if port %s/%s is defined"
+msgstr "無法檢查連接埠 %s/%s 是否已經定義"
+
+#: ../semanage/seobject.py:834
+#, python-format
+msgid "Port %s/%s already defined"
+msgstr "連接埠 %s/%s 已經定義"
+
+#: ../semanage/seobject.py:838
+#, python-format
+msgid "Could not create port for %s/%s"
+msgstr "無法為 %s/%s 建立連接埠"
+
+#: ../semanage/seobject.py:844
+#, python-format
+msgid "Could not create context for %s/%s"
+msgstr "無法為 %s/%s 建立內文"
+
+#: ../semanage/seobject.py:848
+#, python-format
+msgid "Could not set user in port context for %s/%s"
+msgstr "無法為 %s/%s 的連接埠內文中，設定使用者"
+
+#: ../semanage/seobject.py:852
+#, python-format
+msgid "Could not set role in port context for %s/%s"
+msgstr "無法為 %s/%s 的連接埠內文中，設定角色"
+
+#: ../semanage/seobject.py:856
+#, python-format
+msgid "Could not set type in port context for %s/%s"
+msgstr "無法為 %s/%s 的連接埠內文中，設定類型"
+
+#: ../semanage/seobject.py:861
+#, python-format
+msgid "Could not set mls fields in port context for %s/%s"
+msgstr "無法為 %s/%s 的連接埠內文中，設定 mls 欄位"
+
+#: ../semanage/seobject.py:865
+#, python-format
+msgid "Could not set port context for %s/%s"
+msgstr "無法為 %s/%s 設定連接埠內文"
+
+#: ../semanage/seobject.py:869
+#, python-format
+msgid "Could not add port %s/%s"
+msgstr "無法新增連接埠 %s/%s"
+
+#: ../semanage/seobject.py:883 ../semanage/seobject.py:1129
+#: ../semanage/seobject.py:1317
+msgid "Requires setype or serange"
+msgstr "需要 setype 或 serange"
+
+#: ../semanage/seobject.py:885
+msgid "Requires setype"
+msgstr "需要 setype"
+
+#: ../semanage/seobject.py:893 ../semanage/seobject.py:948
+#, python-format
+msgid "Port %s/%s is not defined"
+msgstr "連接埠 %s/%s 未定義"
+
+#: ../semanage/seobject.py:897
+#, python-format
+msgid "Could not query port %s/%s"
+msgstr "無法查詢連接埠 %s/%s"
+
+#: ../semanage/seobject.py:908
+#, python-format
+msgid "Could not modify port %s/%s"
+msgstr "無法修改連接埠 %s/%s"
+
+#: ../semanage/seobject.py:921
+msgid "Could not list the ports"
+msgstr "無法列出連接埠"
+
+#: ../semanage/seobject.py:937
+#, python-format
+msgid "Could not delete the port %s"
+msgstr "無法刪除連接埠 %s"
+
+#: ../semanage/seobject.py:954
+#, python-format
+msgid "Port %s/%s is defined in policy, cannot be deleted"
+msgstr "連接埠 %s/%s 已經在政策中定義，無法刪除"
+
+#: ../semanage/seobject.py:958
+#, python-format
+msgid "Could not delete port %s/%s"
+msgstr "無法刪除連接埠 %s/%s"
+
+#: ../semanage/seobject.py:974 ../semanage/seobject.py:996
+msgid "Could not list ports"
+msgstr "無法列出連接埠"
+
+#: ../semanage/seobject.py:1017
+msgid "SELinux Port Type"
+msgstr "SELinux 連接埠類型"
+
+#: ../semanage/seobject.py:1017
+msgid "Proto"
+msgstr "Proto"
+
+#: ../semanage/seobject.py:1017
+msgid "Port Number"
+msgstr "埠號"
+
+#: ../semanage/seobject.py:1034 ../semanage/seobject.py:1116
+#: ../semanage/seobject.py:1166
+#, fuzzy
+msgid "Node Address is required"
+msgstr "需要連接埠"
+
+#: ../semanage/seobject.py:1037 ../semanage/seobject.py:1119
+#: ../semanage/seobject.py:1169
+#, fuzzy
+msgid "Node Netmask is required"
+msgstr "需要連接埠"
+
+#: ../semanage/seobject.py:1044 ../semanage/seobject.py:1125
+#: ../semanage/seobject.py:1176
+msgid "Unknown or missing protocol"
+msgstr ""
+
+#: ../semanage/seobject.py:1054 ../semanage/seobject.py:1256
+#: ../semanage/seobject.py:1445
+msgid "SELinux Type is required"
+msgstr "需要 SELinux 類型"
+
+#: ../semanage/seobject.py:1058 ../semanage/seobject.py:1133
+#: ../semanage/seobject.py:1180 ../semanage/seobject.py:1260
+#: ../semanage/seobject.py:1321 ../semanage/seobject.py:1355
+#: ../semanage/seobject.py:1449
+#, python-format
+msgid "Could not create key for %s"
+msgstr "無法為 %s 建立金鑰"
+
+#: ../semanage/seobject.py:1060 ../semanage/seobject.py:1137
+#: ../semanage/seobject.py:1184 ../semanage/seobject.py:1190
+#, fuzzy, python-format
+msgid "Could not check if addr %s is defined"
+msgstr "無法檢查連接埠 %s/%s 是否已經定義"
+
+#: ../semanage/seobject.py:1064
+#, fuzzy, python-format
+msgid "Addr %s already defined"
+msgstr "連接埠 %s/%s 已經定義"
+
+#: ../semanage/seobject.py:1068
+#, fuzzy, python-format
+msgid "Could not create addr for %s"
+msgstr "無法為 %s 建立金鑰"
+
+#: ../semanage/seobject.py:1073 ../semanage/seobject.py:1275
+#: ../semanage/seobject.py:1415
+#, python-format
+msgid "Could not create context for %s"
+msgstr "無法為 %s 建立內文"
+
+#: ../semanage/seobject.py:1077
+#, fuzzy, python-format
+msgid "Could not set mask for %s"
+msgstr "無法為 %s 設定名稱"
+
+#: ../semanage/seobject.py:1082
+#, fuzzy, python-format
+msgid "Could not set user in addr context for %s"
+msgstr "無法為 %s 的檔案內文設定使用者"
+
+#: ../semanage/seobject.py:1086
+#, fuzzy, python-format
+msgid "Could not set role in addr context for %s"
+msgstr "無法為 %s 的檔案內文設定角色"
+
+#: ../semanage/seobject.py:1090
+#, fuzzy, python-format
+msgid "Could not set type in addr context for %s"
+msgstr "無法為 %s 的檔案內文設定類型"
+
+#: ../semanage/seobject.py:1095
+#, fuzzy, python-format
+msgid "Could not set mls fields in addr context for %s"
+msgstr "無法為 %s 的檔案內文設定 mls 欄位"
+
+#: ../semanage/seobject.py:1099
+#, fuzzy, python-format
+msgid "Could not set addr context for %s"
+msgstr "無法為 %s 設定檔案內文"
+
+#: ../semanage/seobject.py:1103
+#, fuzzy, python-format
+msgid "Could not add addr %s"
+msgstr "無法新增連接埠 %s/%s"
+
+#: ../semanage/seobject.py:1139 ../semanage/seobject.py:1186
+#, fuzzy, python-format
+msgid "Addr %s is not defined"
+msgstr "連接埠 %s/%s 未定義"
+
+#: ../semanage/seobject.py:1143
+#, fuzzy, python-format
+msgid "Could not query addr %s"
+msgstr "無法查詢連接埠 %s/%s"
+
+#: ../semanage/seobject.py:1154
+#, fuzzy, python-format
+msgid "Could not modify addr %s"
+msgstr "無法修改連接埠 %s/%s"
+
+#: ../semanage/seobject.py:1192
+#, fuzzy, python-format
+msgid "Addr %s is defined in policy, cannot be deleted"
+msgstr "連接埠 %s/%s 已經在政策中定義，無法刪除"
+
+#: ../semanage/seobject.py:1196
+#, fuzzy, python-format
+msgid "Could not delete addr %s"
+msgstr "無法刪除連接埠 %s/%s"
+
+#: ../semanage/seobject.py:1212
+#, fuzzy
+msgid "Could not list addrs"
+msgstr "無法列出連接埠"
+
+#: ../semanage/seobject.py:1264 ../semanage/seobject.py:1325
+#: ../semanage/seobject.py:1359 ../semanage/seobject.py:1365
+#, python-format
+msgid "Could not check if interface %s is defined"
+msgstr "無法檢查介面 %s 是否已經定義"
+
+#: ../semanage/seobject.py:1266
+#, python-format
+msgid "Interface %s already defined"
+msgstr "介面 %s 已經定義"
+
+#: ../semanage/seobject.py:1270
+#, python-format
+msgid "Could not create interface for %s"
+msgstr "無法為 %s 建立介面"
+
+#: ../semanage/seobject.py:1279
+#, python-format
+msgid "Could not set user in interface context for %s"
+msgstr "無法為 %s 設定介面內文中的使用者"
+
+#: ../semanage/seobject.py:1283
+#, python-format
+msgid "Could not set role in interface context for %s"
+msgstr "無法為 %s 設定介面內文中的角色"
+
+#: ../semanage/seobject.py:1287
+#, python-format
+msgid "Could not set type in interface context for %s"
+msgstr "無法為 %s 設定介面內文中的類型"
+
+#: ../semanage/seobject.py:1292
+#, python-format
+msgid "Could not set mls fields in interface context for %s"
+msgstr "無法為 %s 設定介面內文中的 mls 欄位"
+
+#: ../semanage/seobject.py:1296
+#, python-format
+msgid "Could not set interface context for %s"
+msgstr "無法為 %s 設定介面內文"
+
+#: ../semanage/seobject.py:1300
+#, python-format
+msgid "Could not set message context for %s"
+msgstr "無法為 %s 設定訊息內文"
+
+#: ../semanage/seobject.py:1304
+#, python-format
+msgid "Could not add interface %s"
+msgstr "無法新增介面 %s"
+
+#: ../semanage/seobject.py:1327 ../semanage/seobject.py:1361
+#, python-format
+msgid "Interface %s is not defined"
+msgstr "介面 %s 未定義"
+
+#: ../semanage/seobject.py:1331
+#, python-format
+msgid "Could not query interface %s"
+msgstr "無法查詢介面 %s"
+
+#: ../semanage/seobject.py:1342
+#, python-format
+msgid "Could not modify interface %s"
+msgstr "無法修改介面 %s"
+
+#: ../semanage/seobject.py:1367
+#, python-format
+msgid "Interface %s is defined in policy, cannot be deleted"
+msgstr "介面 %s 定義在政策中，無法刪除"
+
+#: ../semanage/seobject.py:1371
+#, python-format
+msgid "Could not delete interface %s"
+msgstr "無法刪除介面 %s"
+
+#: ../semanage/seobject.py:1387
+msgid "Could not list interfaces"
+msgstr "無法列出介面"
+
+#: ../semanage/seobject.py:1397
+msgid "SELinux Interface"
+msgstr "SELinux 介面"
+
+#: ../semanage/seobject.py:1397 ../semanage/seobject.py:1636
+msgid "Context"
+msgstr "內文"
+
+#: ../semanage/seobject.py:1421
+#, python-format
+msgid "Could not set user in file context for %s"
+msgstr "無法為 %s 的檔案內文設定使用者"
+
+#: ../semanage/seobject.py:1425
+#, python-format
+msgid "Could not set role in file context for %s"
+msgstr "無法為 %s 的檔案內文設定角色"
+
+#: ../semanage/seobject.py:1430 ../semanage/seobject.py:1478
+#, python-format
+msgid "Could not set mls fields in file context for %s"
+msgstr "無法為 %s 的檔案內文設定 mls 欄位"
+
+#: ../semanage/seobject.py:1436
+msgid "Invalid file specification"
+msgstr "無效的檔案規格"
+
+#: ../semanage/seobject.py:1453 ../semanage/seobject.py:1458
+#: ../semanage/seobject.py:1510 ../semanage/seobject.py:1586
+#: ../semanage/seobject.py:1590
+#, python-format
+msgid "Could not check if file context for %s is defined"
+msgstr "無法檢查 %s 的檔案內文是否已經定義"
+
+#: ../semanage/seobject.py:1461
+#, python-format
+msgid "File context for %s already defined"
+msgstr "%s 的檔案內文已經定義"
+
+#: ../semanage/seobject.py:1465
+#, python-format
+msgid "Could not create file context for %s"
+msgstr "無法為 %s 建立檔案內文"
+
+#: ../semanage/seobject.py:1473
+#, python-format
+msgid "Could not set type in file context for %s"
+msgstr "無法為 %s 的檔案內文設定類型"
+
+#: ../semanage/seobject.py:1481 ../semanage/seobject.py:1538
+#: ../semanage/seobject.py:1542
+#, python-format
+msgid "Could not set file context for %s"
+msgstr "無法為 %s 設定檔案內文"
+
+#: ../semanage/seobject.py:1487
+#, python-format
+msgid "Could not add file context for %s"
+msgstr "無法為 %s 新增檔案內文"
+
+#: ../semanage/seobject.py:1501
+msgid "Requires setype, serange or seuser"
+msgstr "需要 setype、serange 或 seuser"
+
+#: ../semanage/seobject.py:1514 ../semanage/seobject.py:1594
+#, python-format
+msgid "File context for %s is not defined"
+msgstr "%s 的檔案內文未定義"
+
+#: ../semanage/seobject.py:1520
+#, python-format
+msgid "Could not query file context for %s"
+msgstr "無法為 %s 查詢檔案內文"
+
+#: ../semanage/seobject.py:1546
+#, python-format
+msgid "Could not modify file context for %s"
+msgstr "無法為 %s 修改檔案內文"
+
+#: ../semanage/seobject.py:1560
+msgid "Could not list the file contexts"
+msgstr "無法列出檔案內文"
+
+#: ../semanage/seobject.py:1574
+#, python-format
+msgid "Could not delete the file context %s"
+msgstr "無法刪除檔案內文 %s"
+
+#: ../semanage/seobject.py:1592
+#, python-format
+msgid "File context for %s is defined in policy, cannot be deleted"
+msgstr "%s 的檔案內文已經定義於政策中，無法刪除"
+
+#: ../semanage/seobject.py:1598
+#, python-format
+msgid "Could not delete file context for %s"
+msgstr "無法為 %s 刪除檔案內文"
+
+#: ../semanage/seobject.py:1613
+msgid "Could not list file contexts"
+msgstr "無法列出檔案內文"
+
+#: ../semanage/seobject.py:1617
+msgid "Could not list local file contexts"
+msgstr "無法列出本地的檔案內文"
+
+#: ../semanage/seobject.py:1636
+msgid "SELinux fcontext"
+msgstr "SELinux fcontext"
+
+#: ../semanage/seobject.py:1636
+msgid "type"
+msgstr "類型"
+
+#: ../semanage/seobject.py:1666 ../semanage/seobject.py:1717
+#: ../semanage/seobject.py:1723
+#, python-format
+msgid "Could not check if boolean %s is defined"
+msgstr "無法檢查布林值 %s 是否已經定義"
+
+#: ../semanage/seobject.py:1668 ../semanage/seobject.py:1719
+#, python-format
+msgid "Boolean %s is not defined"
+msgstr "布林值 %s 未定義"
+
+#: ../semanage/seobject.py:1672
+#, python-format
+msgid "Could not query file context %s"
+msgstr "無法查詢檔案內文 %s"
+
+#: ../semanage/seobject.py:1677
+#, python-format
+msgid "You must specify one of the following values: %s"
+msgstr "您必須指定下列其中一個值：%s"
+
+#: ../semanage/seobject.py:1681
+#, python-format
+msgid "Could not set active value of boolean %s"
+msgstr "無法設置布林值 %s"
+
+#: ../semanage/seobject.py:1684
+#, python-format
+msgid "Could not modify boolean %s"
+msgstr "無法修改布林值 %s"
+
+#: ../semanage/seobject.py:1702
+#, python-format
+msgid "Bad format %s: Record %s"
+msgstr "錯誤的格式 %s：紀錄 %s"
+
+#: ../semanage/seobject.py:1725
+#, python-format
+msgid "Boolean %s is defined in policy, cannot be deleted"
+msgstr "布林值 %s 已經定義在政策中，無法刪除"
+
+#: ../semanage/seobject.py:1729
+#, python-format
+msgid "Could not delete boolean %s"
+msgstr "無法刪除布林值 %s"
+
+#: ../semanage/seobject.py:1741 ../semanage/seobject.py:1758
+msgid "Could not list booleans"
+msgstr "無法列出布林值"
+
+#: ../semanage/seobject.py:1777
+msgid "unknown"
+msgstr "不明"
+
+#: ../semanage/seobject.py:1780
+msgid "off"
+msgstr "關閉"
+
+#: ../semanage/seobject.py:1780
+msgid "on"
+msgstr "開啟"
+
+#: ../semanage/seobject.py:1789
+msgid "SELinux boolean"
+msgstr "SELinux 布林值"
+
+#: ../semanage/seobject.py:1789
+msgid "Description"
+msgstr "描述"
+
+#: ../newrole/newrole.c:198
+#, c-format
+msgid "failed to set PAM_TTY\n"
+msgstr "設定 PAM_TTY 失敗\n"
+
+#: ../newrole/newrole.c:287
+#, c-format
+msgid "newrole: service name configuration hashtable overflow\n"
+msgstr "newrole：服務名稱配置雜湊溢位\n"
+
+#: ../newrole/newrole.c:297
+#, c-format
+msgid "newrole:  %s:  error on line %lu.\n"
+msgstr "newrole：%s：行列 %lu 上發生錯誤。\n"
+
+#: ../newrole/newrole.c:436
+#, c-format
+msgid "cannot find valid entry in the passwd file.\n"
+msgstr "在 passwd 檔案中找不到有效的紀錄。\n"
+
+#: ../newrole/newrole.c:447
+#, c-format
+msgid "Out of memory!\n"
+msgstr "記憶體不足！\n"
+
+#: ../newrole/newrole.c:452
+#, c-format
+msgid "Error!  Shell is not valid.\n"
+msgstr "錯誤！Shell 無效。\n"
+
+#: ../newrole/newrole.c:509
+#, c-format
+msgid "Unable to clear environment\n"
+msgstr "無法清除環境\n"
+
+#: ../newrole/newrole.c:556 ../newrole/newrole.c:634
+#, fuzzy, c-format
+msgid "Error initializing capabilities, aborting.\n"
+msgstr "起始功能時發生錯誤，放棄。\n"
+
+#: ../newrole/newrole.c:564 ../newrole/newrole.c:640
+#, c-format
+msgid "Error setting capabilities, aborting\n"
+msgstr "設定功能時發生錯誤，放棄\n"
+
+#: ../newrole/newrole.c:570
+#, c-format
+msgid "Error setting KEEPCAPS, aborting\n"
+msgstr "設定 KEEPCAPS 錯誤，放棄\n"
+
+#: ../newrole/newrole.c:578 ../newrole/newrole.c:652
+#, c-format
+msgid "Error dropping capabilities, aborting\n"
+msgstr "丟棄功能時發生錯誤，放棄。\n"
+
+#: ../newrole/newrole.c:584 ../newrole/newrole.c:683
+#, c-format
+msgid "Error changing uid, aborting.\n"
+msgstr "變更 uid 錯誤，放棄。\n"
+
+#: ../newrole/newrole.c:590 ../newrole/newrole.c:646 ../newrole/newrole.c:678
+#, c-format
+msgid "Error resetting KEEPCAPS, aborting\n"
+msgstr "重設 KEEPCAPS 錯誤，放棄\n"
+
+#: ../newrole/newrole.c:597
+#, c-format
+msgid "Error dropping SETUID capability, aborting\n"
+msgstr "丟棄 SETUID 功能錯誤，放棄\n"
+
+#: ../newrole/newrole.c:602 ../newrole/newrole.c:657
+#, c-format
+msgid "Error freeing caps\n"
+msgstr "釋放功能時發生錯誤\n"
+
+#: ../newrole/newrole.c:701
+#, c-format
+msgid "Error connecting to audit system.\n"
+msgstr "連接稽核系統錯誤。\n"
+
+#: ../newrole/newrole.c:707
+#, c-format
+msgid "Error allocating memory.\n"
+msgstr "分配記憶體錯誤。\n"
+
+#: ../newrole/newrole.c:714
+#, c-format
+msgid "Error sending audit message.\n"
+msgstr "發送稽核訊息時錯誤。\n"
+
+#: ../newrole/newrole.c:758 ../newrole/newrole.c:1122
+#, c-format
+msgid "Could not determine enforcing mode.\n"
+msgstr "無法決定 enforcing 模式。\n"
+
+#: ../newrole/newrole.c:765
+#, c-format
+msgid "Error!  Could not open %s.\n"
+msgstr "錯誤！無法開啟 %s。\n"
+
+#: ../newrole/newrole.c:771
+#, c-format
+msgid "%s!  Could not get current context for %s, not relabeling tty.\n"
+msgstr "%s！無法取得 %s 目前的內文，無法為 tty 重新標記。\n"
+
+#: ../newrole/newrole.c:781
+#, c-format
+msgid "%s!  Could not get new context for %s, not relabeling tty.\n"
+msgstr "%s！無法取得 %s 新的內文，無法為 tty 重新標記。\n"
+
+#: ../newrole/newrole.c:791
+#, c-format
+msgid "%s!  Could not set new context for %s\n"
+msgstr "%s！無法為 %s 設定新的內文\n"
+
+#: ../newrole/newrole.c:838
+#, c-format
+msgid "%s changed labels.\n"
+msgstr "%s 改變了標籤。\n"
+
+#: ../newrole/newrole.c:844
+#, c-format
+msgid "Warning! Could not restore context for %s\n"
+msgstr "無法為 %s 回復內文\n"
+
+#: ../newrole/newrole.c:901
+#, c-format
+msgid "Error: multiple roles specified\n"
+msgstr "錯誤：指定了多個角色\n"
+
+#: ../newrole/newrole.c:909
+#, c-format
+msgid "Error: multiple types specified\n"
+msgstr "錯誤：指定了多個類型\n"
+
+#: ../newrole/newrole.c:916
+#, c-format
+msgid "Sorry, -l may be used with SELinux MLS support.\n"
+msgstr "對不起，-l 也許能與 SELinux MLS 的支援合用。\n"
+
+#: ../newrole/newrole.c:921
+#, c-format
+msgid "Error: multiple levels specified\n"
+msgstr "錯誤：指令的多個等級\n"
+
+#: ../newrole/newrole.c:931
+#, c-format
+msgid "Error: you are not allowed to change levels on a non secure terminal \n"
+msgstr "錯誤：您不可在一個非安全的終端機上更改等級 \n"
+
+#: ../newrole/newrole.c:957
+#, c-format
+msgid "Couldn't get default type.\n"
+msgstr "無法取得預設類型。\n"
+
+#: ../newrole/newrole.c:967
+#, c-format
+msgid "failed to get new context.\n"
+msgstr "無法取得新的內文。\n"
+
+#: ../newrole/newrole.c:974
+#, c-format
+msgid "failed to set new role %s\n"
+msgstr "無法設定新的角色 %s\n"
+
+#: ../newrole/newrole.c:981
+#, c-format
+msgid "failed to set new type %s\n"
+msgstr "無法設定新的類型 %s\n"
+
+#: ../newrole/newrole.c:991
+#, c-format
+msgid "failed to build new range with level %s\n"
+msgstr "無法以 %s 等級建立新的範圍\n"
+
+#: ../newrole/newrole.c:996
+#, c-format
+msgid "failed to set new range %s\n"
+msgstr "設定新範圍 %s 失敗\n"
+
+#: ../newrole/newrole.c:1004
+#, c-format
+msgid "failed to convert new context to string\n"
+msgstr "無法將新的內文轉為字串\n"
+
+#: ../newrole/newrole.c:1009
+#, c-format
+msgid "%s is not a valid context\n"
+msgstr "%s 不是有效的內文\n"
+
+#: ../newrole/newrole.c:1016
+#, c-format
+msgid "Unable to allocate memory for new_context"
+msgstr "無法為新的內文（new_context）分配記憶體"
+
+#: ../newrole/newrole.c:1042
+#, c-format
+msgid "Unable to obtain empty signal set\n"
+msgstr "無法獲得空的訊號組\n"
+
+#: ../newrole/newrole.c:1050
+#, c-format
+msgid "Unable to set SIGHUP handler\n"
+msgstr "無法設定 SIGHUP 處理器\n"
+
+#: ../newrole/newrole.c:1116
+#, c-format
+msgid "Sorry, newrole may be used only on a SELinux kernel.\n"
+msgstr "很抱歉，newrole 只能在 SELinux 核心中使用。\n"
+
+#: ../newrole/newrole.c:1133
+#, c-format
+msgid "failed to get old_context.\n"
+msgstr "無法取得舊的內文（old_context）。\n"
+
+#: ../newrole/newrole.c:1140
+#, c-format
+msgid "Warning!  Could not retrieve tty information.\n"
+msgstr "警告！無法擷取 tty 資訊。\n"
+
+#: ../newrole/newrole.c:1161
+#, c-format
+msgid "error on reading PAM service configuration.\n"
+msgstr "讀取 PAM 服務組態設定時發生了錯誤。\n"
+
+#: ../newrole/newrole.c:1196
+#, c-format
+msgid "newrole: incorrect password for %s\n"
+msgstr "newrole：%s 的密碼錯誤\n"
+
+#: ../newrole/newrole.c:1223
+#, c-format
+msgid "newrole: failure forking: %s"
+msgstr "newrole：無法分支（fork）：%s"
+
+#: ../newrole/newrole.c:1226 ../newrole/newrole.c:1249
+#, c-format
+msgid "Unable to restore tty label...\n"
+msgstr "無法回復 tty 標籤...\n"
+
+#: ../newrole/newrole.c:1228 ../newrole/newrole.c:1255
+#, c-format
+msgid "Failed to close tty properly\n"
+msgstr "無法正確地關閉 tty\n"
+
+#: ../newrole/newrole.c:1287
+#, c-format
+msgid "Could not close descriptors.\n"
+msgstr "無法關閉描述者。\n"
+
+#: ../newrole/newrole.c:1314
+#, c-format
+msgid "Error allocating shell's argv0.\n"
+msgstr "無法分配 shell 的 argv0。\n"
+
+#: ../newrole/newrole.c:1346
+#, c-format
+msgid "Unable to restore the environment, aborting\n"
+msgstr "無法復原環境；放棄\n"
+
+#: ../newrole/newrole.c:1357
+msgid "failed to exec shell\n"
+msgstr "無法 exec shell\n"
+
+#: ../load_policy/load_policy.c:22
+#, c-format
+msgid "usage:  %s [-qi]\n"
+msgstr "用法：%s [-qi]\n"
+
+#: ../load_policy/load_policy.c:71
+#, c-format
+msgid "%s:  Policy is already loaded and initial load requested\n"
+msgstr "%s：政策已載入，已請求初始載入\n"
+
+#: ../load_policy/load_policy.c:80
+#, c-format
+msgid "%s:  Can't load policy and enforcing mode requested:  %s\n"
+msgstr "%s：無法載入政策，已請求強制模式：%s\n"
+
+#: ../load_policy/load_policy.c:90
+#, c-format
+msgid "%s:  Can't load policy:  %s\n"
+msgstr "%s：無法載入政策：%s\n"
+
+#: ../scripts/chcat:92 ../scripts/chcat:169
+msgid "Requires at least one category"
+msgstr "需要至少一個分類"
+
+#: ../scripts/chcat:106 ../scripts/chcat:183
+#, c-format
+msgid "Can not modify sensitivity levels using '+' on %s"
+msgstr "無法在 %s 上使用「+」來修改敏感等級。"
+
+#: ../scripts/chcat:110
+#, c-format
+msgid "%s is already in %s"
+msgstr "%s 已經在 %s 中執行"
+
+#: ../scripts/chcat:188 ../scripts/chcat:198
+#, c-format
+msgid "%s is not in %s"
+msgstr "%s 不在 %s 中"
+
+#: ../scripts/chcat:267 ../scripts/chcat:272
+msgid "Can not combine +/- with other types of categories"
+msgstr "+/- 不能與其他類別結合"
+
+#: ../scripts/chcat:319
+msgid "Can not have multiple sensitivities"
+msgstr "不能擁有多種敏感度"
+
+#: ../scripts/chcat:325
+#, c-format
+msgid "Usage %s CATEGORY File ..."
+msgstr "使用 %s CATEGORY 檔案..."
+
+#: ../scripts/chcat:326
+#, c-format
+msgid "Usage %s -l CATEGORY user ..."
+msgstr "用法 %s -l CATEGORY user ..."
+
+#: ../scripts/chcat:327
+#, c-format
+msgid "Usage %s [[+|-]CATEGORY],...]q File ..."
+msgstr "用法 %s [[+|-]CATEGORY],...]q File ..."
+
+#: ../scripts/chcat:328
+#, c-format
+msgid "Usage %s -l [[+|-]CATEGORY],...]q user ..."
+msgstr "用法 %s -l [[+|-]CATEGORY],...]q user ..."
+
+#: ../scripts/chcat:329
+#, c-format
+msgid "Usage %s -d File ..."
+msgstr "用法 %s -d File ..."
+
+#: ../scripts/chcat:330
+#, c-format
+msgid "Usage %s -l -d user ..."
+msgstr "用法 %s -l -d user ..."
+
+#: ../scripts/chcat:331
+#, c-format
+msgid "Usage %s -L"
+msgstr "用法 %s -L"
+
+#: ../scripts/chcat:332
+#, c-format
+msgid "Usage %s -L -l user"
+msgstr "用法 %s -L -l user"
+
+#: ../scripts/chcat:333
+msgid "Use -- to end option list.  For example"
+msgstr "用法 -- 表示選項清單的結尾。例如"
+
+#: ../scripts/chcat:334
+msgid "chcat -- -CompanyConfidential /docs/businessplan.odt"
+msgstr "chcat -- -CompanyConfidential /docs/businessplan.odt"
+
+#: ../scripts/chcat:335
+msgid "chcat -l +CompanyConfidential juser"
+msgstr "chcat -l +CompanyConfidential juser"
+
+#: ../scripts/chcat:399
+#, c-format
+msgid "Options Error %s "
+msgstr "選項錯誤 %s"
+
+#~ msgid ""
+#~ "\n"
+#~ "\n"
+#~ "semodule -i %s\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\n"
+#~ "\n"
+#~ "semodule -i %s\n"
+#~ "\n"
+
+#~ msgid "translations not supported on non-MLS machines"
+#~ msgstr "非 MLS 的機器上並不支援轉譯"
+
+#~ msgid "Name"
+#~ msgstr "名稱"
+
+#~ msgid "Role"
+#~ msgstr "角色"
+
+#~ msgid "Existing_User"
+#~ msgstr "Existing_User"
+
+#~ msgid "Application"
+#~ msgstr "應用程式"
+
+#~ msgid "%s must be a directory"
+#~ msgstr "%s 必須要是個目錄"
+
+#~ msgid "You must select a user"
+#~ msgstr "您必須選擇用戶"
+
+#~ msgid "Select executable file to be confined."
+#~ msgstr "選擇要限制的可執行檔。"
+
+#~ msgid "Select init script file to be confined."
+#~ msgstr "選擇要限制的 init script 檔案。"
+
+#~ msgid "Select file(s) that confined application creates or writes"
+#~ msgstr "選擇限制了應用程式建立或寫入的檔案"
+
+#~ msgid ""
+#~ "Select directory(s) that the confined application owns and writes into"
+#~ msgstr "選擇被限制的應用程式所屬並寫入的目錄"
+
+#~ msgid "Select directory to generate policy files in"
+#~ msgstr "選擇產生政策檔案的目錄"
+
+#~ msgid ""
+#~ "Type %s_t already defined in current policy.\n"
+#~ "Do you want to continue?"
+#~ msgstr ""
+#~ "類型 %s_t 已定義於目前的政策中。\n"
+#~ "請問您是否希望繼續進行？"
+
+#~ msgid "Verify Name"
+#~ msgstr "驗證名稱"
+
+#~ msgid ""
+#~ "Module %s.pp already loaded in current policy.\n"
+#~ "Do you want to continue?"
+#~ msgstr ""
+#~ "模組 %s.pp 已載入目前的政策中。\n"
+#~ "請問您是否希望繼續進行？"
+
+#~ msgid "You must enter a name"
+#~ msgstr "您必須輸入名稱"
+
+#~ msgid "You must enter a executable"
+#~ msgstr "您必須輸入可執行檔"
+
+#~ msgid "Configue SELinux"
+#~ msgstr "設定 SELinux"
+
+#~ msgid "Ports must be be numbers or ranges of numbers from 1 to %d "
+#~ msgstr "通訊埠必須以介於 1 與 %d 之間的數字來構成"
+
+#~ msgid "You must enter a name for your confined process/user"
+#~ msgstr "您必須為您限制的程序 / 用戶輸入名稱"
+
+#~ msgid "USER Types are not allowed executables"
+#~ msgstr "USER 類型不是被允許的可執行檔"
+
+#~ msgid "Only DAEMON apps can use an init script"
+#~ msgstr "只有 DAEMON apps 可以使用 init script"
+
+#~ msgid "use_syslog must be a boolean value "
+#~ msgstr "use_syslog 必須是布林值"
+
+#~ msgid "USER Types autoomatically get a tmp type"
+#~ msgstr "USER 類型會自動取得一個 tmp 類型"
+
+#~ msgid "You must enter the executable path for your confined process"
+#~ msgstr "您必須輸入您限制的程序的可執行檔路徑"
+
+#~ msgid "Type Enforcement file"
+#~ msgstr "類型強制檔"
+
+#~ msgid "Interface file"
+#~ msgstr "介面檔案"
+
+#~ msgid "File Contexts file"
+#~ msgstr "檔案內文檔"
+
+#~ msgid "Setup Script"
+#~ msgstr "設定 Script"
+
+#~ msgid "Permissive"
+#~ msgstr "寬鬆型"
+
+#~ msgid "Enforcing"
+#~ msgstr "強制"
+
+#~ msgid "Disabled"
+#~ msgstr "停用"
+
+#~ msgid "Status"
+#~ msgstr "狀態"
+
+#~ msgid ""
+#~ "Changing the policy type will cause a relabel of the entire file system "
+#~ "on the next boot. Relabeling takes a long time depending on the size of "
+#~ "the file system.  Do you wish to continue?"
+#~ msgstr ""
+#~ "更改政策類型會造成整個檔案系統在下次重新啟動時被重新標記（relabeling）。根"
+#~ "據檔案系統的大小，重新標記可能會花上許多時間。您是否希望繼續進行？"
+
+#~ msgid ""
+#~ "Changing to SELinux disabled requires a reboot.  It is not recommended.  "
+#~ "If you later decide to turn SELinux back on, the system will be required "
+#~ "to relabel.  If you just want to see if SELinux is causing a problem on "
+#~ "your system, you can go to permissive mode which will only log errors and "
+#~ "not enforce SELinux policy.  Permissive mode does not require a reboot    "
+#~ "Do you wish to continue?"
+#~ msgstr ""
+#~ "若要將 SELinux 變更為停用的話您需重新啟動系統。我們不建議這麼作。若您之後"
+#~ "決定將 SELinux 再次啟用，系統將會需要被重新標記。若您只是想查看 SELinux 是"
+#~ "否會在您的系統上造成問題，您可進入寬鬆模式，這只會將錯誤紀錄下來並且不會強"
+#~ "制 SELinux 政策。寬鬆模式無須重新啟動系統    請問您希望繼續進行嗎？"
+
+#~ msgid ""
+#~ "Changing to SELinux enabled will cause a relabel of the entire file "
+#~ "system on the next boot. Relabeling takes a long time depending on the "
+#~ "size of the file system.  Do you wish to continue?"
+#~ msgstr ""
+#~ "若將 SELinux 變更為啟用的話，下次系統啟動時，整個檔案系統都將會被重新標"
+#~ "記。根據檔案系統的大小，重新標記可能會花上許多時間。您是否希望繼續進行？"
+
+#~ msgid ""
+#~ "SELinux\n"
+#~ "User"
+#~ msgstr ""
+#~ "SELinux\n"
+#~ "用戶"
+
+#~ msgid ""
+#~ "MLS/\n"
+#~ "MCS Range"
+#~ msgstr ""
+#~ "MLS/\n"
+#~ "MCS 範圍"
+
+#~ msgid "SELinux user '%s' is required"
+#~ msgstr "需要 SELinux 用戶「%s」"
+
+#~ msgid "User Mapping"
+#~ msgstr "用戶對映"
+
+#~ msgid ""
+#~ "Login\n"
+#~ "Name"
+#~ msgstr ""
+#~ "登錄\n"
+#~ "名稱"
+
+#~ msgid "Login '%s' is required"
+#~ msgstr "需要登錄名稱「%s」"
+
+#~ msgid "Disable"
+#~ msgstr "停用"
+
+#~ msgid "Enable"
+#~ msgstr "啟用"
+
+#~ msgid "Default"
+#~ msgstr "預設"
+
+#~ msgid "<b>Boolean</b>"
+#~ msgstr "<b>布林值</b>"
+
+#~ msgid "<b>Description</b>"
+#~ msgstr "<b>描述</b>"
+
+#~ msgid "<b>Status</b>"
+#~ msgstr "<b>狀態</b>"
+
+#~ msgid "Category: %s <br>"
+#~ msgstr "類別：%s <br>"
+
+#~ msgid "Begin"
+#~ msgstr "起始"
+
+#~ msgid ""
+#~ "Welcome to the SELinux Lockdown Tool.<br> <br>This tool can be used to "
+#~ "lockdown SELinux booleans.The tool will generate a configuration file "
+#~ "which can be used to lockdown this system or other SELinux systems.<br>"
+#~ msgstr ""
+#~ "歡迎使用 SELinux Lockdown 工具。<br> <br>此工具可被用來將 SELinux 布林值鎖"
+#~ "住。此工具會產生一個可被用來將此系統或其它 SELinux 系統鎖住的配置檔案。"
+#~ "<br>"
+
+#~ msgid "Finish"
+#~ msgstr "結束"
+
+#~ msgid "Category %s booleans completed <br><br>"
+#~ msgstr "類別 %s 的布林值已完成 <br><br>"
+
+#~ msgid "Current settings:<br><br>"
+#~ msgstr "目前設定：<br><br>"
+
+#~ msgid "Finish: <br><br>"
+#~ msgstr "結束：<br><br>"
+
+#~ msgid "Category: %s<br><br>Current Settings<br><br>"
+#~ msgstr "類別：%s<br><br>目前設定<br><br>"
+
+#~ msgid "Boolean:   %s<br><br>"
+#~ msgstr "布林值：%s<br><br>"
+
+#~ msgid "Lockdown SELinux Booleans"
+#~ msgstr "鎖定 SELinux 布林值"
+
+#~ msgid "<b>Select:</b>"
+#~ msgstr "<b>選擇：</b>"
+
+#~ msgid "Apply"
+#~ msgstr "套用"
+
+#~ msgid ""
+#~ "Copyright (c)2006 Red Hat, Inc.\n"
+#~ "Copyright (c) 2006 Dan Walsh <dwalsh@redhat.com>"
+#~ msgstr ""
+#~ "Copyright (c)2006 Red Hat, Inc.\n"
+#~ "Copyright (c) 2006 Dan Walsh <dwalsh@redhat.com>"
+
+#~ msgid "SELinux Boolean Lockdown"
+#~ msgstr "SELinux 布林值鎖定"
+
+#~ msgid "Save As"
+#~ msgstr "儲存為"
+
+#~ msgid "Save Boolean Configuration File"
+#~ msgstr "儲存布林值配置檔案"
+
+#~ msgid "Select Management Object"
+#~ msgstr "選擇管理物件"
+
+#~ msgid "Select file name to save  boolean settings."
+#~ msgstr "選擇儲存布林值設定的檔案名稱。"
+
+#~ msgid "_Forward"
+#~ msgstr "下一步（_F）"
+
+#~ msgid "_Previous"
+#~ msgstr "上一步（_P）"
+
+#~ msgid "system-config-selinux"
+#~ msgstr "system-config-selinux"
+
+#~ msgid "translator-credits"
+#~ msgstr "譯者姓名：莊佳儒（tchuang@redhat.com）"
+
+#~ msgid "SELinux Service Protection"
+#~ msgstr "SELinux 服務保護"
+
+#~ msgid "Disable SELinux protection for acct daemon"
+#~ msgstr "停用 acct daemon 的 SELinux 保護"
+
+#~ msgid "Admin"
+#~ msgstr "管理員"
+
+#~ msgid "Allow all daemons to write corefiles to /"
+#~ msgstr "允許所有 daemon 將 corefile 寫至 /"
+
+#~ msgid "Allow all daemons the ability to use unallocated ttys"
+#~ msgstr "允許所有 daemon 使用未分配的 ttys"
+
+#~ msgid "User Privs"
+#~ msgstr "用戶 Privs"
+
+#~ msgid ""
+#~ "Allow gadmin SELinux user account to execute files in home directory or /"
+#~ "tmp"
+#~ msgstr "允許 gadmin SELinux 用戶帳號執行家目錄或 /tmp 中的檔案"
+
+#~ msgid ""
+#~ "Allow guest SELinux user account to execute files in home directory or /"
+#~ "tmp"
+#~ msgstr "允許 guest SELinux 用戶帳號執行家目錄或 /tmp 中的檔案"
+
+#~ msgid "Memory Protection"
+#~ msgstr "記憶體保護"
+
+#~ msgid "Allow java executable stack"
+#~ msgstr "允許 java 執行堆疊"
+
+#~ msgid "Mount"
+#~ msgstr "掛載"
+
+#~ msgid "Allow mount to mount any file"
+#~ msgstr "允許 mount 掛載任何檔案"
+
+#~ msgid "Allow mount to mount any directory"
+#~ msgstr "允許 mount 掛載任何目錄"
+
+#~ msgid "Allow mplayer executable stack"
+#~ msgstr "允許 mplayer 可執行堆疊"
+
+#~ msgid "SSH"
+#~ msgstr "SSH"
+
+#~ msgid "Allow ssh to run ssh-keysign"
+#~ msgstr "允許 ssh 執行 ssh-keysign"
+
+#~ msgid ""
+#~ "Allow staff SELinux user account to execute files in home directory or /"
+#~ "tmp"
+#~ msgstr "允許 staff SELinux 用戶帳號執行家目錄或是 /tmp 中的檔案"
+
+#~ msgid ""
+#~ "Allow sysadm SELinux user account to execute files in home directory or /"
+#~ "tmp"
+#~ msgstr "允許 sysadm SELinux 用戶帳號執行家目錄或是 /tmp 中的檔案"
+
+#~ msgid ""
+#~ "Allow unconfined SELinux user account to execute files in home directory "
+#~ "or /tmp"
+#~ msgstr "允許 unconfined SELinux 用戶帳號執行家目錄或是 /tmp 中的檔案"
+
+#~ msgid "Network Configuration"
+#~ msgstr "網路配置"
+
+#~ msgid "Allow unlabeled packets to flow on the network"
+#~ msgstr "允許未標記的封包在網路上流動"
+
+#~ msgid ""
+#~ "Allow user SELinux user account to execute files in home directory or /tmp"
+#~ msgstr "允許 user SELinux 用戶帳號執行家目錄或是 /tmp 中的檔案"
+
+#~ msgid "Allow unconfined to dyntrans to unconfined_execmem"
+#~ msgstr "允許 unconfined dyntrans 至 unconfined_execmem"
+
+#~ msgid "Databases"
+#~ msgstr "資料庫"
+
+#~ msgid "Allow user to connect to mysql socket"
+#~ msgstr "允許用戶連至 mysql socket"
+
+#~ msgid "Allow user to connect to postgres socket"
+#~ msgstr "允許用戶連至 postgres socket"
+
+#~ msgid "XServer"
+#~ msgstr "XServer"
+
+#~ msgid "Allow clients to write to X shared memory"
+#~ msgstr "允許客戶端寫至 X 共享記憶體"
+
+#~ msgid ""
+#~ "Allow xguest SELinux user account to execute files in home directory or /"
+#~ "tmp"
+#~ msgstr "允許 xguest SELinux 用戶帳號執行家目錄或是 /tmp 中的檔案"
+
+#~ msgid "NIS"
+#~ msgstr "NIS"
+
+#~ msgid "Allow daemons to run with NIS"
+#~ msgstr "允許 daemon 以 NIS 執行"
+
+#~ msgid "Web Applications"
+#~ msgstr "網站應用程式"
+
+#~ msgid "Transition staff SELinux user to Web Browser Domain"
+#~ msgstr "將 staff SELinux 用戶轉移至 Web Browser Domain"
+
+#~ msgid "Transition sysadm SELinux user to Web Browser Domain"
+#~ msgstr "將 sysadm SELinux 用戶轉移至 Web Browser Domain"
+
+#~ msgid "Transition user SELinux user to Web Browser Domain"
+#~ msgstr "將 user SELinux 用戶轉移至 Web Browser Domain"
+
+#~ msgid "Transition xguest SELinux user to Web Browser Domain"
+#~ msgstr "將 xguest SELinux 用戶轉移至 Web Browser Domain"
+
+#~ msgid "Allow staff Web Browsers to write to home directories"
+#~ msgstr "允許 staff Web Browsers 寫至家目錄"
+
+#~ msgid "Disable SELinux protection for amanda"
+#~ msgstr "停用 amanda 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for amavis"
+#~ msgstr "停用 amavis 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for apmd daemon"
+#~ msgstr "停用 apmd daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for arpwatch daemon"
+#~ msgstr "停用 arpwatch daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for auditd daemon"
+#~ msgstr "停用 auditd daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for automount daemon"
+#~ msgstr "停用 automount daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for avahi"
+#~ msgstr "停用 avahi 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for bluetooth daemon"
+#~ msgstr "停用 bluetooth daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for canna daemon"
+#~ msgstr "停用 canna daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for cardmgr daemon"
+#~ msgstr "停用 cardmgr daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for Cluster Server"
+#~ msgstr "停用 Cluster Server 的 SELinux 保護"
+
+#~ msgid ""
+#~ "Allow cdrecord to read various content. nfs, samba, removable devices, "
+#~ "user temp and untrusted content files"
+#~ msgstr ""
+#~ "允許 cdrecord 讀取各種內容。nfs、samba、卸除式裝置、用戶 temp 和不信任的內"
+#~ "容檔案"
+
+#~ msgid "Disable SELinux protection for ciped daemon"
+#~ msgstr "停用 ciped daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for clamd daemon"
+#~ msgstr "停用 clamd daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for clamscan"
+#~ msgstr "停用 clamscan 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for clvmd"
+#~ msgstr "停用 clvmd 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for comsat daemon"
+#~ msgstr "停用 comsat daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for courier daemon"
+#~ msgstr "停用 courier daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for cpucontrol daemon"
+#~ msgstr "停用 cpucontrol daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for cpuspeed daemon"
+#~ msgstr "停用 cpuspeed daemon 的 SELinux 保護"
+
+#~ msgid "Cron"
+#~ msgstr "Cron"
+
+#~ msgid "Disable SELinux protection for crond daemon"
+#~ msgstr "停用 crond daemon 的 SELinux 保護"
+
+#~ msgid "Printing"
+#~ msgstr "列印"
+
+#~ msgid "Disable SELinux protection for cupsd back end server"
+#~ msgstr "停用 cupsd 後端伺服器的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for cupsd daemon"
+#~ msgstr "停用 cupsd daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for cupsd_lpd"
+#~ msgstr "停用 cupsd_lpd 的 SELinux 保護"
+
+#~ msgid "CVS"
+#~ msgstr "CVS"
+
+#~ msgid "Disable SELinux protection for cvs daemon"
+#~ msgstr "停用 cvs daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for cyrus daemon"
+#~ msgstr "停用 cyrus daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for dbskkd daemon"
+#~ msgstr "停用 dbskkd daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for dbusd daemon"
+#~ msgstr "停用 dbusd daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for dccd"
+#~ msgstr "停用 dccd 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for dccifd"
+#~ msgstr "停用 dccifd 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for dccm"
+#~ msgstr "停用 dccm 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for ddt daemon"
+#~ msgstr "停用 ddt daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for devfsd daemon"
+#~ msgstr "停用 devfsd daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for dhcpc daemon"
+#~ msgstr "停用 dhcpc daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for dhcpd daemon"
+#~ msgstr "停用 dhcpd daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for dictd daemon"
+#~ msgstr "停用 dictd daemon 的 SELinux 保護"
+
+#~ msgid "Allow sysadm_t to directly start daemons"
+#~ msgstr "允許 sysadm_t 直接啟用 daemon"
+
+#~ msgid "Disable SELinux protection for Evolution"
+#~ msgstr "停用 Evolution 的 SELinux 保護"
+
+#~ msgid "Games"
+#~ msgstr "遊戲"
+
+#~ msgid "Disable SELinux protection for games"
+#~ msgstr "停用 games 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for the web browsers"
+#~ msgstr "停用 web browsers 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for Thunderbird"
+#~ msgstr "停用 Thunderbird 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for distccd daemon"
+#~ msgstr "停用 distccd daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for dmesg daemon"
+#~ msgstr "停用 dmesg daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for dnsmasq daemon"
+#~ msgstr "停用 dnsmasq daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for dovecot daemon"
+#~ msgstr "停用 dovecot daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for entropyd daemon"
+#~ msgstr "停用 entropyd daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for fetchmail"
+#~ msgstr "停用 fetchmail 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for fingerd daemon"
+#~ msgstr "停用 fingerd daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for freshclam daemon"
+#~ msgstr "停用 freshclam daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for fsdaemon daemon"
+#~ msgstr "停用 fsdaemon daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for gpm daemon"
+#~ msgstr "停用 gpm daemon 的 SELinux 保護"
+
+#~ msgid "NFS"
+#~ msgstr "NFS"
+
+#~ msgid "Disable SELinux protection for gss daemon"
+#~ msgstr "停用 gss daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for Hal daemon"
+#~ msgstr "停用 Hal daemon 的 SELinux 保護"
+
+#~ msgid "Compatibility"
+#~ msgstr "相容性"
+
+#~ msgid ""
+#~ "Do not audit things that we know to be broken but which are not security "
+#~ "risks"
+#~ msgstr "不稽核我們已知損壞，卻不會造成安全性風險的物件"
+
+#~ msgid "Disable SELinux protection for hostname daemon"
+#~ msgstr "停用 hostname daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for hotplug daemon"
+#~ msgstr "停用 hotplug daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for howl daemon"
+#~ msgstr "停用 howl daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for cups hplip daemon"
+#~ msgstr "停用 cups hplip daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for httpd rotatelogs"
+#~ msgstr "停用 httpd rotatelogs 的 SELinux 保護"
+
+#~ msgid "HTTPD Service"
+#~ msgstr "HTTPD 服務"
+
+#~ msgid "Disable SELinux protection for http suexec"
+#~ msgstr "停用 http suexec 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for hwclock daemon"
+#~ msgstr "停用 hwclock daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for i18n daemon"
+#~ msgstr "停用 i18n daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for imazesrv daemon"
+#~ msgstr "停用 imazesrv daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for inetd child daemons"
+#~ msgstr "停用 inetd child daemons 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for inetd daemon"
+#~ msgstr "停用 inetd daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for innd daemon"
+#~ msgstr "停用 innd daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for iptables daemon"
+#~ msgstr "停用 iptables daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for ircd daemon"
+#~ msgstr "停用 ircd daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for irqbalance daemon"
+#~ msgstr "停用 irqbalance daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for iscsi daemon"
+#~ msgstr "停用 iscsi daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for jabberd daemon"
+#~ msgstr "停用 jabberd daemon 的 SELinux 保護"
+
+#~ msgid "Kerberos"
+#~ msgstr "Kerberos"
+
+#~ msgid "Disable SELinux protection for kadmind daemon"
+#~ msgstr "停用 kadmind daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for klogd daemon"
+#~ msgstr "停用 klogd daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for krb5kdc daemon"
+#~ msgstr "停用 krb5kdc daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for ktalk daemons"
+#~ msgstr "停用 ktalk daemons 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for kudzu daemon"
+#~ msgstr "停用 kudzu daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for locate daemon"
+#~ msgstr "停用 locate daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for lpd daemon"
+#~ msgstr "停用 lpd daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for lrrd daemon"
+#~ msgstr "停用 lrrd daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for lvm daemon"
+#~ msgstr "停用 lvm daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for mailman"
+#~ msgstr "停用 mailman 的 SELinux 保護"
+
+#~ msgid "Allow evolution and thunderbird to read user files"
+#~ msgstr "允許 evolution 和 thunderbird 讀取用戶檔案"
+
+#~ msgid "Disable SELinux protection for mdadm daemon"
+#~ msgstr "停用 mdadm daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for monopd daemon"
+#~ msgstr "停用 monopd daemon 的 SELinux 保護"
+
+#~ msgid "Allow the mozilla browser to read user files"
+#~ msgstr "允許 mozilla 瀏覽器讀取用戶檔案"
+
+#~ msgid "Disable SELinux protection for mrtg daemon"
+#~ msgstr "停用 mrtg daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for mysqld daemon"
+#~ msgstr "停用 mysqld daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for nagios daemon"
+#~ msgstr "停用 nagios daemon 的 SELinux 保護"
+
+#~ msgid "Name Service"
+#~ msgstr "名稱服務"
+
+#~ msgid "Disable SELinux protection for named daemon"
+#~ msgstr "停用 named daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for nessusd daemon"
+#~ msgstr "停用 nessusd daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for NetworkManager"
+#~ msgstr "停用 NetworkManager 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for nfsd daemon"
+#~ msgstr "停用 nfsd daemon 的 SELinux 保護"
+
+#~ msgid "Samba"
+#~ msgstr "Samba"
+
+#~ msgid "Disable SELinux protection for nmbd daemon"
+#~ msgstr "停用 nmbd daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for nrpe daemon"
+#~ msgstr "停用 nrpe daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for nscd daemon"
+#~ msgstr "停用 nscd daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for nsd daemon"
+#~ msgstr "停用 nsd daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for ntpd daemon"
+#~ msgstr "停用 ntpd daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for oddjob"
+#~ msgstr "停用 oddjob 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for oddjob_mkhomedir"
+#~ msgstr "停用 oddjob_mkhomedir 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for openvpn daemon"
+#~ msgstr "停用 openvpn daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for pam daemon"
+#~ msgstr "停用 pam daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for pegasus"
+#~ msgstr "停用 pegasus 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for perdition daemon"
+#~ msgstr "停用 perdition daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for portmap daemon"
+#~ msgstr "停用 portmap daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for portslave daemon"
+#~ msgstr "停用 portslave daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for postfix"
+#~ msgstr "停用 postfix 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for postgresql daemon"
+#~ msgstr "停用 postgresql daemon 的 SELinux 保護"
+
+#~ msgid "pppd"
+#~ msgstr "pppd"
+
+#~ msgid "Allow pppd to be run for a regular user"
+#~ msgstr "允許 pppd 為一般用戶執行"
+
+#~ msgid "Disable SELinux protection for pptp"
+#~ msgstr "停用 pptp 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for prelink daemon"
+#~ msgstr "停用 prelink daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for privoxy daemon"
+#~ msgstr "停用 privoxy daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for ptal daemon"
+#~ msgstr "停用 ptal daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for pxe daemon"
+#~ msgstr "停用 pxe daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for pyzord"
+#~ msgstr "停用 pyzord 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for quota daemon"
+#~ msgstr "停用 quota daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for radiusd daemon"
+#~ msgstr "停用 radiusd daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for radvd daemon"
+#~ msgstr "停用 radvd daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for rdisc"
+#~ msgstr "停用 rdisc 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for readahead"
+#~ msgstr "停用 readahead 的 SELinux 保護"
+
+#~ msgid "Allow programs to read files in non-standard locations (default_t)"
+#~ msgstr "允許程式讀取位於非標準位置上的檔案（default_t）"
+
+#~ msgid "Disable SELinux protection for restorecond"
+#~ msgstr "停用 restorecond 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for rhgb daemon"
+#~ msgstr "停用 rhgb daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for ricci"
+#~ msgstr "停用 ricci 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for ricci_modclusterd"
+#~ msgstr "停用 ricci_modclusterd 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for rlogind daemon"
+#~ msgstr "停用 rlogind daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for rpcd daemon"
+#~ msgstr "停用 rpcd daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for rshd"
+#~ msgstr "停用 rshd 的 SELinux 保護"
+
+#~ msgid "rsync"
+#~ msgstr "rsync"
+
+#~ msgid "Disable SELinux protection for rsync daemon"
+#~ msgstr "停用 rsync daemon 的 SELinux 保護"
+
+#~ msgid "Allow ssh to run from inetd instead of as a daemon"
+#~ msgstr "允許 ssh 由 inetd 執行而不是以一個 daemon 來執行"
+
+#~ msgid "Allow Samba to share nfs directories"
+#~ msgstr "允許 Samba 共享 nfs 目錄"
+
+#~ msgid "SASL authentication server"
+#~ msgstr "SASL 驗證伺服器"
+
+#~ msgid "Allow sasl authentication server to read /etc/shadow"
+#~ msgstr "允許 sasl 驗證伺服器讀取 /etc/shadow"
+
+#~ msgid ""
+#~ "Allow X-Windows server to map a memory region as both executable and "
+#~ "writable"
+#~ msgstr "允許 X-Windows 伺服器將一個 memory region 同時對映為可執行與可寫"
+
+#~ msgid "Disable SELinux protection for saslauthd daemon"
+#~ msgstr "停用 saslauthd daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for scannerdaemon daemon"
+#~ msgstr "停用 scannerdaemon daemon 的 SELinux 保護"
+
+#~ msgid "Do not allow transition to sysadm_t, sudo and su effected"
+#~ msgstr "不允許轉移至受影響的 sysadm_t、sudo 和 su"
+
+#~ msgid "Do not allow any processes to load kernel modules"
+#~ msgstr "不允許任何程序載入 kernel 模組"
+
+#~ msgid "Do not allow any processes to modify kernel SELinux policy"
+#~ msgstr "不允許任何程序修改 kernel SELinux 政策"
+
+#~ msgid "Disable SELinux protection for sendmail daemon"
+#~ msgstr "停用 sendmail daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for setrans"
+#~ msgstr "停用 setrans 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for setroubleshoot daemon"
+#~ msgstr "停用 setroubleshoot daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for slapd daemon"
+#~ msgstr "停用 slapd daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for slrnpull daemon"
+#~ msgstr "停用 slrnpull daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for smbd daemon"
+#~ msgstr "停用 smbd daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for snmpd daemon"
+#~ msgstr "停用 snmpd daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for snort daemon"
+#~ msgstr "停用 snort daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for soundd daemon"
+#~ msgstr "停用 soundd daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for sound daemon"
+#~ msgstr "停用 sound daemon 的 SELinux 保護"
+
+#~ msgid "Spam Protection"
+#~ msgstr "垃圾郵件保護"
+
+#~ msgid "Disable SELinux protection for spamd daemon"
+#~ msgstr "停用 spamd daemon 的 SELinux 保護"
+
+#~ msgid "Allow spamd to access home directories"
+#~ msgstr "允許 spamd 存取家目錄"
+
+#~ msgid "Allow Spam Assassin daemon network access"
+#~ msgstr "允許 Spam Assassin daemon 網路存取"
+
+#~ msgid "Disable SELinux protection for speedmgmt daemon"
+#~ msgstr "停用 speedmgmt daemon 的 SELinux 保護"
+
+#~ msgid "Squid"
+#~ msgstr "Squid"
+
+#~ msgid "Allow squid daemon to connect to the network"
+#~ msgstr "允許 squid daemon 連至網路"
+
+#~ msgid "Disable SELinux protection for squid daemon"
+#~ msgstr "停用 squid daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for ssh daemon"
+#~ msgstr "停用 ssh daemon 的 SELinux 保護"
+
+#~ msgid "Allow ssh logins as sysadm_r:sysadm_t"
+#~ msgstr "允許以 sysadm_r:sysadm_t 進行 ssh 登錄"
+
+#~ msgid ""
+#~ "Allow staff_r users to search the sysadm home dir and read files (such as "
+#~ "~/.bashrc)"
+#~ msgstr ""
+#~ "允許 staff_r users 搜尋 sysadm home dir 並讀取檔案（例如 ~/.bashrc）"
+
+#~ msgid "Universal SSL tunnel"
+#~ msgstr "全域 SSL 通道"
+
+#~ msgid "Disable SELinux protection for stunnel daemon"
+#~ msgstr "停用 stunnel daemon 的 SELinux 保護"
+
+#~ msgid "Allow stunnel daemon to run as standalone, outside of xinetd"
+#~ msgstr "允許 stunnel daemon 獨立地執行於 xinetd 之外"
+
+#~ msgid "Disable SELinux protection for swat daemon"
+#~ msgstr "停用 swat daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for sxid daemon"
+#~ msgstr "停用 sxid daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for syslogd daemon"
+#~ msgstr "停用 syslogd daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for system cron jobs"
+#~ msgstr "停用 system cron jobs 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for tcp daemon"
+#~ msgstr "停用 tcp daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for telnet daemon"
+#~ msgstr "停用 telnet daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for tftpd daemon"
+#~ msgstr "停用 tftpd daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for transproxy daemon"
+#~ msgstr "停用 transproxy daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for udev daemon"
+#~ msgstr "停用 udev daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for uml daemon"
+#~ msgstr "停用 uml daemon 的 SELinux 保護"
+
+#~ msgid ""
+#~ "Allow xinetd to run unconfined, including any services it starts that do "
+#~ "not have a domain transition explicitly defined"
+#~ msgstr ""
+#~ "允許 xinetd 以不被限制的方式執行，包括任何它所啟用的、未清楚定義網域轉移的"
+#~ "服務"
+
+#~ msgid ""
+#~ "Allow rc scripts to run unconfined, including any daemon started by an rc "
+#~ "script that does not have a domain transition explicitly defined"
+#~ msgstr ""
+#~ "允許 rc script 以不受限制的方式執行，包括任何 rc script 所啟用的、未清楚定"
+#~ "義網域轉移的 daemon"
+
+#~ msgid "Allow rpm to run unconfined"
+#~ msgstr "允許 rpm 以不受限制的方式執行"
+
+#~ msgid "Allow privileged utilities like hotplug and insmod to run unconfined"
+#~ msgstr "允許有特權的工具程式（例如 hotplug 和 insmod）以不受限制的方式執行"
+
+#~ msgid "Disable SELinux protection for updfstab daemon"
+#~ msgstr "停用 updfstab daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for uptimed daemon"
+#~ msgstr "停用 uptimed daemon 的 SELinux 保護"
+
+#~ msgid ""
+#~ "Allow user_r to reach sysadm_r via su, sudo, or userhelper. Otherwise, "
+#~ "only staff_r can do so"
+#~ msgstr ""
+#~ "允許 user_r 透過 su、sudo 或 userhelper 來連至 sysadm_r。否則，只有 "
+#~ "staff_r 可以這麼作"
+
+#~ msgid "Allow users to execute the mount command"
+#~ msgstr "允許用戶執行 mount 指令"
+
+#~ msgid "Allow regular users direct mouse access (only allow the X server)"
+#~ msgstr "允許一般用戶的直接滑鼠存取（只允許 X server）"
+
+#~ msgid "Allow users to run the dmesg command"
+#~ msgstr "允許用戶執行 dmesg 指令"
+
+#~ msgid "Allow users to control network interfaces (also needs USERCTL=true)"
+#~ msgstr "允許用戶控制網路介面（也需要 USERCTL=true）"
+
+#~ msgid "Allow normal user to execute ping"
+#~ msgstr "允許一般用戶執行 ping"
+
+#~ msgid "Allow user to r/w noextattrfile (FAT, CDROM, FLOPPY)"
+#~ msgstr "允許用戶 r/w noextattrfile（FAT、CDROM、FLOPPY）"
+
+#~ msgid "Allow users to rw usb devices"
+#~ msgstr "允許用戶 rw usb 裝置"
+
+#~ msgid ""
+#~ "Allow users to run TCP servers (bind to ports and accept connection from "
+#~ "the same domain and outside users)  disabling this forces FTP passive "
+#~ "mode and may change other protocols"
+#~ msgstr ""
+#~ "允許用戶執行 TCP 伺服器（綁定至通訊埠並接受來自相同網域和外部用戶的連線）"
+#~ "停用此選項會強制 FTP 被動模式並且可能會更改其它通訊協定"
+
+#~ msgid "Allow user to stat ttyfiles"
+#~ msgstr "允許用戶 stat ttyfiles"
+
+#~ msgid "Disable SELinux protection for uucpd daemon"
+#~ msgstr "停用 uucpd daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for vmware daemon"
+#~ msgstr "停用 vmware daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for watchdog daemon"
+#~ msgstr "停用 watchdog daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for winbind daemon"
+#~ msgstr "停用 winbind daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for xdm daemon"
+#~ msgstr "停用 xdm daemon 的 SELinux 保護"
+
+#~ msgid "Allow xdm logins as sysadm_r:sysadm_t"
+#~ msgstr "允許 xdm 以 sysadm_r:sysadm_t 來進行登錄"
+
+#~ msgid "Disable SELinux protection for xen daemon"
+#~ msgstr "停用 xen daemon 的 SELinux 保護"
+
+#~ msgid "XEN"
+#~ msgstr "XEN"
+
+#~ msgid "Allow xen to read/write physical disk devices"
+#~ msgstr "允許 xen 讀取/寫入實體磁碟裝置"
+
+#~ msgid "Disable SELinux protection for xfs daemon"
+#~ msgstr "停用 xfs daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for xen control"
+#~ msgstr "停用 xen control 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for ypbind daemon"
+#~ msgstr "停用 ypbind daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for NIS Password Daemon"
+#~ msgstr "停用 NIS Password Daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for ypserv daemon"
+#~ msgstr "停用 ypserv daemon 的 SELinux 保護"
+
+#~ msgid "Disable SELinux protection for NIS Transfer Daemon"
+#~ msgstr "停用 NIS Transfer Daemon 的 SELinux 保護"
+
+#~ msgid ""
+#~ "Allow SELinux webadm user to manage unprivileged users home directories"
+#~ msgstr "允許 SELinux webadm 用戶管理無特權用戶的家目錄"
+
+#~ msgid ""
+#~ "Allow SELinux webadm user to read unprivileged users home directories"
+#~ msgstr "允許 SELinux webadm 用戶讀取無特權用戶的家目錄"
+
+#~ msgid "Sensitvity Level"
+#~ msgstr "敏感度"
+
+#~ msgid "Are you sure you want to delete %s '%s'?"
+#~ msgstr "您是否希望刪除 %s「%s」？"
+
+#~ msgid "Delete %s"
+#~ msgstr "刪除 %s"
+
+#~ msgid "Add %s"
+#~ msgstr "新增 %s"
+
+#~ msgid "Modify %s"
+#~ msgstr "修改 %s"
+
+#~ msgid "all"
+#~ msgstr "全部"
+
+#~ msgid "Customized"
+#~ msgstr "自訂化"
+
+#~ msgid "Policy Module"
+#~ msgstr "政策模組"
+
+#~ msgid "Module Name"
+#~ msgstr "模組名稱"
+
+#~ msgid "Version"
+#~ msgstr "版本"
+
+#~ msgid "Disable Audit"
+#~ msgstr "停用稽核"
+
+#~ msgid "Enable Audit"
+#~ msgstr "啟用稽核"
+
+#~ msgid "Load Policy Module"
+#~ msgstr "載入政策模組"
+
+#~ msgid "File Labeling"
+#~ msgstr "檔案標記"
+
+#~ msgid ""
+#~ "File\n"
+#~ "Specification"
+#~ msgstr ""
+#~ "檔案\n"
+#~ "規格"
+
+#~ msgid ""
+#~ "Selinux\n"
+#~ "File Type"
+#~ msgstr ""
+#~ "Selinux\n"
+#~ "檔案類型"
+
+#~ msgid ""
+#~ "File\n"
+#~ "Type"
+#~ msgstr ""
+#~ "檔案\n"
+#~ "類型"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "600-1024"
+#~ msgstr "600-1024"
+
+#~ msgid "<b>Applications</b>"
+#~ msgstr "<b>應用程式</b>"
+
+#~ msgid "<b>Login Users</b>"
+#~ msgstr "<b>登錄用戶</b>"
+
+#~ msgid "<b>Root Users</b>"
+#~ msgstr "<b>Root 用戶</b>"
+
+#~ msgid "<b>TCP Ports</b>"
+#~ msgstr "<b>TCP 通訊埠</b>"
+
+#~ msgid "<b>UDP Ports</b>"
+#~ msgstr "<b>UDP 通訊埠</b>"
+
+#~ msgid "Add Booleans Dialog"
+#~ msgstr "新增布林值對話"
+
+#~ msgid ""
+#~ "Add Files/Directories that application will need to \"Write\" to. Pid "
+#~ "Files, Log Files, /var/lib Files ..."
+#~ msgstr ""
+#~ "新增應用程式需要「寫」至檔案/目錄。Pid 檔案、日誌檔、/var/lib 檔案 ..."
+
+#~ msgid "Add/Remove booleans used for this confined application/user"
+#~ msgstr "新增/移除這個受限制的應用程式/用戶所使用的布林值"
+
+#~ msgid "Admin User Role"
+#~ msgstr "管理員用戶角色"
+
+#~ msgid "All"
+#~ msgstr "全部"
+
+#~ msgid ""
+#~ "Allow application/user role to call bindresvport with 0. Binding to port "
+#~ "600-1024"
+#~ msgstr ""
+#~ "允許應用程式/用戶角色以 0 來調用 bindresvport。綁定至通訊埠 600-1024"
+
+#~ msgid "Allows application/user role to bind to any udp ports > 1024"
+#~ msgstr "允許應用程式/用戶角色綁定至任何大於 1024 的 udp 通訊埠"
+
+#~ msgid "Allows confined application/user role to bind to any udp port"
+#~ msgstr "允許受限制的應用程式/用戶角色綁定至任何 udp 通訊埠"
+
+#~ msgid "Boolean Name"
+#~ msgstr "布林值名稱"
+
+#~ msgid "Create/Manipulate temporary files in /tmp"
+#~ msgstr "建立/操作位於 /tmp 中的臨時檔案"
+
+#~ msgid ""
+#~ "Enter a comma separated list of tcp ports or ranges of ports that "
+#~ "application/user role connects to. Example: 612, 650-660"
+#~ msgstr ""
+#~ "輸入一個應用程式/用戶角色連至、以逗號區隔開的 tcp 通訊埠清單或是通訊埠範"
+#~ "圍。例如：612, 650-660"
+
+#~ msgid ""
+#~ "Enter a comma separated list of udp ports or ranges of ports that "
+#~ "application/user role binds to. Example: 612, 650-660"
+#~ msgstr ""
+#~ "輸入一個應用程式/用戶角色綁定至、以逗號區隔開的 udp 通訊埠清單或是通訊埠範"
+#~ "圍。例如：612, 650-660"
+
+#~ msgid ""
+#~ "Enter a comma separated list of udp ports or ranges of ports that "
+#~ "application/user role connects to. Example: 612, 650-660"
+#~ msgstr ""
+#~ "輸入一個應用程式/用戶角色連至、以逗號區隔開的 udp 通訊埠清單或是通訊埠範"
+#~ "圍。例如：612, 650-660"
+
+#~ msgid "Enter complete path for executable to be confined."
+#~ msgstr "輸入要被限制的可執行檔的完整路徑。"
+
+#~ msgid ""
+#~ "Enter complete path to init script used to start the confined application."
+#~ msgstr "輸入用來啟用受限制的應用程式的 init script 的完整路徑。"
+
+#~ msgid "Enter name of application or user role to be confined"
+#~ msgstr "輸入受限制的應用程式名稱或用戶角色"
+
+#~ msgid "Enter network ports that application/user role connects to"
+#~ msgstr "輸入應用程式/用戶連至的網路通訊埠"
+
+#~ msgid "Enter network ports that application/user role listens to"
+#~ msgstr "輸入應用程式/用戶角色監聽的網路通訊埠"
+
+#~ msgid "Enter unique name for the confined application or user role."
+#~ msgstr "輸入受限制的應用程式或用戶角色的特殊名稱。"
+
+#~ msgid "Executable"
+#~ msgstr "可執行檔"
+
+#~ msgid "Existing User Roles"
+#~ msgstr "現有的用戶角色"
+
+#~ msgid "GPL"
+#~ msgstr "GPL"
+
+#~ msgid "Generated Policy Files"
+#~ msgstr "產生的政策檔案"
+
+#~ msgid "Init script"
+#~ msgstr "init script"
+
+#~ msgid "Interacts with the terminal"
+#~ msgstr "與終端機進行互動"
+
+#~ msgid "Internet Services Daemon (inetd)"
+#~ msgstr "網路服務 Daemon（inetd）"
+
+#~ msgid "Internet Services Daemon are daemons started by xinetd"
+#~ msgstr "網路服務 Daemon 為 xinetd 所啟用的系統程式"
+
+#~ msgid "Minimal Terminal User Role"
+#~ msgstr "最少的終端機用戶角色"
+
+#~ msgid "Minimal X Windows User Role"
+#~ msgstr "最少的 X Windows 用戶角色"
+
+#~ msgid "Modify an existing login user record."
+#~ msgstr "修改一個現有的登錄用戶紀錄。"
+
+#~ msgid "Polgen"
+#~ msgstr "Polgen"
+
+#~ msgid "Policy Directory"
+#~ msgstr "政策目錄"
+
+#~ msgid "Red Hat 2007"
+#~ msgstr "Red Hat 2007"
+
+#~ msgid "Root Admin User Role"
+#~ msgstr "Root 管理員用戶角色（Root Admin User Role）"
+
+#~ msgid "SELinux Policy Generation Tool"
+#~ msgstr "SELinux 政策產生工具（SELinux Policy Generation Tool）"
+
+#~ msgid "Select Ports"
+#~ msgstr "選擇通訊埠"
+
+#~ msgid ""
+#~ "Select Root Administrator User Role, if this user will be used to "
+#~ "administer the machine while running as root.  This user will not be able "
+#~ "to login to the system directly."
+#~ msgstr ""
+#~ "若此用戶將會被用來以 root 的身份管理機器的話，選擇 Root 管理者用戶角色。此"
+#~ "用戶將無法直接登入系統。"
+
+#~ msgid "Select additional domains that this user role will administer"
+#~ msgstr "選擇此用戶角色將會管理的額外網域"
+
+#~ msgid "Select additional domains to which this user role will transition"
+#~ msgstr "選擇此用戶角色將會轉移的額外網域"
+
+#~ msgid "Select additional roles for this user"
+#~ msgstr "選擇此用戶的額外角色"
+
+#~ msgid "Select booleans that the application uses"
+#~ msgstr "選擇應用程式所使用的布林值"
+
+#~ msgid "Select common application traits"
+#~ msgstr "選擇一般的應用程式特性"
+
+#~ msgid "Select directory to generate policy in"
+#~ msgstr "選擇產生政策的目錄"
+
+#~ msgid "Select files/directories that the application manages"
+#~ msgstr "選擇應用程式所管理的檔案/目錄"
+
+#~ msgid ""
+#~ "Select the applications domains that you would like this user role to "
+#~ "transition to."
+#~ msgstr "選擇您希望此用戶角色轉移至的應用程式網域。"
+
+#~ msgid "Select the domains that you would like this user administer."
+#~ msgstr "選擇您希望此用戶管理的網域。"
+
+#~ msgid ""
+#~ "Select the user roles that will transiton to this applications domains."
+#~ msgstr "選擇將會轉移至此應用程式網域的用戶角色。"
+
+#~ msgid "Select type of the application/user role to be confined"
+#~ msgstr "選擇欲限制的應用程式/用戶角色類型"
+
+#~ msgid "Select user roles that will transition to this domain"
+#~ msgstr "選擇將會轉移至此網域的用戶角色"
+
+#~ msgid "Select user roles that you want to customize"
+#~ msgstr "選擇您希望自訂化的用戶角色"
+
+#~ msgid "Sends audit messages"
+#~ msgstr "發送稽核訊息"
+
+#~ msgid "Sends email"
+#~ msgstr "發送電子郵件"
+
+#~ msgid "Standard Init Daemon"
+#~ msgstr "標準 Init Daemon"
+
+#~ msgid ""
+#~ "Standard Init Daemon are daemons started on boot via init scripts.  "
+#~ "Usually requires a script in /etc/rc.d/init.d"
+#~ msgstr ""
+#~ "標準的 Init Daemon 代表透過 init script 在開機時啟動的系統程式。通常在 /"
+#~ "etc/rc.d/init.d 中會需要一個 script"
+
+#~ msgid ""
+#~ "This tool can be used to generate a policy framework, to confine "
+#~ "applications or users using SELinux.   \n"
+#~ "\n"
+#~ "The tool generates:\n"
+#~ "Type enforcement file (te)\n"
+#~ "Interface file (if)\n"
+#~ "File context file (fc)\n"
+#~ "Shell script (sh) - used to compile and install the policy. "
+#~ msgstr ""
+#~ "此工具可被用來產生一個繼續進行應用程式或是使用 SELinux 的用戶的政策架"
+#~ "構。   \n"
+#~ "\n"
+#~ "此工具會產生：\n"
+#~ "類型強制檔案（te）\n"
+#~ "介面檔案（if）\n"
+#~ "檔案 context 檔（fc）\n"
+#~ "Shell script（sh）- 用來編譯和安裝政策。"
+
+#~ msgid ""
+#~ "This tool will generate the following: \n"
+#~ "Type Enforcement(te), File Context(fc), Interface(if), Shell Script(sh)\n"
+#~ "\n"
+#~ "Execute shell script to compile/install and relabel files/directories.  \n"
+#~ "Put the machine in permissive mode (setenforce 0). \n"
+#~ "Run/restart the application to generate avc messages.\n"
+#~ "Use audit2allow -R to generate additional rules for the te file.\n"
+#~ msgstr ""
+#~ "此工具會產生下列：\n"
+#~ "類型強制（te）、檔案 Context（fc）、介面（if）、Shell Script（sh）\n"
+#~ "\n"
+#~ "執行 shell script 來編譯/安裝和重新標記檔案/目錄。\n"
+#~ "將機器設置為寬鬆模式（setenforce 0）。\n"
+#~ "執行/重新啟動用程式來產生 avc 訊息。\n"
+#~ "使用 audit2allow -R 來為 te 檔案產生額外的規則。\n"
+
+#~ msgid ""
+#~ "This tool will generate the following: \n"
+#~ "Type Enforcement(te), File Context(fc), Interface(if), Shell Script(sh)\n"
+#~ "Execute shell script as root to compile/install and relabel files/"
+#~ "directories.  \n"
+#~ "Use semanage or useradd to map Linux login users to user roles.\n"
+#~ "Put the machine in permissive mode (setenforce 0). \n"
+#~ "Login as the user and test this user role.\n"
+#~ "Use audit2allow -R to generate additional rules for the te file.\n"
+#~ msgstr ""
+#~ "此工具會產生下列：\n"
+#~ "類型強制（te）、檔案 Context（fc）、介面（if）、Shell Script（sh）\n"
+#~ "以 root 來執行 shell script 並編譯/安裝和重新標記檔案/目錄？\n"
+#~ "使用 semanage 或是 useradd 來將 Linux 登錄用戶對映至用戶角色。\n"
+#~ "將機器設置為寬鬆模式（setenforce 0）。\n"
+#~ "以該用戶登入並測試此用戶角色。\n"
+#~ "使用 audit2allow -R 來為 te 檔案產生額外的規則。\n"
+
+#~ msgid ""
+#~ "This user can login to a machine via X or terminal.  By default this user "
+#~ "will have no setuid, no networking, no sudo, no su"
+#~ msgstr ""
+#~ "此用戶可透過 X 或是終端機來登入一部機器。就預設值來講，此用戶將不會有 "
+#~ "setuid、網路作業、sudo 和 su"
+
+#~ msgid ""
+#~ "This user will login to a machine only via a terminal or remote login.  "
+#~ "By default this user will have  no setuid, no networking, no su, no sudo."
+#~ msgstr ""
+#~ "此用戶將只可透過終端機或是遠端登錄來登入一部機器。就預設值來講，此用戶將不"
+#~ "會有 setuid、網路作業、su 和 sudo。"
+
+#~ msgid "Unreserved Ports (>1024)"
+#~ msgstr "未保留的通訊埠（>1024）"
+
+#~ msgid "User Application"
+#~ msgstr "用戶應用程式"
+
+#~ msgid ""
+#~ "User Application are any application that you would like to confine that "
+#~ "is started by a user"
+#~ msgstr "用戶應用程式為任何您所希望限制、由某個用戶所啟用的應用程式"
+
+#~ msgid "User Role"
+#~ msgstr "用戶角色"
+
+#~ msgid ""
+#~ "User with full networking, no setuid applications without transition, no "
+#~ "su, can sudo to Root Administration Roles"
+#~ msgstr ""
+#~ "具有完整網路作業、沒有無轉移的 setuid 應用程式、無 su，並且可 sudo 至 "
+#~ "Root 管理角色的用戶"
+
+#~ msgid ""
+#~ "User with full networking, no setuid applications without transition, no "
+#~ "sudo, no su."
+#~ msgstr ""
+#~ "具有完整網路作業、沒有無轉移的 setuid 應用程式、無 sudo，並且無 su。"
+
+#~ msgid "Uses Pam for authentication"
+#~ msgstr "使用 Pam 來進行驗證"
+
+#~ msgid "Uses dbus"
+#~ msgstr "使用 dbus"
+
+#~ msgid "Uses nsswitch or getpw* calls"
+#~ msgstr "使用 nsswitch 或是 getpw* 調用"
+
+#~ msgid "Web Application/Script (CGI)"
+#~ msgstr "網站應用程式/Script（CGI）"
+
+#~ msgid ""
+#~ "Web Applications/Script (CGI) CGI scripts started by the web server "
+#~ "(apache)"
+#~ msgstr "網站應用程式/Script（CGI）由網站伺服器（apache）所啟用的 CGI script"
+
+#~ msgid "Writes syslog messages\t"
+#~ msgstr "寫入 syslog 訊息\t"
+
+#~ msgid "Boolean"
+#~ msgstr "布林值"
+
+#~ msgid ""
+#~ "SELinux Port\n"
+#~ "Type"
+#~ msgstr ""
+#~ "SELinux 通訊埠\n"
+#~ "類型"
+
+#~ msgid "Protocol"
+#~ msgstr "通訊協定"
+
+#~ msgid ""
+#~ "MLS/MCS\n"
+#~ "Level"
+#~ msgstr ""
+#~ "MLS/MCS\n"
+#~ "等級"
+
+#~ msgid "Port"
+#~ msgstr "通訊埠"
+
+#~ msgid "Port number \"%s\" is not valid.  0 < PORT_NUMBER < 65536 "
+#~ msgstr "通訊埠號「%s」無效。0 < PORT_NUMBER < 65536 "
+
+#~ msgid "List View"
+#~ msgstr "清單視點"
+
+#~ msgid "Group View"
+#~ msgstr "群組視點"
+
+#~ msgid "Add"
+#~ msgstr "新增"
+
+#~ msgid "Add File Context"
+#~ msgstr "新增檔案 Context"
+
+#~ msgid "Add Network Port"
+#~ msgstr "新增網路通訊埠"
+
+#~ msgid "Add SELinux Login Mapping"
+#~ msgstr "新增 SELinux 登錄對映"
+
+#~ msgid "Add SELinux Network Ports"
+#~ msgstr "新增 SELinux 網路通訊埠"
+
+#~ msgid "Add SELinux User"
+#~ msgstr "新增 SELinux 用戶"
+
+#~ msgid "Add SELinux User Mapping"
+#~ msgstr "新增 SELinux 用戶對映"
+
+#~ msgid "Add Translation"
+#~ msgstr "新增轉移s"
+
+#~ msgid "Current Enforcing Mode"
+#~ msgstr "目前的強制模式"
+
+#~ msgid "Delete File Context"
+#~ msgstr "刪除檔案 Context"
+
+#~ msgid "Delete Network Port"
+#~ msgstr "刪除網路通訊埠"
+
+#~ msgid "Delete SELinux User Mapping"
+#~ msgstr "刪除 SELinux 用戶對映"
+
+#~ msgid "Delete Translation"
+#~ msgstr "刪除轉移"
+
+#~ msgid ""
+#~ "Disabled\n"
+#~ "Permissive\n"
+#~ "Enforcing\n"
+#~ msgstr ""
+#~ "停用\n"
+#~ "寬鬆\n"
+#~ "強制\n"
+
+#~ msgid "Edit Network Port"
+#~ msgstr "編輯網路通訊埠"
+
+#~ msgid ""
+#~ "Enable/Disable additional audit rules, that are normally not reported in "
+#~ "the log files."
+#~ msgstr "啟用/停用額外的稽核規則，這些規則一般不會回報於日誌檔案中。"
+
+#~ msgid "File Specification"
+#~ msgstr "檔案規格"
+
+#~ msgid "File Type"
+#~ msgstr "檔案類型"
+
+#~ msgid "Filter"
+#~ msgstr "過濾器"
+
+#~ msgid "Generate new policy module"
+#~ msgstr "產生新的政策模組"
+
+#~ msgid "Load policy module"
+#~ msgstr "載入政策模組"
+
+#~ msgid "Lockdown..."
+#~ msgstr "鎖定..."
+
+#~ msgid "MLS"
+#~ msgstr "MLS"
+
+#~ msgid "Modify File Context"
+#~ msgstr "修改檔案 Context"
+
+#~ msgid "Modify SELinux User"
+#~ msgstr "修改 SELinux 用戶"
+
+#~ msgid "Modify SELinux User Mapping"
+#~ msgstr "修改 SELinux 用戶對映"
+
+#~ msgid "Modify Translation"
+#~ msgstr "修改轉移"
+
+#~ msgid "Relabel on next reboot."
+#~ msgstr "下次開機時重新標記。"
+
+#~ msgid "Remove loadable policy module"
+#~ msgstr "移除可載入的政策模組"
+
+#~ msgid "Revert boolean setting to system default"
+#~ msgstr "將布林值設定恢復成系統預設值"
+
+#~ msgid "Run booleans lockdown wizard"
+#~ msgstr "執行布林值鎖定精靈"
+
+#~ msgid "SELinux Administration"
+#~ msgstr "SELinux 管理"
+
+#~ msgid ""
+#~ "SELinux MLS/MCS\n"
+#~ "Level"
+#~ msgstr ""
+#~ "SELinux MLS/MCS\n"
+#~ "等級"
+
+#~ msgid "SELinux Type"
+#~ msgstr "SELinux 類型"
+
+#~ msgid ""
+#~ "Select if you wish to relabel then entire file system on next reboot.  "
+#~ "Relabeling can take a very long time, depending on the size of the "
+#~ "system.  If you are changing policy types or going from disabled to "
+#~ "enforcing, a relabel is required."
+#~ msgstr ""
+#~ "選擇您是否希望在下次開機時重新標記整個檔案系統。根據系統大小，重新標記可能"
+#~ "會花上一段很長時間。若您要更改政策類型或是要由停用狀態更改為強制模式，重新"
+#~ "標記將是必要的。"
+
+#~ msgid "System Default Enforcing Mode"
+#~ msgstr "系統預設強制模式"
+
+#~ msgid "System Default Policy Type: "
+#~ msgstr "系統預設政策類型："
+
+#~ msgid "Toggle between Customized and All Booleans"
+#~ msgstr "在自訂化以及所有布林值之間進行啟用"
+
+#~ msgid "Toggle between Customized and All Ports"
+#~ msgstr "在自訂化以及所有通訊埠之間進行啟用"
+
+#~ msgid "Toggle between all and customized file context"
+#~ msgstr "在自訂化以及所有檔案 context 之間進行啟用"
+
+#~ msgid "_Delete"
+#~ msgstr "刪除（_D）"
+
+#~ msgid "_Properties"
+#~ msgstr "屬性（_P）"
+
+#~ msgid ""
+#~ "all files\n"
+#~ "regular file\n"
+#~ "directory\n"
+#~ "character device\n"
+#~ "block device\n"
+#~ "socket\n"
+#~ "symbolic link\n"
+#~ "named pipe\n"
+#~ msgstr ""
+#~ "所有檔案\n"
+#~ "正規檔案\n"
+#~ "目錄\n"
+#~ "字元裝置\n"
+#~ "區塊裝置\n"
+#~ "socket\n"
+#~ "符號連結\n"
+#~ "named 管線\n"
+
+#~ msgid ""
+#~ "tcp\n"
+#~ "udp"
+#~ msgstr ""
+#~ "tcp\n"
+#~ "udp"

@@ -1,0 +1,2984 @@
+# translation of policycoreutils.HEAD.kn.po to Kannada
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Shankar Prasad <svenkate@redhat.com>, 2007, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: policycoreutils.HEAD.kn\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-06-24 10:53-0400\n"
+"PO-Revision-Date: 2008-04-02 10:45+0530\n"
+"Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
+"Language-Team: Kannada <en@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+
+#: ../run_init/run_init.c:67
+msgid ""
+"USAGE: run_init <script> <args ...>\n"
+"  where: <script> is the name of the init script to run,\n"
+"         <args ...> are the arguments to that script."
+msgstr ""
+"ಬಳಕೆ: run_init <script> <args ...>\n"
+"  ಇಲ್ಲಿ: <script> ವು ಚಲಾಯಿಸಬೇಕಿರುವ init ಸ್ಕ್ರಿಪ್ಟಿನ ಹೆಸರು,\n"
+"         <args ...> ಗಳು ಈ ಸ್ಕ್ರಿಪ್ಟಿನ ಆರ್ಗ್ಯುಮೆಂಟುಗಳು."
+
+#: ../run_init/run_init.c:126 ../newrole/newrole.c:1187
+#, c-format
+msgid "failed to initialize PAM\n"
+msgstr "PAM ಅನ್ನು ಆರಂಭಿಸುವಲ್ಲಿ ದೋಷ\n"
+
+#: ../run_init/run_init.c:139
+#, c-format
+msgid "failed to get account information\n"
+msgstr "ಖಾತೆ ಮಾಹಿತಿಯನ್ನು ಪಡೆಯುವಲ್ಲ್ಲಿ ವಿಫಲತೆ\n"
+
+#: ../run_init/run_init.c:162 ../newrole/newrole.c:338
+msgid "Password:"
+msgstr "ಗುಪ್ತಪದ:"
+
+#: ../run_init/run_init.c:197 ../newrole/newrole.c:363
+#, c-format
+msgid "Cannot find your entry in the shadow passwd file.\n"
+msgstr "ನಿಮ್ಮ ನಮೂದು ಛಾಯಾ passwd ಕಡತದಲ್ಲಿ ಕಂಡುಬಂದಿಲ್ಲ.\n"
+
+#: ../run_init/run_init.c:203 ../newrole/newrole.c:370
+#, c-format
+msgid "getpass cannot open /dev/tty\n"
+msgstr "getpass ನಿಂದ /dev/tty ಅನ್ನು ತೆರೆಯಲಾಗಿಲ್ಲ\n"
+
+#: ../run_init/run_init.c:275
+#, c-format
+msgid "run_init: incorrect password for %s\n"
+msgstr "run_init: %s ಕ್ಕೆ ಗುಪ್ತಪದ ಸರಿ ಇಲ್ಲ\n"
+
+#: ../run_init/run_init.c:309
+#, c-format
+msgid "Could not open file %s\n"
+msgstr "%s ಕಡತವನ್ನು ತೆರೆಯಲಾಗಿಲ್ಲ\n"
+
+#: ../run_init/run_init.c:336
+#, c-format
+msgid "No context in file %s\n"
+msgstr "ಕಡತ %s ದಲ್ಲಿ ಯಾವುದೆ ಸನ್ನಿವೇಶವಿಲ್ಲ\n"
+
+#: ../run_init/run_init.c:361
+#, c-format
+msgid "Sorry, run_init may be used only on a SELinux kernel.\n"
+msgstr "ಕ್ಷಮಿಸಿ, run_init ಕೇವಲ ಒಂದು SELinux ಕರ್ನಲ್ಲಿನಲ್ಲಿ ಮಾತ್ರ ಬಳಸಲ್ಪಡಬಹುದು.\n"
+
+#: ../run_init/run_init.c:380
+#, c-format
+msgid "authentication failed.\n"
+msgstr "ದೃಢೀಕರಣವು ವಿಫಲಗೊಂಡಿದೆ.\n"
+
+#: ../run_init/run_init.c:405 ../newrole/newrole.c:1321
+#, c-format
+msgid "Could not set exec context to %s.\n"
+msgstr "%s ಕ್ಕೆ exec ಸನ್ನಿವೇಶವನ್ನು ಹೊಂದಿಸಲಾಗಿಲ್ಲ.\n"
+
+#: ../audit2allow/audit2allow:217
+msgid "******************** IMPORTANT ***********************\n"
+msgstr "******************** ಪ್ರಮುಖ ಅಂಶ ***********************\n"
+
+#: ../audit2allow/audit2allow:218
+msgid "To make this policy package active, execute:"
+msgstr "ಈ ನೀತಿ(ಪಾಲಿಸಿ) ಪ್ಯಾಕೇಜನ್ನು ಸಕ್ರಿಯವಾಗಿಸಲು, ಇದನ್ನು ಕಾರ್ಯಗತಗೊಳಿಸಿ:"
+
+#: ../semanage/seobject.py:48
+msgid "Could not create semanage handle"
+msgstr "semanage ಹ್ಯಾಂಡಲನ್ನು ಸೃಜಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:55
+msgid "SELinux policy is not managed or store cannot be accessed."
+msgstr "SELinux ನೀತಿಯನ್ನು ನಿರ್ವಹಿಸಲಾಗಿಲ್ಲ ಅಥವ ಶೇಖರಣೆಯನ್ನು ನಿಲುಕಿಸಿಕೊಳ್ಳಲಾಗಿಲ್ಲ."
+
+#: ../semanage/seobject.py:60
+msgid "Cannot read policy store."
+msgstr "ನೀತಿ ಶೇಖರಣೆಯನ್ನು ಓದಲಾಗಿಲ್ಲ."
+
+#: ../semanage/seobject.py:65
+msgid "Could not establish semanage connection"
+msgstr "semanage ಸಂಪರ್ಕವನ್ನು ಸ್ಥಾಪಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:70
+#, fuzzy
+msgid "Could not test MLS enabled status"
+msgstr "%s ಗಾಗಿ MLS ವ್ಯಾಪ್ತಿಯನ್ನು ಹೊಂದಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:142 ../semanage/seobject.py:146
+msgid "global"
+msgstr "ಜಾಗತಿಕ"
+
+#: ../semanage/seobject.py:206
+#, python-format
+msgid "Unable to open %s: translations not supported on non-MLS machines: %s"
+msgstr ""
+"%s ಅನ್ನು ತೆರೆಯುವಲ್ಲಿ ವಿಫಲತೆ: MLS ಅಲ್ಲದ ಗಣಕಗಳಲ್ಲಿ ಅನುವಾದಗಳಿಗೆ ಬೆಂಬಲ ಇರುವುದಿಲ್ಲ:%s"
+
+#: ../semanage/seobject.py:239
+msgid "Level"
+msgstr "ಮಟ್ಟ"
+
+#: ../semanage/seobject.py:239
+msgid "Translation"
+msgstr "ಅನುವಾದ"
+
+#: ../semanage/seobject.py:247 ../semanage/seobject.py:261
+#, python-format
+msgid "Translations can not contain spaces '%s' "
+msgstr "ಅನುವಾದಗಳು ಖಾಲಿ ಜಾಗಗಳನ್ನು ಹೊಂದಿರುವಂತಿಲ್ಲ '%s' "
+
+#: ../semanage/seobject.py:250
+#, python-format
+msgid "Invalid Level '%s' "
+msgstr "ಅಮಾನ್ಯ ಮಟ್ಟ '%s' "
+
+#: ../semanage/seobject.py:253
+#, python-format
+msgid "%s already defined in translations"
+msgstr "%s ಅನ್ನು ಈಗಾಗಲೆ ಅನುವಾದದಲ್ಲಿ ವಿವರಿಸಲಾಗಿದೆ"
+
+#: ../semanage/seobject.py:265
+#, python-format
+msgid "%s not defined in translations"
+msgstr "%s ಅನುವಾದದಲ್ಲಿ ವಿವರಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:290
+msgid "Not yet implemented"
+msgstr "ಇನ್ನೂ ಅನ್ವಯಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:294
+msgid "Semanage transaction already in progress"
+msgstr ""
+
+#: ../semanage/seobject.py:303
+msgid "Could not start semanage transaction"
+msgstr "semanage ವಹಿವಾಟನ್ನು ಆರಂಭಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:309
+#, fuzzy
+msgid "Could not commit semanage transaction"
+msgstr "semanage ವಹಿವಾಟನ್ನು ಆರಂಭಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:313
+msgid "Semanage transaction not in progress"
+msgstr ""
+
+#: ../semanage/seobject.py:325
+#, fuzzy
+msgid "Could not list SELinux modules"
+msgstr "SELinux ಬಳಕೆದಾರರನ್ನು ಪಟ್ಟಿ ಮಾಡಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:336
+#, fuzzy
+msgid "Permissive Types"
+msgstr "ಅನುಮತಿಪೂರ್ವಕವಾಗಿ"
+
+#: ../semanage/seobject.py:378
+#, python-format
+msgid "Could not set permissive domain %s (module installation failed)"
+msgstr ""
+
+#: ../semanage/seobject.py:384
+#, python-format
+msgid "Could not remove permissive domain %s (remove failed)"
+msgstr ""
+
+#: ../semanage/seobject.py:410 ../semanage/seobject.py:470
+#: ../semanage/seobject.py:516 ../semanage/seobject.py:598
+#: ../semanage/seobject.py:665 ../semanage/seobject.py:723
+#: ../semanage/seobject.py:933 ../semanage/seobject.py:1506
+#: ../semanage/seobject.py:1570 ../semanage/seobject.py:1582
+#: ../semanage/seobject.py:1663 ../semanage/seobject.py:1714
+#, python-format
+msgid "Could not create a key for %s"
+msgstr "%s ಗಾಗಿ ಕೀಲಿಯನ್ನು ಸೃಜಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:414 ../semanage/seobject.py:474
+#: ../semanage/seobject.py:520 ../semanage/seobject.py:526
+#, python-format
+msgid "Could not check if login mapping for %s is defined"
+msgstr "%s ಗೆ ಪ್ರವೇಶ ಮ್ಯಾಪಿಂಗ್ ವಿವರಿಸಲ್ಪಟ್ಟಿದೆಯೆ ಎಂದು ಪರಿಶೀಲಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:416
+#, python-format
+msgid "Login mapping for %s is already defined"
+msgstr "%s ಗಾಗಿ ಪ್ರವೇಶ ಮ್ಯಾಪಿಂಗ್ ವಿವರಿಸಲಾಗಿದೆ"
+
+#: ../semanage/seobject.py:421
+#, fuzzy, python-format
+msgid "Linux Group %s does not exist"
+msgstr "Linux ಬಳಕೆದಾರ %s ಅಸ್ತಿತ್ವದಲ್ಲಿಲ್ಲ"
+
+#: ../semanage/seobject.py:426
+#, python-format
+msgid "Linux User %s does not exist"
+msgstr "Linux ಬಳಕೆದಾರ %s ಅಸ್ತಿತ್ವದಲ್ಲಿಲ್ಲ"
+
+#: ../semanage/seobject.py:430
+#, python-format
+msgid "Could not create login mapping for %s"
+msgstr "%s ಗಾಗಿ ಪ್ರವೇಶ ಮ್ಯಾಪಿಂಗನ್ನು ಸೃಜಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:434 ../semanage/seobject.py:612
+#, python-format
+msgid "Could not set name for %s"
+msgstr "%s ಗಾಗಿ ಹೆಸರನ್ನು ಹೊಂದಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:439 ../semanage/seobject.py:622
+#, python-format
+msgid "Could not set MLS range for %s"
+msgstr "%s ಗಾಗಿ MLS ವ್ಯಾಪ್ತಿಯನ್ನು ಹೊಂದಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:443
+#, python-format
+msgid "Could not set SELinux user for %s"
+msgstr "%s ಗಾಗಿ SELinux ಬಳಕೆದಾರನನ್ನು ಹೊಂದಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:447
+#, python-format
+msgid "Could not add login mapping for %s"
+msgstr "%s ಗೆ ಪ್ರವೇಶ ಮ್ಯಾಪಿಂಗನ್ನು ಸೇರಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:459 ../semanage/seobject.py:462
+msgid "add SELinux user mapping"
+msgstr "SELinux ಪ್ರವೇಶ ಮ್ಯಾಪಿಂಗನ್ನು ಸೇರಿಸು"
+
+#: ../semanage/seobject.py:466
+msgid "Requires seuser or serange"
+msgstr "seuser ಅಥವ serange ದ ಅಗತ್ಯವಿದೆ"
+
+#: ../semanage/seobject.py:476 ../semanage/seobject.py:522
+#, python-format
+msgid "Login mapping for %s is not defined"
+msgstr "%s ಗಾಗಿನ ಪ್ರವೇಶ ಮ್ಯಾಪಿಂಗನ್ನು ವಿವರಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:480
+#, python-format
+msgid "Could not query seuser for %s"
+msgstr "seuser ಅನ್ನು %s ಗಾಗಿ ಪ್ರಶ್ನಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:496
+#, python-format
+msgid "Could not modify login mapping for %s"
+msgstr "%s ಗಾಗಿ ಪ್ರವೇಶ ಮ್ಯಾಪಿಂಗನ್ನು ಮಾರ್ಪಡಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:528
+#, python-format
+msgid "Login mapping for %s is defined in policy, cannot be deleted"
+msgstr "%s ಗಾಗಿನ ಪ್ರವೇಶ ಮ್ಯಾಪಿಂಗ್ ನೀತಿಯಲ್ಲಿ ವಿವರಿಸಲಾಗಿದೆ, ಅಳಿಸಲಾಗುವುದಿಲ್ಲ"
+
+#: ../semanage/seobject.py:532
+#, python-format
+msgid "Could not delete login mapping for %s"
+msgstr "%s ಗಾಗಿನ ಪ್ರವೇಶ ಮ್ಯಾಪಿಂಗನ್ನು ಅಳಿಸಲಾಗುವುದಿಲ್ಲ"
+
+#: ../semanage/seobject.py:555
+msgid "Could not list login mappings"
+msgstr "ಪ್ರವೇಶ ಮ್ಯಾಪಿಂಗುಗಳನ್ನು ಪಟ್ಟಿ ಮಾಡಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:568 ../semanage/seobject.py:573
+msgid "Login Name"
+msgstr "ಪ್ರವೇಶ ಹೆಸರು"
+
+#: ../semanage/seobject.py:568 ../semanage/seobject.py:573
+#: ../semanage/seobject.py:782 ../semanage/seobject.py:787
+msgid "SELinux User"
+msgstr "SELinux ಬಳಕೆದಾರ"
+
+#: ../semanage/seobject.py:568
+msgid "MLS/MCS Range"
+msgstr "MLS/MCS ವ್ಯಾಪ್ತಿ"
+
+#: ../semanage/seobject.py:594
+#, fuzzy, python-format
+msgid "You must add at least one role for %s"
+msgstr "%s ಗಾಗಿ ಕಡತ ಸನ್ನಿವೇಶವನ್ನು ಸೇರಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:602 ../semanage/seobject.py:669
+#: ../semanage/seobject.py:727 ../semanage/seobject.py:733
+#, python-format
+msgid "Could not check if SELinux user %s is defined"
+msgstr "SELinux ಬಳಕೆದಾರ %s ನು ವಿವರಿಸಲ್ಪಟ್ಟಿದೆಯೆ ಎಂದು ಪರಿಶೀಲಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:604
+#, python-format
+msgid "SELinux user %s is already defined"
+msgstr "SELinux ಬಳಕೆದಾರ %s ನನ್ನು ಈಗಾಗಲೆ ವಿವರಿಸಲಾಗಿದೆ"
+
+#: ../semanage/seobject.py:608
+#, python-format
+msgid "Could not create SELinux user for %s"
+msgstr "%s SELinux ಬಳಕೆದಾರನನ್ನು ಸೃಜಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:617
+#, python-format
+msgid "Could not add role %s for %s"
+msgstr "ಪಾತ್ರ %s ಅನ್ನು %s ಗೆ ಸೇರಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:626
+#, python-format
+msgid "Could not set MLS level for %s"
+msgstr "%s ಗಾಗಿ MLS ಮಟ್ಟವನ್ನು ಹೊಂದಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:629
+#, python-format
+msgid "Could not add prefix %s for %s"
+msgstr "ಪೂರ್ವಪ್ರತ್ಯಯ %s ಅನ್ನು %s ಗೆ ಸೇರಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:632
+#, python-format
+msgid "Could not extract key for %s"
+msgstr "%s ಗಾಗಿ ಕೀಲಿಯನ್ನು ತೆಗೆಯಲಾಗಿಲ್ಲ(extract)"
+
+#: ../semanage/seobject.py:636
+#, python-format
+msgid "Could not add SELinux user %s"
+msgstr "SELinux ಬಳಕೆದಾರ %s ನನ್ನು ಸೇರಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:659
+msgid "Requires prefix, roles, level or range"
+msgstr "ಪೂರ್ವಪ್ರತ್ಯಯ, ಪಾತ್ರಗಳು, ಮಟ್ಟ ಅಥವ ವ್ಯಾಪ್ತಿಯ ಅಗತ್ಯವಿದೆ"
+
+#: ../semanage/seobject.py:661
+msgid "Requires prefix or roles"
+msgstr "ಪೂರ್ವಪ್ರತ್ಯಯ ಅಥವ ಪಾತ್ರಗಳ ಅಗತ್ಯವಿದೆ"
+
+#: ../semanage/seobject.py:671 ../semanage/seobject.py:729
+#, python-format
+msgid "SELinux user %s is not defined"
+msgstr "SELinux ಬಳಕೆದಾರ %s ನು ಸೂಚಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:675
+#, python-format
+msgid "Could not query user for %s"
+msgstr "ಬಳಕೆದಾರನನ್ನು %s ಗಾಗಿ ಪ್ರಶ್ನಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:702
+#, python-format
+msgid "Could not modify SELinux user %s"
+msgstr "SELinux ಬಳಕೆದಾರ %s ನನ್ನು ಮಾರ್ಪಡಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:735
+#, python-format
+msgid "SELinux user %s is defined in policy, cannot be deleted"
+msgstr "SELinux ಬಳಕೆದಾರ %s ನನ್ನು ನೀತಿಯಲ್ಲಿ ವಿವರಿಸಲಾಗಿದೆ, ಅಳಿಸಲಾಗುವುದಿಲ್ಲ"
+
+#: ../semanage/seobject.py:739
+#, python-format
+msgid "Could not delete SELinux user %s"
+msgstr "SELinux ಬಳಕೆದಾರ %s ನನ್ನು ಅಳಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:762
+msgid "Could not list SELinux users"
+msgstr "SELinux ಬಳಕೆದಾರರನ್ನು ಪಟ್ಟಿ ಮಾಡಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:768
+#, python-format
+msgid "Could not list roles for user %s"
+msgstr "ಬಳಕೆದಾರ %s ನಿಗೆ ಪಾತ್ರಗಳನ್ನು ಪಟ್ಟಿ ಮಾಡಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:781
+msgid "Labeling"
+msgstr "ಲೇಬಲ್ ಮಾಡಲಾಗುತ್ತಿದೆ"
+
+#: ../semanage/seobject.py:781
+msgid "MLS/"
+msgstr "MLS/"
+
+#: ../semanage/seobject.py:782
+msgid "Prefix"
+msgstr "ಪೂರ್ವಪ್ರತ್ಯಯ"
+
+#: ../semanage/seobject.py:782
+msgid "MCS Level"
+msgstr "MCS ಮಟ್ಟ"
+
+#: ../semanage/seobject.py:782
+msgid "MCS Range"
+msgstr "MCS ವ್ಯಾಪ್ತಿ"
+
+#: ../semanage/seobject.py:782 ../semanage/seobject.py:787
+msgid "SELinux Roles"
+msgstr "SELinux ಪಾತ್ರಗಳು"
+
+#: ../semanage/seobject.py:802
+msgid "Protocol udp or tcp is required"
+msgstr "ಪ್ರೋಟೊಕಾಲ್ udp ಅಥವ tcp ಯ ಅಗತ್ಯವಿರುತ್ತದೆ"
+
+#: ../semanage/seobject.py:804
+msgid "Port is required"
+msgstr "ಸಂಪರ್ಕಸ್ಥಾನದ ಅಗತ್ಯವಿದೆ"
+
+#: ../semanage/seobject.py:815
+#, python-format
+msgid "Could not create a key for %s/%s"
+msgstr "%s/%s ಗಾಗಿ ಒಂದು ಕೀಲಿಯನ್ನು ಸೃಜಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:826
+msgid "Type is required"
+msgstr "ಬಗೆಯ ಅಗತ್ಯವಿದೆ"
+
+#: ../semanage/seobject.py:832 ../semanage/seobject.py:891
+#: ../semanage/seobject.py:946 ../semanage/seobject.py:952
+#, python-format
+msgid "Could not check if port %s/%s is defined"
+msgstr "%s/%s ಸಂಪರ್ಕ ಸ್ಥಾನವನ್ನು ವಿವರಿಸಲಾಗಿದೆಯೆ ಎಂದು ಪರಿಶೀಲಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:834
+#, python-format
+msgid "Port %s/%s already defined"
+msgstr "ಸಂಪರ್ಕ ಸ್ಥಾನ %s/%s ವನ್ನು ಈಗಾಗಲೆ ವಿವರಿಸಲಾಗಿದೆ"
+
+#: ../semanage/seobject.py:838
+#, python-format
+msgid "Could not create port for %s/%s"
+msgstr "%s/%s ಗಾಗಿ ಸಂಪರ್ಕ ಸ್ಥಾನವನ್ನು ಸೃಜಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:844
+#, python-format
+msgid "Could not create context for %s/%s"
+msgstr "%s/%s ಗಾಗಿ ಸನ್ನಿವೇಶವನ್ನು ಸೃಜಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:848
+#, python-format
+msgid "Could not set user in port context for %s/%s"
+msgstr "%s/%s ಗಾಗಿ ಸಂಪರ್ಕಸ್ಥಾನ ಸನ್ನಿವೇಶದಲ್ಲಿ ಬಳಕೆದಾರನನ್ನು ಸಿದ್ಧಗೊಳಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:852
+#, python-format
+msgid "Could not set role in port context for %s/%s"
+msgstr "%s/%s ಗಾಗಿ ಸಂಪರ್ಕಸ್ಥಾನ ಸನ್ನಿವೇಶದಲ್ಲಿ ಪಾತ್ರವನ್ನು ಸಿದ್ಧಗೊಳಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:856
+#, python-format
+msgid "Could not set type in port context for %s/%s"
+msgstr "%s/%s ಗಾಗಿ ಸಂಪರ್ಕಸ್ಥಾನ ಸನ್ನಿವೇಶದಲ್ಲಿ ಪ್ರಕಾರವನ್ನು ಸಿದ್ಧಗೊಳಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:861
+#, python-format
+msgid "Could not set mls fields in port context for %s/%s"
+msgstr "%s/%s ಗಾಗಿನ ಸಂಪರ್ಕಸ್ಥಾನ mls ಕ್ಷೇತ್ರವನ್ನು ಸಿದ್ಧಗೊಳಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:865
+#, python-format
+msgid "Could not set port context for %s/%s"
+msgstr "%s/%s ಗಾಗಿನ ಸಂಪರ್ಕಸ್ಥಾನವನ್ನು ಸಿದ್ಧಗೊಳಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:869
+#, python-format
+msgid "Could not add port %s/%s"
+msgstr "%s/%s ದಲ್ಲಿ ಸಂಪರ್ಕ ಸ್ಥಾನವನ್ನು ಸೇರಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:883 ../semanage/seobject.py:1129
+#: ../semanage/seobject.py:1317
+msgid "Requires setype or serange"
+msgstr "setype ಅಥವ serange ನ ಅಗತ್ಯವಿದೆ"
+
+#: ../semanage/seobject.py:885
+msgid "Requires setype"
+msgstr "setype ನ ಅಗತ್ಯವಿದೆ"
+
+#: ../semanage/seobject.py:893 ../semanage/seobject.py:948
+#, python-format
+msgid "Port %s/%s is not defined"
+msgstr "ಸಂಪರ್ಕಸ್ಥಾನ %s/%s ವು ವಿವರಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:897
+#, python-format
+msgid "Could not query port %s/%s"
+msgstr "ಸಂಪರ್ಕಸ್ಥಾನ %s/%s ಅನ್ನು ಪ್ರಶ್ನಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:908
+#, python-format
+msgid "Could not modify port %s/%s"
+msgstr "ಸಂಪರ್ಕಸ್ಥಾನ %s/%s ಅನ್ನು ಮಾರ್ಪಡಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:921
+msgid "Could not list the ports"
+msgstr "ಸಂಪರ್ಕ ಸ್ಥಾನಗಳನ್ನು ಪಟ್ಟಿ ಮಾಡಲಾಗಲಿಲ್ಲ"
+
+#: ../semanage/seobject.py:937
+#, python-format
+msgid "Could not delete the port %s"
+msgstr "ಸಂಪರ್ಕ ಸ್ಥಾನ %s ಅನ್ನು ಅಳಿಸಲಾಗಲಿಲ್ಲ"
+
+#: ../semanage/seobject.py:954
+#, python-format
+msgid "Port %s/%s is defined in policy, cannot be deleted"
+msgstr "ಸಂಪರ್ಕಸ್ಥಾನ %s/%s ವನ್ನು ನೀತಿಯಲ್ಲಿ ವಿವರಿಸಲಾಗಿದೆ, ಅಳಿಸಲಾಗುವುದಿಲ್ಲ"
+
+#: ../semanage/seobject.py:958
+#, python-format
+msgid "Could not delete port %s/%s"
+msgstr "ಸಂಪರ್ಕ ಸ್ಥಾನ %s/%s ಅನ್ನು ಅಳಿಸಲಾಗಲಿಲ್ಲ"
+
+#: ../semanage/seobject.py:974 ../semanage/seobject.py:996
+msgid "Could not list ports"
+msgstr "ಸಂಪರ್ಕ ಸ್ಥಾನಗಳನ್ನು ಪಟ್ಟಿ ಮಾಡಲಾಗಲಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1017
+msgid "SELinux Port Type"
+msgstr "SELinux ಸಂಪರ್ಕ ಸ್ಥಾನದ ಬಗೆ"
+
+#: ../semanage/seobject.py:1017
+msgid "Proto"
+msgstr "Proto"
+
+#: ../semanage/seobject.py:1017
+msgid "Port Number"
+msgstr "ಸಂಪರ್ಕಸ್ಥಾನದ ಸಂಖ್ಯೆ"
+
+#: ../semanage/seobject.py:1034 ../semanage/seobject.py:1116
+#: ../semanage/seobject.py:1166
+#, fuzzy
+msgid "Node Address is required"
+msgstr "ಸಂಪರ್ಕಸ್ಥಾನದ ಅಗತ್ಯವಿದೆ"
+
+#: ../semanage/seobject.py:1037 ../semanage/seobject.py:1119
+#: ../semanage/seobject.py:1169
+#, fuzzy
+msgid "Node Netmask is required"
+msgstr "ಸಂಪರ್ಕಸ್ಥಾನದ ಅಗತ್ಯವಿದೆ"
+
+#: ../semanage/seobject.py:1044 ../semanage/seobject.py:1125
+#: ../semanage/seobject.py:1176
+msgid "Unknown or missing protocol"
+msgstr ""
+
+#: ../semanage/seobject.py:1054 ../semanage/seobject.py:1256
+#: ../semanage/seobject.py:1445
+msgid "SELinux Type is required"
+msgstr "SELinux ನ ಬಗೆಯ ಅಗತ್ಯವಿದೆ"
+
+#: ../semanage/seobject.py:1058 ../semanage/seobject.py:1133
+#: ../semanage/seobject.py:1180 ../semanage/seobject.py:1260
+#: ../semanage/seobject.py:1321 ../semanage/seobject.py:1355
+#: ../semanage/seobject.py:1449
+#, python-format
+msgid "Could not create key for %s"
+msgstr "%s ಗಾಗಿ ಕೀಲಿಯನ್ನು ಸೃಜಿಸಲಾಗಲಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1060 ../semanage/seobject.py:1137
+#: ../semanage/seobject.py:1184 ../semanage/seobject.py:1190
+#, fuzzy, python-format
+msgid "Could not check if addr %s is defined"
+msgstr "%s/%s ಸಂಪರ್ಕ ಸ್ಥಾನವನ್ನು ವಿವರಿಸಲಾಗಿದೆಯೆ ಎಂದು ಪರಿಶೀಲಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1064
+#, fuzzy, python-format
+msgid "Addr %s already defined"
+msgstr "ಸಂಪರ್ಕ ಸ್ಥಾನ %s/%s ವನ್ನು ಈಗಾಗಲೆ ವಿವರಿಸಲಾಗಿದೆ"
+
+#: ../semanage/seobject.py:1068
+#, fuzzy, python-format
+msgid "Could not create addr for %s"
+msgstr "%s ಗಾಗಿ ಕೀಲಿಯನ್ನು ಸೃಜಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1073 ../semanage/seobject.py:1275
+#: ../semanage/seobject.py:1415
+#, python-format
+msgid "Could not create context for %s"
+msgstr "%s ಗಾಗಿ ಸನ್ನಿವೇಶವನ್ನು ಸೃಜಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1077
+#, fuzzy, python-format
+msgid "Could not set mask for %s"
+msgstr "%s ಗಾಗಿ ಹೆಸರನ್ನು ಹೊಂದಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1082
+#, fuzzy, python-format
+msgid "Could not set user in addr context for %s"
+msgstr "%s ಗಾಗಿ ಕಡತ ಸನ್ನಿವೇಶದಲ್ಲಿ ಬಳಕೆದಾರನನ್ನು ಸಿದ್ಧಗೊಳಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1086
+#, fuzzy, python-format
+msgid "Could not set role in addr context for %s"
+msgstr "%s ಗಾಗಿ ಕಡತ ಸನ್ನಿವೇಶದಲ್ಲಿ ಪಾತ್ರವನ್ನು ಸಿದ್ಧಗೊಳಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1090
+#, fuzzy, python-format
+msgid "Could not set type in addr context for %s"
+msgstr "%s ಗಾಗಿ ಕಡತ ಸನ್ನಿವೇಶದಲ್ಲ್ಲಿ ಬಗೆಯನ್ನು ಸಿದ್ಧಗೊಳಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1095
+#, fuzzy, python-format
+msgid "Could not set mls fields in addr context for %s"
+msgstr "%s ಗಾಗಿ ಕಡತ ಸನ್ನಿವೇಶದಲ್ಲಿ mls ಕ್ಷೇತ್ರಗಳನ್ನು ಸಿದ್ಧಗೊಳಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1099
+#, fuzzy, python-format
+msgid "Could not set addr context for %s"
+msgstr "%s ಗಾಗಿ ಕಡತ ಸನ್ನಿವೇಶವನ್ನು ಸಿದ್ಧಗೊಳಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1103
+#, fuzzy, python-format
+msgid "Could not add addr %s"
+msgstr "%s/%s ದಲ್ಲಿ ಸಂಪರ್ಕ ಸ್ಥಾನವನ್ನು ಸೇರಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1139 ../semanage/seobject.py:1186
+#, fuzzy, python-format
+msgid "Addr %s is not defined"
+msgstr "ಸಂಪರ್ಕಸ್ಥಾನ %s/%s ವು ವಿವರಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1143
+#, fuzzy, python-format
+msgid "Could not query addr %s"
+msgstr "ಸಂಪರ್ಕಸ್ಥಾನ %s/%s ಅನ್ನು ಪ್ರಶ್ನಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1154
+#, fuzzy, python-format
+msgid "Could not modify addr %s"
+msgstr "ಸಂಪರ್ಕಸ್ಥಾನ %s/%s ಅನ್ನು ಮಾರ್ಪಡಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1192
+#, fuzzy, python-format
+msgid "Addr %s is defined in policy, cannot be deleted"
+msgstr "ಸಂಪರ್ಕಸ್ಥಾನ %s/%s ವನ್ನು ನೀತಿಯಲ್ಲಿ ವಿವರಿಸಲಾಗಿದೆ, ಅಳಿಸಲಾಗುವುದಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1196
+#, fuzzy, python-format
+msgid "Could not delete addr %s"
+msgstr "%s ಅನ್ನು ಅಳಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1212
+#, fuzzy
+msgid "Could not list addrs"
+msgstr "ಸಂಪರ್ಕ ಸ್ಥಾನಗಳನ್ನು ಪಟ್ಟಿ ಮಾಡಲಾಗಲಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1264 ../semanage/seobject.py:1325
+#: ../semanage/seobject.py:1359 ../semanage/seobject.py:1365
+#, python-format
+msgid "Could not check if interface %s is defined"
+msgstr "ಸಂಪರ್ಕಸಾಧನ %s ವು ವಿವರಿಸಲ್ಪಟ್ಟಿದೆಯೆ ಎಂದು ಪರಿಶೀಲಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1266
+#, python-format
+msgid "Interface %s already defined"
+msgstr "ಸಂಪರ್ಕಸಾಧನ %s ವು ಈಗಾಗಲೆ ವಿವರಿಸಲ್ಪಟ್ಟಿದೆ"
+
+#: ../semanage/seobject.py:1270
+#, python-format
+msgid "Could not create interface for %s"
+msgstr "%s ಗಾಗಿ ಸಂಪರ್ಕಸಾಧನವನ್ನು ಸೃಜಿಸಲಾಗಲಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1279
+#, python-format
+msgid "Could not set user in interface context for %s"
+msgstr "%s ಗಾಗಿ ಸಂಪರ್ಕ ಸಾಧನ ಸನ್ನಿವೇಶದಲ್ಲಿ ಬಳಕೆದಾರನನ್ನು ಸಿದ್ಧಗೊಳಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1283
+#, python-format
+msgid "Could not set role in interface context for %s"
+msgstr "%s ಗಾಗಿ ಸಂಪರ್ಕಸಾಧನ ಸನ್ನಿವೇಶದಲ್ಲಿ ಪಾತ್ರವನ್ನು ಸಿದ್ಧಗೊಳಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1287
+#, python-format
+msgid "Could not set type in interface context for %s"
+msgstr "%s ಗಾಗಿ ಸಂಪರ್ಕಸಾಧನ ಸನ್ನಿವೇಶದಲ್ಲಿ ಪ್ರಕಾರವನ್ನು ಸಿದ್ಧಗೊಳಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1292
+#, python-format
+msgid "Could not set mls fields in interface context for %s"
+msgstr "%s ಗಾಗಿನ ಸಂಪರ್ಕಸಾಧನ ಸನ್ನಿವೇಶವನ್ನು ಸಿದ್ಧಗೊಳಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1296
+#, python-format
+msgid "Could not set interface context for %s"
+msgstr "%s ಗಾಗಿ ಸಂಪರ್ಕಸಾಧನ ಸನ್ನಿವೇಶವನ್ನು ಹೊಂದಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1300
+#, python-format
+msgid "Could not set message context for %s"
+msgstr "%s ಗೆ ಸಂದೇಶ ಸನ್ನಿವೇಶವನ್ನು ಹೊಂದಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1304
+#, python-format
+msgid "Could not add interface %s"
+msgstr "ಸಂಪರ್ಕಸಾಧನ %s ಅನ್ನು ಸೇರಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1327 ../semanage/seobject.py:1361
+#, python-format
+msgid "Interface %s is not defined"
+msgstr "ಸಂಪರ್ಕ ಸಾಧನ %s ವು ವಿವರಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1331
+#, python-format
+msgid "Could not query interface %s"
+msgstr "ಸಂಪರ್ಕ ಸಾಧನ %s ಅನ್ನು ಪ್ರಶ್ನಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1342
+#, python-format
+msgid "Could not modify interface %s"
+msgstr "ಸಂಪರ್ಕ ಸಾಧನ %s ಅನ್ನು ಮಾರ್ಪಡಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1367
+#, python-format
+msgid "Interface %s is defined in policy, cannot be deleted"
+msgstr "ಸಂಪರ್ಕಸಾಧನ %s ವನ್ನು ನೀತಿಯಲ್ಲಿ ವಿವರಿಸಲಾಗಿದೆ, ಅಳಿಸಲಾಗುವುದಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1371
+#, python-format
+msgid "Could not delete interface %s"
+msgstr "ಸಂಪರ್ಕ ಸಾಧನ %s ಅನ್ನು ಅಳಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1387
+msgid "Could not list interfaces"
+msgstr "ಸಂಪರ್ಕ ಸಾಧನಗಳನ್ನು ಪಟ್ಟಿ ಮಾಡಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1397
+msgid "SELinux Interface"
+msgstr "SELinux ಸಂಪರ್ಕಸಾಧನ"
+
+#: ../semanage/seobject.py:1397 ../semanage/seobject.py:1636
+msgid "Context"
+msgstr "ಸನ್ನಿವೇಶ"
+
+#: ../semanage/seobject.py:1421
+#, python-format
+msgid "Could not set user in file context for %s"
+msgstr "%s ಗಾಗಿ ಕಡತ ಸನ್ನಿವೇಶದಲ್ಲಿ ಬಳಕೆದಾರನನ್ನು ಸಿದ್ಧಗೊಳಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1425
+#, python-format
+msgid "Could not set role in file context for %s"
+msgstr "%s ಗಾಗಿ ಕಡತ ಸನ್ನಿವೇಶದಲ್ಲಿ ಪಾತ್ರವನ್ನು ಸಿದ್ಧಗೊಳಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1430 ../semanage/seobject.py:1478
+#, python-format
+msgid "Could not set mls fields in file context for %s"
+msgstr "%s ಗಾಗಿ ಕಡತ ಸನ್ನಿವೇಶದಲ್ಲಿ mls ಕ್ಷೇತ್ರಗಳನ್ನು ಸಿದ್ಧಗೊಳಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1436
+msgid "Invalid file specification"
+msgstr "ಕಡತದ ಅಮಾನ್ಯ ವಿಶಿಷ್ಟ ವಿವರಗಳು"
+
+#: ../semanage/seobject.py:1453 ../semanage/seobject.py:1458
+#: ../semanage/seobject.py:1510 ../semanage/seobject.py:1586
+#: ../semanage/seobject.py:1590
+#, python-format
+msgid "Could not check if file context for %s is defined"
+msgstr "%s ಗಾಗಿ ಕಡತ ಸನ್ನಿವೇಶಗಳು ವಿವರಿಸಲ್ಪಟ್ಟಿದೆಯೆ ಎಂದು ಪರಿಶೀಲಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1461
+#, python-format
+msgid "File context for %s already defined"
+msgstr "%s ಗಾಗಿನ ಕಡತ ಸನ್ನಿವೇಶವು ಈಗಾಗಲೆ ವಿವರಿಸಲ್ಪಟ್ಟಿದೆ"
+
+#: ../semanage/seobject.py:1465
+#, python-format
+msgid "Could not create file context for %s"
+msgstr "%s ಗಾಗಿ ಕಡತ ಸನ್ನಿವೇಶವನ್ನು ಸೃಜಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1473
+#, python-format
+msgid "Could not set type in file context for %s"
+msgstr "%s ಗಾಗಿ ಕಡತ ಸನ್ನಿವೇಶದಲ್ಲ್ಲಿ ಬಗೆಯನ್ನು ಸಿದ್ಧಗೊಳಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1481 ../semanage/seobject.py:1538
+#: ../semanage/seobject.py:1542
+#, python-format
+msgid "Could not set file context for %s"
+msgstr "%s ಗಾಗಿ ಕಡತ ಸನ್ನಿವೇಶವನ್ನು ಸಿದ್ಧಗೊಳಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1487
+#, python-format
+msgid "Could not add file context for %s"
+msgstr "%s ಗಾಗಿ ಕಡತ ಸನ್ನಿವೇಶವನ್ನು ಸೇರಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1501
+msgid "Requires setype, serange or seuser"
+msgstr "setype, serange ಅಥವ seuser ನ ಅಗತ್ಯವಿದೆ"
+
+#: ../semanage/seobject.py:1514 ../semanage/seobject.py:1594
+#, python-format
+msgid "File context for %s is not defined"
+msgstr "%s ಗಾಗಿ ಕಡತ ಸನ್ನಿವೇಶವು ವಿವರಿಸಲ್ಪಟ್ಟಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1520
+#, python-format
+msgid "Could not query file context for %s"
+msgstr "%s ಗಾಗಿ ಕಡತ ಸನ್ನಿವೇಶವನ್ನು ಪ್ರಶ್ನಿಸಲಾಗಲಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1546
+#, python-format
+msgid "Could not modify file context for %s"
+msgstr "%s ಗಾಗಿ ಕಡತ ಸನ್ನಿವೇಶವನ್ನು ಮಾರ್ಪಡಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1560
+msgid "Could not list the file contexts"
+msgstr "ಕಡತ ಸನ್ನಿವೇಶಗಳನ್ನು ಪಟ್ಟಿಮಾಡಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1574
+#, python-format
+msgid "Could not delete the file context %s"
+msgstr "%s ದ ಕಡತ ಸನ್ನಿವೇಶವನ್ನು ಅಳಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1592
+#, python-format
+msgid "File context for %s is defined in policy, cannot be deleted"
+msgstr "%s ಗಾಗಿನ ಕಡತ ಸನ್ನಿವೇಶವು ನೀತಿಯಲ್ಲಿ ವಿವರಿಸಲ್ಪಟ್ಟಿದೆ, ಅಳಿಸಲಾಗುವುದಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1598
+#, python-format
+msgid "Could not delete file context for %s"
+msgstr "%s ಗಾಗಿನ ಕಡತ ಸನ್ನಿವೇಶವನ್ನು ಅಳಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1613
+msgid "Could not list file contexts"
+msgstr "ಕಡತ ಸನ್ನಿವೇಶಗಳನ್ನು ಪಟ್ಟಿಮಾಡಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1617
+msgid "Could not list local file contexts"
+msgstr "ಸ್ಥಳೀಯ ಕಡತ ಸನ್ನಿವೇಶಗಳನ್ನು ಪಟ್ಟಿಮಾಡಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1636
+msgid "SELinux fcontext"
+msgstr "SELinux fcontext"
+
+#: ../semanage/seobject.py:1636
+msgid "type"
+msgstr "ಬಗೆ"
+
+#: ../semanage/seobject.py:1666 ../semanage/seobject.py:1717
+#: ../semanage/seobject.py:1723
+#, python-format
+msgid "Could not check if boolean %s is defined"
+msgstr "ಬೂಲಿಯನ್ %s ವಿವರಿಸಲ್ಪಟ್ಟಿದೆಯೆ ಅಂದು ಪರೀಕ್ಷಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1668 ../semanage/seobject.py:1719
+#, python-format
+msgid "Boolean %s is not defined"
+msgstr "ಬೂಲಿಯನ್ %s ವಿವರಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1672
+#, python-format
+msgid "Could not query file context %s"
+msgstr "ಕಡತ ಸನ್ನಿವೇಶ %s ಅನ್ನು ಪ್ರಶ್ನಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1677
+#, fuzzy, python-format
+msgid "You must specify one of the following values: %s"
+msgstr "ನೀವು ಒಂದು ಮೌಲ್ಯವನ್ನು ನಮೂದಿಸಬೇಕು"
+
+#: ../semanage/seobject.py:1681
+#, fuzzy, python-format
+msgid "Could not set active value of boolean %s"
+msgstr "ಬೂಲಿಯನ್ %s ಅನ್ನು ಅಳಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1684
+#, python-format
+msgid "Could not modify boolean %s"
+msgstr "ಬೂಲಿಯನ್ %s ಅನ್ನು ಮಾರ್ಪಡಿಸಲಾಗುವುದಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1702
+#, python-format
+msgid "Bad format %s: Record %s"
+msgstr ""
+
+#: ../semanage/seobject.py:1725
+#, python-format
+msgid "Boolean %s is defined in policy, cannot be deleted"
+msgstr "ಬೂಲಿಯನ್ %s ವು ನೀತಿಯಲ್ಲಿ ವಿವರಿಸಲಾಗಿದೆ, ಅಳಿಸಲಾಗುವುದಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1729
+#, python-format
+msgid "Could not delete boolean %s"
+msgstr "ಬೂಲಿಯನ್ %s ಅನ್ನು ಅಳಿಸಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1741 ../semanage/seobject.py:1758
+msgid "Could not list booleans"
+msgstr "ಬೂಲಿಯನ್ನುಗಳನ್ನು ಪಟ್ಟಿ ಮಾಡಲಾಗಿಲ್ಲ"
+
+#: ../semanage/seobject.py:1777
+msgid "unknown"
+msgstr "ಗೊತ್ತಿರದ"
+
+#: ../semanage/seobject.py:1780
+msgid "off"
+msgstr "ಆಫ್"
+
+#: ../semanage/seobject.py:1780
+msgid "on"
+msgstr "ಆನ್"
+
+#: ../semanage/seobject.py:1789
+msgid "SELinux boolean"
+msgstr "SELinux ಬೂಲಿಯನ್"
+
+#: ../semanage/seobject.py:1789
+msgid "Description"
+msgstr "ವಿವರಣೆ"
+
+#: ../newrole/newrole.c:198
+#, c-format
+msgid "failed to set PAM_TTY\n"
+msgstr "PAM_TTY ಅನ್ನು ಸಿದ್ಧಗೊಳಿಸುವಲ್ಲಿ ವಿಫಲತೆ\n"
+
+#: ../newrole/newrole.c:287
+#, c-format
+msgid "newrole: service name configuration hashtable overflow\n"
+msgstr "ಹೊಸಪಾತ್ರ: service name configuration hashtable overflow\n"
+
+#: ../newrole/newrole.c:297
+#, c-format
+msgid "newrole:  %s:  error on line %lu.\n"
+msgstr "ಹೊಸಪಾತ್ರ:  %s:  %lu ಸಾಲಿನಲ್ಲಿ ದೋಷ.\n"
+
+#: ../newrole/newrole.c:436
+#, c-format
+msgid "cannot find valid entry in the passwd file.\n"
+msgstr "passwd ಕಡತದಲ್ಲಿ ಒಂದು ಮಾನ್ಯವಾದ ನಮೂದು ಕಂಡುಬಂದಿಲ್ಲ.\n"
+
+#: ../newrole/newrole.c:447
+#, c-format
+msgid "Out of memory!\n"
+msgstr "ಮೆಮೊರಿ ಖಾಲಿಯಾಗಿದೆ!\n"
+
+#: ../newrole/newrole.c:452
+#, c-format
+msgid "Error!  Shell is not valid.\n"
+msgstr "ದೋಷ!  ಶೆಲ್ ಅಮಾನ್ಯವಾಗಿದೆ.\n"
+
+#: ../newrole/newrole.c:509
+#, c-format
+msgid "Unable to clear environment\n"
+msgstr "ವಾತಾವರಣವನ್ನು ತೆರವುಗೊಳಸಲಾಗಿಲ್ಲ\n"
+
+#: ../newrole/newrole.c:556 ../newrole/newrole.c:634
+#, fuzzy, c-format
+msgid "Error initializing capabilities, aborting.\n"
+msgstr "ಸಾಮರ್ಥ್ಯಗಳನ್ನು ಆರಂಭಿಸುವಲ್ಲಿ ದೋಷ, ಸ್ಥಗಿತಗೊಳಿಸಲಾಗುತ್ತದೆ.\n"
+
+#: ../newrole/newrole.c:564 ../newrole/newrole.c:640
+#, c-format
+msgid "Error setting capabilities, aborting\n"
+msgstr "ಸಾಮರ್ಥ್ಯಗಳನ್ನು ಸಿದ್ಧಗೊಳಿಸುವಲ್ಲಿ ದೋಷ, ಸ್ಥಗಿತಗೊಳಿಸಲಾಗುತ್ತದೆ.\n"
+
+#: ../newrole/newrole.c:570
+#, c-format
+msgid "Error setting KEEPCAPS, aborting\n"
+msgstr "KEEPCAPS ಅನ್ನು ಸಿದ್ಧಗೊಳಿಸುವಲ್ಲಿ ದೋಷ, ಸ್ಥಗಿತಗೊಳಿಸಲಾಗುತ್ತಿದೆ\n"
+
+#: ../newrole/newrole.c:578 ../newrole/newrole.c:652
+#, c-format
+msgid "Error dropping capabilities, aborting\n"
+msgstr "ಸಾಮರ್ಥ್ಯಗಳನ್ನು ತ್ಯಜಿಸುವಲ್ಲಿ(dropping) ದೋಷ, ಕಾರ್ಯಭಂಗಗೊಳಿಸಲಾಗುತ್ತಿದೆ\n"
+
+#: ../newrole/newrole.c:584 ../newrole/newrole.c:683
+#, c-format
+msgid "Error changing uid, aborting.\n"
+msgstr "uid ಅನ್ನು ಬದಲಾಯಿಸುವಲ್ಲಿ ದೋಷ, ಸ್ಥಗಿತಗೊಳಿಸಲಾಗುತ್ತಿದೆ.\n"
+
+#: ../newrole/newrole.c:590 ../newrole/newrole.c:646 ../newrole/newrole.c:678
+#, c-format
+msgid "Error resetting KEEPCAPS, aborting\n"
+msgstr "KEEPCAPS ಅನ್ನು ಪುನರ್ ಸಿದ್ಧಗೊಳಿಸುವಲ್ಲಿ ದೋಷ, ಸ್ಥಗಿತಗೊಳಿಸಲಾಗುತ್ತಿದೆ\n"
+
+#: ../newrole/newrole.c:597
+#, c-format
+msgid "Error dropping SETUID capability, aborting\n"
+msgstr "SETUID ಸಾಮರ್ಥ್ಯವನ್ನು ತ್ಯಜಿಸುವಲ್ಲಿ(dropping) ದೋಷ, ಕಾರ್ಯಭಂಗಗೊಳಿಸಲಾಗುತ್ತಿದೆ\n"
+
+#: ../newrole/newrole.c:602 ../newrole/newrole.c:657
+#, c-format
+msgid "Error freeing caps\n"
+msgstr "caps ಅನ್ನು ಮುಕ್ತಗೊಳಿಸುವಲ್ಲಿ ದೋಷ\n"
+
+#: ../newrole/newrole.c:701
+#, c-format
+msgid "Error connecting to audit system.\n"
+msgstr "ಆಡಿಟ್ ಗಣಕಕ್ಕೆ ಸಂಪರ್ಕ ಹೊಂದುವಲ್ಲಿ ದೋಷ.\n"
+
+#: ../newrole/newrole.c:707
+#, c-format
+msgid "Error allocating memory.\n"
+msgstr "ಮೆಮೊರಿಯನ್ನು ನಿಯೋಜಿಸುವಲ್ಲಿ ದೋಷ.\n"
+
+#: ../newrole/newrole.c:714
+#, c-format
+msgid "Error sending audit message.\n"
+msgstr "ಆಡಿಟ್ ಸಂದೇಶವನ್ನು ಕಳುಹಿಸುವಲ್ಲ್ಲಿ ದೋಷ.\n"
+
+#: ../newrole/newrole.c:758 ../newrole/newrole.c:1122
+#, c-format
+msgid "Could not determine enforcing mode.\n"
+msgstr "ಒತ್ತಾಯಪೂರ್ವಕ ಕ್ರಮವನ್ನು ನಿರ್ಧರಿಸಲಾಗಿಲ್ಲ.\n"
+
+#: ../newrole/newrole.c:765
+#, c-format
+msgid "Error!  Could not open %s.\n"
+msgstr "ದೋಷ!  %s ಅನ್ನು ತೆರೆಯಲಾಗುತ್ತಿಲ್ಲ.\n"
+
+#: ../newrole/newrole.c:771
+#, c-format
+msgid "%s!  Could not get current context for %s, not relabeling tty.\n"
+msgstr ""
+"%s! %s ಗಾಗಿ ಪ್ರಸಕ್ತ ಸನ್ನಿವೇಶವನ್ನು ಪಡೆಯಲಾಗಿಲ್ಲ, tty ಅನ್ನು ಪುನರ್ ಲೇಬಲ್ ಮಾಡುತ್ತಿಲ್ಲ.\n"
+
+#: ../newrole/newrole.c:781
+#, c-format
+msgid "%s!  Could not get new context for %s, not relabeling tty.\n"
+msgstr ""
+"%s! %s ಗಾಗಿ ಹೊಸ ಸನ್ನಿವೇಶವನ್ನು ಪಡೆಯಲಾಗಿಲ್ಲ, tty ಅನ್ನು ಪುನರ್ ಲೇಬಲ್ ಮಾಡುತ್ತಿಲ್ಲ.\n"
+
+#: ../newrole/newrole.c:791
+#, c-format
+msgid "%s!  Could not set new context for %s\n"
+msgstr "%s!  %s ಗಾಗಿ ಹೊಸ ಸನ್ನಿವೇಶವನ್ನು ಸಿದ್ಧಗೊಳಿಸಲಾಗಿಲ್ಲ\n"
+
+#: ../newrole/newrole.c:838
+#, c-format
+msgid "%s changed labels.\n"
+msgstr "%s ಲೇಬಲ್ಲುಗಳು ಬದಲಾಗಿವೆ.\n"
+
+#: ../newrole/newrole.c:844
+#, c-format
+msgid "Warning! Could not restore context for %s\n"
+msgstr "ಎಚ್ಚರಿಕೆ! %s ಗಾಗಿ ಸನ್ನಿವೇಶವನ್ನು ಮರುಸ್ಥಾಪಿಸಲಾಗಿಲ್ಲ\n"
+
+#: ../newrole/newrole.c:901
+#, c-format
+msgid "Error: multiple roles specified\n"
+msgstr "ದೋಷ: ಅನೇಕ ಪಾತ್ರಗಳು ಸೂಚಿತಗೊಂಡಿವೆ\n"
+
+#: ../newrole/newrole.c:909
+#, c-format
+msgid "Error: multiple types specified\n"
+msgstr "ದೋಷ: ಅನೇಕ ಬಗೆಗಳು ಸೂಚಿತಗೊಂಡಿವೆ\n"
+
+#: ../newrole/newrole.c:916
+#, c-format
+msgid "Sorry, -l may be used with SELinux MLS support.\n"
+msgstr "ಕ್ಷಮಿಸಿ, -l ವು SELinux MLS ಬೆಂಬಲದೊಂದಿಗೆ ಮಾತ್ರ ಬಳಸಬಹುದಾಗಿದೆ.\n"
+
+#: ../newrole/newrole.c:921
+#, c-format
+msgid "Error: multiple levels specified\n"
+msgstr "ದೋಷ: ಅನೇಕ ಮಟ್ಟಗಳು ಸೂಚಿತಗೊಂಡಿವೆ\n"
+
+#: ../newrole/newrole.c:931
+#, c-format
+msgid "Error: you are not allowed to change levels on a non secure terminal \n"
+msgstr ""
+"ದೋಷ: ಸುರಕ್ಷಿತವಲ್ಲದ ಆದೇಶ ತೆರೆಯಲ್ಲಿ(terminal) ಮಟ್ಟಗಳನ್ನು ಬದಲಾಯಿಸಲು ನಿಮಗೆ ಅನುಮತಿ "
+"ಇಲ್ಲ\n"
+
+#: ../newrole/newrole.c:957
+#, c-format
+msgid "Couldn't get default type.\n"
+msgstr "ಪೂರ್ವನಿಯೋಜಿತ ಬಗೆಯನ್ನು ಪಡೆದುಕೊಳ್ಳಲಾಗಿಲ್ಲ.\n"
+
+#: ../newrole/newrole.c:967
+#, c-format
+msgid "failed to get new context.\n"
+msgstr "ಹೊಸ ಸನ್ನಿವೇಶವನ್ನು ಪಡೆದುಕೊಳ್ಳುವಲ್ಲಿ ವಿಫಲತೆ\n"
+
+#: ../newrole/newrole.c:974
+#, c-format
+msgid "failed to set new role %s\n"
+msgstr "ಹೊಸ ಪಾತ್ರ %s ಅನ್ನು ಸಿದ್ಧಗೊಳಿಸುವಲ್ಲಿ ವಿಫಲತೆ\n"
+
+#: ../newrole/newrole.c:981
+#, c-format
+msgid "failed to set new type %s\n"
+msgstr "ಹೊಸ ಬಗೆ %s ಅನ್ನು ಸಿದ್ಧಗೊಳಿಸುವಲ್ಲಿ ವಿಫಲತೆ\n"
+
+#: ../newrole/newrole.c:991
+#, c-format
+msgid "failed to build new range with level %s\n"
+msgstr "%s ಮಟ್ಟದೊಂದಿಗೆ ಹೊಸ ವ್ಯಾಪ್ತಿಯನ್ನು ನಿರ್ಮಿಸುವಲ್ಲಿ ವಿಫಲತೆ\n"
+
+#: ../newrole/newrole.c:996
+#, c-format
+msgid "failed to set new range %s\n"
+msgstr "ಹೊಸ ವ್ಯಾಪ್ತಿ %s ಅನ್ನು ಸಿದ್ಧಗೊಳಿಸುವಲ್ಲಿ ವಿಫಲತೆ\n"
+
+#: ../newrole/newrole.c:1004
+#, c-format
+msgid "failed to convert new context to string\n"
+msgstr "ಹೊಸ ಸನ್ನಿವೇಶವನ್ನು ಅಕ್ಷರಾವಳಿಯಾಗಿ(string) ಮಾರ್ಪಡಿಸುವಲ್ಲಿ ವಿಫಲತೆ\n"
+
+#: ../newrole/newrole.c:1009
+#, c-format
+msgid "%s is not a valid context\n"
+msgstr "%s ವು ಒಂದು ಮಾನ್ಯ ಸನ್ನಿವೇಶವಲ್ಲ\n"
+
+#: ../newrole/newrole.c:1016
+#, c-format
+msgid "Unable to allocate memory for new_context"
+msgstr "new_context ಗೆ ಮೆಮೊರಿಯನ್ನು ನಿಯೋಜಿಸಲಾಗಿಲ್ಲ"
+
+#: ../newrole/newrole.c:1042
+#, c-format
+msgid "Unable to obtain empty signal set\n"
+msgstr "ಖಾಲಿ ಸೂಚನಾ ಸೆಟ್ಟನ್ನು ಪಡೆಯಲಾಗಿಲ್ಲ\n"
+
+#: ../newrole/newrole.c:1050
+#, c-format
+msgid "Unable to set SIGHUP handler\n"
+msgstr "SIGHUP ನಿಯಂತ್ರಕವನ್ನು ಸಿದ್ಧಗೊಳಿಸಲಾಗಿಲ್ಲ\n"
+
+#: ../newrole/newrole.c:1116
+#, c-format
+msgid "Sorry, newrole may be used only on a SELinux kernel.\n"
+msgstr "ಕ್ಷಮಿಸಿ, ಹೊಸಪಾತ್ರವನ್ನು ಕೇವಲ ಒಂದು SELinux ಕರ್ನಲಿನಲ್ಲಿ ಮಾತ್ರ ಬಳಸಬಹುದಾಗಿದೆ.\n"
+
+#: ../newrole/newrole.c:1133
+#, c-format
+msgid "failed to get old_context.\n"
+msgstr "old_context ಅನ್ನು ಪಡೆಯುವಲ್ಲಿ ವಿಫಲತೆ.\n"
+
+#: ../newrole/newrole.c:1140
+#, c-format
+msgid "Warning!  Could not retrieve tty information.\n"
+msgstr "ಎಚ್ಚರಿಕೆ!  tty ಮಾಹಿತಿಯನ್ನು ಹಿಂಪಡೆಯಲಾಗಿಲ್ಲ.\n"
+
+#: ../newrole/newrole.c:1161
+#, c-format
+msgid "error on reading PAM service configuration.\n"
+msgstr "PAM ಸೇವಾ ಸಂರಚನೆಯನ್ನು ಓದುವಾಗ ವಿಫಲತೆ.\n"
+
+#: ../newrole/newrole.c:1196
+#, c-format
+msgid "newrole: incorrect password for %s\n"
+msgstr "ಹೊಸಪಾತ್ರ: %s ಗೆ ಸರಿಯಲ್ಲದ ಗುಪ್ತಪದ\n"
+
+#: ../newrole/newrole.c:1223
+#, c-format
+msgid "newrole: failure forking: %s"
+msgstr "ಹೊಸಪಾತ್ರ: ಕವಲೊಡೆಯುವಲ್ಲಿ (forking) ವಿಫಲ: %s"
+
+#: ../newrole/newrole.c:1226 ../newrole/newrole.c:1249
+#, c-format
+msgid "Unable to restore tty label...\n"
+msgstr "tty ಲೇಬಲ್ಲನು ಪುನ: ಸ್ಥಾಪಿಸಲಾಗಿಲ್ಲ...\n"
+
+#: ../newrole/newrole.c:1228 ../newrole/newrole.c:1255
+#, c-format
+msgid "Failed to close tty properly\n"
+msgstr "tty ಅನ್ನು ಸರಿಯಾಗಿ ಮುಚ್ಚುವಲ್ಲಿ ವಿಫಲವಾಗಿದೆ\n"
+
+#: ../newrole/newrole.c:1287
+#, c-format
+msgid "Could not close descriptors.\n"
+msgstr "ವಿವರಣೆಕಾರನನ್ನು ಮುಚ್ಚಲಾಗಿಲ್ಲ.\n"
+
+#: ../newrole/newrole.c:1314
+#, c-format
+msgid "Error allocating shell's argv0.\n"
+msgstr "ಶೆಲ್ಲಿನ argv0 ಅನ್ನು ನಿಯೋಜಿಸುವಲ್ಲಿ ದೋಷ.\n"
+
+#: ../newrole/newrole.c:1346
+#, c-format
+msgid "Unable to restore the environment, aborting\n"
+msgstr "ವಾತಾವರಣವನ್ನು ಪುನಃಸ್ಥಾಪಿಸಲಾಗಿಲ್ಲ, ಕಾರ್ಯಭಂಗ ಮಾಡಲಾಗುತ್ತಿದೆ\n"
+
+#: ../newrole/newrole.c:1357
+msgid "failed to exec shell\n"
+msgstr "ಶೆಲ್ಲನ್ನು exec ಮಾಡುವಲ್ಲಿ ವಿಫಲತೆ\n"
+
+#: ../load_policy/load_policy.c:22
+#, c-format
+msgid "usage:  %s [-qi]\n"
+msgstr "ಬಳಕೆ:  %s [-qi]\n"
+
+#: ../load_policy/load_policy.c:71
+#, c-format
+msgid "%s:  Policy is already loaded and initial load requested\n"
+msgstr "%s:  ನೀತಿಯು ಈಗಾಗಲೆ ಲೋಡ್‌ ಮಾಡಲಾಗಿದೆ ಹಾಗು ಆರಂಭಿಕ ಲೋಡ್‍ಗೆ ಮನವಿ ಸಲ್ಲಿಸಲಾಗಿದೆ\n"
+
+#: ../load_policy/load_policy.c:80
+#, c-format
+msgid "%s:  Can't load policy and enforcing mode requested:  %s\n"
+msgstr ""
+"%s:  ನೀತಿಯನ್ನು ಲೋಡ್ ಮಾಡಲಾಗಿಲ್ಲ ಹಾಗು ಒತ್ತಾಯಪೂರ್ವಕ ಕ್ರಮಕ್ಕೆ ಮನವಿ ಸಲ್ಲಿಸಲಾಗಿದೆ:  %s\n"
+
+#: ../load_policy/load_policy.c:90
+#, c-format
+msgid "%s:  Can't load policy:  %s\n"
+msgstr "%s:  ನೀತಿಯನ್ನು ಲೋಡ್ ಮಾಡಲಾಗಿಲ್ಲ:  %s\n"
+
+#: ../scripts/chcat:92 ../scripts/chcat:169
+msgid "Requires at least one category"
+msgstr "ಕನಿಷ್ಟ ಒಂದು ವರ್ಗದ ಅಗತ್ಯವಿದೆ"
+
+#: ../scripts/chcat:106 ../scripts/chcat:183
+#, c-format
+msgid "Can not modify sensitivity levels using '+' on %s"
+msgstr ""
+"%s ನಲ್ಲಿ '+' ಅನ್ನು ಬಳಸಿಕೊಂಡು ಸಂವೇದನಾ(sensitivity) ಮಟ್ಟಗಳನ್ನು ಮಾರ್ಪಡಿಸಲಾಗುವುದಿಲ್ಲ"
+
+#: ../scripts/chcat:110
+#, c-format
+msgid "%s is already in %s"
+msgstr "%s ವು %s ನಲ್ಲಿ ಈಗಾಗಲೆ ಇದೆ"
+
+#: ../scripts/chcat:188 ../scripts/chcat:198
+#, c-format
+msgid "%s is not in %s"
+msgstr "%s ವು %s ನಲ್ಲಿಲ್ಲ"
+
+#: ../scripts/chcat:267 ../scripts/chcat:272
+msgid "Can not combine +/- with other types of categories"
+msgstr "ಇತರೆ ಬಗೆಯ ವರ್ಗಗಳೊಂದಿಗೆ +/- ಅನ್ನು ಸಂಯೋಜಿಸಲಾಗುವುದಿಲ್ಲ"
+
+#: ../scripts/chcat:319
+msgid "Can not have multiple sensitivities"
+msgstr "ಅನೇಕ ಸಂವೇದನೆಗಳನ್ನು ಹೊಂದಲು ಸಾಧ್ಯವಿಲ್ಲ"
+
+#: ../scripts/chcat:325
+#, c-format
+msgid "Usage %s CATEGORY File ..."
+msgstr "ಬಳಕೆ %s CATEGORY File ..."
+
+#: ../scripts/chcat:326
+#, c-format
+msgid "Usage %s -l CATEGORY user ..."
+msgstr "ಬಳಕೆ %s -l CATEGORY user ..."
+
+#: ../scripts/chcat:327
+#, c-format
+msgid "Usage %s [[+|-]CATEGORY],...]q File ..."
+msgstr "ಬಳಕೆ %s [[+|-]CATEGORY],...]q File ..."
+
+#: ../scripts/chcat:328
+#, c-format
+msgid "Usage %s -l [[+|-]CATEGORY],...]q user ..."
+msgstr "ಬಳಕೆ %s -l [[+|-]CATEGORY],...]q user ..."
+
+#: ../scripts/chcat:329
+#, c-format
+msgid "Usage %s -d File ..."
+msgstr "ಬಳಕೆ %s -d File ..."
+
+#: ../scripts/chcat:330
+#, c-format
+msgid "Usage %s -l -d user ..."
+msgstr "ಬಳಕೆ %s -l -d user ..."
+
+#: ../scripts/chcat:331
+#, c-format
+msgid "Usage %s -L"
+msgstr "ಬಳಕೆ %s -L"
+
+#: ../scripts/chcat:332
+#, c-format
+msgid "Usage %s -L -l user"
+msgstr "ಬಳಕೆ %s -L -l user"
+
+#: ../scripts/chcat:333
+msgid "Use -- to end option list.  For example"
+msgstr "ಆಯ್ಕಾ ಪಟ್ಟಿಯ ಕೊನೆಯಲ್ಲಿ -- ಅನ್ನು ಬಳಸಿ.  ಉದಾಹರಣೆಗೆ"
+
+#: ../scripts/chcat:334
+msgid "chcat -- -CompanyConfidential /docs/businessplan.odt"
+msgstr "chcat -- -CompanyConfidential /docs/businessplan.odt"
+
+#: ../scripts/chcat:335
+msgid "chcat -l +CompanyConfidential juser"
+msgstr "chcat -l +CompanyConfidential juser"
+
+#: ../scripts/chcat:399
+#, c-format
+msgid "Options Error %s "
+msgstr "ಆಯ್ಕೆಗಳ ದೋಷ %s "
+
+#~ msgid "translations not supported on non-MLS machines"
+#~ msgstr "MLS ಅಲ್ಲದ ಗಣಕಗಳಲ್ಲಿ ಅನುವಾದಗಳಿಗೆ ಬೆಂಬಲ ಇರುವುದಿಲ್ಲ್ಲ"
+
+#~ msgid "Boolean"
+#~ msgstr "ಬೂಲಿಯನ್"
+
+#~ msgid "all"
+#~ msgstr "ಎಲ್ಲಾ"
+
+#~ msgid "Customized"
+#~ msgstr "ಕಸ್ಟಮೈಸ್ ಮಾಡಲಾದ"
+
+#~ msgid "File Labeling"
+#~ msgstr "ಕಡತವನ್ನು ಲೇಬಲ್ ಮಾಡುವುದು"
+
+#~ msgid ""
+#~ "File\n"
+#~ "Specification"
+#~ msgstr ""
+#~ "ಕಡತದ\n"
+#~ "ವಿಶಿಷ್ಟ ವಿವರಗಳು"
+
+#~ msgid ""
+#~ "Selinux\n"
+#~ "File Type"
+#~ msgstr ""
+#~ "Selinux\n"
+#~ "ಕಡತದ ಬಗೆ"
+
+#~ msgid ""
+#~ "File\n"
+#~ "Type"
+#~ msgstr ""
+#~ "ಕಡತದ\n"
+#~ "ಹೆಸರು"
+
+#~ msgid "User Mapping"
+#~ msgstr "ಬಳಕೆದಾರ ಮ್ಯಾಪಿಂಗ್"
+
+#~ msgid ""
+#~ "Login\n"
+#~ "Name"
+#~ msgstr ""
+#~ "ಪ್ರವೇಶದ\n"
+#~ "ಹೆಸರು"
+
+#~ msgid ""
+#~ "SELinux\n"
+#~ "User"
+#~ msgstr ""
+#~ "SELinux\n"
+#~ "ಬಳಕೆದಾರ"
+
+#~ msgid ""
+#~ "MLS/\n"
+#~ "MCS Range"
+#~ msgstr ""
+#~ "MLS/\n"
+#~ "MCS ವ್ಯಾಪ್ತಿ"
+
+#~ msgid "Login '%s' is required"
+#~ msgstr "'%s' ದ ಪ್ರವೇಶದ ಅಗತ್ಯವಿದೆ"
+
+#~ msgid "Policy Module"
+#~ msgstr "ನೀತಿ ಘಟಕ"
+
+#~ msgid "Module Name"
+#~ msgstr "ಘಟಕದ ಹೆಸರು"
+
+#~ msgid "Version"
+#~ msgstr "ಆವೃತ್ತಿ"
+
+#~ msgid "Disable Audit"
+#~ msgstr "ಆಡಿಟನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Enable Audit"
+#~ msgstr "ಆಡಿಟನ್ನು ಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Load Policy Module"
+#~ msgstr "ನೀತಿ ಘಟಕವನ್ನು ಲೋಡ್ ಮಾಡಿ"
+
+#~ msgid "Polgen"
+#~ msgstr "Polgen"
+
+#~ msgid "Red Hat 2007"
+#~ msgstr "Red Hat 2007"
+
+#~ msgid "GPL"
+#~ msgstr "GPL"
+
+#~ msgid "translator-credits"
+#~ msgstr "ಶಂಕರ್ ಪ್ರಸಾದ್ ಎಂ. ವಿ."
+
+#~ msgid "SELinux Policy Generation Tool"
+#~ msgstr "SELinux ನೀತಿ ಉತ್ಪಾದನಾ ಉಪಕರಣ"
+
+#~ msgid ""
+#~ "This tool can be used to generate a policy framework, to confine "
+#~ "applications or users using SELinux.   \n"
+#~ "\n"
+#~ "The tool generates:\n"
+#~ "Type enforcement file (te)\n"
+#~ "Interface file (if)\n"
+#~ "File context file (fc)\n"
+#~ "Shell script (sh) - used to compile and install the policy. "
+#~ msgstr ""
+#~ "ಈ ಉಪಕರಣದಿಂದ SELinux ಬಳಸಿಕೊಂಡು ನೀತಿ ಚೌಕಟ್ಟನ್ನು (framework), ಅನ್ವಯಗಳನ್ನು "
+#~ "ಮಿತಿಗೊಳಿಸಲು ಅಥವ ಬಳಕೆದಾರರನ್ನು ನಿರ್ಮಿಸಲು ಬಳಸಬಹುದಾಗಿದೆ.   \n"
+#~ "\n"
+#~ "ಉಪಕರಣವು ಈ ಕೆಳಗಿನವುಗಳನ್ನು ಉತ್ಪಾದಿಸುತ್ತದೆ:\n"
+#~ "ಒತ್ತಾಯಪೂರ್ವಕ ಕಡತದ ಬಗೆ (te)\n"
+#~ "ಸಂಪರ್ಕಸಾಧನ ಕಡತ (if)\n"
+#~ "ಕಡತ ಸನ್ನಿವೇಶ ಕಡತ (fc)\n"
+#~ "ಶೆಲ್ ಸ್ಕ್ರಿಪ್ಟ್ (sh) - ನೀತಿಯನ್ನು ಸಂಕಲಿಸಲು ಹಾಗು ಅನುಸ್ಥಾಪಿಸಲು ಬಳಸಲಾಗುತ್ತದೆ. "
+
+#~ msgid "Select type of the application/user role to be confined"
+#~ msgstr "ಮಿತಿಗೊಳಿಸಲು ಅನ್ವಯ/ಬಳಕೆದಾರನ ಪಾತ್ರವನ್ನು ಆರಿಸಿ"
+
+#~ msgid "<b>Applications</b>"
+#~ msgstr "<b>ಅನ್ವಯಗಳು</b>"
+
+#~ msgid ""
+#~ "Standard Init Daemon are daemons started on boot via init scripts.  "
+#~ "Usually requires a script in /etc/rc.d/init.d"
+#~ msgstr ""
+#~ "ಸ್ಟಾಂಡರ್ಡ್ Init ಡೆಮನ್‍ಗಳೆಂದರೆ init ಸ್ಕ್ರಿಪ್ಟ್‍ಗಳ ಮೂಲಕ ಬೂಟ್ ಸಮಯದಲ್ಲಿ ಆರಂಭಗೊಳ್ಳುವ "
+#~ "ಡೆಮನ್‍ಗಳಾಗಿರುತ್ತವೆ.  ಸಾಮಾನ್ಯವಾಗಿ /etc/rc.d/init.d ನಲ್ಲಿ ಒಂದು ಸ್ಕ್ರಿಪ್ಟ್‍ನ "
+#~ "ಅಗತ್ಯವಿರುತ್ತದೆ"
+
+#~ msgid "Standard Init Daemon"
+#~ msgstr "ಸಾಮಾನ್ಯ init ಡೆಮೋನ್"
+
+#~ msgid "Internet Services Daemon are daemons started by xinetd"
+#~ msgstr "ಜಾಲಬಂಧ ಸೇವೆಗಳ ಡೆಮೊನುಗಳು xinetd ಇಂದ ಆರಂಭಗೊಂಡವು"
+
+#~ msgid "Internet Services Daemon (inetd)"
+#~ msgstr "ಜಾಲಬಂಧ ಸೇವೆಗಳ ಡೆಮೊನ್ (inetd)"
+
+#~ msgid ""
+#~ "Web Applications/Script (CGI) CGI scripts started by the web server "
+#~ "(apache)"
+#~ msgstr ""
+#~ "ಜಾಲ ಅನ್ವಯಗಳು/ಸ್ಕ್ರಿಪ್ಟ್ (CGI) ಜಾಲ ಪರಿಚಾರಕದಿಂದ (apache) ಆರಂಭಿಸಲಾದ CGI ಸ್ಕ್ರಿಪ್ಟುಗಳು"
+
+#~ msgid "Web Application/Script (CGI)"
+#~ msgstr "ಜಾಲ ಅನ್ವಯಗಳು/ಸ್ಕ್ರಿಪ್ಟ್ (CGI)"
+
+#~ msgid ""
+#~ "User Application are any application that you would like to confine that "
+#~ "is started by a user"
+#~ msgstr ""
+#~ "ಬಳಕೆದಾರರಿಂದ ಆರಂಭಿಸಲ್ಪಟ್ಟಿದೆ ಎಂದು ನೀವು ಮಿತಿಗೊಳಪಡಿಸುವ ಯಾವುದೆ ಅನ್ವಯವು ಬಳಕೆದಾರ "
+#~ "ಅನ್ವಯ ಆಗಿರುತ್ತದೆ"
+
+#~ msgid "User Application"
+#~ msgstr "ಬಳಕೆದಾರ ಅನ್ವಯಗಳು"
+
+#~ msgid "<b>Login Users</b>"
+#~ msgstr "<b>ಪ್ರವೇಶಿಸಿರುವ ಬಳಕೆದಾರರು</b>"
+
+#~ msgid "Modify an existing login user record."
+#~ msgstr "ಈಗಿರುವ ಒಂದು ಪ್ರವೇಶ ಬಳಕೆದಾರ ದಾಖಲೆಯನ್ನು ಮಾರ್ಪಡಿಸು."
+
+#~ msgid "Existing User Roles"
+#~ msgstr "ಈಗಿರುವ ಬಳಕೆದಾರ ಪಾತ್ರಗಳು"
+
+#~ msgid ""
+#~ "This user will login to a machine only via a terminal or remote login.  "
+#~ "By default this user will have  no setuid, no networking, no su, no sudo."
+#~ msgstr ""
+#~ "ಈ ಬಳಕೆದಾರನು ಒಂದು ಟರ್ಮಿನಲ್ ಅಥವ ದೂರಸ್ಥ ಪ್ರವೇಶದ ಮೂಲಕ ಒಂದು ಗಣಕಕ್ಕೆ ಪ್ರವೇಶಿಸಬಲ್ಲನು.  "
+#~ "ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ ಈ ಬಳಕೆದಾರನು setuid, networking, sudo ಹಾಗು su ಗಳಲ್ಲಿ "
+#~ "ಯಾವುದನ್ನೂ ಹೊಂದಿರುವುದಿಲ್ಲ."
+
+#~ msgid "Minimal Terminal User Role"
+#~ msgstr "ಕನಿಷ್ಟ ಟರ್ಮಿನಲ್ ಬಳಕೆದಾರ ಪಾತ್ರ"
+
+#~ msgid ""
+#~ "This user can login to a machine via X or terminal.  By default this user "
+#~ "will have no setuid, no networking, no sudo, no su"
+#~ msgstr ""
+#~ "ಈ ಬಳಕೆದಾರನು X ಅಥವ ಟರ್ಮಿನಲ್ ಮೂಲಕ ಒಂದು ಗಣಕಕ್ಕೆ ಪ್ರವೇಶಿಸಬಲ್ಲನು.  ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ "
+#~ "ಈ ಬಳಕೆದಾರನು setuid, networking, sudo ಹಾಗು su ಗಳಲ್ಲಿ ಯಾವುದನ್ನೂ ಹೊಂದಿರುವುದಿಲ್ಲ"
+
+#~ msgid "Minimal X Windows User Role"
+#~ msgstr "ಕನಿಷ್ಟ X Windows ಬಳಕೆದಾರ ಪಾತ್ರ"
+
+#~ msgid ""
+#~ "User with full networking, no setuid applications without transition, no "
+#~ "sudo, no su."
+#~ msgstr ""
+#~ "ಸಂಪೂರ್ಣ networking ಹೊಂದಿರುವ, ಪರಿವರ್ತನೆ ಹೊಂದದ setuid ಅನ್ವಯಗಳಿಲ್ಲದ, sudo ಇಲ್ಲದ "
+#~ "ಹಾಗು ಯಾವುದೆ su ಇಲ್ಲದಿರುವ ಬಳಕೆದಾರ."
+
+#~ msgid "User Role"
+#~ msgstr "ಬಳಕೆದಾರ ಪಾತ್ರ"
+
+#~ msgid ""
+#~ "User with full networking, no setuid applications without transition, no "
+#~ "su, can sudo to Root Administration Roles"
+#~ msgstr ""
+#~ "ಸಂಪೂರ್ಣ networking ಹೊಂದಿರುವ, ಪರಿವರ್ತನೆ ಹೊಂದದ setuid ಅನ್ವಯಗಳಿಲ್ಲದ, ಯಾವುದೆ su "
+#~ "ಇಲ್ಲದಿರುವ ಆದರೆ ಮೂಲ ವ್ಯವಸ್ಥಾಪಕ ಪಾತ್ರಗಳಿಗೆ sudo ಮಾಡಬಹುದಾದ ಬಳಕೆದಾರ"
+
+#~ msgid "Admin User Role"
+#~ msgstr "ನಿರ್ವಹಣಾ ಬಳಕೆದಾರ ಪಾತ್ರ"
+
+#~ msgid "<b>Root Users</b>"
+#~ msgstr "<b>ಮೂಲ ಬಳಕೆದಾರರು</b>"
+
+#~ msgid ""
+#~ "Select Root Administrator User Role, if this user will be used to "
+#~ "administer the machine while running as root.  This user will not be able "
+#~ "to login to the system directly."
+#~ msgstr ""
+#~ "ಈ ಬಳಕೆದಾರನನ್ನು ಮೂಲವಾಗಿ ಚಲಾಯಿಸುವಾಗ ಗಣಕದ ನಿರ್ವಹಣೆಗೆ ಬಳಸುವಂತಿದ್ದರೆ, ಮೂಲ "
+#~ "ಬಳಕೆದಾರನನ್ನು ಆರಿಸಿ.  ಈ ಬಳಕೆದಾರನು ಗಣಕಕ್ಕೆ ನೇರವಾಗಿ ಪ್ರವೇಶಿಸಲು ಸಾಧ್ಯವಿರುವುದಿಲ್ಲ."
+
+#~ msgid "Root Admin User Role"
+#~ msgstr "ಮೂಲ ನಿರ್ವಾಹಕ ಬಳಕೆದಾರ ಪಾತ್ರ"
+
+#~ msgid "Enter name of application or user role to be confined"
+#~ msgstr "ಮಿತಿಗೊಳಿಸಲು ಅನ್ವಯ ಅಥವ ಬಳಕೆದಾರನ ಪಾತ್ರದ ಹೆಸರನ್ನು ನಮೂದಿಸಿ"
+
+#~ msgid "Name"
+#~ msgstr "ಹೆಸರು"
+
+#~ msgid "Enter complete path for executable to be confined."
+#~ msgstr "ಕಾರ್ಯಗತಗೊಳಿಸಬಲ್ಲದುದನ್ನು ಪರಿಮಿತಿಗೆ ಒಳಪಡಿಸಲು ಸಂಪೂರ್ಣ ಪಥವನ್ನು ನಮೂದಿಸಿ."
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Enter unique name for the confined application or user role."
+#~ msgstr "ಮಿತಿಗೊಳಿಸಬೇಕಿರುವ ಬಳಕೆದಾರ ಅಥವ ಅನ್ವಯದ ವಿಶೇಷವಾದ ಪ್ರಕಾರದ ಹೆಸರನ್ನು ನಮೂದಿಸಿ."
+
+#~ msgid "Executable"
+#~ msgstr "ಕಾರ್ಯಗತಗೊಳಿಸಬಲ್ಲ"
+
+#~ msgid "Init script"
+#~ msgstr "Init ಸ್ಕ್ರಿಪ್ಟ್"
+
+#~ msgid ""
+#~ "Enter complete path to init script used to start the confined application."
+#~ msgstr ""
+#~ "ಮಿತಿಗೊಳಿಸಲಾದ ಅನ್ವಯವನ್ನು ಆರಂಭಿಸಲು init ಸ್ಕ್ರಿಪ್ಟಿಗೆ ಸಂಪೂರ್ಣ ಪಥವನ್ನು ನಮೂದಿಸಿ."
+
+#~ msgid "Select user roles that you want to customize"
+#~ msgstr "ನೀವು ಕಸ್ಟಮೈಝ್ ಮಾಡಲು ಬಯಸುವ ಬಳಕೆದಾರ ಪಾತ್ರಗಳನ್ನು ಆರಿಸಿ"
+
+#~ msgid ""
+#~ "Select the user roles that will transiton to this applications domains."
+#~ msgstr "ಈ ಅನ್ವಯ ಕ್ಷೇತ್ರಗಳಿಗೆ ಪರಿವರ್ತಿತಗೊಳ್ಳುವ ಬಳಕೆದಾರ ಪಾತ್ರಗಳನ್ನು ಆರಿಸಿ."
+
+#~ msgid "Select additional domains to which this user role will transition"
+#~ msgstr "ಈ ಬಳಕೆದಾರ ಪಾತ್ರವು ಪರಿವರ್ತನೆ ಹೊಂದಬೇಕಿರುವ ಹೆಚ್ಚುವರಿ ಕ್ಷೇತ್ರಗಳನ್ನು ಆರಿಸಿ"
+
+#~ msgid ""
+#~ "Select the applications domains that you would like this user role to "
+#~ "transition to."
+#~ msgstr "ಈ ಬಳಕೆದಾರ ಪಾತ್ರವು ಪರಿವರ್ತನೆ ಹೊಂದಲು ನೀವು ಬಯಸುವ ಅನ್ವಯ ಕ್ಷೇತ್ರಗಳನ್ನು ಅರಿಸಿ."
+
+#~ msgid "Select user roles that will transition to this domain"
+#~ msgstr "ಈ ಕ್ಷೇತ್ರಕ್ಕೆ ಪರಿವರ್ತಿತಗೊಳ್ಳುವ ಬಳಕೆದಾರ ಪಾತ್ರಗಳನ್ನು ಆರಿಸಿ"
+
+#~ msgid "Select additional domains that this user role will administer"
+#~ msgstr "ಈ ಬಳಕೆದಾರ ವ್ಯವಸ್ಥಾಪಿಸಬಹುದಾದ ಹೆಚ್ಚುವರಿ ಕ್ಷೇತ್ರಗಳನ್ನು ಆರಿಸಿ"
+
+#~ msgid "Select the domains that you would like this user administer."
+#~ msgstr "ಈ ಬಳಕೆದಾರ ವ್ಯವಸ್ಥಾಪಿಸಲು ನೀವು ಬಯಸುವ ಕ್ಷೇತ್ರಗಳನ್ನು ಆರಿಸಿ."
+
+#~ msgid "Select additional roles for this user"
+#~ msgstr "ಈ ಬಳಕೆದಾರನಿಗೆ ಹೆಚ್ಚುವರಿ ಪಾತ್ರಗಳನ್ನು ಆರಿಸು"
+
+#~ msgid "Enter network ports that application/user role listens to"
+#~ msgstr "ಈ ಅನ್ವಯ/ಬಳಕೆದಾರ ಪಾತ್ರವು ಆಲಿಸುವ ಜಾಲಬಂಧ ಸಂಪರ್ಕಸ್ಥಾನಗಳನ್ನು ನಮೂದಿಸಿ"
+
+#~ msgid "<b>TCP Ports</b>"
+#~ msgstr "<b>TCP ಸಂಪರ್ಕ ಸ್ಥಾನಗಳು</b>"
+
+#~ msgid "Allows confined application/user role to bind to any udp port"
+#~ msgstr ""
+#~ "ಮಿತಿಗೊಳಪಟ್ಟ ಅನ್ವಯ/ಬಳಕೆದಾರನನ್ನು ಯಾವುದೆ udp ಸಂಪರ್ಕ ಸ್ಥಾನಕ್ಕೆ ಬದ್ಧವಾಗಿರಲು ಅನುಮತಿಸು"
+
+#~ msgid "All"
+#~ msgstr "ಎಲ್ಲಾ"
+
+#~ msgid ""
+#~ "Allow application/user role to call bindresvport with 0. Binding to port "
+#~ "600-1024"
+#~ msgstr ""
+#~ "ಅನ್ವಯ/ಬಳಕೆದಾರನು ೦ ಯೊಂದಿಗೆ bindresvport ಅನ್ನು ಕರೆ ಮಾಡಲು ಅನುಮತಿಸು. ೬೦೦-೧೦೨೪ "
+#~ "ಸಂಪರ್ಕಸ್ಥಾನಕ್ಕೆ ಬದ್ಧವಾಗಿರಿಸಲಾಗುತ್ತಿದೆ"
+
+#~ msgid "600-1024"
+#~ msgstr "೬೦೦-೧೦೨೪"
+
+#~ msgid ""
+#~ "Enter a comma separated list of udp ports or ranges of ports that "
+#~ "application/user role binds to. Example: 612, 650-660"
+#~ msgstr ""
+#~ "ಅನ್ವಯ/ಬಳಕೆದಾರ ಪಾತ್ರವು ಬದ್ಧವಾಗಿರುವ udp ಸಂಪರ್ಕಸ್ಥಾನಗಳು ಅಥವ ಸಂಪರ್ಕಸ್ಥಾನಗಳ ವ್ಯಾಪ್ತಿಗಳ "
+#~ "ಅಲ್ಪವಿರಾಮ ಚಿಹ್ನೆಗಳಿಂದ ಪ್ರತ್ಯೇಕಿಸಲಾದ ಪಟ್ಟಿಯನ್ನು ನಮೂದಿಸಿ. ಉದಾಹರಣೆಗೆ: 612, 650-660"
+
+#~ msgid "Unreserved Ports (>1024)"
+#~ msgstr "ಕಾದಿರಿಸದ ಸಂಪರ್ಕಸ್ಥಾನಗಳು (> ೧೦೨೪)"
+
+#~ msgid "Select Ports"
+#~ msgstr "ಸಂಪರ್ಕಸ್ಥಾನಗಳನ್ನು ಆರಿಸು"
+
+#~ msgid "Allows application/user role to bind to any udp ports > 1024"
+#~ msgstr ""
+#~ "ಅನ್ವಯ/ಬಳಕೆದಾರನನ್ನು ಯಾವುದೆ udp ಸಂಪರ್ಕ ಸ್ಥಾನಗಳಿಗೆ ಬದ್ಧವಾಗಿರಲು ಅನುಮತಿಸು >೧೦೨೪"
+
+#~ msgid "<b>UDP Ports</b>"
+#~ msgstr "<b>UDP ಸಂಪರ್ಕಸ್ಥಾನಗಳು</b>"
+
+#~ msgid "Enter network ports that application/user role connects to"
+#~ msgstr "ಈ ಅನ್ವಯ/ಬಳಕೆದಾರ ಪಾತ್ರವು ಸಂಪರ್ಕಿತಗೊಳ್ಳುವ ಜಾಲಬಂಧ ಸಂಪರ್ಕಸ್ಥಾನಗಳನ್ನು ನಮೂದಿಸಿ"
+
+#~ msgid ""
+#~ "Enter a comma separated list of tcp ports or ranges of ports that "
+#~ "application/user role connects to. Example: 612, 650-660"
+#~ msgstr ""
+#~ "ಅನ್ವಯ/ಬಳಕೆದಾರ ಪಾತ್ರವು ಸಂಪರ್ಕಿತವಾಗುವ tcp ಸಂಪರ್ಕಸ್ಥಾನಗಳು ಅಥವ ಸಂಪರ್ಕಸ್ಥಾನಗಳ "
+#~ "ವ್ಯಾಪ್ತಿಗಳ ಅಲ್ಪವಿರಾಮ ಚಿಹ್ನೆಗಳಿಂದ ಪ್ರತ್ಯೇಕಿಸಲಾದ ಪಟ್ಟಿಯನ್ನು ನಮೂದಿಸಿ. ಉದಾಹರಣೆಗೆ: "
+#~ "612, 650-660"
+
+#~ msgid ""
+#~ "Enter a comma separated list of udp ports or ranges of ports that "
+#~ "application/user role connects to. Example: 612, 650-660"
+#~ msgstr ""
+#~ "ಅನ್ವಯ/ಬಳಕೆದಾರ ಪಾತ್ರವು ಸಂಪರ್ಕಿತವಾಗುವ udp ಸಂಪರ್ಕಸ್ಥಾನಗಳು ಅಥವ ಸಂಪರ್ಕಸ್ಥಾನಗಳ "
+#~ "ವ್ಯಾಪ್ತಿಗಳ ಅಲ್ಪವಿರಾಮ ಚಿಹ್ನೆಗಳಿಂದ ಪ್ರತ್ಯೇಕಿಸಲಾದ ಪಟ್ಟಿಯನ್ನು ನಮೂದಿಸಿ. ಉದಾಹರಣೆಗೆ: "
+#~ "612, 650-660"
+
+#~ msgid "Select common application traits"
+#~ msgstr "ಸಾಮಾನ್ಯ ಅನ್ವಯ ವಿಶೇಷ ಗುಣಗಳನ್ನು(Traits) ಆರಿಸು"
+
+#~ msgid "Writes syslog messages\t"
+#~ msgstr "syslog  ಸಂದೇಶಗಳನ್ನು ಬರೆಯುತ್ತದೆ\t"
+
+#~ msgid "Create/Manipulate temporary files in /tmp"
+#~ msgstr "/tmp ತಾತ್ಕಾಲಿಕ ಕಡತಗಳನ್ನು ಸೃಜಿಸು/ಕುಶಲವಾಗಿ ನಿರ್ವಹಿಸು"
+
+#~ msgid "Uses Pam for authentication"
+#~ msgstr "ದೃಢೀಕರಣಕ್ಕಾಗಿ Pam ಅನ್ನು ಬಳಸುತ್ತದೆ"
+
+#~ msgid "Uses nsswitch or getpw* calls"
+#~ msgstr "nsswitch ಅಥವ getpw* ಕರೆಗಳನ್ನು ಬಳಸುತ್ತದೆ"
+
+#~ msgid "Uses dbus"
+#~ msgstr "dbus ಅನ್ನು ಬಳಸುತ್ತದೆ"
+
+#~ msgid "Sends audit messages"
+#~ msgstr "ಆಡಿಟ್ ಸಂದೇಶಗಳನ್ನು ಕಳುಹಿಸುತ್ತದೆ"
+
+#~ msgid "Interacts with the terminal"
+#~ msgstr "ಟರ್ಮಿನಲ್‍ನೊಂದಿಗೆ ವ್ಯವಹರಿಸುತ್ತದೆ"
+
+#~ msgid "Sends email"
+#~ msgstr "ಇಮೈಲ್ ಅನ್ನು ಕಳುಹಿಸುತ್ತದೆ"
+
+#~ msgid "Select files/directories that the application manages"
+#~ msgstr "ಅನ್ವಯವು ನಿರ್ವಹಿಸುವ ಕಡತಗಳು/ಕಡತಕೋಶಗಳನ್ನು ಆರಿಸಿ"
+
+#~ msgid ""
+#~ "Add Files/Directories that application will need to \"Write\" to. Pid "
+#~ "Files, Log Files, /var/lib Files ..."
+#~ msgstr ""
+#~ "ಈ ಅನ್ವಯವು \"ಬರೆಯ\"ಬೇಕಿರುವ ಕಡತಗಳನ್ನು/ಕಡತಕೋಶಗಳನ್ನು ಸೇರಿಸು. Pid ಕಡತಗಳು, Log "
+#~ "ಕಡತಗಳು, /var/lib ಕಡತಗಳು ..."
+
+#~ msgid "Select booleans that the application uses"
+#~ msgstr "ಅನ್ವಯವು ಬಳಸುವ ಬೂಲಿಯನ್‍ಗಳು ಆರಿಸು"
+
+#~ msgid "Add/Remove booleans used for this confined application/user"
+#~ msgstr "ಈ ಮಿತಿಗೊಳಿಸಲಾದ ಅನ್ವಯಕ್ಕಾಗಿ ಬಳಸಲಾದ ಬೂಲಿಯನ್‍ಗಳನ್ನು ಸೇರಿಸು/ತೆಗೆದುಹಾಕು"
+
+#~ msgid "Select directory to generate policy in"
+#~ msgstr "ನೀತಿ ಕಡತಗಳನ್ನು ಉತ್ಪಾದಿಸಲು ಕೋಶವನ್ನು ಆರಿಸು"
+
+#~ msgid "Policy Directory"
+#~ msgstr "ನೀತಿ ಕೋಶ"
+
+#~ msgid "Generated Policy Files"
+#~ msgstr "ನೀತಿ ಕಡತಗಳನ್ನು ಉತ್ಪಾದಿಸು"
+
+#~ msgid ""
+#~ "This tool will generate the following: \n"
+#~ "Type Enforcement(te), File Context(fc), Interface(if), Shell Script(sh)\n"
+#~ "Execute shell script as root to compile/install and relabel files/"
+#~ "directories.  \n"
+#~ "Use semanage or useradd to map Linux login users to user roles.\n"
+#~ "Put the machine in permissive mode (setenforce 0). \n"
+#~ "Login as the user and test this user role.\n"
+#~ "Use audit2allow -R to generate additional rules for the te file.\n"
+#~ msgstr ""
+#~ "ಈ ಉಪಕರಣವು ಈ ಕೆಳಗಿನವುಗಳನ್ನು ಉತ್ಪಾದಿಸುತ್ತದೆ: ಒತ್ತಾಯಪೂರ್ವಕ ಕಡತದ ಬಗೆ (te)\n"
+#~ "ಸಂಪರ್ಕಸಾಧನ ಕಡತ (if) ಕಡತ ಸನ್ನಿವೇಶ ಕಡತ (fc) ಶೆಲ್ ಸ್ಕ್ರಿಪ್ಟ್ (sh).\n"
+#~ "ಸಂಕಲಿಸಲು/ಅನುಸ್ಥಾಪಿಸಲು ಹಾಗು ಕಡತಗಳನ್ನು/ಕಡತಕೋಶಗಳನ್ನು.ಮರುಲೇಬಲ್ ಮಾಡಲು ಶೆಲ್ ಸ್ಕ್ರಿಪ್ಟ್‍ "
+#~ "ಅನ್ನು ಕಾರ್ಯಗತಗೊಳಿಸಿ.  \n"
+#~ " Linux ಲಾಗಿನ್ ಬಳಕೆದಾರರನ್ನು ಬಳಕೆದಾರರ ಪಾತ್ರಗಳಿಗೆ ಮ್ಯಾಪ್ ಮಾಡಲು semanage ಅಥವ "
+#~ "useradd ಅನ್ನು ಬಳಸಿ.\n"
+#~ "ಗಣಕವನ್ನು ಅನುಮತಿ ಕ್ರಮದಲ್ಲಿ ಇರಿಸಿ (setenforce 0). \n"
+#~ "ಬಳಕೆದಾರನಾಗಿ ಪ್ರವೇಶಿಸಿ ಹಾಗು ಈ ಬಳಕೆದಾರ ಪಾತ್ರವನ್ನು ಪರೀಕ್ಷಿಸಿ.\n"
+#~ "te ಕಡತಕ್ಕೆ ಹೆಚ್ಚುವರಿ ನಿಯಮಗಳನ್ನು ಉತ್ಪಾದಿಸಲು audit2allow -R ಅನ್ನು ಬಳಸಿ.\n"
+
+#~ msgid ""
+#~ "This tool will generate the following: \n"
+#~ "Type Enforcement(te), File Context(fc), Interface(if), Shell Script(sh)\n"
+#~ "\n"
+#~ "Execute shell script to compile/install and relabel files/directories.  \n"
+#~ "Put the machine in permissive mode (setenforce 0). \n"
+#~ "Run/restart the application to generate avc messages.\n"
+#~ "Use audit2allow -R to generate additional rules for the te file.\n"
+#~ msgstr ""
+#~ "ಈ ಉಪಕರಣವು ಈ ಕೆಳಗಿನವುಗಳನ್ನು ಉತ್ಪಾದಿಸುತ್ತದೆ: ಒತ್ತಾಯಪೂರ್ವಕ ಕಡತದ ಬಗೆ (te)\n"
+#~ "ಸಂಪರ್ಕಸಾಧನ ಕಡತ (if) ಕಡತ ಸನ್ನಿವೇಶ ಕಡತ (fc) ಶೆಲ್ ಸ್ಕ್ರಿಪ್ಟ್ (sh).\n"
+#~ "ಸಂಕಲಿಸಲು/ಅನುಸ್ಥಾಪಿಸಲು ಹಾಗು ಕಡತಗಳನ್ನು/ಕಡತಕೋಶಗಳನ್ನು.ಮರುಲೇಬಲ್ ಮಾಡಲು ಶೆಲ್ ಸ್ಕ್ರಿಪ್ಟ್‍ "
+#~ "ಅನ್ನು ಕಾರ್ಯಗತಗೊಳಿಸಿ\n"
+#~ " ಗಣಕವನ್ನು ಅನುಮತಿ ಕ್ರಮದಲ್ಲಿ ಇರಿಸಿ (setenforce 0). \n"
+#~ "avc ಸಂದೇಶಗಳನ್ನು ಉತ್ಪಾದಿಸಲು ಅನ್ವಯವನ್ನು ಚಲಾಯಿಸಿ/ಪುನರಾರಂಭಿಸಿ.\n"
+#~ "te ಕಡತಕ್ಕೆ ಹೆಚ್ಚುವರಿ ನಿಯಮಗಳನ್ನು ಉತ್ಪಾದಿಸಲು audit2allow -R ಅನ್ನು ಬಳಸಿ.\n"
+
+#~ msgid "Add Booleans Dialog"
+#~ msgstr "ಬೂಲಿಯನ್ ಸಂವಾದವನ್ನು ಸೇರಿಸು"
+
+#~ msgid "Boolean Name"
+#~ msgstr "ಬೂಲಿಯನ್ ಹೆಸರು"
+
+#~ msgid "Role"
+#~ msgstr "ಪಾತ್ರ"
+
+#~ msgid "Existing_User"
+#~ msgstr "ಬಳಕೆದಾರನಿಂದ ನಿರ್ಗಮಿಸುತ್ತಿದೆ(_U)"
+
+#~ msgid "Application"
+#~ msgstr "ಅನ್ವಯ"
+
+#~ msgid "%s must be a directory"
+#~ msgstr "%s ವು ಕಡತಕೋಶ ಆಗಿರಬೇಕು"
+
+#~ msgid "You must select a user"
+#~ msgstr "ನೀವು ಒಬ್ಬ ಬಳಕೆದಾರನಾಗಿರಬೇಕು"
+
+#~ msgid "Select executable file to be confined."
+#~ msgstr "ಮಿತಿಗೊಳಪಡಿಸಬೇಕಾದ ಕಾರ್ಯಗತಗೊಳಿಸಬಲ್ಲ ಕಡತವನ್ನು ಆರಿಸು."
+
+#~ msgid "Select init script file to be confined."
+#~ msgstr "ಮಿತಿಗೊಳಪಡಿಸಬೇಕಾದ init ಸ್ಕ್ರಿಪ್ಟ್ ಕಡತವನ್ನು ಆರಿಸು."
+
+#~ msgid "Select file(s) that confined application creates or writes"
+#~ msgstr "ಮಿತಿಗೊಳಿಸಲ್ಪಟ್ಟ ಅನ್ವಯವು ನಿರ್ಮಿಸುವ ಅಥವ ಬರೆಯುವ ಕಡತವನ್ನು(ಗಳನ್ನು) ಆರಿಸಿ"
+
+#~ msgid ""
+#~ "Select directory(s) that the confined application owns and writes into"
+#~ msgstr ""
+#~ "ಮಿತಿಗೊಳಿಸಲ್ಪಟ್ಟ ಅನ್ವಯವು ಅಧಿಕಾರ ಹೊಂದಿರುವ ಅಥವ ಬರೆಯುವ ಕಡತಕೋಶವನ್ನು(ಗಳನ್ನು) ಆರಿಸಿ"
+
+#~ msgid "Select directory to generate policy files in"
+#~ msgstr "ನೀತಿ ಕಡತಗಳನ್ನು ಉತ್ಪಾದಿಸಲು ಕೋಶವನ್ನು ಆರಿಸು"
+
+#~ msgid ""
+#~ "Type %s_t already defined in current policy.\n"
+#~ "Do you want to continue?"
+#~ msgstr ""
+#~ "ಈಗಿರುವ ಪಾಲಿಸಿಯಲ್ಲಿ ಬಗೆ %s_t ವು ಈಗಾಗಲೆ ಲೋಡ್ ಆಗಿದೆ.\n"
+#~ "ಮುಂದುವರೆಯಲು ಬಯಸುತ್ತೀರಾ?"
+
+#~ msgid "Verify Name"
+#~ msgstr "ಹೆಸರನ್ನು ಪರಿಶೀಲಿಸು"
+
+#~ msgid ""
+#~ "Module %s.pp already loaded in current policy.\n"
+#~ "Do you want to continue?"
+#~ msgstr ""
+#~ "ಈಗಿರುವ ಪಾಲಿಸಿಯಲ್ಲಿ ಘಟಕ %s.pp ವು ಈಗಾಗಲೆ ಲೋಡ್ ಆಗಿದೆ.\n"
+#~ "ಮುಂದುವರೆಯಲು ಬಯಸುತ್ತೀರಾ?"
+
+#~ msgid "You must enter a name"
+#~ msgstr "ನೀವು ಒಂದು ಹೆಸರನ್ನು ನಮೂದಿಸಬೇಕು"
+
+#~ msgid "You must enter a executable"
+#~ msgstr "ನೀವು ಒಂದು ಕಾರ್ಯಗೊಳಿಸಬಹುದಾದ್ದನ್ನು ನಮೂದಿಸಬೇಕು"
+
+#~ msgid "Configue SELinux"
+#~ msgstr "SELinux ಅನ್ನು ಸಂರಚಿಸು"
+
+#, fuzzy
+#~ msgid "Ports must be numbers or ranges of numbers from 1 to %d "
+#~ msgstr "ಸಂಪರ್ಕ ಸ್ಥಾನಗಳು 1 ರಿಂದ %d ರ ನಡುವಿನ ಸಂಖ್ಯೆ ಅಥವ ವ್ಯಾಪ್ತಿಯಾಗಿರಬೇಕು"
+
+#~ msgid "You must enter a name for your confined process/user"
+#~ msgstr "ನಿಮ್ಮ ಮಿತಿಗೊಳಿಸಲ್ಪಟ್ಟ ಪ್ರಕ್ರಿಯೆ/ಬಳಕೆದಾರರಿಗಾಗಿ ಒಂದು ಹೆಸರನ್ನು ದಾಖಲಿಸಬೇಕು"
+
+#~ msgid "USER Types are not allowed executables"
+#~ msgstr "USER ಪ್ರಕಾರಗಳು ಅನುಮತಿಸಲಾದ ಕಾರ್ಯಗತಗೊಳಿಸಬಲ್ಲವುಗಳಲ್ಲ"
+
+#~ msgid "Only DAEMON apps can use an init script"
+#~ msgstr "ಕೇವಲ DAEMON ಅನ್ವಯಗಳು ಮಾತ್ರ ಒಂದು init ಸ್ಕ್ರಿಪ್ಟನ್ನು ಬಳಸಬಲ್ಲದು"
+
+#~ msgid "use_syslog must be a boolean value "
+#~ msgstr "use_syslog ವು ಒಂದು ಬೂಲಿಯನ್ ಮೌಲ್ಯವಾಗಿರಬೇಕು "
+
+#, fuzzy
+#~ msgid "USER Types automatically get a tmp type"
+#~ msgstr "USER ಪ್ರಕಾರಗಳು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಒಂದು tmp ಬಗೆಯನ್ನು ಪಡೆದುಕೊಳ್ಳುತ್ತದೆ"
+
+#~ msgid "You must enter the executable path for your confined process"
+#~ msgstr ""
+#~ "ನಿಮ್ಮ ಮಿತಿಗೊಳಿಸಲ್ಪಟ್ಟ ಪ್ರಕ್ರಿಯೆಗಳಿಗಾಗಿ ಕಾರ್ಯಗತಗೊಳಿಸಬಲ್ಲ ಪಥವನ್ನು ನೀವು ನಮೂದಿಸಲೇ ಬೇಕು"
+
+#, fuzzy
+#~ msgid "Type Enforcement file"
+#~ msgstr "ಪ್ರಕಾರ ಜಾರಿ ಕಡತ"
+
+#~ msgid "Interface file"
+#~ msgstr "ಸಂಪರ್ಕ ಸಾಧನ ಕಡತ"
+
+#~ msgid "File Contexts file"
+#~ msgstr "ಕಡತ ಸನ್ನಿವೇಶಗಳ ಕಡತ"
+
+#~ msgid "Setup Script"
+#~ msgstr "ಸಿದ್ಧತಾ ಸ್ಕ್ರಿಪ್ಟ್"
+
+#~ msgid ""
+#~ "SELinux Port\n"
+#~ "Type"
+#~ msgstr ""
+#~ "SELinux ಸಂಪರ್ಕಸ್ಥಾನದ\n"
+#~ "ಬಗೆ"
+
+#~ msgid "Protocol"
+#~ msgstr "ಪ್ರೊಟೊಕಾಲ್"
+
+#~ msgid ""
+#~ "MLS/MCS\n"
+#~ "Level"
+#~ msgstr ""
+#~ "MLS/MCS\n"
+#~ "ಮಟ್ಟ"
+
+#~ msgid "Port"
+#~ msgstr "ಸಂಪರ್ಕ ಸ್ಥಾನ"
+
+#~ msgid "Port number \"%s\" is not valid.  0 < PORT_NUMBER < 65536 "
+#~ msgstr "ಸಂಪರ್ಕ ಸ್ಥಾನ ಸಂಖ್ಯೆ \"%s\" ಯು ಅಮಾನ್ಯವಾಗಿದೆ.  0 < PORT_NUMBER < 65536 "
+
+#~ msgid "List View"
+#~ msgstr "ಪಟ್ಟಿ ನೋಟ"
+
+#~ msgid "Group View"
+#~ msgstr "ಸಮೂಹ ನೋಟ"
+
+#~ msgid "SELinux Service Protection"
+#~ msgstr "SELinux ಸೇವಾ ಸಂರಕ್ಷಣೆ"
+
+#~ msgid "Disable SELinux protection for acct daemon"
+#~ msgstr "acct ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Admin"
+#~ msgstr "Admin"
+
+#~ msgid "Allow all daemons to write corefiles to /"
+#~ msgstr "ಮುಖ್ಯಕಡತಗಳನ್ನು(corefiles) / ಕ್ಕೆ ಬರೆಯಲು ಡೆಮೋನುಗಳಿಗೆ ಅನುಮತಿಸು"
+
+#~ msgid "Allow all daemons the ability to use unallocated ttys"
+#~ msgstr "ಎಲ್ಲಾ ಡೆಮೋನುಗಳು ನಿಯೋಜಿಸಲಾದ tty ಗಳನ್ನು ಬಳಸುವ ಸಾಮರ್ಥ್ಯವನ್ನು ಅನುಮತಿಸು"
+
+#~ msgid "User Privs"
+#~ msgstr "ಬಳಕೆದಾರ Privs"
+
+#, fuzzy
+#~ msgid ""
+#~ "Allow gadmin SELinux user account to execute files in home directory or /"
+#~ "tmp"
+#~ msgstr ""
+#~ "gadmin SELinux ಬಳಕೆದಾರ ಖಾತೆಗಳಿಗೆ ಅವುಗಳ ನೆಲೆ ಕೋಶದಲ್ಲಿ ಅಥವ /tmp ದಲ್ಲಿ "
+#~ "ಕಡತಗಳನ್ನು ಕಾರ್ಯಗತಗೊಳಿಸಲು ಅನುಮತಿಸು"
+
+#, fuzzy
+#~ msgid ""
+#~ "Allow guest SELinux user account to execute files in home directory or /"
+#~ "tmp"
+#~ msgstr ""
+#~ "ಅತಿಥಿ SELinux ಬಳಕೆದಾರ ಖಾತೆಗಳಿಗೆ ಅವುಗಳ ನೆಲೆ ಕೋಶದಲ್ಲಿ ಅಥವ /tmp ದಲ್ಲಿ ಕಡತಗಳನ್ನು "
+#~ "ಕಾರ್ಯಗತಗೊಳಿಸಲು ಅನುಮತಿಸು"
+
+#~ msgid "Memory Protection"
+#~ msgstr "ಮೆಮೊರಿ ಸಂರಕ್ಷಣೆ"
+
+#~ msgid "Allow java executable stack"
+#~ msgstr "java ಕಾರ್ಯಗತಗೊಳಿಸಬಲ್ಲಂತಹ ಸ್ಟಾಕ್ ಅನ್ನು ಅನುಮತಿಸು"
+
+#~ msgid "Mount"
+#~ msgstr "ಆರೋಹಣ"
+
+#~ msgid "Allow mount to mount any file"
+#~ msgstr "ಆರೋಹಣಕ್ಕೆ ಯಾವುದೆ ಕಡತಗಳನ್ನು ಆರೋಹಿಸಲು ಅನುಮತಿಸು"
+
+#~ msgid "Allow mount to mount any directory"
+#~ msgstr "ಆರೋಹಿಸುದಕ್ಕೆ ಯಾವುದೆ ಕಡತಕೋಶವನ್ನು ಆರೋಹಿಸ ಅನುಮತಿಸುಲು"
+
+#~ msgid "Allow mplayer executable stack"
+#~ msgstr "mplayer ಕಾರ್ಯಗತಗೊಳಿಸಬಲ್ಲಂತಹ ಸ್ಟಾಕ್ ಅನ್ನು ಅನುಮತಿಸು"
+
+#~ msgid "SSH"
+#~ msgstr "SSH"
+
+#~ msgid "Allow ssh to run ssh-keysign"
+#~ msgstr "ssh ಗೆ ssh-keysign ಅನ್ನು ಚಲಾಯಿಸಲು ಅನುಮತಿಸು"
+
+#, fuzzy
+#~ msgid ""
+#~ "Allow staff SELinux user account to execute files in home directory or /"
+#~ "tmp"
+#~ msgstr ""
+#~ "ಸ್ಟಾಫ್ SELinux ಬಳಕೆದಾರ ಖಾತೆಗಳಿಗೆ ಅವುಗಳ ನೆಲೆ ಕೋಶದಲ್ಲಿ ಅಥವ /tmp ದಲ್ಲಿ ಕಡತಗಳನ್ನು "
+#~ "ಕಾರ್ಯಗತಗೊಳಿಸಲು ಅನುಮತಿಸು"
+
+#, fuzzy
+#~ msgid ""
+#~ "Allow sysadm SELinux user account to execute files in home directory or /"
+#~ "tmp"
+#~ msgstr ""
+#~ "sysadm SELinux ಬಳಕೆದಾರ ಖಾತೆಗಳಿಗೆ ಅವುಗಳ ನೆಲೆ ಕೋಶದಲ್ಲಿ ಅಥವ /tmp ದಲ್ಲಿ "
+#~ "ಕಡತಗಳನ್ನು ಕಾರ್ಯಗತಗೊಳಿಸಲು ಅನುಮತಿಸು"
+
+#, fuzzy
+#~ msgid ""
+#~ "Allow unconfined SELinux user account to execute files in home directory "
+#~ "or /tmp"
+#~ msgstr ""
+#~ "ಮಿತಿಗೊಳಪಡಿಸದ SELinux ಬಳಕೆದಾರ ಖಾತೆಗಳು ತಮ್ಮ ನೆಲೆ ಕಡತಕೋಶ ಅಥವ /tmp ಯಲ್ಲಿ "
+#~ "ಕಡತಗಳನ್ನು ಕಾರ್ಯಗತಗೊಳಿಸಲು ಅನುಮತಿಸು"
+
+#~ msgid "Network Configuration"
+#~ msgstr "ಜಾಲಬಂಧ ಸಂರಚನೆ"
+
+#~ msgid "Allow unlabeled packets to flow on the network"
+#~ msgstr "ಲೇಬಲ್ ಮಾಡಲಾಗದ ಪ್ಯಾಕೇಟುಗಳು ಜಾಲಬಂಧದಲ್ಲಿ ಹಾಯಲು ಅನುಮತಿಸು"
+
+#, fuzzy
+#~ msgid ""
+#~ "Allow user SELinux user account to execute files in home directory or /tmp"
+#~ msgstr ""
+#~ "ಬಳಕೆದಾರ SELinux ಬಳಕೆದಾರ ಖಾತೆಗಳಿಗೆ ಅವುಗಳ ನೆಲೆ ಕೋಶದಲ್ಲಿ ಅಥವ /tmp ದಲ್ಲಿ "
+#~ "ಕಡತಗಳನ್ನು ಕಾರ್ಯಗತಗೊಳಿಸಲು ಅನುಮತಿಸು"
+
+#~ msgid "Allow unconfined to dyntrans to unconfined_execmem"
+#~ msgstr "ಮಿತಿಗೊಳಪಡದವನ್ನು dyntrans ಗೆ unconfined_execmem ಮಾಡಲು ಅನುಮತಿಸು"
+
+#~ msgid "Databases"
+#~ msgstr "ದತ್ತಸಂಚಯಗಳು"
+
+#~ msgid "Allow user to connect to mysql socket"
+#~ msgstr "ಬಳಕೆದಾರನಿಗೆ mysql ಸಾಕೆಟ್ಟಿಗೆ ಸಂಪರ್ಕ ಕಲ್ಪಿಸಲು ಅನುಮತಿಸು"
+
+#~ msgid "Allow user to connect to postgres socket"
+#~ msgstr "ಬಳಕೆದಾರನಿಗೆ postgres ಸಾಕೆಟ್ಟಿಗೆ ಸಂಪರ್ಕ ಕಲ್ಪಿಸಲು ಅನುಮತಿಸು"
+
+#~ msgid "XServer"
+#~ msgstr "Xಪರಿಚಾರಕ"
+
+#~ msgid "Allow clients to write to X shared memory"
+#~ msgstr "ಕ್ಲೈಂಟುಗಳಿಗೆ X ಹಂಚಿಕಾ ಮೆಮೊರಿಗೆ ಬರೆಯಲು ಅನುಮತಿಸಲು"
+
+#, fuzzy
+#~ msgid ""
+#~ "Allow xguest SELinux user account to execute files in home directory or /"
+#~ "tmp"
+#~ msgstr ""
+#~ "xguest SELinux ಬಳಕೆದಾರ ಖಾತೆಗಳಿಗೆ ಅವುಗಳ ನೆಲೆ ಕೋಶದಲ್ಲಿ ಅಥವ /tmp ದಲ್ಲಿ "
+#~ "ಕಡತಗಳನ್ನು ಕಾರ್ಯಗತಗೊಳಿಸಲು ಅನುಮತಿಸು"
+
+#~ msgid "NIS"
+#~ msgstr "NIS"
+
+#~ msgid "Allow daemons to run with NIS"
+#~ msgstr "ಡೆಮೊನುಳಿಗೆ NIS ನೊಂದಿಗೆ ಚಲಾಯಿತವಾಗುವಂತೆ ಅನುಮತಿಸು"
+
+#~ msgid "Web Applications"
+#~ msgstr "ಜಾಲ ಅನ್ವಯಗಳು"
+
+#~ msgid "Transition staff SELinux user to Web Browser Domain"
+#~ msgstr "ಸ್ಟಾಫ್ SELinux ಬಳಕೆದಾರನನ್ನು ಜಾಲ ವೀಕ್ಷಕ ಕ್ಷೇತ್ರಕ್ಕೆ ಪರಿವರ್ತಿಸು"
+
+#~ msgid "Transition sysadm SELinux user to Web Browser Domain"
+#~ msgstr "sysadm SELinux ಬಳಕೆದಾರನನ್ನು ಜಾಲ ವೀಕ್ಷಕ ಕ್ಷೇತ್ರಕ್ಕೆ ಪರಿವರ್ತಿಸು"
+
+#~ msgid "Transition user SELinux user to Web Browser Domain"
+#~ msgstr "ಬಳಕೆದಾರ SELinux ಬಳಕೆದಾರನನ್ನು ಜಾಲ ವೀಕ್ಷಕ ಕ್ಷೇತ್ರಕ್ಕೆ ಪರಿವರ್ತಿಸು"
+
+#~ msgid "Transition xguest SELinux user to Web Browser Domain"
+#~ msgstr "xguest SELinux ಬಳಕೆದಾರನನ್ನು ಜಾಲ ವೀಕ್ಷಕ ಕ್ಷೇತ್ರಕ್ಕೆ ಪರಿವರ್ತಿಸು"
+
+#~ msgid "Allow staff Web Browsers to write to home directories"
+#~ msgstr "ಸ್ಟಾಫ್ ಜಾಲ ವೀಕ್ಷಕರಿಗೆ ನೆಲೆ ಕಡತಕೋಶಗಳಿಗೆ ಬರೆಯಲು ಅನುಮತಿಸು"
+
+#~ msgid "Disable SELinux protection for amanda"
+#~ msgstr "amanda ಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for amavis"
+#~ msgstr "amavis ಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for apmd daemon"
+#~ msgstr "apmd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for arpwatch daemon"
+#~ msgstr "arpwatch ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for auditd daemon"
+#~ msgstr "audit ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for automount daemon"
+#~ msgstr "automount ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for avahi"
+#~ msgstr "avahi ಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for bluetooth daemon"
+#~ msgstr "bluetooth ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for canna daemon"
+#~ msgstr "canna ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for cardmgr daemon"
+#~ msgstr "cardmgr ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for Cluster Server"
+#~ msgstr "Cluster ಪರಿಚಾರಕಕ್ಕಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid ""
+#~ "Allow cdrecord to read various content. nfs, samba, removable devices, "
+#~ "user temp and untrusted content files"
+#~ msgstr ""
+#~ "cdrecord ಗೆ ಹಲವಾರು ವಿಷಯವನ್ನು ಓದಲು ಅನುಮತಿಸು. nfs, samba, ತೆಗೆದುಹಾಕಬಹುದಾದ "
+#~ "ಸಾಧನಗಳು, ಬಳಕೆದಾರ temp ಹಾಗು ನಂಬಲರ್ಹವಲ್ಲದ ವಿಷಯವನ್ನು ಹೊಂದಿರುವ ಕಡತಗಳು"
+
+#~ msgid "Disable SELinux protection for ciped daemon"
+#~ msgstr "ciped ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for clamd daemon"
+#~ msgstr "clamd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for clamscan"
+#~ msgstr "clamscan ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for clvmd"
+#~ msgstr "clvmd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for comsat daemon"
+#~ msgstr "comsat ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for courier daemon"
+#~ msgstr "courier ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for cpucontrol daemon"
+#~ msgstr "cpucontrol ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for cpuspeed daemon"
+#~ msgstr "cpuspeed ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Cron"
+#~ msgstr "Cron"
+
+#~ msgid "Disable SELinux protection for crond daemon"
+#~ msgstr "crond ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Printing"
+#~ msgstr "ಮುದ್ರಣ"
+
+#~ msgid "Disable SELinux protection for cupsd back end server"
+#~ msgstr "cupsd back end ಪರಿಚಾರಕಕ್ಕಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for cupsd daemon"
+#~ msgstr "cupsd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for cupsd_lpd"
+#~ msgstr "cup_Ipd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "CVS"
+#~ msgstr "CVS"
+
+#~ msgid "Disable SELinux protection for cvs daemon"
+#~ msgstr "cvs ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for cyrus daemon"
+#~ msgstr "cyrus ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for dbskkd daemon"
+#~ msgstr "dbskkd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for dbusd daemon"
+#~ msgstr "bdusd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for dccd"
+#~ msgstr "dccd ಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for dccifd"
+#~ msgstr "dccifd ಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for dccm"
+#~ msgstr "dccm ಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for ddt daemon"
+#~ msgstr "ddt ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for devfsd daemon"
+#~ msgstr "devfsd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for dhcpc daemon"
+#~ msgstr "dhcpc ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for dhcpd daemon"
+#~ msgstr "dhcpd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for dictd daemon"
+#~ msgstr "dictd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Allow sysadm_t to directly start daemons"
+#~ msgstr "sysadm_t ಗೆ ನೇರವಾಗಿ ಡೆಮೋನುಗಳನ್ನು ಆರಂಭಿಸಲು ಅನುಮತಿಸು"
+
+#~ msgid "Disable SELinux protection for Evolution"
+#~ msgstr "ಇವಲೂಶನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Games"
+#~ msgstr "ಆಟಗಳು"
+
+#~ msgid "Disable SELinux protection for games"
+#~ msgstr "ಆಟಗಳಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for the web browsers"
+#~ msgstr "ಜಾಲ ವೀಕ್ಷಕಗಳಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for Thunderbird"
+#~ msgstr "ಥಂಡರ್-ಬರ್ಡಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for distccd daemon"
+#~ msgstr "distccd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for dmesg daemon"
+#~ msgstr "dmesg ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for dnsmasq daemon"
+#~ msgstr "dnsmasq ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for dovecot daemon"
+#~ msgstr "dovecot ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for entropyd daemon"
+#~ msgstr "entropyd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for fetchmail"
+#~ msgstr "fetchmail ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for fingerd daemon"
+#~ msgstr "fingerd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for freshclam daemon"
+#~ msgstr "freshclam ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for fsdaemon daemon"
+#~ msgstr "fsdaemon ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for gpm daemon"
+#~ msgstr "gpm ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "NFS"
+#~ msgstr "NFS"
+
+#~ msgid "Disable SELinux protection for gss daemon"
+#~ msgstr "gss ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for Hal daemon"
+#~ msgstr "Hal ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Compatibility"
+#~ msgstr "ಸಹರ್ತನೀಯತೆ"
+
+#~ msgid ""
+#~ "Do not audit things that we know to be broken but which are not security "
+#~ "risks"
+#~ msgstr "ತುಂಡರಿಸಲ್ಪಟ್ಟ ಆದರೆ ಸುರಕ್ಷತೆಯ ದೃಷ್ಟಿಯಲ್ಲಿ ಅಪಾಯಕಾರಿಯಲ್ಲವುಗಳನ್ನು ಆಡಿಟ್ ಮಾಡಬೇಡ"
+
+#~ msgid "Disable SELinux protection for hostname daemon"
+#~ msgstr "hostname ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for hotplug daemon"
+#~ msgstr "hotplug ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for howl daemon"
+#~ msgstr "howl ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for cups hplip daemon"
+#~ msgstr "cups hplip ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for httpd rotatelogs"
+#~ msgstr "httpd rotatelogs ಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "HTTPD Service"
+#~ msgstr "HTTPD ಸೇವೆ"
+
+#~ msgid "Disable SELinux protection for http suexec"
+#~ msgstr "http suexec ಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for hwclock daemon"
+#~ msgstr "hwclock ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for i18n daemon"
+#~ msgstr "i18n ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for imazesrv daemon"
+#~ msgstr "imazesrv ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for inetd child daemons"
+#~ msgstr "inetd child ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for inetd daemon"
+#~ msgstr "inetd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for innd daemon"
+#~ msgstr "innd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for iptables daemon"
+#~ msgstr "iptables ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for ircd daemon"
+#~ msgstr "ircd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for irqbalance daemon"
+#~ msgstr "irqbalance ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for iscsi daemon"
+#~ msgstr "iscsi ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for jabberd daemon"
+#~ msgstr "jabberd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Kerberos"
+#~ msgstr "ಕರ್ಬರೋಸ್"
+
+#~ msgid "Disable SELinux protection for kadmind daemon"
+#~ msgstr "kadmind ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for klogd daemon"
+#~ msgstr "klogd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for krb5kdc daemon"
+#~ msgstr "krb5kdc ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for ktalk daemons"
+#~ msgstr "ktalk ಡೆಮೋನುಗಳಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for kudzu daemon"
+#~ msgstr "kudzu ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for locate daemon"
+#~ msgstr "locate ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for lpd daemon"
+#~ msgstr "lpd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for lrrd daemon"
+#~ msgstr "lrrd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for lvm daemon"
+#~ msgstr "lvm ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for mailman"
+#~ msgstr "mailman ಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Allow evolution and thunderbird to read user files"
+#~ msgstr "ಬಳಕೆದಾರ ಕಡತಗಳನ್ನು ಇವಲೂಶನ್ ಹಾಗು ಥಂಡರ್-ಬರ್ಡ್ ಓದಲು ಅನುಮತಿಸು"
+
+#~ msgid "Disable SELinux protection for mdadm daemon"
+#~ msgstr "mdadm ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for monopd daemon"
+#~ msgstr "monopd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Allow the mozilla browser to read user files"
+#~ msgstr "ಬಳಕೆದಾರ ಕಡತಗಳನ್ನು ಓದಲು ಮೊಝಿಲ್ಲಾ ವೀಕ್ಷಕಕ್ಕೆ ಅನುಮತಿಸು"
+
+#~ msgid "Disable SELinux protection for mrtg daemon"
+#~ msgstr "Dmrtg ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for mysqld daemon"
+#~ msgstr "mysqld ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for nagios daemon"
+#~ msgstr "nagios ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Name Service"
+#~ msgstr "ಹೆಸರು ಸೇವೆ"
+
+#~ msgid "Disable SELinux protection for named daemon"
+#~ msgstr "named ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for nessusd daemon"
+#~ msgstr "nessusd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for NetworkManager"
+#~ msgstr "NetworkManager SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for nfsd daemon"
+#~ msgstr "nfsd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Samba"
+#~ msgstr "ಸಾಂಬಾ"
+
+#~ msgid "Disable SELinux protection for nmbd daemon"
+#~ msgstr "nmbd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for nrpe daemon"
+#~ msgstr "nrpe ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for nscd daemon"
+#~ msgstr "nscd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for nsd daemon"
+#~ msgstr "Dnsd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for ntpd daemon"
+#~ msgstr "ntpd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for oddjob"
+#~ msgstr "oddjob ಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for oddjob_mkhomedir"
+#~ msgstr "oddjob_mkhomedir ಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for openvpn daemon"
+#~ msgstr "openvpn ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for pam daemon"
+#~ msgstr "pam ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for pegasus"
+#~ msgstr "pegasus ಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for perdition daemon"
+#~ msgstr "perdition ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for portmap daemon"
+#~ msgstr "portmap ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for portslave daemon"
+#~ msgstr "portslave ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for postfix"
+#~ msgstr "postfix ಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for postgresql daemon"
+#~ msgstr "postgresql ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "pppd"
+#~ msgstr "pppd"
+
+#~ msgid "Allow pppd to be run for a regular user"
+#~ msgstr "ಒಬ್ಬ ಸಾಮಾನ್ಯ ಬಳಕೆದಾರನಿಗೆ ಚಲಾಯಿತವಾಗುವಂತೆ pppd ಗೆ ಅನುಮತಿಸು"
+
+#~ msgid "Disable SELinux protection for pptp"
+#~ msgstr "pptp ಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for prelink daemon"
+#~ msgstr "prelink ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for privoxy daemon"
+#~ msgstr "privoxy ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for ptal daemon"
+#~ msgstr "ptal ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for pxe daemon"
+#~ msgstr "pxe ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for pyzord"
+#~ msgstr "pyzord ಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for quota daemon"
+#~ msgstr "quota ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for radiusd daemon"
+#~ msgstr "radiusd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for radvd daemon"
+#~ msgstr "radvd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for rdisc"
+#~ msgstr "rdisc ಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for readahead"
+#~ msgstr "readahead ಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Allow programs to read files in non-standard locations (default_t)"
+#~ msgstr "ಸ್ಟಾಂಡರ್ಡ್‌ ಅಲ್ಲದ ಸ್ಥಳಗಳಿಂದ (default_t) ಕಡತಗಳನ್ನು ಓದಲು ಪ್ರೋಗ್ರಾಂಗೆ ಅನುಮತಿಸು"
+
+#~ msgid "Disable SELinux protection for restorecond"
+#~ msgstr "restorecond ಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for rhgb daemon"
+#~ msgstr "rhgb ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for ricci"
+#~ msgstr "ricci ಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for ricci_modclusterd"
+#~ msgstr "ricci_modclusterd ಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for rlogind daemon"
+#~ msgstr "rlogind ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for rpcd daemon"
+#~ msgstr "rpcd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for rshd"
+#~ msgstr "rshd ಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "rsync"
+#~ msgstr "rsync"
+
+#~ msgid "Disable SELinux protection for rsync daemon"
+#~ msgstr "rsync ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Allow ssh to run from inetd instead of as a daemon"
+#~ msgstr "ssh ಗೆ ಒಂದು ಡೆಮೋನಿನ ಬದಲಿಗೆ inetd ಯಿಂದ ಚಲಾಯಿತವಾಗುವಂತೆ ಅನುಮತಿಸು"
+
+#~ msgid "Allow Samba to share nfs directories"
+#~ msgstr "ಸಾಂಬಾಗೆ nfs ಕಡತಕೋಶಗಳನ್ನು ಹಂಚಿಕೆ ಮಾಡಿಕೊಳ್ಳುವಂತೆ ಅನುಮತಿಸು"
+
+#~ msgid "SASL authentication server"
+#~ msgstr "SASL ದೃಢೀಕರಣ ಪರಿಚಾರಕ"
+
+#~ msgid "Allow sasl authentication server to read /etc/shadow"
+#~ msgstr "sasl ದೃಢೀಕರಣ ಪರಿಚಾರಕಕ್ಕೆ /etc/shadow ಅನ್ನು ಓದಲು ಅನುಮತಿಸು"
+
+#~ msgid ""
+#~ "Allow X-Windows server to map a memory region as both executable and "
+#~ "writable"
+#~ msgstr ""
+#~ "X-Windows ಪರಿಚಾರಕವು ಒಂದು ಮೆಮೊರಿ ಪ್ರದೇಶಕ್ಕೆ ಕಾರ್ಯಗತಗೊಳಿಸಬಲ್ಲ ಹಾಗು ಬರೆಯಬಲ್ಲುದಾಗಿ "
+#~ "ಮ್ಯಾಪ್ ಮಾಡಲು ಅನುಮತಿಸು"
+
+#~ msgid "Disable SELinux protection for saslauthd daemon"
+#~ msgstr "saslauthd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for scannerdaemon daemon"
+#~ msgstr "scannerdaemon ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Do not allow transition to sysadm_t, sudo and su effected"
+#~ msgstr ""
+#~ "sysadm_t, sudo ಹಾಗು su ಪ್ರಭಾವಗೊಂಡಿದ್ದಕ್ಕೆ ಪರಿವರ್ತಿತಗೊಳ್ಳುವುದನ್ನು ಅನುಮತಿಸಬೇಡ"
+
+#~ msgid "Do not allow any processes to load kernel modules"
+#~ msgstr "ಯಾವುದೆ ಪ್ರಕ್ರಿಯೆಗಳು ಕರ್ನಲ್ ಘಟಕಗಳಿಗೆ ಲೋಡ್ ಆಗುವುದನ್ನು ಅನುಮತಿಸಬೇಡ"
+
+#~ msgid "Do not allow any processes to modify kernel SELinux policy"
+#~ msgstr "ಕರ್ನಲ್ SELinux ನೀತಿಯನ್ನು ಮಾರ್ಪಡಿಸಲು ಯಾವುದೇ ಪ್ರಕ್ರಿಯೆಗಳಿಗೆ ಅನುಮತಿಸಬೇಡ"
+
+#~ msgid "Disable SELinux protection for sendmail daemon"
+#~ msgstr "sendmail ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for setrans"
+#~ msgstr "setrans ಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for setroubleshoot daemon"
+#~ msgstr "setroublesoot ಡೆಮನ್‍ಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for slapd daemon"
+#~ msgstr "slapd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for slrnpull daemon"
+#~ msgstr "slrnpull ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for smbd daemon"
+#~ msgstr "smbd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for snmpd daemon"
+#~ msgstr "snmpd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for snort daemon"
+#~ msgstr "snort ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for soundd daemon"
+#~ msgstr "soundd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for sound daemon"
+#~ msgstr "sound ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Spam Protection"
+#~ msgstr "Spamನಿಂದ ಸಂರಕ್ಷಣೆ"
+
+#~ msgid "Disable SELinux protection for spamd daemon"
+#~ msgstr "spamd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Allow spamd to access home directories"
+#~ msgstr "spamd ನೆಲೆ ಕಡತಕೋಶಗಳನ್ನು ನಿಲುಕಿಸಿಕೊಳ್ಳಲು ಅನುಮತಿಸು"
+
+#~ msgid "Allow Spam Assassin daemon network access"
+#~ msgstr "Spam assasin ಡೆಮನ್‍ಗೆ ಜಾಲಬಂಧವನ್ನು ನಿಲುಕಿಸಿಕೊಳ್ಳಲು ಅನುಮತಿಸು"
+
+#~ msgid "Disable SELinux protection for speedmgmt daemon"
+#~ msgstr "speedmgmt ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Squid"
+#~ msgstr "Squid"
+
+#~ msgid "Allow squid daemon to connect to the network"
+#~ msgstr "squid ಡೆಮೋನಿಗೆ ಜಾಲಬಂಧವನ್ನು ಸಂಪರ್ಕಿಸಲು ಅನುಮತಿಸಲು"
+
+#~ msgid "Disable SELinux protection for squid daemon"
+#~ msgstr "squid ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for ssh daemon"
+#~ msgstr "ssh ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Allow ssh logins as sysadm_r:sysadm_t"
+#~ msgstr "sysadm_r:sysadm_t ಆಗಿ ssh ಪ್ರವೇಶವನ್ನು ಅನುಮತಿಸು"
+
+#~ msgid ""
+#~ "Allow staff_r users to search the sysadm home dir and read files (such as "
+#~ "~/.bashrc)"
+#~ msgstr ""
+#~ "staff_r ಬಳಕೆದಾರರಿಗೆ sysadm ನ ನೆಲೆ dir ಹಾಗು ಕಡತಗಳನ್ನು ಓದಲು ಅನುಮತಿಸು (~/."
+#~ "bashrc ನಂತಹ)"
+
+#~ msgid "Universal SSL tunnel"
+#~ msgstr "ವಿಶ್ವವ್ಯಾಪಿ SSL ಟನ್ನಲ್"
+
+#~ msgid "Disable SELinux protection for stunnel daemon"
+#~ msgstr "stunnel ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Allow stunnel daemon to run as standalone, outside of xinetd"
+#~ msgstr "stunnel ಡೆಮನ್ ಅನ್ನು xinetd ದ ಹೊರಗೆ ಏಕಮೇವವಾಗಿ ಚಲಾಯಿತಗೊಳ್ಳಲು ಅನುಮತಿಸು "
+
+#~ msgid "Disable SELinux protection for swat daemon"
+#~ msgstr "swat ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for sxid daemon"
+#~ msgstr "sxid ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for syslogd daemon"
+#~ msgstr "syslogd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for system cron jobs"
+#~ msgstr "ಗಣಕ cron ಕಾರ್ಯಗಳಿಗಾಗಿ(jobs) SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for tcp daemon"
+#~ msgstr "tcp ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for telnet daemon"
+#~ msgstr "telnet ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for tftpd daemon"
+#~ msgstr "tftpd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for transproxy daemon"
+#~ msgstr "transproxy ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for udev daemon"
+#~ msgstr "udev ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for uml daemon"
+#~ msgstr "uml ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid ""
+#~ "Allow xinetd to run unconfined, including any services it starts that do "
+#~ "not have a domain transition explicitly defined"
+#~ msgstr ""
+#~ "ಒಂದು ಕ್ಷೇತ್ರ ಪರಿವರ್ತನೆಯನ್ನು ಸ್ಪಷ್ಟವಾಗಿ ಸೂಚಿಸದ ಯಾವುದೆ ಸೇವೆಗಳನ್ನು ಒಳಗೊಂಡಂತಹ xinetd "
+#~ "ಯನ್ನು ಮಿತಿಗೊಳಪಡದೆ ಚಲಾಯಿತಗೊಳ್ಳಲು ಅನುಮತಿಸಿ"
+
+#~ msgid ""
+#~ "Allow rc scripts to run unconfined, including any daemon started by an rc "
+#~ "script that does not have a domain transition explicitly defined"
+#~ msgstr ""
+#~ "ಒಂದು ಕ್ಷೇತ್ರ ಪರಿವರ್ತನೆಯನ್ನು ಸ್ಪಷ್ಟವಾಗಿ ಸೂಚಿಸದ ಒಂದು rc ಸ್ಕ್ರಿಪ್ಟ್‍ನಿಂದ ಆರಂಭಗೊಂಡ "
+#~ "ಯಾವುದೆ ಡೆಮನ್ ಅನ್ನು ಒಳಗೊಂಡಂತಹ rc ಸ್ಕ್ರಿಪ್ಟ್‍ ಅನ್ನು ಮಿತಿಗೊಳಪಡದೆ ಚಲಾಯಿತಗೊಳ್ಳಲು "
+#~ "ಅನುಮತಿಸಿ"
+
+#~ msgid "Allow rpm to run unconfined"
+#~ msgstr "rpm ಅನ್ನು ಮಿತಿಗೊಳಪಡದೆ ಚಲಾಯಿತಗೊಳ್ಳಲು ಅನುಮತಿಸು"
+
+#~ msgid "Allow privileged utilities like hotplug and insmod to run unconfined"
+#~ msgstr ""
+#~ "ಸವಲತ್ತು ಉಪಯುಕ್ತತೆಗಳಾದ hotplug ಹಾಗು insmod ನಂತಹುಗಳನ್ನು ಮಿತಿಗೊಳಪಡದೆ "
+#~ "ಚಲಾಯಿತಗೊಳ್ಳಲು ಅನುಮತಿಸು"
+
+#~ msgid "Disable SELinux protection for updfstab daemon"
+#~ msgstr "updfstab ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for uptimed daemon"
+#~ msgstr "ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid ""
+#~ "Allow user_r to reach sysadm_r via su, sudo, or userhelper. Otherwise, "
+#~ "only staff_r can do so"
+#~ msgstr ""
+#~ "user_r ಗೆ su ನ ಮೂಲಕ sysadm_r, sudo, ಅಥವ userhelper ಅನ್ನು ತಲುಪಲು ಅನುಮತಿಸಿ. "
+#~ "ಇಲ್ಲದೆ ಹೋದಲ್ಲಿ, ಕೇವಲ staff_r ಹಾಗೆ ಮಾಡುತ್ತದೆ"
+
+#~ msgid "Allow users to execute the mount command"
+#~ msgstr "ಬಳಕೆದಾರರಿಗೆ ಆರೋಹಿಸು ಆಜ್ಞೆಯನ್ನು ಕಾರ್ಯಗತಗೊಳಿಸಲು ಅನುಮತಿಸು"
+
+#~ msgid "Allow regular users direct mouse access (only allow the X server)"
+#~ msgstr ""
+#~ "ಸಾಮಾನ್ಯ ಬಳಕೆದಾರರಿಗೆ ನೇರ ಮೌಸಿನ ನಿಲುಕಣೆಯನ್ನು ಅನುಮತಿಸು(ಕೇವಲ X ಪರಿಚಾರಕವನ್ನು ಮಾತ್ರ "
+#~ "ಅನುಮತಿಸು)"
+
+#~ msgid "Allow users to run the dmesg command"
+#~ msgstr "dmesg ಆಜ್ಞೆಯನ್ನು ಚಲಾಯಿಸಲು ಅನುಮತಿಸು"
+
+#~ msgid "Allow users to control network interfaces (also needs USERCTL=true)"
+#~ msgstr ""
+#~ "ಬಳಕೆದಾರರಿಗೆ ಜಾಲಬಂಧ ಸಂಪರ್ಕಸಾಧನಗಳನ್ನು ನಿಯಂತ್ರಿಸಲು ಅನುಮತಿಸು(USERCTL=true ನ "
+#~ "ಅಗತ್ಯವು ಸಹ ಇರುತ್ತದೆ)"
+
+#~ msgid "Allow normal user to execute ping"
+#~ msgstr "ಸಾಮಾನ್ಯ ಬಳಕೆದಾರರಿಗೆ ಪಿಂಗ್ ಅನ್ನು ಕಾರ್ಯಗತಗೊಳಿಸಲು ಅನುಮತಿಸು"
+
+#~ msgid "Allow user to r/w noextattrfile (FAT, CDROM, FLOPPY)"
+#~ msgstr "ಬಳಕೆದಾರನನ್ನು r/w noextattrfile (FAT, CDROM, FLOPPY) ಗೆ ಅನುಮತಿಸು"
+
+#~ msgid "Allow users to rw usb devices"
+#~ msgstr "rw usb ಸಾಧನಗಳಿಗೆ ಬಳಕೆದಾರರನ್ನು ಅನುಮತಿಸು"
+
+#~ msgid ""
+#~ "Allow users to run TCP servers (bind to ports and accept connection from "
+#~ "the same domain and outside users)  disabling this forces FTP passive "
+#~ "mode and may change other protocols"
+#~ msgstr ""
+#~ "ಬಳಕೆದಾರರಿಗೆ TCP ಪರಿಚಾರಕಗಳನ್ನು ಚಲಾಯಿಸಲು ಅನುಮತಿಸು (ಸಂಪರ್ಕಸ್ಥಾನಗಳಿಗೆ ಬೈಂಡ್ ಮಾಡಿ "
+#~ "ಹಾಗು ಅದೆ ಕ್ಷೇತ್ರದಿಂದ ಹಾಗು ಬಳಕೆದಾರರ ಹೊರಗಿನ ಸಂಪರ್ಕಗಳನ್ನು ಅನುಮತಿಸು).  ಇದನ್ನು "
+#~ "ಅಶಕ್ತಗೊಳಿಸುವುದರಿಂದ ಅದುFTP ಜಡ ಕ್ರಮಕ್ಕೆ ಒತ್ತಾಯಿಸುತ್ತದೆ ಹಾಗು ಇತರೆ ಪ್ರೊಟೋಕಾಲ್‍ಗಳನ್ನು "
+#~ "ಸಹ ಬದಲಾಯಿಸಬಹುದು"
+
+#~ msgid "Allow user to stat ttyfiles"
+#~ msgstr "ಬಳಕೆದಾರರಿಗೆ ttyfiles ಅನ್ನು stat ಮಾಡಲು ಅನುಮತಿಸು"
+
+#~ msgid "Disable SELinux protection for uucpd daemon"
+#~ msgstr "uucpd ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for vmware daemon"
+#~ msgstr "vmware ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for watchdog daemon"
+#~ msgstr "watchdog ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for winbind daemon"
+#~ msgstr "winbind ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for xdm daemon"
+#~ msgstr "xdm ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Allow xdm logins as sysadm_r:sysadm_t"
+#~ msgstr "xdm ಪ್ರವೇಶಗಳನ್ನು sysadm_r:sysadm_t ಆಗಿ ಅನುಮತಿಸು"
+
+#~ msgid "Disable SELinux protection for xen daemon"
+#~ msgstr "xen ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "XEN"
+#~ msgstr "XEN"
+
+#~ msgid "Allow xen to read/write physical disk devices"
+#~ msgstr "xen ಗೆ ಭೌತಿಕ ಡಿಸ್ಕ್ ಸಾಧನಗಳನ್ನು ಓದಲು/ಬರೆಯಲು ಅನುಮತಿಸು"
+
+#~ msgid "Disable SELinux protection for xfs daemon"
+#~ msgstr "xfs ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for xen control"
+#~ msgstr "xen constrol ಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for ypbind daemon"
+#~ msgstr "ypbind ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for NIS Password Daemon"
+#~ msgstr "NIS ಗುಪ್ತಪದ ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for ypserv daemon"
+#~ msgstr "ypserv ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid "Disable SELinux protection for NIS Transfer Daemon"
+#~ msgstr "NIS ವರ್ಗಾವಣಾ ಡೆಮೋನಿಗಾಗಿ SELinux ಸಂರಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#~ msgid ""
+#~ "Allow SELinux webadm user to manage unprivileged users home directories"
+#~ msgstr ""
+#~ "ಸವಲತ್ತುಗಳಿಲ್ಲದ ಬಳಕೆದಾರರ ನೆಲೆ ಕಡತಕೋಶಗಳನ್ನು ನಿರ್ವಹಿಸಲು SELinux webadm "
+#~ "ಬಳಕೆದಾರನಿಗೆ ಅನುಮತಿಸು"
+
+#~ msgid ""
+#~ "Allow SELinux webadm user to read unprivileged users home directories"
+#~ msgstr ""
+#~ "ಸವಲತ್ತುಗಳಿಲ್ಲದ ಬಳಕೆದಾರರ ನೆಲೆ ಕಡತಕೋಶಗಳನ್ನು ಓದಲು SELinux webadm ಬಳಕೆದಾರನಿಗೆ "
+#~ "ಅನುಮತಿಸು"
+
+#~ msgid "Are you sure you want to delete %s '%s'?"
+#~ msgstr "%s '%s' ಅನ್ನು ಅಳಿಸಿಹಾಕಬೇಕೆಂದು ನೀವು ಖಚಿತವೆ?"
+
+#~ msgid "Delete %s"
+#~ msgstr "%s ಅನ್ನು ಅಳಿಸಿಹಾಕು"
+
+#~ msgid "Add %s"
+#~ msgstr "%s ಅನ್ನು ಸೇರಿಸು"
+
+#~ msgid "Modify %s"
+#~ msgstr "%s ಮಾರ್ಪಡಿಸು"
+
+#~ msgid "Permissive"
+#~ msgstr "ಅನುಮತಿಪೂರ್ವಕವಾಗಿ"
+
+#~ msgid "Enforcing"
+#~ msgstr "ಒತ್ತಾಯಪೂರ್ವಕ"
+
+#~ msgid "Disabled"
+#~ msgstr "ಅಶಕ್ತಗೊಂಡ"
+
+#~ msgid "Status"
+#~ msgstr "ಸ್ಥಿತಿ"
+
+#~ msgid ""
+#~ "Changing the policy type will cause a relabel of the entire file system "
+#~ "on the next boot. Relabeling takes a long time depending on the size of "
+#~ "the file system.  Do you wish to continue?"
+#~ msgstr ""
+#~ "ನೀತಿಯ ಪ್ರಕಾರವನ್ನು ಬದಲಾಯಿಸುವುದರಿಂದ ಮುಂದಿನ ಬೂಟಿನಲ್ಲಿ ಇಡಿ ಕಡತವ್ಯವಸ್ಥೆಯನ್ನು ಲೇಬಲ್ "
+#~ "ಮಾಡುವುದು ಅಗತ್ಯವಾಗುತ್ತದೆ. ಕಡತ ವ್ಯವಸ್ಥೆಗೆ ಅನುಗುಣವಾಗಿ ಪುನಃ ಲೇಬಲ್ ಮಾಡಲು ಬಹಳ ಸಮಯ "
+#~ "ಹಿಡಿಯುತ್ತದೆ.  ನೀವು ಮುಂದುವರೆಯಲು ಬಯಸುತ್ತೀರೆ?"
+
+#~ msgid ""
+#~ "Changing to SELinux disabled requires a reboot.  It is not recommended.  "
+#~ "If you later decide to turn SELinux back on, the system will be required "
+#~ "to relabel.  If you just want to see if SELinux is causing a problem on "
+#~ "your system, you can go to permissive mode which will only log errors and "
+#~ "not enforce SELinux policy.  Permissive mode does not require a reboot    "
+#~ "Do you wish to continue?"
+#~ msgstr ""
+#~ "SELinux ಅಶಕ್ತಗೊಂಡಿದ್ದಕ್ಕೆ ಬದಲಾಯಿಸಲು ಪುನರ್ ಬೂಟಿಸುವುದು ಅಗತ್ಯವಾಗುತ್ತದೆ.  ಹಾಗೆ "
+#~ "ಮಾಡುವುದು ಸೂಕ್ತವಲ್ಲ.   ನೀವು ನಂತರ SELinux ಅನ್ನು ಪುನಃ ಆನ್ ಮಾಡಲು ನಿರ್ಧರಿಸಿದಾಗ, "
+#~ "ಗಣಕವನ್ನು ಪುನಃ ಲೇಬಲ್ ಮಾಡುವುದು ಅಗತ್ಯವಾಗುತ್ತದೆ.  ನೀವು ಕೇವಲ SELinux ನಿಮ್ಮ ಗಣಕದಲ್ಲಿನ "
+#~ "ಒಂದು ತೊಂದರೆಗೆ ಕಾರಣವಾಗಿದೆಯೆ ಎಂದು ನೋಡಲು, ಅನುಮತಿಪೂರ್ವಕ ಕ್ರಮಕ್ಕೆ ಹೋಗಿ ಅದು ಕೇವಲ "
+#~ "ದೋಷಗಳನ್ನು ದಾಖಲಿಸುತ್ತದೆಯೆ ಹೊರತು SELinux ನೀತಿಯನ್ನು ಒತ್ತಾಯಿಸುವುದಿಲ್ಲ.  "
+#~ "ಅನುಮತಿಪೂರ್ವಕ ಕ್ರಮಕ್ಕೆ ಒಂದು ಪುನರ್ ಬೂಟಿನ ಅಗತ್ಯವಿರುವುದಿಲ್ಲ    ನೀವು ಮುಂದುವರೆಯಲು "
+#~ "ಬಯಸುತ್ತೀರೆ?"
+
+#~ msgid ""
+#~ "Changing to SELinux enabled will cause a relabel of the entire file "
+#~ "system on the next boot. Relabeling takes a long time depending on the "
+#~ "size of the file system.  Do you wish to continue?"
+#~ msgstr ""
+#~ "SELinux ಶಕ್ತಗೊಂಡ ಸ್ಥಿತಿಗೆ ಬದಲಾಯಿಸುವುದರಿಂದ ಮುಂದಿನ ಬೂಟಿನಲ್ಲಿ ಇಡಿ ಕಡತವ್ಯವಸ್ಥೆಯನ್ನು "
+#~ "ಲೇಬಲ್ ಮಾಡುವುದು ಅಗತ್ಯವಾಗುತ್ತದೆ. ಕಡತ ವ್ಯವಸ್ಥೆಗೆ ಅನುಗುಣವಾಗಿ ಪುನಃ ಲೇಬಲ್ ಮಾಡಲು ಬಹಳ "
+#~ "ಸಮಯ ಹಿಡಿಯುತ್ತದೆ.  ನೀವು ಮುಂದುವರೆಯಲು ಬಯಸುತ್ತೀರೆ?"
+
+#~ msgid "system-config-selinux"
+#~ msgstr "system-config-selinux"
+
+#~ msgid ""
+#~ "Copyright (c)2006 Red Hat, Inc.\n"
+#~ "Copyright (c) 2006 Dan Walsh <dwalsh@redhat.com>"
+#~ msgstr ""
+#~ "ಕೃತಿಸ್ವಾಮ್ಯ (c)2006 Red Hat, Inc.\n"
+#~ "ಕೃತಿಸ್ವಾಮ್ಯ (c) 2006 Dan Walsh <dwalsh@redhat.com>"
+
+#~ msgid "Add SELinux Login Mapping"
+#~ msgstr "SELinux ಪ್ರವೇಶ ಮ್ಯಾಪಿಂಗನ್ನು ಸೇರಿಸು"
+
+#~ msgid "Add SELinux Network Ports"
+#~ msgstr "SELinux ಜಾಲಬಂಧ ಸಂಪರ್ಕಸ್ಥಾನಗಳನ್ನು ಸೇರಿಸು"
+
+#~ msgid "SELinux Type"
+#~ msgstr "SELinux ನ ಬಗೆ"
+
+#~ msgid ""
+#~ "tcp\n"
+#~ "udp"
+#~ msgstr ""
+#~ "tcp\n"
+#~ "udp"
+
+#~ msgid ""
+#~ "SELinux MLS/MCS\n"
+#~ "Level"
+#~ msgstr ""
+#~ "SELinux MLS/MCS\n"
+#~ "ಮಟ್ಟ"
+
+#~ msgid "File Specification"
+#~ msgstr "ಕಡತದ ವಿಶಿಷ್ಟ ವಿವರಗಳು"
+
+#~ msgid "File Type"
+#~ msgstr "ಕಡತದ ಬಗೆ"
+
+#~ msgid ""
+#~ "all files\n"
+#~ "regular file\n"
+#~ "directory\n"
+#~ "character device\n"
+#~ "block device\n"
+#~ "socket\n"
+#~ "symbolic link\n"
+#~ "named pipe\n"
+#~ msgstr ""
+#~ "ಎಲ್ಲಾ ಕಡತಗಳು\n"
+#~ "ಸಾಮಾನ್ಯ ಕಡತ\n"
+#~ "ಕಡತಕೋಶ\n"
+#~ "ವೈಶಿಷ್ಟ್ಯ ಸಾಧನ\n"
+#~ "ಬ್ಲಾಕ್(block) ಸಾಧನ\n"
+#~ "ಸಾಕೆಟ್\n"
+#~ "ಸಾಂಕೇತಿಕ ಕೊಂಡಿ\n"
+#~ "ಹೆಸರಿಸಲಾದ ಪೈಪ್\n"
+
+#~ msgid "MLS"
+#~ msgstr "MLS"
+
+#~ msgid "Add SELinux User"
+#~ msgstr "SELinux ಬಳಕೆದಾರನನ್ನು ಸೇರಿಸು"
+
+#~ msgid "SELinux Administration"
+#~ msgstr "SELinux ನಿರ್ವಹಣೆ"
+
+#~ msgid "Add"
+#~ msgstr "ಸೇರಿಸು"
+
+#~ msgid "_Properties"
+#~ msgstr "ಗುಣಲಕ್ಷಣಗಳು(_P)"
+
+#~ msgid "_Delete"
+#~ msgstr "ಅಳಿಸಿಹಾಕು(_D)"
+
+#~ msgid "Select Management Object"
+#~ msgstr "ನಿರ್ವಹಣಾ ವಸ್ತುವನ್ನು ಆರಿಸು"
+
+#~ msgid "<b>Select:</b>"
+#~ msgstr "<b>ಆರಿಸು:</b>"
+
+#~ msgid "System Default Enforcing Mode"
+#~ msgstr "ಗಣಕ ಪೂರ್ವನಿಯೋಜಿತ ಒತ್ತಾಯಪೂರ್ವಕ ಕ್ರಮ"
+
+#~ msgid "Current Enforcing Mode"
+#~ msgstr "ಪ್ರಸಕ್ತ ಒತ್ತಾಯಪೂರ್ವಕ ಕ್ರಮ"
+
+#~ msgid "System Default Policy Type: "
+#~ msgstr "ಗಣಕ ಪೂರ್ವನಿಯೋಜಿತ ನೀತಿಯ ಬಗೆ: "
+
+#~ msgid ""
+#~ "Select if you wish to relabel then entire file system on next reboot.  "
+#~ "Relabeling can take a very long time, depending on the size of the "
+#~ "system.  If you are changing policy types or going from disabled to "
+#~ "enforcing, a relabel is required."
+#~ msgstr ""
+#~ "ಮುಂದಿನ ಬೂಟಿನಲ್ಲಿ ಇಡಿ ಕಡತವ್ಯವಸ್ಥೆಯನ್ನು ಪುನಃ ಲೇಬಲ್ ಮಾಡಲು ನೀವು ಬಯಸಿದರೆ ಇದನ್ನು "
+#~ "ಆರಿಸಿ.  ಗಣಕದ ಗಾತ್ರಕ್ಕೆ ಅನುಗುಣವಾಗಿ, ಪುನಃ ಲೇಬಲ್ ಮಾಡಲು ಬಹಳ ಸಮಯ "
+#~ "ತೆಗೆದುಕೊಳ್ಳಬಹುದು.  ನೀತಿಯ ಬಗೆಗಳನ್ನು ಬದಲಾಯಿಸುವಂತಿದ್ದರೆ ಅಥವ ಅಶಕ್ತಗೊಂಡ ಸ್ಥಿತಿಯಿಂದ "
+#~ "ಒತ್ತಾಯಪೂರ್ವಕಕ್ಕೆ ಹೋಗುವಂತಿದ್ದರೆ, ಒಂದು ಪುನಃ ಲೇಬಲ್ ಮಾಡುವ ಅಗತ್ಯವಿದೆ."
+
+#~ msgid "Relabel on next reboot."
+#~ msgstr "ಮುಂದಿನ ಬೂಟಿನಲ್ಲಿ ಪುನರ್ ಲೇಬಲ್ ಮಾಡು."
+
+#~ msgid "Revert boolean setting to system default"
+#~ msgstr "ಬೂಲಿಯನ್ ಸಂಯೋಜನೆಯನ್ನು ಗಣಕ ಪೂರ್ವನಿಯೋಜಿತಕ್ಕೆ ಮರಳಿಸು"
+
+#~ msgid "Toggle between Customized and All Booleans"
+#~ msgstr "ಕಸ್ಟಮೈಝ್ ಮಾಡಲಾದ ಹಾಗು ಎಲ್ಲಾ ಬೂಲಿಯನ್‍ಗಳ ನಡುವೆ ಟಾಗಲ್ ಮಾಡು"
+
+#~ msgid "Filter"
+#~ msgstr "ಶೋಧಕ(Filter)"
+
+#~ msgid "Add File Context"
+#~ msgstr "ಕಡತ ಸನ್ನಿವೇಶವನ್ನು ಸೇರಿಸು"
+
+#~ msgid "Modify File Context"
+#~ msgstr "ಕಡತ ಸನ್ನಿವೇಶವನ್ನು ಮಾರ್ಪಡಿಸು"
+
+#~ msgid "Delete File Context"
+#~ msgstr "ಕಡತ ಸನ್ನಿವೇಶವನ್ನು ಅಳಿಸಿಹಾಕು"
+
+#~ msgid "Toggle between all and customized file context"
+#~ msgstr "ಎಲ್ಲಾ ಹಾಗು ಕಸ್ಟಮೈಝ್ ಮಾಡಲಾದ ಕಡತ ಸನ್ನಿವೇಶಗಳ ನಡುವೆ ಟಾಗಲ್ ಮಾಡು"
+
+#~ msgid "Add SELinux User Mapping"
+#~ msgstr "SELinux ಬಳಕೆದಾರ ಮ್ಯಾಪಿಂಗನ್ನು ಸೇರಿಸು"
+
+#~ msgid "Modify SELinux User Mapping"
+#~ msgstr "SELinux ಬಳಕೆದಾರ ಮ್ಯಾಪಿಂಗನ್ನು ಮಾರ್ಪಡಿಸು"
+
+#~ msgid "Delete SELinux User Mapping"
+#~ msgstr "SELinux ಬಳಕೆದಾರ ಮ್ಯಾಪಿಂಗನ್ನು ಅಳಿಸು"
+
+#~ msgid "Add Translation"
+#~ msgstr "ಅನುವಾದವನ್ನು ಸೇರಿಸು"
+
+#~ msgid "Modify Translation"
+#~ msgstr "ಅನುವಾದವನ್ನು ಮಾರ್ಪಡಿಸು"
+
+#~ msgid "Delete Translation"
+#~ msgstr "ಅನುವಾದವನ್ನು ಅಳಿಸಿಹಾಕು"
+
+#~ msgid "Modify SELinux User"
+#~ msgstr "SELinux ಬಳಕೆದಾರನನ್ನು ಸಂಪಾದಿಸು"
+
+#~ msgid "Add Network Port"
+#~ msgstr "ಜಾಲಬಂಧ ಸಂಪರ್ಕಸ್ಥಾನವನ್ನು ಸೇರಿಸು"
+
+#~ msgid "Edit Network Port"
+#~ msgstr "ಜಾಲಬಂಧ ಸಂಪರ್ಕಸ್ಥಾನವನ್ನು ಸಂಪಾದಿಸು"
+
+#~ msgid "Delete Network Port"
+#~ msgstr "ಜಾಲಬಂಧ ಸಂಪರ್ಕಸ್ಥಾನವನ್ನು ಅಳಿಸಿಹಾಕು"
+
+#~ msgid "Toggle between Customized and All Ports"
+#~ msgstr "ಕಸ್ಟಮೈಝ್ ಮಾಡಲಾದ ಹಾಗು ಎಲ್ಲಾ ಸಂಪರ್ಕಸ್ಥಾನಗಳ ನಡುವೆ ಟಾಗಲ್ ಮಾಡು"
+
+#~ msgid "Generate new policy module"
+#~ msgstr "ಹೊಸ ನೀತಿ ಘಟಕವನ್ನು ಉತ್ಪಾದಿಸು"
+
+#~ msgid "Load policy module"
+#~ msgstr "ನೀತಿ ಘಟಕವನ್ನು ಲೋಡ್ ಮಾಡು"
+
+#~ msgid "Remove loadable policy module"
+#~ msgstr "ಲೋಡ್ ಮಾಡಬಹುದಾದ ನೀತಿಯ ಘಟಕವನ್ನು ತೆಗೆದುಹಾಕು"
+
+#~ msgid ""
+#~ "Enable/Disable additional audit rules, that are normally not reported in "
+#~ "the log files."
+#~ msgstr ""
+#~ "ದಾಖಲೆ ಕಡತಗಳಲ್ಲಿ ಸಾಮಾನ್ಯವಾಗಿ ವರದಿ ಮಾಡದೆ ಇರುವ ಹೆಚ್ಚುವರಿ ಆಡಿಟ್ ನಿಯಮಗಳನ್ನು ಶಕ್ತ/"
+#~ "ಅಶಕ್ತಗೊಳಿಸು."
+
+#~ msgid "Sensitvity Level"
+#~ msgstr "ಸಂವೇದನೆಯ ಮಟ್ಟ (Sensitvity Level)"
+
+#~ msgid "SELinux user '%s' is required"
+#~ msgstr "SELinux ಬಳಕೆದಾರ '%s' ನ ಅಗತ್ಯವಿದೆ"
+
+#~ msgid "Requires value"
+#~ msgstr "ಮೌಲ್ಯದ ಅಗತ್ಯವಿದೆ"
+
+#~ msgid ""
+#~ "\n"
+#~ "\n"
+#~ "semodule -i %s\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\n"
+#~ "\n"
+#~ "semodule -i %s\n"
+#~ "\n"
+
+#~ msgid "Invalid prefix %s"
+#~ msgstr "ಅಮಾನ್ಯ ಪೂರ್ವಪ್ರತ್ಯಯ %s"
+
+#~ msgid "Allow application/user role to bind to any tcp ports > 1024"
+#~ msgstr ""
+#~ "ಅನ್ವಯ/ಬಳಕೆದಾರನನ್ನು ಯಾವುದೆ tcp ಸಂಪರ್ಕಸ್ಥಾನಗಳಿಗೆ ಬದ್ಧವಾಗಿರಲು ಅನುಮತಿಸು > ೧೦೨೪"
+
+#~ msgid "Allows confined application/user role to bind to any tcp port"
+#~ msgstr ""
+#~ "ಮಿತಿಗೊಳಪಟ್ಟ ಅನ್ವಯ/ಬಳಕೆದಾರನನ್ನು ಯಾವುದೆ tcp ಸಂಪರ್ಕ ಸ್ಥಾನಕ್ಕೆ ಬದ್ಧವಾಗಿರಲು ಅನುಮತಿಸು"
+
+#~ msgid ""
+#~ "Enter a comma separated list of tcp ports or ranges of ports that "
+#~ "application/user role binds to. Example: 612, 650-660"
+#~ msgstr ""
+#~ "ಅನ್ವಯ/ಬಳಕೆದಾರ ಪಾತ್ರವು ಬದ್ಧವಾಗಿರುವ tcp ಸಂಪರ್ಕಸ್ಥಾನಗಳು ಅಥವ ಸಂಪರ್ಕಸ್ಥಾನಗಳ ವ್ಯಾಪ್ತಿಗಳ "
+#~ "ಅಲ್ಪವಿರಾಮ ಚಿಹ್ನೆಗಳಿಂದ ಪ್ರತ್ಯೇಕಿಸಲಾದ ಪಟ್ಟಿಯನ್ನು ನಮೂದಿಸಿ. ಉದಾಹರಣೆಗೆ: 612, 650-660"
+
+#~ msgid "SELinux Policy Generation Druid"
+#~ msgstr "SELinux ನೀತಿ ಉತ್ಪಾದನಾ ಮಾಂತ್ರಿಕ(Druid)"
+
+#~ msgid "Unreserved Ports  (> 1024)"
+#~ msgstr "ಕಾದಿರಿಸದ ಸಂಪರ್ಕಸ್ಥಾನಗಳು  (> ೧೦೨೪)"
+
+#~ msgid "Use this checkbutton if your app calls bindresvport with 0."
+#~ msgstr ""
+#~ "ನಿಮ್ಮ ಅನ್ವಯವು ೦ ಯೊಂದಿಗೆ bindresvport ಅನ್ನು ಕರೆಮಾಡಿದರೆ ಈ ಗುಂಡಿಯನ್ನು ಬಳಸಿ."
+
+#~ msgid ""
+#~ "Enforcing\n"
+#~ "Permissive\n"
+#~ "Disabled\n"
+#~ msgstr ""
+#~ "ಒತ್ತಾಯಪೂರ್ವಕ\n"
+#~ "ಅನುಮತಿಪೂರ್ವಕ\n"
+#~ "ಅಶಕ್ತಗೊಂಡ\n"

@@ -1,0 +1,3038 @@
+# translation of ja.po to Japanese
+# translation of ja.po to
+# translation of ja.po to
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+#
+# Takuro Nagamoto <tnagamot@redhat.com>, 2006.
+# Noriko Mizumoto <noriko@redhat.com>, 2006, 2008.
+# Hyu_gabaru Ryu_ichi <hyu_gabaru@yahoo.co.jp>, 2007.
+# Kiyoto Hashida <khashida@redhat.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: ja\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-06-24 10:53-0400\n"
+"PO-Revision-Date: 2008-09-09 21:12+1000\n"
+"Last-Translator: Noriko Mizumoto <noriko@redhat.com>\n"
+"Language-Team: Japanese <fedora-trans-ja@redhat.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: ../run_init/run_init.c:67
+msgid ""
+"USAGE: run_init <script> <args ...>\n"
+"  where: <script> is the name of the init script to run,\n"
+"         <args ...> are the arguments to that script."
+msgstr ""
+"使い方: run_init <script> <args ...>\n"
+"  ここで、 <script> は実行する init スクリプトの名前、\n"
+"         <args ...> はそのスクリプトに対する引数になります。"
+
+#: ../run_init/run_init.c:126 ../newrole/newrole.c:1187
+#, c-format
+msgid "failed to initialize PAM\n"
+msgstr "PAM の初期化に失敗しました\n"
+
+#: ../run_init/run_init.c:139
+#, c-format
+msgid "failed to get account information\n"
+msgstr "アカウント情報の取得に失敗しました\n"
+
+#: ../run_init/run_init.c:162 ../newrole/newrole.c:338
+msgid "Password:"
+msgstr "パスワード:"
+
+#: ../run_init/run_init.c:197 ../newrole/newrole.c:363
+#, c-format
+msgid "Cannot find your entry in the shadow passwd file.\n"
+msgstr "シャドーパスワードファイルに該当するエントリが見つかりません。\n"
+
+#: ../run_init/run_init.c:203 ../newrole/newrole.c:370
+#, c-format
+msgid "getpass cannot open /dev/tty\n"
+msgstr "getpass が /dev/tty を開けません\n"
+
+#: ../run_init/run_init.c:275
+#, c-format
+msgid "run_init: incorrect password for %s\n"
+msgstr "run_init: %s のパスワードが間違っています\n"
+
+#: ../run_init/run_init.c:309
+#, c-format
+msgid "Could not open file %s\n"
+msgstr "ファイル %s を開けませんでした\n"
+
+#: ../run_init/run_init.c:336
+#, c-format
+msgid "No context in file %s\n"
+msgstr "ファイル %s にコンテキストがありません\n"
+
+#: ../run_init/run_init.c:361
+#, c-format
+msgid "Sorry, run_init may be used only on a SELinux kernel.\n"
+msgstr "残念ながら、 run_init は SELinux カーネル上でしか使用できません。\n"
+
+#: ../run_init/run_init.c:380
+#, c-format
+msgid "authentication failed.\n"
+msgstr "認証に失敗しました。\n"
+
+#: ../run_init/run_init.c:405 ../newrole/newrole.c:1321
+#, c-format
+msgid "Could not set exec context to %s.\n"
+msgstr "exec コンテキストを %s に設定できませんでした。\n"
+
+#: ../audit2allow/audit2allow:217
+msgid "******************** IMPORTANT ***********************\n"
+msgstr "******************** 重要 ***********************\n"
+
+#: ../audit2allow/audit2allow:218
+msgid "To make this policy package active, execute:"
+msgstr "このポリシーパッケージを有効にするには、以下を実行して下さい:"
+
+#: ../semanage/seobject.py:48
+msgid "Could not create semanage handle"
+msgstr "semanage ハンドルを作成できませんでした"
+
+#: ../semanage/seobject.py:55
+msgid "SELinux policy is not managed or store cannot be accessed."
+msgstr ""
+"SELinux ポリシーが管理されていないか、 store にアクセスできないかのいずれかで"
+"す。"
+
+#: ../semanage/seobject.py:60
+msgid "Cannot read policy store."
+msgstr "ポリシー store を読み込めません"
+
+#: ../semanage/seobject.py:65
+msgid "Could not establish semanage connection"
+msgstr "semanage 接続を確立できませんでした"
+
+#: ../semanage/seobject.py:70
+#, fuzzy
+msgid "Could not test MLS enabled status"
+msgstr "%s の MLS 範囲を設定できませんでした"
+
+#: ../semanage/seobject.py:142 ../semanage/seobject.py:146
+msgid "global"
+msgstr "グローバル"
+
+#: ../semanage/seobject.py:206
+#, python-format
+msgid "Unable to open %s: translations not supported on non-MLS machines: %s"
+msgstr "%s を開けません: MLS 以外のマシンでは変換はサポートされません: %s"
+
+#: ../semanage/seobject.py:239
+msgid "Level"
+msgstr "レベル"
+
+#: ../semanage/seobject.py:239
+msgid "Translation"
+msgstr "変換"
+
+#: ../semanage/seobject.py:247 ../semanage/seobject.py:261
+#, python-format
+msgid "Translations can not contain spaces '%s' "
+msgstr "変換に空白 '%s' を含ませることはできません"
+
+#: ../semanage/seobject.py:250
+#, python-format
+msgid "Invalid Level '%s' "
+msgstr "無効なレベル '%s' "
+
+#: ../semanage/seobject.py:253
+#, python-format
+msgid "%s already defined in translations"
+msgstr "%s はすでに変換で定義されています"
+
+#: ../semanage/seobject.py:265
+#, python-format
+msgid "%s not defined in translations"
+msgstr "%s は変換で定義されていません"
+
+#: ../semanage/seobject.py:290
+msgid "Not yet implemented"
+msgstr "まだ、実装されていません"
+
+#: ../semanage/seobject.py:294
+msgid "Semanage transaction already in progress"
+msgstr ""
+
+#: ../semanage/seobject.py:303
+msgid "Could not start semanage transaction"
+msgstr "semanage トランザクションを起動できませんでした"
+
+#: ../semanage/seobject.py:309
+msgid "Could not commit semanage transaction"
+msgstr "semanage トランザクションをコミットできませんでした"
+
+#: ../semanage/seobject.py:313
+msgid "Semanage transaction not in progress"
+msgstr ""
+
+#: ../semanage/seobject.py:325
+msgid "Could not list SELinux modules"
+msgstr "SELinux のモジュール一覧を表示できませんでした"
+
+#: ../semanage/seobject.py:336
+msgid "Permissive Types"
+msgstr "許容タイプ"
+
+#: ../semanage/seobject.py:378
+#, python-format
+msgid "Could not set permissive domain %s (module installation failed)"
+msgstr ""
+"許容ドメイン %s を設定できませんでした (モジュールのインストールに失敗)"
+
+#: ../semanage/seobject.py:384
+#, python-format
+msgid "Could not remove permissive domain %s (remove failed)"
+msgstr "許容ドメイン %s の削除ができませんでした (削除に失敗)"
+
+#: ../semanage/seobject.py:410 ../semanage/seobject.py:470
+#: ../semanage/seobject.py:516 ../semanage/seobject.py:598
+#: ../semanage/seobject.py:665 ../semanage/seobject.py:723
+#: ../semanage/seobject.py:933 ../semanage/seobject.py:1506
+#: ../semanage/seobject.py:1570 ../semanage/seobject.py:1582
+#: ../semanage/seobject.py:1663 ../semanage/seobject.py:1714
+#, python-format
+msgid "Could not create a key for %s"
+msgstr "%s のキーを作成できませんでした"
+
+#: ../semanage/seobject.py:414 ../semanage/seobject.py:474
+#: ../semanage/seobject.py:520 ../semanage/seobject.py:526
+#, python-format
+msgid "Could not check if login mapping for %s is defined"
+msgstr "%s のログインマッピングが定義されているか確認できませんでした"
+
+#: ../semanage/seobject.py:416
+#, python-format
+msgid "Login mapping for %s is already defined"
+msgstr "%s のログインマッピングはすでに定義されています"
+
+#: ../semanage/seobject.py:421
+#, python-format
+msgid "Linux Group %s does not exist"
+msgstr "Linux グループ %s は存在していません"
+
+#: ../semanage/seobject.py:426
+#, python-format
+msgid "Linux User %s does not exist"
+msgstr "Linux ユーザー %s は存在していません"
+
+#: ../semanage/seobject.py:430
+#, python-format
+msgid "Could not create login mapping for %s"
+msgstr "%s のログインマッピングを作成できませんでした"
+
+#: ../semanage/seobject.py:434 ../semanage/seobject.py:612
+#, python-format
+msgid "Could not set name for %s"
+msgstr "%s の名前を設定できませんでした"
+
+#: ../semanage/seobject.py:439 ../semanage/seobject.py:622
+#, python-format
+msgid "Could not set MLS range for %s"
+msgstr "%s の MLS 範囲を設定できませんでした"
+
+#: ../semanage/seobject.py:443
+#, python-format
+msgid "Could not set SELinux user for %s"
+msgstr "%s の SELinux ユーザーを設定できませんでした"
+
+#: ../semanage/seobject.py:447
+#, python-format
+msgid "Could not add login mapping for %s"
+msgstr "%s のログインマッピングを追加できませんでした"
+
+#: ../semanage/seobject.py:459 ../semanage/seobject.py:462
+msgid "add SELinux user mapping"
+msgstr "SELinux ユーザーマッピングを追加"
+
+#: ../semanage/seobject.py:466
+msgid "Requires seuser or serange"
+msgstr "seuser または serange が必要です"
+
+#: ../semanage/seobject.py:476 ../semanage/seobject.py:522
+#, python-format
+msgid "Login mapping for %s is not defined"
+msgstr "%s のログインマッピングは定義されていません"
+
+#: ../semanage/seobject.py:480
+#, python-format
+msgid "Could not query seuser for %s"
+msgstr "%s の seuser をクエリーできませんでした"
+
+#: ../semanage/seobject.py:496
+#, python-format
+msgid "Could not modify login mapping for %s"
+msgstr "%s のログインマッピングを修正できませんでした"
+
+#: ../semanage/seobject.py:528
+#, python-format
+msgid "Login mapping for %s is defined in policy, cannot be deleted"
+msgstr "%s のログインマッピングはポリシーに定義されています、削除できません"
+
+#: ../semanage/seobject.py:532
+#, python-format
+msgid "Could not delete login mapping for %s"
+msgstr "%s のログインマッピングを削除できませんでした"
+
+#: ../semanage/seobject.py:555
+msgid "Could not list login mappings"
+msgstr "ログインマッピングの一覧を表示できませんでした"
+
+#: ../semanage/seobject.py:568 ../semanage/seobject.py:573
+msgid "Login Name"
+msgstr "ログイン名"
+
+#: ../semanage/seobject.py:568 ../semanage/seobject.py:573
+#: ../semanage/seobject.py:782 ../semanage/seobject.py:787
+msgid "SELinux User"
+msgstr "SELinux ユーザー"
+
+#: ../semanage/seobject.py:568
+msgid "MLS/MCS Range"
+msgstr "MLS/MCS 範囲"
+
+#: ../semanage/seobject.py:594
+#, python-format
+msgid "You must add at least one role for %s"
+msgstr "少なくとも %s のロールを 1 つ追加する必要があります"
+
+#: ../semanage/seobject.py:602 ../semanage/seobject.py:669
+#: ../semanage/seobject.py:727 ../semanage/seobject.py:733
+#, python-format
+msgid "Could not check if SELinux user %s is defined"
+msgstr " SELinux ユーザー %s が定義されているか確認できませんでした"
+
+#: ../semanage/seobject.py:604
+#, python-format
+msgid "SELinux user %s is already defined"
+msgstr "SELinux ユーザー %s はすでに定義されています"
+
+#: ../semanage/seobject.py:608
+#, python-format
+msgid "Could not create SELinux user for %s"
+msgstr "%s の SELinux ユーザーを作成できませんでした"
+
+#: ../semanage/seobject.py:617
+#, python-format
+msgid "Could not add role %s for %s"
+msgstr "ロール %s を %s に追加できませんでした"
+
+#: ../semanage/seobject.py:626
+#, python-format
+msgid "Could not set MLS level for %s"
+msgstr "MLS レベルを %s に設定できませんでした"
+
+#: ../semanage/seobject.py:629
+#, python-format
+msgid "Could not add prefix %s for %s"
+msgstr "プレフィックス %s を %s に追加できませんでした"
+
+#: ../semanage/seobject.py:632
+#, python-format
+msgid "Could not extract key for %s"
+msgstr "%s のキーを抽出できませんでした"
+
+#: ../semanage/seobject.py:636
+#, python-format
+msgid "Could not add SELinux user %s"
+msgstr "SELinux ユーザー %s を追加できませんでした"
+
+#: ../semanage/seobject.py:659
+msgid "Requires prefix, roles, level or range"
+msgstr "プレフィックスか、ロール、レベル、範囲のいずれかが必要です"
+
+#: ../semanage/seobject.py:661
+msgid "Requires prefix or roles"
+msgstr "プレフィックスかロールが必要です"
+
+#: ../semanage/seobject.py:671 ../semanage/seobject.py:729
+#, python-format
+msgid "SELinux user %s is not defined"
+msgstr "SELinux ユーザー %s は定義されていません"
+
+#: ../semanage/seobject.py:675
+#, python-format
+msgid "Could not query user for %s"
+msgstr "%s のユーザーをクエリーできませんでした"
+
+#: ../semanage/seobject.py:702
+#, python-format
+msgid "Could not modify SELinux user %s"
+msgstr "SELinux ユーザー %s を修正できませんでした"
+
+#: ../semanage/seobject.py:735
+#, python-format
+msgid "SELinux user %s is defined in policy, cannot be deleted"
+msgstr "SELinux ユーザー %s はポリシーで定義されています、削除できません"
+
+#: ../semanage/seobject.py:739
+#, python-format
+msgid "Could not delete SELinux user %s"
+msgstr "SELinux ユーザー %s を削除できませんでした"
+
+#: ../semanage/seobject.py:762
+msgid "Could not list SELinux users"
+msgstr "SELinux ユーザーの一覧を表示できませんでした"
+
+#: ../semanage/seobject.py:768
+#, python-format
+msgid "Could not list roles for user %s"
+msgstr "ユーザー %s のロール一覧を表示できませんでした"
+
+#: ../semanage/seobject.py:781
+msgid "Labeling"
+msgstr "ラベリング"
+
+#: ../semanage/seobject.py:781
+msgid "MLS/"
+msgstr "MLS/"
+
+#: ../semanage/seobject.py:782
+msgid "Prefix"
+msgstr "プレフィックス"
+
+#: ../semanage/seobject.py:782
+msgid "MCS Level"
+msgstr "MCS レベル"
+
+#: ../semanage/seobject.py:782
+msgid "MCS Range"
+msgstr "MCS 範囲"
+
+#: ../semanage/seobject.py:782 ../semanage/seobject.py:787
+msgid "SELinux Roles"
+msgstr "SELinux ロール"
+
+#: ../semanage/seobject.py:802
+msgid "Protocol udp or tcp is required"
+msgstr "プロトコル udp か tcp が必要です"
+
+#: ../semanage/seobject.py:804
+msgid "Port is required"
+msgstr "ポートが必要です"
+
+#: ../semanage/seobject.py:815
+#, python-format
+msgid "Could not create a key for %s/%s"
+msgstr "%s/%s のキーを作成できませんでした"
+
+#: ../semanage/seobject.py:826
+msgid "Type is required"
+msgstr "タイプが必要です"
+
+#: ../semanage/seobject.py:832 ../semanage/seobject.py:891
+#: ../semanage/seobject.py:946 ../semanage/seobject.py:952
+#, python-format
+msgid "Could not check if port %s/%s is defined"
+msgstr "ポート %s/%s が定義されているか確認できませんでした"
+
+#: ../semanage/seobject.py:834
+#, python-format
+msgid "Port %s/%s already defined"
+msgstr "ポート %s/%s はすでに定義されています"
+
+#: ../semanage/seobject.py:838
+#, python-format
+msgid "Could not create port for %s/%s"
+msgstr "%s/%s のポートを作成できませんでした"
+
+#: ../semanage/seobject.py:844
+#, python-format
+msgid "Could not create context for %s/%s"
+msgstr "%s/%s のコンテキストを作成できませんでした"
+
+#: ../semanage/seobject.py:848
+#, python-format
+msgid "Could not set user in port context for %s/%s"
+msgstr "%s/%s のポートコンテキストにユーザーを設定できませんでした"
+
+#: ../semanage/seobject.py:852
+#, python-format
+msgid "Could not set role in port context for %s/%s"
+msgstr "%s/%s のポートコンテキストにロールを設定できませんでした"
+
+#: ../semanage/seobject.py:856
+#, python-format
+msgid "Could not set type in port context for %s/%s"
+msgstr "%s/%s のポートコンテキストにタイプを設定できませんでした"
+
+#: ../semanage/seobject.py:861
+#, python-format
+msgid "Could not set mls fields in port context for %s/%s"
+msgstr "%s/%s のポートコンテキストに mls フィールドを設定できませんでした"
+
+#: ../semanage/seobject.py:865
+#, python-format
+msgid "Could not set port context for %s/%s"
+msgstr "%s/%s のポートコンテキストを設定できませんでした"
+
+#: ../semanage/seobject.py:869
+#, python-format
+msgid "Could not add port %s/%s"
+msgstr "ポート %s/%s を追加できませんでした"
+
+#: ../semanage/seobject.py:883 ../semanage/seobject.py:1129
+#: ../semanage/seobject.py:1317
+msgid "Requires setype or serange"
+msgstr "setype か serange が必要です"
+
+#: ../semanage/seobject.py:885
+msgid "Requires setype"
+msgstr "setype が必要です"
+
+#: ../semanage/seobject.py:893 ../semanage/seobject.py:948
+#, python-format
+msgid "Port %s/%s is not defined"
+msgstr "ポート %s/%s は定義されていません"
+
+#: ../semanage/seobject.py:897
+#, python-format
+msgid "Could not query port %s/%s"
+msgstr "ポート %s/%s をクエリーできませんでした"
+
+#: ../semanage/seobject.py:908
+#, python-format
+msgid "Could not modify port %s/%s"
+msgstr "ポート %s/%s を修正できませんでした"
+
+#: ../semanage/seobject.py:921
+msgid "Could not list the ports"
+msgstr "ポートを一覧表示できませんでした"
+
+#: ../semanage/seobject.py:937
+#, python-format
+msgid "Could not delete the port %s"
+msgstr "ポート %s を削除できませんでした"
+
+#: ../semanage/seobject.py:954
+#, python-format
+msgid "Port %s/%s is defined in policy, cannot be deleted"
+msgstr "ポート %s/%s はポリシーで定義されています、 削除できません"
+
+#: ../semanage/seobject.py:958
+#, python-format
+msgid "Could not delete port %s/%s"
+msgstr "ポート %s/%s を削除できませんでした"
+
+#: ../semanage/seobject.py:974 ../semanage/seobject.py:996
+msgid "Could not list ports"
+msgstr "ポートの一覧を表示できませんでした"
+
+#: ../semanage/seobject.py:1017
+msgid "SELinux Port Type"
+msgstr "SELinux ポートタイプ"
+
+#: ../semanage/seobject.py:1017
+msgid "Proto"
+msgstr "プロト"
+
+#: ../semanage/seobject.py:1017
+msgid "Port Number"
+msgstr "ポート番号"
+
+#: ../semanage/seobject.py:1034 ../semanage/seobject.py:1116
+#: ../semanage/seobject.py:1166
+#, fuzzy
+msgid "Node Address is required"
+msgstr "ポートが必要です"
+
+#: ../semanage/seobject.py:1037 ../semanage/seobject.py:1119
+#: ../semanage/seobject.py:1169
+#, fuzzy
+msgid "Node Netmask is required"
+msgstr "ポートが必要です"
+
+#: ../semanage/seobject.py:1044 ../semanage/seobject.py:1125
+#: ../semanage/seobject.py:1176
+msgid "Unknown or missing protocol"
+msgstr ""
+
+#: ../semanage/seobject.py:1054 ../semanage/seobject.py:1256
+#: ../semanage/seobject.py:1445
+msgid "SELinux Type is required"
+msgstr "SELinux タイプが必要です"
+
+#: ../semanage/seobject.py:1058 ../semanage/seobject.py:1133
+#: ../semanage/seobject.py:1180 ../semanage/seobject.py:1260
+#: ../semanage/seobject.py:1321 ../semanage/seobject.py:1355
+#: ../semanage/seobject.py:1449
+#, python-format
+msgid "Could not create key for %s"
+msgstr "%s のキーを作成できませんでした"
+
+#: ../semanage/seobject.py:1060 ../semanage/seobject.py:1137
+#: ../semanage/seobject.py:1184 ../semanage/seobject.py:1190
+#, fuzzy, python-format
+msgid "Could not check if addr %s is defined"
+msgstr "ポート %s/%s が定義されているか確認できませんでした"
+
+#: ../semanage/seobject.py:1064
+#, fuzzy, python-format
+msgid "Addr %s already defined"
+msgstr "ポート %s/%s はすでに定義されています"
+
+#: ../semanage/seobject.py:1068
+#, fuzzy, python-format
+msgid "Could not create addr for %s"
+msgstr "%s のキーを作成できませんでした"
+
+#: ../semanage/seobject.py:1073 ../semanage/seobject.py:1275
+#: ../semanage/seobject.py:1415
+#, python-format
+msgid "Could not create context for %s"
+msgstr "%s のコンテキストを作成できませんでした"
+
+#: ../semanage/seobject.py:1077
+#, fuzzy, python-format
+msgid "Could not set mask for %s"
+msgstr "%s の名前を設定できませんでした"
+
+#: ../semanage/seobject.py:1082
+#, fuzzy, python-format
+msgid "Could not set user in addr context for %s"
+msgstr "%s のファイルコンテキストにユーザーを設定できませんでした"
+
+#: ../semanage/seobject.py:1086
+#, fuzzy, python-format
+msgid "Could not set role in addr context for %s"
+msgstr "%s のファイルコンテキストにロールを設定できませんでした"
+
+#: ../semanage/seobject.py:1090
+#, fuzzy, python-format
+msgid "Could not set type in addr context for %s"
+msgstr "%s のファイルコンテキストにタイプを設定できませんでした"
+
+#: ../semanage/seobject.py:1095
+#, fuzzy, python-format
+msgid "Could not set mls fields in addr context for %s"
+msgstr "%s のファイルコンテキストに mls フィールドを設定できませんでした"
+
+#: ../semanage/seobject.py:1099
+#, fuzzy, python-format
+msgid "Could not set addr context for %s"
+msgstr "%s のファイルコンテキストを設定できませんでした"
+
+#: ../semanage/seobject.py:1103
+#, fuzzy, python-format
+msgid "Could not add addr %s"
+msgstr "ポート %s/%s を追加できませんでした"
+
+#: ../semanage/seobject.py:1139 ../semanage/seobject.py:1186
+#, fuzzy, python-format
+msgid "Addr %s is not defined"
+msgstr "ポート %s/%s は定義されていません"
+
+#: ../semanage/seobject.py:1143
+#, fuzzy, python-format
+msgid "Could not query addr %s"
+msgstr "ポート %s/%s をクエリーできませんでした"
+
+#: ../semanage/seobject.py:1154
+#, fuzzy, python-format
+msgid "Could not modify addr %s"
+msgstr "ポート %s/%s を修正できませんでした"
+
+#: ../semanage/seobject.py:1192
+#, fuzzy, python-format
+msgid "Addr %s is defined in policy, cannot be deleted"
+msgstr "ポート %s/%s はポリシーで定義されています、 削除できません"
+
+#: ../semanage/seobject.py:1196
+#, fuzzy, python-format
+msgid "Could not delete addr %s"
+msgstr "ポート %s/%s を削除できませんでした"
+
+#: ../semanage/seobject.py:1212
+#, fuzzy
+msgid "Could not list addrs"
+msgstr "ポートの一覧を表示できませんでした"
+
+#: ../semanage/seobject.py:1264 ../semanage/seobject.py:1325
+#: ../semanage/seobject.py:1359 ../semanage/seobject.py:1365
+#, python-format
+msgid "Could not check if interface %s is defined"
+msgstr "インターフェース %s が定義されているか確認できませんでした"
+
+#: ../semanage/seobject.py:1266
+#, python-format
+msgid "Interface %s already defined"
+msgstr "インターフェース %s はすでに定義されています"
+
+#: ../semanage/seobject.py:1270
+#, python-format
+msgid "Could not create interface for %s"
+msgstr "%s のインターフェースを作成できませんでした"
+
+#: ../semanage/seobject.py:1279
+#, python-format
+msgid "Could not set user in interface context for %s"
+msgstr "%s のインターフェースコンテキストにユーザーを設定できませんでした"
+
+#: ../semanage/seobject.py:1283
+#, python-format
+msgid "Could not set role in interface context for %s"
+msgstr "%s のインターフェースコンテキストにロールを設定できませんでした"
+
+#: ../semanage/seobject.py:1287
+#, python-format
+msgid "Could not set type in interface context for %s"
+msgstr "%s のインターフェースコンテキストにタイプを設定できませんでした"
+
+#: ../semanage/seobject.py:1292
+#, python-format
+msgid "Could not set mls fields in interface context for %s"
+msgstr ""
+"%s のインターフェースコンテキストに mls フィールドを設定できませんでした"
+
+#: ../semanage/seobject.py:1296
+#, python-format
+msgid "Could not set interface context for %s"
+msgstr "%s のインターフェースコンテキストを設定できませんでした"
+
+#: ../semanage/seobject.py:1300
+#, python-format
+msgid "Could not set message context for %s"
+msgstr "%s のメッセージコンテキストを設定できませんでした"
+
+#: ../semanage/seobject.py:1304
+#, python-format
+msgid "Could not add interface %s"
+msgstr "インターフェース %s を追加できませんでした"
+
+#: ../semanage/seobject.py:1327 ../semanage/seobject.py:1361
+#, python-format
+msgid "Interface %s is not defined"
+msgstr "インターフェース %s は定義されていません"
+
+#: ../semanage/seobject.py:1331
+#, python-format
+msgid "Could not query interface %s"
+msgstr "インターフェース %s をクエリーできませんでした"
+
+#: ../semanage/seobject.py:1342
+#, python-format
+msgid "Could not modify interface %s"
+msgstr "インターフェース %s を修正できませんでした"
+
+#: ../semanage/seobject.py:1367
+#, python-format
+msgid "Interface %s is defined in policy, cannot be deleted"
+msgstr "インターフェース %s はポリシーで定義されています、 削除できません"
+
+#: ../semanage/seobject.py:1371
+#, python-format
+msgid "Could not delete interface %s"
+msgstr "インターフェース %s を削除できませんでした"
+
+#: ../semanage/seobject.py:1387
+msgid "Could not list interfaces"
+msgstr "インターフェースの一覧を表示できませんでした"
+
+#: ../semanage/seobject.py:1397
+msgid "SELinux Interface"
+msgstr "SELinux インターフェース"
+
+#: ../semanage/seobject.py:1397 ../semanage/seobject.py:1636
+msgid "Context"
+msgstr "コンテキスト"
+
+#: ../semanage/seobject.py:1421
+#, python-format
+msgid "Could not set user in file context for %s"
+msgstr "%s のファイルコンテキストにユーザーを設定できませんでした"
+
+#: ../semanage/seobject.py:1425
+#, python-format
+msgid "Could not set role in file context for %s"
+msgstr "%s のファイルコンテキストにロールを設定できませんでした"
+
+#: ../semanage/seobject.py:1430 ../semanage/seobject.py:1478
+#, python-format
+msgid "Could not set mls fields in file context for %s"
+msgstr "%s のファイルコンテキストに mls フィールドを設定できませんでした"
+
+#: ../semanage/seobject.py:1436
+msgid "Invalid file specification"
+msgstr "無効なファイル使用"
+
+#: ../semanage/seobject.py:1453 ../semanage/seobject.py:1458
+#: ../semanage/seobject.py:1510 ../semanage/seobject.py:1586
+#: ../semanage/seobject.py:1590
+#, python-format
+msgid "Could not check if file context for %s is defined"
+msgstr "%s のファイルコンテキストが定義されているか確認できませんでした"
+
+#: ../semanage/seobject.py:1461
+#, python-format
+msgid "File context for %s already defined"
+msgstr "%s のファイルコンテキストはすでに定義されています"
+
+#: ../semanage/seobject.py:1465
+#, python-format
+msgid "Could not create file context for %s"
+msgstr "%s のファイルコンテキストを作成できませんでした"
+
+#: ../semanage/seobject.py:1473
+#, python-format
+msgid "Could not set type in file context for %s"
+msgstr "%s のファイルコンテキストにタイプを設定できませんでした"
+
+#: ../semanage/seobject.py:1481 ../semanage/seobject.py:1538
+#: ../semanage/seobject.py:1542
+#, python-format
+msgid "Could not set file context for %s"
+msgstr "%s のファイルコンテキストを設定できませんでした"
+
+#: ../semanage/seobject.py:1487
+#, python-format
+msgid "Could not add file context for %s"
+msgstr "%s のファイルコンテキストを追加できませんでした"
+
+#: ../semanage/seobject.py:1501
+msgid "Requires setype, serange or seuser"
+msgstr "setype、serange、または seuser のいずれかが必要です"
+
+#: ../semanage/seobject.py:1514 ../semanage/seobject.py:1594
+#, python-format
+msgid "File context for %s is not defined"
+msgstr "%s のファイルコンテキストは定義されていません"
+
+#: ../semanage/seobject.py:1520
+#, python-format
+msgid "Could not query file context for %s"
+msgstr "%s のファイルコンテキストをクエリーできませんでした"
+
+#: ../semanage/seobject.py:1546
+#, python-format
+msgid "Could not modify file context for %s"
+msgstr "%s のファイルコンテキストを修正できませんでした"
+
+#: ../semanage/seobject.py:1560
+msgid "Could not list the file contexts"
+msgstr "ファイルコンテキストを一覧表示できませんでした"
+
+#: ../semanage/seobject.py:1574
+#, python-format
+msgid "Could not delete the file context %s"
+msgstr "ファイルコンテキスト %s を削除できませんでした"
+
+#: ../semanage/seobject.py:1592
+#, python-format
+msgid "File context for %s is defined in policy, cannot be deleted"
+msgstr "%s のファイルコンテキストはポリシーで定義されています、 削除できません"
+
+#: ../semanage/seobject.py:1598
+#, python-format
+msgid "Could not delete file context for %s"
+msgstr "%s のファイルコンテキストを削除できませんでした"
+
+#: ../semanage/seobject.py:1613
+msgid "Could not list file contexts"
+msgstr "ファイルコンテキストの一覧を表示できませんでした"
+
+#: ../semanage/seobject.py:1617
+msgid "Could not list local file contexts"
+msgstr "ローカルファイルのコンテキスト一覧を表示できませんでした"
+
+#: ../semanage/seobject.py:1636
+msgid "SELinux fcontext"
+msgstr "SELinux fcontext"
+
+#: ../semanage/seobject.py:1636
+msgid "type"
+msgstr "タイプ"
+
+#: ../semanage/seobject.py:1666 ../semanage/seobject.py:1717
+#: ../semanage/seobject.py:1723
+#, python-format
+msgid "Could not check if boolean %s is defined"
+msgstr "boolean %s が定義されているか確認できませんでした"
+
+#: ../semanage/seobject.py:1668 ../semanage/seobject.py:1719
+#, python-format
+msgid "Boolean %s is not defined"
+msgstr "boolean %s は定義されていません"
+
+#: ../semanage/seobject.py:1672
+#, python-format
+msgid "Could not query file context %s"
+msgstr "ファイルコンテキスト %s をクエリーできませんでした"
+
+#: ../semanage/seobject.py:1677
+#, python-format
+msgid "You must specify one of the following values: %s"
+msgstr "次の値のいずれかひとつを指定してください: %s"
+
+#: ../semanage/seobject.py:1681
+#, python-format
+msgid "Could not set active value of boolean %s"
+msgstr "boolean %s のアクティブな値を設定できませんでした"
+
+#: ../semanage/seobject.py:1684
+#, python-format
+msgid "Could not modify boolean %s"
+msgstr "boolean %s を修正できませんでした"
+
+#: ../semanage/seobject.py:1702
+#, python-format
+msgid "Bad format %s: Record %s"
+msgstr "不正な形式の %s: レコード %s"
+
+#: ../semanage/seobject.py:1725
+#, python-format
+msgid "Boolean %s is defined in policy, cannot be deleted"
+msgstr "boolean %s はポリシーで定義されています、 削除できません"
+
+#: ../semanage/seobject.py:1729
+#, python-format
+msgid "Could not delete boolean %s"
+msgstr "boolean %s を削除できませんでした"
+
+#: ../semanage/seobject.py:1741 ../semanage/seobject.py:1758
+msgid "Could not list booleans"
+msgstr "boolean の一覧を表示できませんでした"
+
+#: ../semanage/seobject.py:1777
+msgid "unknown"
+msgstr "不明"
+
+#: ../semanage/seobject.py:1780
+msgid "off"
+msgstr "オフ"
+
+#: ../semanage/seobject.py:1780
+msgid "on"
+msgstr "オン"
+
+#: ../semanage/seobject.py:1789
+msgid "SELinux boolean"
+msgstr "SELinux boolean"
+
+#: ../semanage/seobject.py:1789
+msgid "Description"
+msgstr "説明"
+
+#: ../newrole/newrole.c:198
+#, c-format
+msgid "failed to set PAM_TTY\n"
+msgstr "PAM_TTY の設定に失敗しました\n"
+
+#: ../newrole/newrole.c:287
+#, c-format
+msgid "newrole: service name configuration hashtable overflow\n"
+msgstr "新ロール: サービス名設定ハッシュテーブルあふれ\n"
+
+#: ../newrole/newrole.c:297
+#, c-format
+msgid "newrole:  %s:  error on line %lu.\n"
+msgstr "新ロール: %s: %lu 行にエラー。\n"
+
+#: ../newrole/newrole.c:436
+#, c-format
+msgid "cannot find valid entry in the passwd file.\n"
+msgstr "passwd ファイルに有効なエントリが見つかりません。\n"
+
+#: ../newrole/newrole.c:447
+#, c-format
+msgid "Out of memory!\n"
+msgstr "メモリの空き容量がありません。\n"
+
+#: ../newrole/newrole.c:452
+#, c-format
+msgid "Error!  Shell is not valid.\n"
+msgstr "エラーが発生しました。シェルが有効ではありません。\n"
+
+#: ../newrole/newrole.c:509
+#, c-format
+msgid "Unable to clear environment\n"
+msgstr "環境を消去できません\n"
+
+#: ../newrole/newrole.c:556 ../newrole/newrole.c:634
+#, fuzzy, c-format
+msgid "Error initializing capabilities, aborting.\n"
+msgstr "機能の初期化中にエラーが発生、中止します。\n"
+
+#: ../newrole/newrole.c:564 ../newrole/newrole.c:640
+#, c-format
+msgid "Error setting capabilities, aborting\n"
+msgstr "機能の設定中にエラーが発生、中止します。\n"
+
+#: ../newrole/newrole.c:570
+#, c-format
+msgid "Error setting KEEPCAPS, aborting\n"
+msgstr "KEEPCAPS の設定中にエラーが発生、中止します。\n"
+
+#: ../newrole/newrole.c:578 ../newrole/newrole.c:652
+#, c-format
+msgid "Error dropping capabilities, aborting\n"
+msgstr "機能をドロップ中にエラーが発生、中止します。\n"
+
+#: ../newrole/newrole.c:584 ../newrole/newrole.c:683
+#, c-format
+msgid "Error changing uid, aborting.\n"
+msgstr "uid の変更中にエラーが発生、中止します。\n"
+
+#: ../newrole/newrole.c:590 ../newrole/newrole.c:646 ../newrole/newrole.c:678
+#, c-format
+msgid "Error resetting KEEPCAPS, aborting\n"
+msgstr "KEEPCAPS のリセット中にエラーが発生、中止します\n"
+
+#: ../newrole/newrole.c:597
+#, c-format
+msgid "Error dropping SETUID capability, aborting\n"
+msgstr "SETUID 機能をドロップ中にエラーが発生、中止します\n"
+
+#: ../newrole/newrole.c:602 ../newrole/newrole.c:657
+#, c-format
+msgid "Error freeing caps\n"
+msgstr "caps を解放中にエラーが発生\n"
+
+#: ../newrole/newrole.c:701
+#, c-format
+msgid "Error connecting to audit system.\n"
+msgstr "監査システムに接続中にエラーが発生しました。\n"
+
+#: ../newrole/newrole.c:707
+#, c-format
+msgid "Error allocating memory.\n"
+msgstr "メモリの割り当て中にエラーが発生しました。\n"
+
+#: ../newrole/newrole.c:714
+#, c-format
+msgid "Error sending audit message.\n"
+msgstr "監査メッセージの送信中にエラーが発生しました。\n"
+
+#: ../newrole/newrole.c:758 ../newrole/newrole.c:1122
+#, c-format
+msgid "Could not determine enforcing mode.\n"
+msgstr "施行モードを確定できませんでした。\n"
+
+#: ../newrole/newrole.c:765
+#, c-format
+msgid "Error!  Could not open %s.\n"
+msgstr "エラー! %s を開けませんでした。\n"
+
+#: ../newrole/newrole.c:771
+#, c-format
+msgid "%s!  Could not get current context for %s, not relabeling tty.\n"
+msgstr ""
+"%s! %s の現在のコンテキストを取得できませんでした、再ラベルを行っている tty "
+"ではありません。\n"
+
+#: ../newrole/newrole.c:781
+#, c-format
+msgid "%s!  Could not get new context for %s, not relabeling tty.\n"
+msgstr ""
+"%s! %s の新しいコンテキストを取得できませんでした、 再ラベルを行っている tty "
+"ではありません。\n"
+
+#: ../newrole/newrole.c:791
+#, c-format
+msgid "%s!  Could not set new context for %s\n"
+msgstr "%s! %s の新しいコンテキストを設定できませんでした\n"
+
+#: ../newrole/newrole.c:838
+#, c-format
+msgid "%s changed labels.\n"
+msgstr "%s 変更されたラベル。\n"
+
+#: ../newrole/newrole.c:844
+#, c-format
+msgid "Warning! Could not restore context for %s\n"
+msgstr "警告! %s のコンテキストを復元できませんでした\n"
+
+#: ../newrole/newrole.c:901
+#, c-format
+msgid "Error: multiple roles specified\n"
+msgstr "エラー: 複数のロールが指定されています\n"
+
+#: ../newrole/newrole.c:909
+#, c-format
+msgid "Error: multiple types specified\n"
+msgstr "エラー: 複数のタイプが指定されています\n"
+
+#: ../newrole/newrole.c:916
+#, c-format
+msgid "Sorry, -l may be used with SELinux MLS support.\n"
+msgstr "残念ながら、 -l は SELinux MLS サポートがないと使用できません。\n"
+
+#: ../newrole/newrole.c:921
+#, c-format
+msgid "Error: multiple levels specified\n"
+msgstr "エラー: 複数のレベルが指定されています\n"
+
+#: ../newrole/newrole.c:931
+#, c-format
+msgid "Error: you are not allowed to change levels on a non secure terminal \n"
+msgstr "エラー: セキュアではない端末でレベルを変更することは許可されません\n"
+
+#: ../newrole/newrole.c:957
+#, c-format
+msgid "Couldn't get default type.\n"
+msgstr "デフォルトタイプを取得できませんでした。\n"
+
+#: ../newrole/newrole.c:967
+#, c-format
+msgid "failed to get new context.\n"
+msgstr "新しいコンテキストの取得に失敗しました。\n"
+
+#: ../newrole/newrole.c:974
+#, c-format
+msgid "failed to set new role %s\n"
+msgstr "新しいロール %s の設定に失敗しました\n"
+
+#: ../newrole/newrole.c:981
+#, c-format
+msgid "failed to set new type %s\n"
+msgstr "新しいタイプ %s の設定に失敗しました\n"
+
+#: ../newrole/newrole.c:991
+#, c-format
+msgid "failed to build new range with level %s\n"
+msgstr "レベル %s で新しい範囲をビルドするのに失敗しました\n"
+
+#: ../newrole/newrole.c:996
+#, c-format
+msgid "failed to set new range %s\n"
+msgstr "新しい範囲 %s の設定に失敗しました\n"
+
+#: ../newrole/newrole.c:1004
+#, c-format
+msgid "failed to convert new context to string\n"
+msgstr "新しいコンテキストの文字列への変換に失敗しました\n"
+
+#: ../newrole/newrole.c:1009
+#, c-format
+msgid "%s is not a valid context\n"
+msgstr "%s は有効なコンテキストではありません\n"
+
+#: ../newrole/newrole.c:1016
+#, c-format
+msgid "Unable to allocate memory for new_context"
+msgstr "new_context にメモリを割り当てることができません"
+
+#: ../newrole/newrole.c:1042
+#, c-format
+msgid "Unable to obtain empty signal set\n"
+msgstr "空のシグナルセットを取得できません\n"
+
+#: ../newrole/newrole.c:1050
+#, c-format
+msgid "Unable to set SIGHUP handler\n"
+msgstr "SIGHUP ハンドラーを設定できません\n"
+
+#: ../newrole/newrole.c:1116
+#, c-format
+msgid "Sorry, newrole may be used only on a SELinux kernel.\n"
+msgstr "残念ながら、 newrole は SELinux カーネル上でしか使用できません。\n"
+
+#: ../newrole/newrole.c:1133
+#, c-format
+msgid "failed to get old_context.\n"
+msgstr "old_context の取得に失敗しました。\n"
+
+#: ../newrole/newrole.c:1140
+#, c-format
+msgid "Warning!  Could not retrieve tty information.\n"
+msgstr "警告!  tty 情報を取り込めませんでした。\n"
+
+#: ../newrole/newrole.c:1161
+#, c-format
+msgid "error on reading PAM service configuration.\n"
+msgstr "PAM サービス設定の読み込みに失敗しました。\n"
+
+#: ../newrole/newrole.c:1196
+#, c-format
+msgid "newrole: incorrect password for %s\n"
+msgstr "newrole: %s のパスワードが間違っています\n"
+
+#: ../newrole/newrole.c:1223
+#, c-format
+msgid "newrole: failure forking: %s"
+msgstr "newrole: フォークの失敗: %s"
+
+#: ../newrole/newrole.c:1226 ../newrole/newrole.c:1249
+#, c-format
+msgid "Unable to restore tty label...\n"
+msgstr "tty ラベルを復元できません...\n"
+
+#: ../newrole/newrole.c:1228 ../newrole/newrole.c:1255
+#, c-format
+msgid "Failed to close tty properly\n"
+msgstr "tty の正常終了に失敗しました\n"
+
+#: ../newrole/newrole.c:1287
+#, c-format
+msgid "Could not close descriptors.\n"
+msgstr "ディスクリプターを終了できませんでした。\n"
+
+#: ../newrole/newrole.c:1314
+#, c-format
+msgid "Error allocating shell's argv0.\n"
+msgstr "シェルの argv0 割り当て中にエラーが発生しました。\n"
+
+#: ../newrole/newrole.c:1346
+#, c-format
+msgid "Unable to restore the environment, aborting\n"
+msgstr "環境を復元できません、中止します\n"
+
+#: ../newrole/newrole.c:1357
+msgid "failed to exec shell\n"
+msgstr "シェルの実行に失敗しました\n"
+
+#: ../load_policy/load_policy.c:22
+#, c-format
+msgid "usage:  %s [-qi]\n"
+msgstr "使い方:  %s [-qi]\n"
+
+#: ../load_policy/load_policy.c:71
+#, c-format
+msgid "%s:  Policy is already loaded and initial load requested\n"
+msgstr "%s:  ポリシーはすでにロード済みで初期ロードが必要です\n"
+
+#: ../load_policy/load_policy.c:80
+#, c-format
+msgid "%s:  Can't load policy and enforcing mode requested:  %s\n"
+msgstr "%s:  ポリシーと要求された強制モードをロード出来ません:  %s\n"
+
+#: ../load_policy/load_policy.c:90
+#, c-format
+msgid "%s:  Can't load policy:  %s\n"
+msgstr "%s:  ポリシーをロードできません:  %s\n"
+
+#: ../scripts/chcat:92 ../scripts/chcat:169
+msgid "Requires at least one category"
+msgstr "少くともカテゴリーが 1 つ必要です"
+
+#: ../scripts/chcat:106 ../scripts/chcat:183
+#, c-format
+msgid "Can not modify sensitivity levels using '+' on %s"
+msgstr "%s で '+' を使って感度レベルを修正することができません"
+
+#: ../scripts/chcat:110
+#, c-format
+msgid "%s is already in %s"
+msgstr "%s はすでに %s にあります"
+
+#: ../scripts/chcat:188 ../scripts/chcat:198
+#, c-format
+msgid "%s is not in %s"
+msgstr "%s は %s にありません"
+
+#: ../scripts/chcat:267 ../scripts/chcat:272
+msgid "Can not combine +/- with other types of categories"
+msgstr "他のタイプのカテゴリーで +/- を結合できません"
+
+#: ../scripts/chcat:319
+msgid "Can not have multiple sensitivities"
+msgstr "複数の感度を持てません"
+
+#: ../scripts/chcat:325
+#, c-format
+msgid "Usage %s CATEGORY File ..."
+msgstr "使い方 %s CATEGORY ファイル ..."
+
+#: ../scripts/chcat:326
+#, c-format
+msgid "Usage %s -l CATEGORY user ..."
+msgstr "使い方 %s -l CATEGORY ユーザー ..."
+
+#: ../scripts/chcat:327
+#, c-format
+msgid "Usage %s [[+|-]CATEGORY],...]q File ..."
+msgstr "使い方 %s [[+|-]CATEGORY],...]q ファイル ..."
+
+#: ../scripts/chcat:328
+#, c-format
+msgid "Usage %s -l [[+|-]CATEGORY],...]q user ..."
+msgstr "使い方 %s -l [[+|-]CATEGORY],...]q ユーザー ..."
+
+#: ../scripts/chcat:329
+#, c-format
+msgid "Usage %s -d File ..."
+msgstr "使い方 %s -d ファイル ..."
+
+#: ../scripts/chcat:330
+#, c-format
+msgid "Usage %s -l -d user ..."
+msgstr "使い方 %s -l -d ユーザー ..."
+
+#: ../scripts/chcat:331
+#, c-format
+msgid "Usage %s -L"
+msgstr "使い方 %s -L"
+
+#: ../scripts/chcat:332
+#, c-format
+msgid "Usage %s -L -l user"
+msgstr "使い方 %s -L -l ユーザー"
+
+#: ../scripts/chcat:333
+msgid "Use -- to end option list.  For example"
+msgstr "オプションリストを終了するには -- を使います。 例えば、"
+
+#: ../scripts/chcat:334
+msgid "chcat -- -CompanyConfidential /docs/businessplan.odt"
+msgstr "chcat -- -CompanyConfidential /docs/businessplan.odt"
+
+#: ../scripts/chcat:335
+msgid "chcat -l +CompanyConfidential juser"
+msgstr "chcat -l +CompanyConfidential juser"
+
+#: ../scripts/chcat:399
+#, c-format
+msgid "Options Error %s "
+msgstr "オプションエラー %s "
+
+#~ msgid "translations not supported on non-MLS machines"
+#~ msgstr "MLS 以外のマシンでは変換はサポートされません"
+
+#~ msgid "Boolean"
+#~ msgstr "ブーリアン値"
+
+#~ msgid "all"
+#~ msgstr "全て"
+
+#~ msgid "Customized"
+#~ msgstr "カスタム化"
+
+#~ msgid "File Labeling"
+#~ msgstr "ファイルラベリング"
+
+#~ msgid ""
+#~ "File\n"
+#~ "Specification"
+#~ msgstr ""
+#~ "ファイル\n"
+#~ "仕様"
+
+#~ msgid ""
+#~ "Selinux\n"
+#~ "File Type"
+#~ msgstr ""
+#~ "Selinux\n"
+#~ "ファイルタイプ"
+
+#~ msgid ""
+#~ "File\n"
+#~ "Type"
+#~ msgstr ""
+#~ "ファイル\n"
+#~ "タイプ"
+
+#~ msgid "User Mapping"
+#~ msgstr "ユーザーマッピング"
+
+#~ msgid ""
+#~ "Login\n"
+#~ "Name"
+#~ msgstr ""
+#~ "ログイン\n"
+#~ "名"
+
+#~ msgid ""
+#~ "SELinux\n"
+#~ "User"
+#~ msgstr ""
+#~ "SELinux\n"
+#~ "ユーザー"
+
+#~ msgid ""
+#~ "MLS/\n"
+#~ "MCS Range"
+#~ msgstr ""
+#~ "MLS/\n"
+#~ "MCS 範囲"
+
+#~ msgid "Login '%s' is required"
+#~ msgstr "ログイン '%s' が必要です"
+
+#~ msgid "Policy Module"
+#~ msgstr "ポリシーモジュール"
+
+#~ msgid "Module Name"
+#~ msgstr "モジュール名"
+
+#~ msgid "Version"
+#~ msgstr "バージョン"
+
+#~ msgid "Disable Audit"
+#~ msgstr "監査を無効にする"
+
+#~ msgid "Enable Audit"
+#~ msgstr "監査を有効にする"
+
+#~ msgid "Load Policy Module"
+#~ msgstr "ポリシーモジュールをロード"
+
+#~ msgid "Polgen"
+#~ msgstr "Polgen"
+
+#~ msgid "Red Hat 2007"
+#~ msgstr "Red Hat 2007"
+
+#~ msgid "GPL"
+#~ msgstr "GPL"
+
+#~ msgid "translator-credits"
+#~ msgstr ""
+#~ "Takuro Nagamoto <tnagamot AT redhat DOT com>, 2006.\n"
+#~ "Noriko Mizumoto <noriko AT redhat DOT com>, 2006.\n"
+#~ "Hyu_gabaru Ryu_ichi <hyu_gabaru AT yahoo DOT co DOT jp>, 2007."
+
+#~ msgid "SELinux Policy Generation Tool"
+#~ msgstr "SELinux ポリシー生成ツール"
+
+#~ msgid ""
+#~ "This tool can be used to generate a policy framework, to confine "
+#~ "applications or users using SELinux.   \n"
+#~ "\n"
+#~ "The tool generates:\n"
+#~ "Type enforcement file (te)\n"
+#~ "Interface file (if)\n"
+#~ "File context file (fc)\n"
+#~ "Shell script (sh) - used to compile and install the policy. "
+#~ msgstr ""
+#~ "このツールは SELinux を使用してアプリケーションやユーザーを制限するポリ"
+#~ "シーフレームワークを生成するのに使用できます。 \n"
+#~ "\n"
+#~ "ツールが生成するのは:\n"
+#~ "タイプ強制ファイル (te)\n"
+#~ "インターフェースファイル (if)\n"
+#~ "ファイルコンテキストファイル (fc)\n"
+#~ "シェルスクリプト (sh) - ポリシーをコンパイルしインストールするのに使用しま"
+#~ "す"
+
+#~ msgid "Select type of the application/user role to be confined"
+#~ msgstr "制限するアプリケーション/ユーザーロールのタイプを選択"
+
+#~ msgid "<b>Applications</b>"
+#~ msgstr "<b>アプリケーション</b>"
+
+#~ msgid ""
+#~ "Standard Init Daemon are daemons started on boot via init scripts.  "
+#~ "Usually requires a script in /etc/rc.d/init.d"
+#~ msgstr ""
+#~ "標準 Init デーモンは init スクリプト経由でブート時に起動されるデーモンで"
+#~ "す。通常 /etc/rc.d/init.d にスクリプトが必要です"
+
+#~ msgid "Standard Init Daemon"
+#~ msgstr "標準初期化デーモン"
+
+#~ msgid "Internet Services Daemon are daemons started by xinetd"
+#~ msgstr ""
+#~ "インターネットサービスデーモンは xinetd により起動されるデーモンです"
+
+#~ msgid "Internet Services Daemon (inetd)"
+#~ msgstr "インターネットサービスデーモン (inetd)"
+
+#~ msgid ""
+#~ "Web Applications/Script (CGI) CGI scripts started by the web server "
+#~ "(apache)"
+#~ msgstr ""
+#~ "ウェブサーバー (apache) により起動されるウェブアプリケーション/スクリプト "
+#~ "(CGI) CGI スクリプト"
+
+#~ msgid "Web Application/Script (CGI)"
+#~ msgstr "ウェブアプリケーション/スクリプト (CGI)"
+
+#~ msgid ""
+#~ "User Application are any application that you would like to confine that "
+#~ "is started by a user"
+#~ msgstr ""
+#~ "ユーザーアプリケーションはユーザーによって起動される、制限をかけたいアプリ"
+#~ "ケーションです"
+
+#~ msgid "User Application"
+#~ msgstr "ユーザーアプリケーション"
+
+#~ msgid "<b>Login Users</b>"
+#~ msgstr "<b>ログインユーザー</b>"
+
+#~ msgid "Modify an existing login user record."
+#~ msgstr "既存のログインユーザー記録を修正"
+
+#~ msgid "Existing User Roles"
+#~ msgstr "既存ユーザーのロール"
+
+#~ msgid ""
+#~ "This user will login to a machine only via a terminal or remote login.  "
+#~ "By default this user will have  no setuid, no networking, no su, no sudo."
+#~ msgstr ""
+#~ "このユーザーはターミナル、又はリモートログインを介してログイン するでしょ"
+#~ "う。デフォルトでは、このユーザーは setuid や networking や su や sudo を持"
+#~ "ちません。"
+
+#~ msgid "Minimal Terminal User Role"
+#~ msgstr "最小限のターミナルユーザーロール"
+
+#~ msgid ""
+#~ "This user can login to a machine via X or terminal.  By default this user "
+#~ "will have no setuid, no networking, no sudo, no su"
+#~ msgstr ""
+#~ "このユーザーは X 又はターミナルを介してマシンにログインできます。デフォル"
+#~ "ト では、このユーザーは setuid や networking や sudo や su を持ちません。"
+
+#~ msgid "Minimal X Windows User Role"
+#~ msgstr "最小限の X Windows ユーザーロール"
+
+#~ msgid ""
+#~ "User with full networking, no setuid applications without transition, no "
+#~ "sudo, no su."
+#~ msgstr ""
+#~ "完全なネットワーキングを持ち、転移のない setuid アプリケーションや sudo "
+#~ "や su を持たないユーザー。"
+
+#~ msgid "User Role"
+#~ msgstr "ユーザーロール"
+
+#~ msgid ""
+#~ "User with full networking, no setuid applications without transition, no "
+#~ "su, can sudo to Root Administration Roles"
+#~ msgstr ""
+#~ "完全なネットワーキングを持ち、転移のない setuid アプリケーションや su を持"
+#~ "たないユーザーは sudo で Root の管理ロールを使用できます。"
+
+#~ msgid "Admin User Role"
+#~ msgstr "管理ユーザーのロール"
+
+#~ msgid "<b>Root Users</b>"
+#~ msgstr "<b>Root ユーザー</b>"
+
+#~ msgid ""
+#~ "Select Root Administrator User Role, if this user will be used to "
+#~ "administer the machine while running as root.  This user will not be able "
+#~ "to login to the system directly."
+#~ msgstr ""
+#~ "このユーザーが root として実行し、マシンの管理者として使用するユーザーなら"
+#~ "ば Root 管理ユーザーロールを選択してください。このユーザーはシステムに 直"
+#~ "接ログインすることはできません。"
+
+#~ msgid "Root Admin User Role"
+#~ msgstr "Root 管理ユーザーロール"
+
+#~ msgid "Enter name of application or user role to be confined"
+#~ msgstr "制限するアプリケーションかユーザーロールの名前を入力"
+
+#~ msgid "Name"
+#~ msgstr "名前"
+
+#~ msgid "Enter complete path for executable to be confined."
+#~ msgstr "制限する実行ファイルのフルパスを入力してください。"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Enter unique name for the confined application or user role."
+#~ msgstr "制限するアプリケーションかユーザーロールの特有な名前を入力"
+
+#~ msgid "Executable"
+#~ msgstr "実行ファイル"
+
+#~ msgid "Init script"
+#~ msgstr "初期化スクリプト"
+
+#~ msgid ""
+#~ "Enter complete path to init script used to start the confined application."
+#~ msgstr ""
+#~ "制限されるアプリケーションの起動に使用される初期化スクリプトのフルパスを入"
+#~ "力してください。"
+
+#~ msgid "Select user roles that you want to customize"
+#~ msgstr "カスタマイズしたいユーザーロールを選択"
+
+#~ msgid ""
+#~ "Select the user roles that will transiton to this applications domains."
+#~ msgstr "このアプリケーションドメインに転移するユーザーロールを選択"
+
+#~ msgid "Select additional domains to which this user role will transition"
+#~ msgstr "このユーザーロールが転移する先の追加のドメインを選択してください"
+
+#~ msgid ""
+#~ "Select the applications domains that you would like this user role to "
+#~ "transition to."
+#~ msgstr ""
+#~ "このユーザーロールの転移先となるアプリケーションドメインを選択 してくださ"
+#~ "い"
+
+#~ msgid "Select user roles that will transition to this domain"
+#~ msgstr "このドメインに転移するユーザーロールを選択"
+
+#~ msgid "Select additional domains that this user role will administer"
+#~ msgstr "このユーザーロールが管理する追加のドメインを選択してください"
+
+#~ msgid "Select the domains that you would like this user administer."
+#~ msgstr "このユーザーに管理させたいドメインを選択してください。"
+
+#~ msgid "Select additional roles for this user"
+#~ msgstr "このユーザー用の追加のロールを選択してください"
+
+#~ msgid "Enter network ports that application/user role listens to"
+#~ msgstr ""
+#~ "アプリケーション/ユーザーロールがリッスンするネットワークポートを入力しま"
+#~ "す"
+
+#~ msgid "<b>TCP Ports</b>"
+#~ msgstr "<b>TCP ポート</b>"
+
+#~ msgid "Allows confined application/user role to bind to any udp port"
+#~ msgstr ""
+#~ "制限されたアプリケーション/ユーザーロールによる全ての udp ポートへのバイン"
+#~ "ドを 許可"
+
+#~ msgid "All"
+#~ msgstr "全て"
+
+#~ msgid ""
+#~ "Allow application/user role to call bindresvport with 0. Binding to port "
+#~ "600-1024"
+#~ msgstr ""
+#~ "アプリケーション/ユーザーロールが bindresvport を 0 でコールすることを許"
+#~ "可。 ポート 600-1024 にバインド"
+
+#~ msgid "600-1024"
+#~ msgstr "600-1024"
+
+#~ msgid ""
+#~ "Enter a comma separated list of udp ports or ranges of ports that "
+#~ "application/user role binds to. Example: 612, 650-660"
+#~ msgstr ""
+#~ "アプリケーション/ユーザーロールがバインドする udp ポートのカンマ区切りの一"
+#~ "覧か、 又はポートの範囲を入力します。例: 612, 650-660"
+
+#~ msgid "Unreserved Ports (>1024)"
+#~ msgstr "予約されていないポート (> 1024)"
+
+#~ msgid "Select Ports"
+#~ msgstr "ポートを選択してください"
+
+#~ msgid "Allows application/user role to bind to any udp ports > 1024"
+#~ msgstr ""
+#~ "アプリケーション/ユーザーロールによる 1024 以上の全ての udp ポートへのバイ"
+#~ "ンドを 許可"
+
+#~ msgid "<b>UDP Ports</b>"
+#~ msgstr "<b>UDP ポート</b>"
+
+#~ msgid "Enter network ports that application/user role connects to"
+#~ msgstr ""
+#~ "アプリケーション/ユーザーロールが接続するネットワークポートを入力します"
+
+#~ msgid ""
+#~ "Enter a comma separated list of tcp ports or ranges of ports that "
+#~ "application/user role connects to. Example: 612, 650-660"
+#~ msgstr ""
+#~ "アプリケーション/ユーザーロールが接続する tcp ポートのカンマ区切りの一覧"
+#~ "か、 又は、ポートの範囲を入力します。例: 612, 650-660"
+
+#~ msgid ""
+#~ "Enter a comma separated list of udp ports or ranges of ports that "
+#~ "application/user role connects to. Example: 612, 650-660"
+#~ msgstr ""
+#~ "アプリケーション/ユーザーロールが接続する udp ポートのカンマ区切りの一覧"
+#~ "か、 又はポートの範囲を入力します。例: 612, 650-660"
+
+#~ msgid "Select common application traits"
+#~ msgstr "共通のアプリケーション特質を選択してください"
+
+#~ msgid "Writes syslog messages\t"
+#~ msgstr "syslog メッセージを書きます\t"
+
+#~ msgid "Create/Manipulate temporary files in /tmp"
+#~ msgstr " /tmp 内の一時ファイルの作成/操作をします"
+
+#~ msgid "Uses Pam for authentication"
+#~ msgstr "Pam を認証に使用します"
+
+#~ msgid "Uses nsswitch or getpw* calls"
+#~ msgstr "nsswitch 又は getpw* コールを使用します"
+
+#~ msgid "Uses dbus"
+#~ msgstr "dbus を使用します"
+
+#~ msgid "Sends audit messages"
+#~ msgstr "監査メッセージを送信します。"
+
+#~ msgid "Interacts with the terminal"
+#~ msgstr "ターミナルと相互作用"
+
+#~ msgid "Sends email"
+#~ msgstr "電子メールを送信します"
+
+#~ msgid "Select files/directories that the application manages"
+#~ msgstr "アプリケーションが管理するファイル/ディレクトリーを選択してください"
+
+#~ msgid ""
+#~ "Add Files/Directories that application will need to \"Write\" to. Pid "
+#~ "Files, Log Files, /var/lib Files ..."
+#~ msgstr ""
+#~ "アプリケーションが \"書き込む\" 必要があるファイル/ディレクトリーを追加し"
+#~ "ます。Pid ファイル、ログファイル、/var/lib ファイル ..."
+
+#~ msgid "Select booleans that the application uses"
+#~ msgstr "アプリケーションが使用するブーリアン値を選択してください"
+
+#~ msgid "Add/Remove booleans used for this confined application/user"
+#~ msgstr ""
+#~ "この制限されるアプリケーション/ユーザーに使用されるブーリアン値を追加/削除"
+
+#~ msgid "Select directory to generate policy in"
+#~ msgstr "ポリシーを生成する場所のディレクトリーを選択してください"
+
+#~ msgid "Policy Directory"
+#~ msgstr "ポリシーディレクトリー"
+
+#~ msgid "Generated Policy Files"
+#~ msgstr "生成したポリシーファイル"
+
+#~ msgid ""
+#~ "This tool will generate the following: \n"
+#~ "Type Enforcement(te), File Context(fc), Interface(if), Shell Script(sh)\n"
+#~ "Execute shell script as root to compile/install and relabel files/"
+#~ "directories.  \n"
+#~ "Use semanage or useradd to map Linux login users to user roles.\n"
+#~ "Put the machine in permissive mode (setenforce 0). \n"
+#~ "Login as the user and test this user role.\n"
+#~ "Use audit2allow -R to generate additional rules for the te file.\n"
+#~ msgstr ""
+#~ "このツールは以下を生成します: \n"
+#~ "タイプ強制(te)、ファイルコンテキスト(fc)、インターフェース(if)、シェルスク"
+#~ "リプト(sh)。\n"
+#~ "コンパイル/インストールし、ファイル/ディレクトリーのリラベルするためにシェ"
+#~ "ルスクリプトを実行します。emanage 又は useradd を使用して Linux ログイン"
+#~ "の ユーザーをユーザーロールにマップします。\n"
+#~ "マシンを寛容モード (setenforce 0) にします。\n"
+#~ "ユーザーとしてログインしてこのユーザーロールをテストします。audit2allow -"
+#~ "R を使用し、te ファイルのための追加ルールを生成します。\n"
+
+#~ msgid ""
+#~ "This tool will generate the following: \n"
+#~ "Type Enforcement(te), File Context(fc), Interface(if), Shell Script(sh)\n"
+#~ "\n"
+#~ "Execute shell script to compile/install and relabel files/directories.  \n"
+#~ "Put the machine in permissive mode (setenforce 0). \n"
+#~ "Run/restart the application to generate avc messages.\n"
+#~ "Use audit2allow -R to generate additional rules for the te file.\n"
+#~ msgstr ""
+#~ "このツールは以下を生成します: \n"
+#~ "タイプ強制(te)、ファイルコンテキスト(fc)、インターフェース(if)、シェルスク"
+#~ "リプト(sh)。\n"
+#~ "コンパイル/インストールし、ファイル/ディレクトリーのリラベルするためにシェ"
+#~ "ルスクリプトを実行します。マシンを寛容モード (setenforce 0) にします。\n"
+#~ "アプリケーションを実行/再起動し、avc メッセージを生成します。\n"
+#~ "audit2allow -R を使用し、te ファイルのための追加ルールを生成します。\n"
+
+#~ msgid "Add Booleans Dialog"
+#~ msgstr "ブーリアンダイアログを追加"
+
+#~ msgid "Boolean Name"
+#~ msgstr "ブーリアン値名"
+
+#~ msgid "Role"
+#~ msgstr "ロール"
+
+#~ msgid "Existing_User"
+#~ msgstr "既存ユーザー（_U）"
+
+#~ msgid "Application"
+#~ msgstr "アプリケーション"
+
+#~ msgid "%s must be a directory"
+#~ msgstr "%s  はディレクトリでなければなりません"
+
+#~ msgid "You must select a user"
+#~ msgstr "ユーザーを選択する必要があります"
+
+#~ msgid "Select executable file to be confined."
+#~ msgstr "制限する実行ファイルを選択してください。"
+
+#~ msgid "Select init script file to be confined."
+#~ msgstr "制限する初期化スクリプトを選択してください。"
+
+#~ msgid "Select file(s) that confined application creates or writes"
+#~ msgstr ""
+#~ "制限されたアプリケーションが作成したり、書き込んだりするファイルを選択して"
+#~ "ください"
+
+#~ msgid ""
+#~ "Select directory(s) that the confined application owns and writes into"
+#~ msgstr ""
+#~ "制限するアプリケーションが所有していたり、書き込んだりするディレクトリーを"
+#~ "選択してください"
+
+#~ msgid "Select directory to generate policy files in"
+#~ msgstr "生成するポリシーファイルを入れるディレクトリーを選択してください"
+
+#~ msgid ""
+#~ "Type %s_t already defined in current policy.\n"
+#~ "Do you want to continue?"
+#~ msgstr ""
+#~ "タイプ %s_t は既に現在のポリシーで定義されています。\n"
+#~ "継続しますか ?"
+
+#~ msgid "Verify Name"
+#~ msgstr "名前の証明"
+
+#~ msgid ""
+#~ "Module %s.pp already loaded in current policy.\n"
+#~ "Do you want to continue?"
+#~ msgstr ""
+#~ "モジュール %s.pp は既に現在のポリシー内にロードされています。\n"
+#~ "継続しますか ?"
+
+#~ msgid "You must enter a name"
+#~ msgstr "名前を指定する必要があります"
+
+#~ msgid "You must enter a executable"
+#~ msgstr "実行ファイルを指定する必要があります"
+
+#~ msgid "Configue SELinux"
+#~ msgstr "SELinux を設定する"
+
+#, fuzzy
+#~ msgid "Ports must be numbers or ranges of numbers from 1 to %d "
+#~ msgstr ""
+#~ "ポートは 1 から %d までの数字か、又は数字の範囲でなければなりません "
+
+#~ msgid "You must enter a name for your confined process/user"
+#~ msgstr "制限するプロセス/ユーザーの名前を入力しなければなりません"
+
+#~ msgid "USER Types are not allowed executables"
+#~ msgstr "USER タイプは実行ファイルとしては認められません"
+
+#~ msgid "Only DAEMON apps can use an init script"
+#~ msgstr "DAEMON アプリのみが初期化スクリプトを使用できます"
+
+#~ msgid "use_syslog must be a boolean value "
+#~ msgstr "use_syslog はブール値でなければなりません"
+
+#, fuzzy
+#~ msgid "USER Types automatically get a tmp type"
+#~ msgstr "USER タイプは自動的に tmp タイプを得ます"
+
+#~ msgid "You must enter the executable path for your confined process"
+#~ msgstr "制限するプロセスの実行ファイルのバスを入力しなければなりません"
+
+#~ msgid "Type Enforcement file"
+#~ msgstr "強制ファイルを入力してください"
+
+#~ msgid "Interface file"
+#~ msgstr "インターフェースファイル"
+
+#~ msgid "File Contexts file"
+#~ msgstr "ファイルコンテキストファイル"
+
+#~ msgid "Setup Script"
+#~ msgstr "設定スクリプト"
+
+#~ msgid ""
+#~ "SELinux Port\n"
+#~ "Type"
+#~ msgstr ""
+#~ "SELinux ポート\n"
+#~ "タイプ"
+
+#~ msgid "Protocol"
+#~ msgstr "プロトコル"
+
+#~ msgid ""
+#~ "MLS/MCS\n"
+#~ "Level"
+#~ msgstr ""
+#~ "MLS/MCS\n"
+#~ "レベル"
+
+#~ msgid "Port"
+#~ msgstr "ポート"
+
+#~ msgid "Port number \"%s\" is not valid.  0 < PORT_NUMBER < 65536 "
+#~ msgstr "ポート番号 \"%s\" は有効ではありません。0 < ポート番号 < 65536 "
+
+#~ msgid "List View"
+#~ msgstr "一覧表示"
+
+#~ msgid "Group View"
+#~ msgstr "グループ表示"
+
+#~ msgid "SELinux Service Protection"
+#~ msgstr "SELinux サービス保護"
+
+#~ msgid "Disable SELinux protection for acct daemon"
+#~ msgstr "acct デーモンの SELinux 保護を無効にします"
+
+#~ msgid "Admin"
+#~ msgstr "管理者"
+
+#~ msgid "Allow all daemons to write corefiles to /"
+#~ msgstr "全てのデーモンがコアファイルを / へ書き込むのを認めます"
+
+#~ msgid "Allow all daemons the ability to use unallocated ttys"
+#~ msgstr "全てのデーモンが割り当てられていない tty を使用できることを認めます"
+
+#~ msgid "User Privs"
+#~ msgstr "ユーザー権限"
+
+#~ msgid ""
+#~ "Allow gadmin SELinux user account to execute files in home directory or /"
+#~ "tmp"
+#~ msgstr ""
+#~ "gadmin SELinux ユーザーアカウントに自分のホームディレクトリや /tmp ディレ"
+#~ "クトリにあるファイルの実行を許可する"
+
+#~ msgid ""
+#~ "Allow guest SELinux user account to execute files in home directory or /"
+#~ "tmp"
+#~ msgstr ""
+#~ "ゲスト SELinux ユーザーアカウントに自分のホームディレクトリや /tmp ディレ"
+#~ "クトリにあるファイルの実行を許可する"
+
+#~ msgid "Memory Protection"
+#~ msgstr "メモリ保護"
+
+#~ msgid "Allow java executable stack"
+#~ msgstr "java 実行可能スタックを認める"
+
+#~ msgid "Mount"
+#~ msgstr "マウント"
+
+#~ msgid "Allow mount to mount any file"
+#~ msgstr "mount にあらゆるファイルをマウントすることを認める"
+
+#~ msgid "Allow mount to mount any directory"
+#~ msgstr "mount にあらゆるディレクトリーをマウントすることを認める"
+
+#~ msgid "Allow mplayer executable stack"
+#~ msgstr "mplayer 実行可能スタックを認める"
+
+#~ msgid "SSH"
+#~ msgstr "SSH"
+
+#~ msgid "Allow ssh to run ssh-keysign"
+#~ msgstr "ssh に ssh-keysign を実行することを認める"
+
+#~ msgid ""
+#~ "Allow staff SELinux user account to execute files in home directory or /"
+#~ "tmp"
+#~ msgstr ""
+#~ "スタッフ SELinux ユーザーアカウントに自分のホームディレクトリや /tmp ディ"
+#~ "レクトリにあるファイルの実行を許可する"
+
+#~ msgid ""
+#~ "Allow sysadm SELinux user account to execute files in home directory or /"
+#~ "tmp"
+#~ msgstr ""
+#~ "sysadm SELinux ユーザーアカウントに自分のホームディレクトリや /tmp ディレ"
+#~ "クトリにあるファイルの実行を許可する"
+
+#~ msgid ""
+#~ "Allow unconfined SELinux user account to execute files in home directory "
+#~ "or /tmp"
+#~ msgstr ""
+#~ "制限されていない SELinux ユーザーアカウントに自分のホームディレクトリや /"
+#~ "tmp ディレクトリにあるファイルの実行を許可する"
+
+#~ msgid "Network Configuration"
+#~ msgstr "ネットワーク設定"
+
+#~ msgid "Allow unlabeled packets to flow on the network"
+#~ msgstr "ラベルのないパケットがネットワークに流れるのを認める"
+
+#~ msgid ""
+#~ "Allow user SELinux user account to execute files in home directory or /tmp"
+#~ msgstr ""
+#~ "ユーザー SELinux ユーザーアカウントに自分のホームディレクトリや /tmp ディ"
+#~ "レクトリにあるファイルの実行を許可する"
+
+#~ msgid "Allow unconfined to dyntrans to unconfined_execmem"
+#~ msgstr ""
+#~ "制限されていないものに unconfined_execmem に dyntrans することを認める"
+
+#~ msgid "Databases"
+#~ msgstr "データベース"
+
+#~ msgid "Allow user to connect to mysql socket"
+#~ msgstr "ユーザーに mysql ソケットに接続することを許可"
+
+#~ msgid "Allow user to connect to postgres socket"
+#~ msgstr "ユーザーに postgres ソケットに接続することを認める"
+
+#~ msgid "XServer"
+#~ msgstr "X サーバー"
+
+#~ msgid "Allow clients to write to X shared memory"
+#~ msgstr "クライアントに X 共有メモリに書き込むことを認める"
+
+#~ msgid ""
+#~ "Allow xguest SELinux user account to execute files in home directory or /"
+#~ "tmp"
+#~ msgstr ""
+#~ "xguest SELinux ユーザーアカウントに自分のホームディレクトリや /tmp ディレ"
+#~ "クトリにあるファイルの実行を許可する"
+
+#~ msgid "NIS"
+#~ msgstr "NIS"
+
+#~ msgid "Allow daemons to run with NIS"
+#~ msgstr "デーモンに NIS といっしょに実行することを認める"
+
+#~ msgid "Web Applications"
+#~ msgstr "ウェブアプリケーション"
+
+#~ msgid "Transition staff SELinux user to Web Browser Domain"
+#~ msgstr "スタッフ SELinux ユーザーからウェブブラウザードメインへの転位"
+
+#~ msgid "Transition sysadm SELinux user to Web Browser Domain"
+#~ msgstr "sysadm SELinux ユーザーからウェブブラウザードメインへの転位"
+
+#~ msgid "Transition user SELinux user to Web Browser Domain"
+#~ msgstr "ユーザー SELinux ユーザーからウェブブラウザードメインへの転位"
+
+#~ msgid "Transition xguest SELinux user to Web Browser Domain"
+#~ msgstr "xguest SELinux ユーザーからウェブブラウザードメインへの転位"
+
+#~ msgid "Allow staff Web Browsers to write to home directories"
+#~ msgstr ""
+#~ "スタッフウェブブラウザーにホームディレクトリーに書き込むことを認める"
+
+#~ msgid "Disable SELinux protection for amanda"
+#~ msgstr "amanda 用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for amavis"
+#~ msgstr "amavis 用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for apmd daemon"
+#~ msgstr "apmd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for arpwatch daemon"
+#~ msgstr "arpwatch デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for auditd daemon"
+#~ msgstr "auditd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for automount daemon"
+#~ msgstr "automount デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for avahi"
+#~ msgstr "avahi 用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for bluetooth daemon"
+#~ msgstr "bluetooth デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for canna daemon"
+#~ msgstr "canna デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for cardmgr daemon"
+#~ msgstr "cardmgr デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for Cluster Server"
+#~ msgstr "クラスターサーバー用の SELinux 保護を無効にする"
+
+#~ msgid ""
+#~ "Allow cdrecord to read various content. nfs, samba, removable devices, "
+#~ "user temp and untrusted content files"
+#~ msgstr ""
+#~ "cdrecord にいろいろな内容の読み込みを認める。nfs、samba、可搬性装置、ユー"
+#~ "ザー temp、信頼できない内容のファイル"
+
+#~ msgid "Disable SELinux protection for ciped daemon"
+#~ msgstr "ciped デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for clamd daemon"
+#~ msgstr "clamd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for clamscan"
+#~ msgstr "clamscan 用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for clvmd"
+#~ msgstr "clvmd 用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for comsat daemon"
+#~ msgstr "comsat デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for courier daemon"
+#~ msgstr "courier デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for cpucontrol daemon"
+#~ msgstr "cpucontrol デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for cpuspeed daemon"
+#~ msgstr "cpuspeed デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Cron"
+#~ msgstr "Cron"
+
+#~ msgid "Disable SELinux protection for crond daemon"
+#~ msgstr "crond デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Printing"
+#~ msgstr "印刷"
+
+#~ msgid "Disable SELinux protection for cupsd back end server"
+#~ msgstr "cupsd バックエンドサーバー用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for cupsd daemon"
+#~ msgstr "cupsd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for cupsd_lpd"
+#~ msgstr "cupsd_lpd 用の SELinux 保護を無効にする"
+
+#~ msgid "CVS"
+#~ msgstr "CVS"
+
+#~ msgid "Disable SELinux protection for cvs daemon"
+#~ msgstr "cvs デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for cyrus daemon"
+#~ msgstr "cyrus デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for dbskkd daemon"
+#~ msgstr "dbskkd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for dbusd daemon"
+#~ msgstr "dbusd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for dccd"
+#~ msgstr "dccd 用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for dccifd"
+#~ msgstr "dccifd 用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for dccm"
+#~ msgstr "dccm 用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for ddt daemon"
+#~ msgstr "ddt デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for devfsd daemon"
+#~ msgstr "devfsd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for dhcpc daemon"
+#~ msgstr "dhcpc デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for dhcpd daemon"
+#~ msgstr "dhcpd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for dictd daemon"
+#~ msgstr "dictd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Allow sysadm_t to directly start daemons"
+#~ msgstr "sysadm_t に直接デーモンを起動することを認める"
+
+#~ msgid "Disable SELinux protection for Evolution"
+#~ msgstr "Evolution 用の SELinux 保護を無効にする"
+
+#~ msgid "Games"
+#~ msgstr "ゲーム"
+
+#~ msgid "Disable SELinux protection for games"
+#~ msgstr "ゲーム用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for the web browsers"
+#~ msgstr "ウェブブラウザー用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for Thunderbird"
+#~ msgstr "Thunderbird 用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for distccd daemon"
+#~ msgstr "distccd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for dmesg daemon"
+#~ msgstr "dmesg デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for dnsmasq daemon"
+#~ msgstr "dnsmasq デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for dovecot daemon"
+#~ msgstr "dovecot デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for entropyd daemon"
+#~ msgstr "entropyd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for fetchmail"
+#~ msgstr "fetchmail 用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for fingerd daemon"
+#~ msgstr "fingerd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for freshclam daemon"
+#~ msgstr "freshclam デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for fsdaemon daemon"
+#~ msgstr "fsdaemon デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for gpm daemon"
+#~ msgstr "gpm デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "NFS"
+#~ msgstr "NFS"
+
+#~ msgid "Disable SELinux protection for gss daemon"
+#~ msgstr "gss デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for Hal daemon"
+#~ msgstr "Hal デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Compatibility"
+#~ msgstr "互換性"
+
+#~ msgid ""
+#~ "Do not audit things that we know to be broken but which are not security "
+#~ "risks"
+#~ msgstr ""
+#~ "壊れていることを知っているが、セキュリティリスクのないことが分かっているも"
+#~ "のを監査しない"
+
+#~ msgid "Disable SELinux protection for hostname daemon"
+#~ msgstr "hostname デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for hotplug daemon"
+#~ msgstr "hotplug デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for howl daemon"
+#~ msgstr "howl デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for cups hplip daemon"
+#~ msgstr "cups hplip デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for httpd rotatelogs"
+#~ msgstr "httpd 交代ログ用の SELinux 保護を無効にする"
+
+#~ msgid "HTTPD Service"
+#~ msgstr "HTTPD サービス"
+
+#~ msgid "Disable SELinux protection for http suexec"
+#~ msgstr "http suexec 用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for hwclock daemon"
+#~ msgstr "hwclock デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for i18n daemon"
+#~ msgstr "i18n デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for imazesrv daemon"
+#~ msgstr "imazesrv デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for inetd child daemons"
+#~ msgstr "inetd 子デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for inetd daemon"
+#~ msgstr "inetd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for innd daemon"
+#~ msgstr "innd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for iptables daemon"
+#~ msgstr "iptables デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for ircd daemon"
+#~ msgstr "ircd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for irqbalance daemon"
+#~ msgstr "irqbalance デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for iscsi daemon"
+#~ msgstr "iscsi デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for jabberd daemon"
+#~ msgstr "jabberd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Kerberos"
+#~ msgstr "ケルベロス"
+
+#~ msgid "Disable SELinux protection for kadmind daemon"
+#~ msgstr "kadmind デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for klogd daemon"
+#~ msgstr "klogd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for krb5kdc daemon"
+#~ msgstr "krb5kdc デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for ktalk daemons"
+#~ msgstr "ktalk デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for kudzu daemon"
+#~ msgstr "kudzu デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for locate daemon"
+#~ msgstr "locate デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for lpd daemon"
+#~ msgstr "lpd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for lrrd daemon"
+#~ msgstr "lrrd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for lvm daemon"
+#~ msgstr "lvm デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for mailman"
+#~ msgstr "mailman 用の SELinux 保護を無効にする"
+
+#~ msgid "Allow evolution and thunderbird to read user files"
+#~ msgstr "evolution と thunderbird にユーザーファイルを読み込むのを認める"
+
+#~ msgid "Disable SELinux protection for mdadm daemon"
+#~ msgstr "mdadm デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for monopd daemon"
+#~ msgstr "monopd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Allow the mozilla browser to read user files"
+#~ msgstr "mozilla ブラウザーにユーザーファイルを読み込むのを認める"
+
+#~ msgid "Disable SELinux protection for mrtg daemon"
+#~ msgstr "mrtg デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for mysqld daemon"
+#~ msgstr "mysqld デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for nagios daemon"
+#~ msgstr "nagios デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Name Service"
+#~ msgstr "名前サービス"
+
+#~ msgid "Disable SELinux protection for named daemon"
+#~ msgstr "named デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for nessusd daemon"
+#~ msgstr "nessusd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for NetworkManager"
+#~ msgstr "NetworkManager 用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for nfsd daemon"
+#~ msgstr "nfsd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Samba"
+#~ msgstr "Samba"
+
+#~ msgid "Disable SELinux protection for nmbd daemon"
+#~ msgstr "nmbd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for nrpe daemon"
+#~ msgstr "nrpe デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for nscd daemon"
+#~ msgstr "nscd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for nsd daemon"
+#~ msgstr "nsd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for ntpd daemon"
+#~ msgstr "ntpd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for oddjob"
+#~ msgstr "oddjob 用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for oddjob_mkhomedir"
+#~ msgstr "oddjob mkhomedir 用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for openvpn daemon"
+#~ msgstr "openvpn デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for pam daemon"
+#~ msgstr "pam デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for pegasus"
+#~ msgstr "pegasus 用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for perdition daemon"
+#~ msgstr "perdition デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for portmap daemon"
+#~ msgstr "portmap デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for portslave daemon"
+#~ msgstr "portslave デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for postfix"
+#~ msgstr "postfix 用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for postgresql daemon"
+#~ msgstr "postgresql デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "pppd"
+#~ msgstr "pppd"
+
+#~ msgid "Allow pppd to be run for a regular user"
+#~ msgstr "pppd に一般ユーザーのために実行することを認める"
+
+#~ msgid "Disable SELinux protection for pptp"
+#~ msgstr "pptp 用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for prelink daemon"
+#~ msgstr "prelink デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for privoxy daemon"
+#~ msgstr "privoxy デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for ptal daemon"
+#~ msgstr "ptal デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for pxe daemon"
+#~ msgstr "pxe デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for pyzord"
+#~ msgstr "pyzord 用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for quota daemon"
+#~ msgstr "quota デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for radiusd daemon"
+#~ msgstr "radiusd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for radvd daemon"
+#~ msgstr "radvd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for rdisc"
+#~ msgstr "rdisc 用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for readahead"
+#~ msgstr "rdisc 用の SELinux 保護を無効にする"
+
+#~ msgid "Allow programs to read files in non-standard locations (default_t)"
+#~ msgstr ""
+#~ "プログラムに標準以外の場所にあるファイルを読み込むことを認める (default_t)"
+
+#~ msgid "Disable SELinux protection for restorecond"
+#~ msgstr "restorecond 用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for rhgb daemon"
+#~ msgstr "rhgb デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for ricci"
+#~ msgstr "ricci 用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for ricci_modclusterd"
+#~ msgstr "ricci_modclusterd 用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for rlogind daemon"
+#~ msgstr "rlogind デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for rpcd daemon"
+#~ msgstr "rpcd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for rshd"
+#~ msgstr "rshd 用の SELinux 保護を無効にする"
+
+#~ msgid "rsync"
+#~ msgstr "rsync"
+
+#~ msgid "Disable SELinux protection for rsync daemon"
+#~ msgstr "rsync デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Allow ssh to run from inetd instead of as a daemon"
+#~ msgstr "ssh にデーモンとしてではなく、inetd から実行することを認める"
+
+#~ msgid "Allow Samba to share nfs directories"
+#~ msgstr "Samba に nfs ディレクトリーを共有することを認める"
+
+#~ msgid "SASL authentication server"
+#~ msgstr "SASL 認証サーバー"
+
+#~ msgid "Allow sasl authentication server to read /etc/shadow"
+#~ msgstr "sasl 認証サーバーに /etc/shadow を読み込むことを認める"
+
+#~ msgid ""
+#~ "Allow X-Windows server to map a memory region as both executable and "
+#~ "writable"
+#~ msgstr ""
+#~ "X-Windows サーバーにメモリ領域を実行可能と書込み可能の両方としてマップする"
+#~ "ことを認める"
+
+#~ msgid "Disable SELinux protection for saslauthd daemon"
+#~ msgstr "saslauthd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for scannerdaemon daemon"
+#~ msgstr "scannerdaemon デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Do not allow transition to sysadm_t, sudo and su effected"
+#~ msgstr "sysadm_t への転位を認めない、sudo と su が影響している"
+
+#~ msgid "Do not allow any processes to load kernel modules"
+#~ msgstr "どのプロセスにもカーネルモジュールをロードすることを認めない"
+
+#~ msgid "Do not allow any processes to modify kernel SELinux policy"
+#~ msgstr "どのプロセスにもカーネル SELinux ポリシーを変更することを認めない"
+
+#~ msgid "Disable SELinux protection for sendmail daemon"
+#~ msgstr "sendmail デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for setrans"
+#~ msgstr "setrans 用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for setroubleshoot daemon"
+#~ msgstr "setroubleshoot デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for slapd daemon"
+#~ msgstr "slapd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for slrnpull daemon"
+#~ msgstr "slrnpull デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for smbd daemon"
+#~ msgstr "smbd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for snmpd daemon"
+#~ msgstr "snmpd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for snort daemon"
+#~ msgstr "snort デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for soundd daemon"
+#~ msgstr "soundd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for sound daemon"
+#~ msgstr "sound デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Spam Protection"
+#~ msgstr "スパム保護"
+
+#~ msgid "Disable SELinux protection for spamd daemon"
+#~ msgstr "spamd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Allow spamd to access home directories"
+#~ msgstr "spamd にホームディレクトリーへのアクセスを認める"
+
+#~ msgid "Allow Spam Assassin daemon network access"
+#~ msgstr "Spam Assassin デーモンにネットワークアクセスを認める"
+
+#~ msgid "Disable SELinux protection for speedmgmt daemon"
+#~ msgstr "speedmgmt デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Squid"
+#~ msgstr "Squid"
+
+#~ msgid "Allow squid daemon to connect to the network"
+#~ msgstr "squid デーモンにネットワークへの接続を認める"
+
+#~ msgid "Disable SELinux protection for squid daemon"
+#~ msgstr "squid デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for ssh daemon"
+#~ msgstr "ssh デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Allow ssh logins as sysadm_r:sysadm_t"
+#~ msgstr "ssh に sysadm_r:sysadm_t としてログインすることを認める"
+
+#~ msgid ""
+#~ "Allow staff_r users to search the sysadm home dir and read files (such as "
+#~ "~/.bashrc)"
+#~ msgstr ""
+#~ "staff_r ユーザーに sysadm ホームディレクトリーを捜し、(~/.bashrc のよう"
+#~ "な) ファイルを読むことを認める"
+
+#~ msgid "Universal SSL tunnel"
+#~ msgstr "汎用 SSL トンネル"
+
+#~ msgid "Disable SELinux protection for stunnel daemon"
+#~ msgstr "stunnel デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Allow stunnel daemon to run as standalone, outside of xinetd"
+#~ msgstr ""
+#~ "stunnel デーモンに xinetd の外でスタンドアローンとして実行することを認める"
+
+#~ msgid "Disable SELinux protection for swat daemon"
+#~ msgstr "swat デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for sxid daemon"
+#~ msgstr "sxid デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for syslogd daemon"
+#~ msgstr "syslogd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for system cron jobs"
+#~ msgstr "システム cron ジョブ用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for tcp daemon"
+#~ msgstr "tcp デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for telnet daemon"
+#~ msgstr "telnet デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for tftpd daemon"
+#~ msgstr "tftpd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for transproxy daemon"
+#~ msgstr "transproxy デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for udev daemon"
+#~ msgstr "udev デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for uml daemon"
+#~ msgstr "uml デーモン用の SELinux 保護を無効にする"
+
+#~ msgid ""
+#~ "Allow xinetd to run unconfined, including any services it starts that do "
+#~ "not have a domain transition explicitly defined"
+#~ msgstr ""
+#~ "xinetd に、それが起動するドメイン転位が明に定義されていないサービスを含"
+#~ "め、制限なしで実行することを認める"
+
+#~ msgid ""
+#~ "Allow rc scripts to run unconfined, including any daemon started by an rc "
+#~ "script that does not have a domain transition explicitly defined"
+#~ msgstr ""
+#~ "rc スクリプトに、rc スクリプトにより起動されるドメイン転位が明に定義されて"
+#~ "いないデーモンを含め、制限なしで実行することを認める"
+
+#~ msgid "Allow rpm to run unconfined"
+#~ msgstr "rpm に制限なしで実行することを認める"
+
+#~ msgid "Allow privileged utilities like hotplug and insmod to run unconfined"
+#~ msgstr ""
+#~ "hotplug や insmod のような特権ユーティリティーに制限なしで実行することを認"
+#~ "める"
+
+#~ msgid "Disable SELinux protection for updfstab daemon"
+#~ msgstr "updfstab デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for uptimed daemon"
+#~ msgstr "uptimed デーモン用の SELinux 保護を無効にする"
+
+#~ msgid ""
+#~ "Allow user_r to reach sysadm_r via su, sudo, or userhelper. Otherwise, "
+#~ "only staff_r can do so"
+#~ msgstr ""
+#~ "user_r に su か、sudo、userhelper 経由で sysadm_r に達することを認める。そ"
+#~ "うでなければ staff_r のみがそうできる"
+
+#~ msgid "Allow users to execute the mount command"
+#~ msgstr "ユーザーに mount コマンドを実行することを認める"
+
+#~ msgid "Allow regular users direct mouse access (only allow the X server)"
+#~ msgstr "標準ユーザーに直接マウスアクセスを認める (X サーバーのみ認める)"
+
+#~ msgid "Allow users to run the dmesg command"
+#~ msgstr "ユーザーに dmesg コマンドを実行することを認める"
+
+#~ msgid "Allow users to control network interfaces (also needs USERCTL=true)"
+#~ msgstr ""
+#~ "ユーザーにネットワークインターフェースを制御することを認める "
+#~ "(USERCTL=true も必要)"
+
+#~ msgid "Allow normal user to execute ping"
+#~ msgstr "通常ユーザーに ping を実行することを認める"
+
+#~ msgid "Allow user to r/w noextattrfile (FAT, CDROM, FLOPPY)"
+#~ msgstr ""
+#~ "ユーザーに ext 属性でないファイルの読み書きを認める (FAT、CDROM、フロッ"
+#~ "ピー)"
+
+#~ msgid "Allow users to rw usb devices"
+#~ msgstr "ユーザーに usb 装置の読み書きを認める"
+
+#~ msgid ""
+#~ "Allow users to run TCP servers (bind to ports and accept connection from "
+#~ "the same domain and outside users)  disabling this forces FTP passive "
+#~ "mode and may change other protocols"
+#~ msgstr ""
+#~ "ユーザーに TCP サーバーを実行することを認める (ポートと結びつけ、同一ドメ"
+#~ "インや外部のユーザーからの接続を受け付ける) これを無効にすると FTP を受動"
+#~ "モードにし、他のプロトコルも変更するかもしれない"
+
+#~ msgid "Allow user to stat ttyfiles"
+#~ msgstr "ユーザーに stat ttyfiles を認める"
+
+#~ msgid "Disable SELinux protection for uucpd daemon"
+#~ msgstr "uucpd デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for vmware daemon"
+#~ msgstr "vmware デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for watchdog daemon"
+#~ msgstr "watchdog デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for winbind daemon"
+#~ msgstr "winbind デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for xdm daemon"
+#~ msgstr "xdm デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Allow xdm logins as sysadm_r:sysadm_t"
+#~ msgstr "xdm が sysadm_r:sysadm_t としてログインすることを認める"
+
+#~ msgid "Disable SELinux protection for xen daemon"
+#~ msgstr "xen デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "XEN"
+#~ msgstr "XEN"
+
+#~ msgid "Allow xen to read/write physical disk devices"
+#~ msgstr "xen に物理ディスク装置を読み書きすることを認める"
+
+#~ msgid "Disable SELinux protection for xfs daemon"
+#~ msgstr "xfs デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for xen control"
+#~ msgstr "xen control 用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for ypbind daemon"
+#~ msgstr "ypbind デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for NIS Password Daemon"
+#~ msgstr "NIS パスワードデーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for ypserv daemon"
+#~ msgstr "ypserv デーモン用の SELinux 保護を無効にする"
+
+#~ msgid "Disable SELinux protection for NIS Transfer Daemon"
+#~ msgstr "NIS 転送デーモン用の SELinux 保護を無効にする"
+
+#~ msgid ""
+#~ "Allow SELinux webadm user to manage unprivileged users home directories"
+#~ msgstr ""
+#~ "SELinux webadm ユーザーに、非特権ユーザーのホームディレクトリーの管理を認"
+#~ "める"
+
+#~ msgid ""
+#~ "Allow SELinux webadm user to read unprivileged users home directories"
+#~ msgstr ""
+#~ "SELinux webadm ユーザーに、非特権ユーザーのホームディレクトリーの読み込み"
+#~ "を認める"
+
+#~ msgid "Are you sure you want to delete %s '%s'?"
+#~ msgstr "%s '%s' を本当に削除したいのですか?"
+
+#~ msgid "Delete %s"
+#~ msgstr "%s を削除"
+
+#~ msgid "Add %s"
+#~ msgstr "%s を追加"
+
+#~ msgid "Modify %s"
+#~ msgstr "%s を変更"
+
+#~ msgid "Permissive"
+#~ msgstr "許容"
+
+#~ msgid "Enforcing"
+#~ msgstr "強制"
+
+#~ msgid "Disabled"
+#~ msgstr "無効"
+
+#~ msgid "Status"
+#~ msgstr "状態"
+
+#~ msgid ""
+#~ "Changing the policy type will cause a relabel of the entire file system "
+#~ "on the next boot. Relabeling takes a long time depending on the size of "
+#~ "the file system.  Do you wish to continue?"
+#~ msgstr ""
+#~ "ポリシータイプを変更すると次の起動時に全ファイルシステムのリラベルを引き起"
+#~ "します。ファイルシステムの大きさに依存してリラベルは長い時間を必要としま"
+#~ "す。続けますか?"
+
+#~ msgid ""
+#~ "Changing to SELinux disabled requires a reboot.  It is not recommended.  "
+#~ "If you later decide to turn SELinux back on, the system will be required "
+#~ "to relabel.  If you just want to see if SELinux is causing a problem on "
+#~ "your system, you can go to permissive mode which will only log errors and "
+#~ "not enforce SELinux policy.  Permissive mode does not require a reboot    "
+#~ "Do you wish to continue?"
+#~ msgstr ""
+#~ "SELinux を無効にするには再起動が必要です。薦められません。後に SELinux を"
+#~ "有効に戻すことに決めたら、システムはリラベルが必要になります。単に "
+#~ "SELinux がシステムに問題を起こしているかを知りたいのならば、エラーを記録す"
+#~ "るだけで SELinux ポリシーを強制しない許容モードにすることができます。許容"
+#~ "モードは再起動は必要ではありません。続けますか?"
+
+#~ msgid ""
+#~ "Changing to SELinux enabled will cause a relabel of the entire file "
+#~ "system on the next boot. Relabeling takes a long time depending on the "
+#~ "size of the file system.  Do you wish to continue?"
+#~ msgstr ""
+#~ "SELinux を有効に変更すると次の起動時に全ファイルシステムのリラベルを引き起"
+#~ "します。ファイルシステムの大きさに依存してリラベルは長い時間を必要としま"
+#~ "す。続けますか?"
+
+#~ msgid "system-config-selinux"
+#~ msgstr "system-config-selinux"
+
+#~ msgid ""
+#~ "Copyright (c)2006 Red Hat, Inc.\n"
+#~ "Copyright (c) 2006 Dan Walsh <dwalsh@redhat.com>"
+#~ msgstr ""
+#~ "Copyright (c)2006 Red Hat, Inc.\n"
+#~ "Copyright (c) 2006 Dan Walsh <dwalsh@redhat.com>"
+
+#~ msgid "Add SELinux Login Mapping"
+#~ msgstr "SELinux ログインマッピングを追加"
+
+#~ msgid "Add SELinux Network Ports"
+#~ msgstr "SELinux ネットワークポートを追加"
+
+#~ msgid "SELinux Type"
+#~ msgstr "SELinux タイプ"
+
+#~ msgid ""
+#~ "tcp\n"
+#~ "udp"
+#~ msgstr ""
+#~ "tcp\n"
+#~ "udp"
+
+#~ msgid ""
+#~ "SELinux MLS/MCS\n"
+#~ "Level"
+#~ msgstr ""
+#~ "SELinux MLS/MCS\n"
+#~ "レベル"
+
+#~ msgid "File Specification"
+#~ msgstr "ファイル仕様"
+
+#~ msgid "File Type"
+#~ msgstr "ファイルタイプ"
+
+#~ msgid ""
+#~ "all files\n"
+#~ "regular file\n"
+#~ "directory\n"
+#~ "character device\n"
+#~ "block device\n"
+#~ "socket\n"
+#~ "symbolic link\n"
+#~ "named pipe\n"
+#~ msgstr ""
+#~ "全ファイル\n"
+#~ "通常ファイル\n"
+#~ "ディレクトリー\n"
+#~ "文字装置\n"
+#~ "ブロック装置\n"
+#~ "ソケット\n"
+#~ "シンボリックリンク\n"
+#~ "名前付きパイプ\n"
+
+#~ msgid "MLS"
+#~ msgstr "MLS"
+
+#~ msgid "Add SELinux User"
+#~ msgstr "SELinux ユーザーの追加"
+
+#~ msgid "SELinux Administration"
+#~ msgstr "SELinux 管理者"
+
+#~ msgid "Add"
+#~ msgstr "追加"
+
+#~ msgid "_Properties"
+#~ msgstr "特性（_P）"
+
+#~ msgid "_Delete"
+#~ msgstr "削除（_D）"
+
+#~ msgid "Select Management Object"
+#~ msgstr "管理オブジェクトを選択"
+
+#~ msgid "<b>Select:</b>"
+#~ msgstr "<b>選択:</b>"
+
+#~ msgid "System Default Enforcing Mode"
+#~ msgstr "システムデフォルトの強制モード"
+
+#~ msgid ""
+#~ "Disabled\n"
+#~ "Permissive\n"
+#~ "Enforcing\n"
+#~ msgstr ""
+#~ "許容\n"
+#~ "強制が\n"
+#~ "無効になりました\n"
+
+#~ msgid "Current Enforcing Mode"
+#~ msgstr "現在の強制モード"
+
+#~ msgid "System Default Policy Type: "
+#~ msgstr "システムデフォルトのポリシータイプ: "
+
+#~ msgid ""
+#~ "Select if you wish to relabel then entire file system on next reboot.  "
+#~ "Relabeling can take a very long time, depending on the size of the "
+#~ "system.  If you are changing policy types or going from disabled to "
+#~ "enforcing, a relabel is required."
+#~ msgstr ""
+#~ "リラベルしたいのならば選択し、そうすれば全ファイルシステムが次の再起動時"
+#~ "に。システムの大きさに依存しますが、リラベルは非常に長い時間がかかります。"
+#~ "ポリシータイプを変更したり無効から強制へ変える場合、リラベルが必要になりま"
+#~ "す。"
+
+#~ msgid "Relabel on next reboot."
+#~ msgstr "次の再起動でリラベル"
+
+#~ msgid "Revert boolean setting to system default"
+#~ msgstr "ブーリアン設定をシステムデフォルトに戻す"
+
+#~ msgid "Toggle between Customized and All Booleans"
+#~ msgstr "カスタム化と全ブーリアン値との間で切り替え"
+
+#~ msgid "Run booleans lockdown wizard"
+#~ msgstr "boolean ロックダウンのウィザードを実行"
+
+#~ msgid "Lockdown..."
+#~ msgstr "ロックダウン..."
+
+#~ msgid "Filter"
+#~ msgstr "フィルター"
+
+#~ msgid "Add File Context"
+#~ msgstr "ファイルコンテキストの追加"
+
+#~ msgid "Modify File Context"
+#~ msgstr "ファイルコンテキストの変更"
+
+#~ msgid "Delete File Context"
+#~ msgstr "ファイルコンテキストの削除"
+
+#~ msgid "Toggle between all and customized file context"
+#~ msgstr "全てとカスタム化ファイルコンテキストの間で切り替え"
+
+#~ msgid "Add SELinux User Mapping"
+#~ msgstr "SELinux ユーザーマッピングの追加"
+
+#~ msgid "Modify SELinux User Mapping"
+#~ msgstr "SELinux ユーザーマッピングの変更"
+
+#~ msgid "Delete SELinux User Mapping"
+#~ msgstr "SELinux ユーザーマッピングの削除"
+
+#~ msgid "Add Translation"
+#~ msgstr "変換の追加"
+
+#~ msgid "Modify Translation"
+#~ msgstr "変換の変更"
+
+#~ msgid "Delete Translation"
+#~ msgstr "変換の削除"
+
+#~ msgid "Modify SELinux User"
+#~ msgstr "SELinux ユーザーの変更"
+
+#~ msgid "Add Network Port"
+#~ msgstr "ネットワークポートの追加"
+
+#~ msgid "Edit Network Port"
+#~ msgstr "ネットワークポートの編集"
+
+#~ msgid "Delete Network Port"
+#~ msgstr "ネットワークポートの削除"
+
+#~ msgid "Toggle between Customized and All Ports"
+#~ msgstr "カスタム化と全ポートの間で切り替え"
+
+#~ msgid "Generate new policy module"
+#~ msgstr "新ポリシーモジュールの生成"
+
+#~ msgid "Load policy module"
+#~ msgstr "ポリシーモジュールをロード"
+
+#~ msgid "Remove loadable policy module"
+#~ msgstr "ロード可能なポリシーモジュールを取り外す"
+
+#~ msgid ""
+#~ "Enable/Disable additional audit rules, that are normally not reported in "
+#~ "the log files."
+#~ msgstr "通常はログファイルに報告されない追加の監査ルールを有効/無効にする。"
+
+#~ msgid "Sensitvity Level"
+#~ msgstr "感度"
+
+#~ msgid "SELinux user '%s' is required"
+#~ msgstr "SELinux ユーザー '%s' が必要です"
+
+#~ msgid ""
+#~ "\n"
+#~ "\n"
+#~ "semodule -i %s\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\n"
+#~ "\n"
+#~ "semodule -i %s\n"
+#~ "\n"
+
+#~ msgid "Disable"
+#~ msgstr "無効"
+
+#~ msgid "Enable"
+#~ msgstr "有効"
+
+#~ msgid "Default"
+#~ msgstr "デフォルト"
+
+#~ msgid "<b>Boolean</b>"
+#~ msgstr "<b>Boolean</b>"
+
+#~ msgid "<b>Description</b>"
+#~ msgstr "<b>説明</b>"
+
+#~ msgid "<b>Status</b>"
+#~ msgstr "<b>ステータス</b>"
+
+#~ msgid "Category: %s <br>"
+#~ msgstr "カテゴリ: %s <br>"
+
+#~ msgid "Begin"
+#~ msgstr "開始"
+
+#~ msgid ""
+#~ "Welcome to the SELinux Lockdown Tool.<br> <br>This tool can be used to "
+#~ "lockdown SELinux booleans.The tool will generate a configuration file "
+#~ "which can be used to lockdown this system or other SELinux systems.<br>"
+#~ msgstr ""
+#~ "SELinux ロックダウンツールにようこそ。 <br> <br>このツールを使用すると "
+#~ "SELinux の boolean をロックダウンすることができます。 このシステムまたは他"
+#~ "の SELinux システムのロックダウンに使用できる設定ファイルを生成します。"
+#~ "<br>"
+
+#~ msgid "Finish"
+#~ msgstr "終了"
+
+#~ msgid "Category %s booleans completed <br><br>"
+#~ msgstr "カテゴリ %s boolean は完了しました <br><br>"
+
+#~ msgid "Current settings:<br><br>"
+#~ msgstr "現在の設定:<br><br>"
+
+#~ msgid "Finish: <br><br>"
+#~ msgstr "終了: <br><br>"
+
+#~ msgid "Category: %s<br><br>Current Settings<br><br>"
+#~ msgstr "カテゴリ: %s<br><br>現在の設定<br><br>"
+
+#~ msgid "Boolean:   %s<br><br>"
+#~ msgstr "Boolean:   %s<br><br>"
+
+#~ msgid "Lockdown SELinux Booleans"
+#~ msgstr "SELinux boolean のロックダウン"
+
+#~ msgid "Apply"
+#~ msgstr "適用"
+
+#~ msgid "SELinux Boolean Lockdown"
+#~ msgstr "SELinux boolean のロックダウン"
+
+#~ msgid "Save As"
+#~ msgstr "名前を付けて保存"
+
+#~ msgid "Save Boolean Configuration File"
+#~ msgstr "Boolean 設定ファイルを保存"
+
+#~ msgid "Select file name to save  boolean settings."
+#~ msgstr "boolean 設定を保存するファイル名を選択します。"
+
+#~ msgid "_Forward"
+#~ msgstr "転送(_F)"
+
+#~ msgid "_Previous"
+#~ msgstr "前(_P）"
