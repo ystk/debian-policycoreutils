@@ -1,0 +1,17 @@
+policycoreutils (1.30.28-1) unstable; urgency=low
+
+  * With this version of policycoreutils, the file /etc/selinux/config
+    shall have the variable SELINUXTYPE set to refpolicy-targeted (you may
+    also set it to be refpolicy-strict or refpolicy-src). Only 1.30.26-3
+    created the file with SELINUXTYPE set to targeted (which is
+    appropriate on Red Hat machines and not Debian). We can't
+    automatically change /etc/selinux/config (preserve user changes) since
+    /etc/selinux/targeted/policy/policy.N might be a legitimate local
+    security policy. If it is not, and if any of the files
+    /etc/selinux/refpolicy-targeted/policy/policy.N,
+    /etc/selinux/refpolicy-strict/policy/policy.N, or
+    /etc/selinux/refpolicy-src/policy/policy.N exist, please select one
+    for the  SELINUXTYPE variable in /etc/selinux/config
+
+ -- Manoj Srivastava <srivasta@debian.org>  Thu,  7 Sep 2006 11:37:19 -0500
+

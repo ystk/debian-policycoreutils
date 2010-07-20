@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pa\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-06-24 10:53-0400\n"
+"POT-Creation-Date: 2010-03-28 17:28+0000\n"
 "PO-Revision-Date: 2008-03-26 16:08+0530\n"
 "Last-Translator: Jaswinder Singh <jsingh@redhat.com>\n"
 "Language-Team: Punjabi <fedora-trans-pa@redhat.com>\n"
@@ -83,11 +83,11 @@ msgstr "ਪ੍ਰਮਾਣਿਕਤਾ ਫੇਲ ਹੋਈ।\n"
 msgid "Could not set exec context to %s.\n"
 msgstr "exec ਪ੍ਰਸੰਗ ਨੂੰ %s ਨਿਰਧਾਰਤ ਨਹੀਂ ਕਰ ਸਕਦਾ।\n"
 
-#: ../audit2allow/audit2allow:217
+#: ../audit2allow/audit2allow:228
 msgid "******************** IMPORTANT ***********************\n"
 msgstr "******************** ਖਾਸ ***********************\n"
 
-#: ../audit2allow/audit2allow:218
+#: ../audit2allow/audit2allow:229
 msgid "To make this policy package active, execute:"
 msgstr "ਇਹ ਪਾਲਿਸੀ ਪੈਕੇਜ ਸਰਗਰਮ ਕਰਨ ਲਈ, ਇਹ ਚਲਾਓ:"
 
@@ -116,803 +116,774 @@ msgstr "%s ਲਈ MLS ਰੇਂਜ ਨਿਰਧਾਰਤ ਨਹੀਂ ਕਰ ਸ
 msgid "global"
 msgstr "ਗਲੋਬਲ"
 
-#: ../semanage/seobject.py:206
-#, python-format
-msgid "Unable to open %s: translations not supported on non-MLS machines: %s"
-msgstr "%s ਨੂੰ ਖੋਲ ਨਹੀਂ ਸਕਦਾ: ਅਨੁਵਾਦ ਨੂੰ ਨਾਨ-MLS ਮਸ਼ੀਨਾਂ ਉੱਪਰ ਸਹਿਯੋਗ ਨਹੀਂ ਹੈ: %s"
-
-#: ../semanage/seobject.py:239
-msgid "Level"
-msgstr "ਲੈਵਲ"
-
-#: ../semanage/seobject.py:239
-msgid "Translation"
-msgstr "ਅਨੁਵਾਦ"
-
-#: ../semanage/seobject.py:247 ../semanage/seobject.py:261
-#, python-format
-msgid "Translations can not contain spaces '%s' "
-msgstr "ਅਨੁਵਾਦ ਵਿੱਚ ਸਪੇਸ '%s' ਨਹੀਂ ਹੈ"
-
-#: ../semanage/seobject.py:250
-#, python-format
-msgid "Invalid Level '%s' "
-msgstr "ਗਲਤ ਲੈਵਲ '%s' "
-
-#: ../semanage/seobject.py:253
-#, python-format
-msgid "%s already defined in translations"
-msgstr "%s ਪਹਿਲਾਂ ਹੀ ਅਨੁਵਾਦ ਵਿੱਚ ਪਰਿਭਾਸ਼ਤ ਹੈ"
-
-#: ../semanage/seobject.py:265
-#, python-format
-msgid "%s not defined in translations"
-msgstr "%s ਅਨੁਵਾਦ ਵਿੱਚ ਪਰਿਭਾਸ਼ਤ ਨਹੀਂ ਹੈ"
-
-#: ../semanage/seobject.py:290
+#: ../semanage/seobject.py:209
 msgid "Not yet implemented"
 msgstr "ਹਾਲੇ ਲਾਗੂ ਨਹੀਂ ਕੀਤਾ"
 
-#: ../semanage/seobject.py:294
+#: ../semanage/seobject.py:213
 msgid "Semanage transaction already in progress"
 msgstr ""
 
-#: ../semanage/seobject.py:303
+#: ../semanage/seobject.py:222
 msgid "Could not start semanage transaction"
 msgstr "semanage ਤਬਦੀਲੀ ਚਾਲੂ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:309
+#: ../semanage/seobject.py:228
 #, fuzzy
 msgid "Could not commit semanage transaction"
 msgstr "semanage ਤਬਦੀਲੀ ਚਾਲੂ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:313
+#: ../semanage/seobject.py:232
 msgid "Semanage transaction not in progress"
 msgstr ""
 
-#: ../semanage/seobject.py:325
+#: ../semanage/seobject.py:242
+msgid "dontaudit requires either 'on' or 'off'"
+msgstr ""
+
+#: ../semanage/seobject.py:255
 #, fuzzy
 msgid "Could not list SELinux modules"
 msgstr "SELinux ਉਪਭੋਗੀਆਂ ਨੂੰ ਵੇਖਾ ਨਹੀਂ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:336
+#: ../semanage/seobject.py:266
 #, fuzzy
 msgid "Permissive Types"
 msgstr "ਚੇਤਾਵਨੀ"
 
-#: ../semanage/seobject.py:378
+#: ../semanage/seobject.py:308
 #, python-format
 msgid "Could not set permissive domain %s (module installation failed)"
 msgstr ""
 
-#: ../semanage/seobject.py:384
+#: ../semanage/seobject.py:314
 #, python-format
 msgid "Could not remove permissive domain %s (remove failed)"
 msgstr ""
 
-#: ../semanage/seobject.py:410 ../semanage/seobject.py:470
-#: ../semanage/seobject.py:516 ../semanage/seobject.py:598
-#: ../semanage/seobject.py:665 ../semanage/seobject.py:723
-#: ../semanage/seobject.py:933 ../semanage/seobject.py:1506
-#: ../semanage/seobject.py:1570 ../semanage/seobject.py:1582
-#: ../semanage/seobject.py:1663 ../semanage/seobject.py:1714
+#: ../semanage/seobject.py:340 ../semanage/seobject.py:400
+#: ../semanage/seobject.py:446 ../semanage/seobject.py:528
+#: ../semanage/seobject.py:595 ../semanage/seobject.py:653
+#: ../semanage/seobject.py:863 ../semanage/seobject.py:1436
+#: ../semanage/seobject.py:1500 ../semanage/seobject.py:1512
+#: ../semanage/seobject.py:1593 ../semanage/seobject.py:1644
 #, python-format
 msgid "Could not create a key for %s"
 msgstr "%s ਲਈ ਕੁੰਜੀ ਨਹੀਂ ਬਣਾ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:414 ../semanage/seobject.py:474
-#: ../semanage/seobject.py:520 ../semanage/seobject.py:526
+#: ../semanage/seobject.py:344 ../semanage/seobject.py:404
+#: ../semanage/seobject.py:450 ../semanage/seobject.py:456
 #, python-format
 msgid "Could not check if login mapping for %s is defined"
 msgstr "ਜਾਂਚ ਨਹੀਂ ਕਰ ਸਕਦਾ ਜੇ %s ਲਈ ਲਾਗਇਨ ਮੈਪ ਪਰਿਭਾਸ਼ਤ ਨਹੀਂ"
 
-#: ../semanage/seobject.py:416
+#: ../semanage/seobject.py:346
 #, python-format
 msgid "Login mapping for %s is already defined"
 msgstr "%s ਲਈ ਲਾਗਇਨ ਮੈਪ ਪਹਿਲਾਂ ਹੀ ਪਰਿਭਾਸ਼ਤ ਹੈ"
 
-#: ../semanage/seobject.py:421
+#: ../semanage/seobject.py:351
 #, fuzzy, python-format
 msgid "Linux Group %s does not exist"
 msgstr "ਲੀਨਕਸ ਉਪਭੋਗੀ %s ਮੌਜੂਦ ਨਹੀਂ ਹੈ"
 
-#: ../semanage/seobject.py:426
+#: ../semanage/seobject.py:356
 #, python-format
 msgid "Linux User %s does not exist"
 msgstr "ਲੀਨਕਸ ਉਪਭੋਗੀ %s ਮੌਜੂਦ ਨਹੀਂ ਹੈ"
 
-#: ../semanage/seobject.py:430
+#: ../semanage/seobject.py:360
 #, python-format
 msgid "Could not create login mapping for %s"
 msgstr "%s ਲਈ ਲਾਗਇਨ ਮੈਪ ਨਹੀਂ ਬਣਾ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:434 ../semanage/seobject.py:612
+#: ../semanage/seobject.py:364 ../semanage/seobject.py:542
 #, python-format
 msgid "Could not set name for %s"
 msgstr "%s ਲਈ ਨਾਂ ਨਿਰਧਾਰਤ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:439 ../semanage/seobject.py:622
+#: ../semanage/seobject.py:369 ../semanage/seobject.py:552
 #, python-format
 msgid "Could not set MLS range for %s"
 msgstr "%s ਲਈ MLS ਰੇਂਜ ਨਿਰਧਾਰਤ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:443
+#: ../semanage/seobject.py:373
 #, python-format
 msgid "Could not set SELinux user for %s"
 msgstr "%s ਲਈ SELinux ਉਪਭੋਗੀ ਨਿਰਧਾਰਤ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:447
+#: ../semanage/seobject.py:377
 #, python-format
 msgid "Could not add login mapping for %s"
 msgstr "%s ਲਈ ਲਾਗਇਨ ਮਿਲਾਪ ਸ਼ਾਮਿਲ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:459 ../semanage/seobject.py:462
+#: ../semanage/seobject.py:389 ../semanage/seobject.py:392
 msgid "add SELinux user mapping"
 msgstr "SELinux ਉਪਭੋਗੀ ਮੇਲ ਸ਼ਾਮਿਲ ਕਰੋ"
 
-#: ../semanage/seobject.py:466
+#: ../semanage/seobject.py:396
 msgid "Requires seuser or serange"
 msgstr "seuser ਜਾਂ serange ਦੀ ਲੋੜ ਹੈ"
 
-#: ../semanage/seobject.py:476 ../semanage/seobject.py:522
+#: ../semanage/seobject.py:406 ../semanage/seobject.py:452
 #, python-format
 msgid "Login mapping for %s is not defined"
 msgstr "%s ਲਈ ਲਾਗਇਨ ਮੈਪ ਪਰਿਭਾਸ਼ਤ ਨਹੀਂ ਹੈ"
 
-#: ../semanage/seobject.py:480
+#: ../semanage/seobject.py:410
 #, python-format
 msgid "Could not query seuser for %s"
 msgstr "seuser ਨੂੰ %s ਲਈ ਕਿਊਰੀ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:496
+#: ../semanage/seobject.py:426
 #, python-format
 msgid "Could not modify login mapping for %s"
 msgstr "%s ਲਈ ਲਾਗਇਨ ਮੈਪਿੰਗ ਤਬਦੀਲ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:528
+#: ../semanage/seobject.py:458
 #, python-format
 msgid "Login mapping for %s is defined in policy, cannot be deleted"
 msgstr "%s ਲਈ ਲਾਗਇਨ ਮੈਪਿੰਗ, ਪਾਲਿਸੀ ਵਿੱਚ ਪਰਿਭਾਸ਼ਿਤ ਕੀਤੀ ਹੈ, ਹਟਾਈ ਨਹੀਂ ਜਾ ਸਕਦੀ"
 
-#: ../semanage/seobject.py:532
+#: ../semanage/seobject.py:462
 #, python-format
 msgid "Could not delete login mapping for %s"
 msgstr "%s ਲਈ ਲਾਗਇਨ ਮੈਪਿੰਗ ਹਟਾ ਨਹੀਂ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:555
+#: ../semanage/seobject.py:485
 msgid "Could not list login mappings"
 msgstr "ਲਾਗਇਨ ਮੈਪਿੰਗ ਵੇਖਾ ਨਹੀਂ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:568 ../semanage/seobject.py:573
+#: ../semanage/seobject.py:498 ../semanage/seobject.py:503
 msgid "Login Name"
 msgstr "ਲਾਗਇਨ ਨਾਂ"
 
-#: ../semanage/seobject.py:568 ../semanage/seobject.py:573
-#: ../semanage/seobject.py:782 ../semanage/seobject.py:787
+#: ../semanage/seobject.py:498 ../semanage/seobject.py:503
+#: ../semanage/seobject.py:712 ../semanage/seobject.py:717
 msgid "SELinux User"
 msgstr "SELinux ਉਪਭੋਗੀ"
 
-#: ../semanage/seobject.py:568
+#: ../semanage/seobject.py:498
 msgid "MLS/MCS Range"
 msgstr "MLS/MCS ਰੇਂਜ"
 
-#: ../semanage/seobject.py:594
+#: ../semanage/seobject.py:524
 #, fuzzy, python-format
 msgid "You must add at least one role for %s"
 msgstr "%s ਲਈ ਫਾਇਲ ਪ੍ਰਸੰਗ ਸ਼ਾਮਿਲ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:602 ../semanage/seobject.py:669
-#: ../semanage/seobject.py:727 ../semanage/seobject.py:733
+#: ../semanage/seobject.py:532 ../semanage/seobject.py:599
+#: ../semanage/seobject.py:657 ../semanage/seobject.py:663
 #, python-format
 msgid "Could not check if SELinux user %s is defined"
 msgstr "ਜਾਂਚ ਨਹੀਂ ਕਰ ਸਕਦਾ ਜੇ SELinux ਉਪਭੋਗੀ %s ਪਰਿਭਾਸ਼ਿਤ ਹੈ"
 
-#: ../semanage/seobject.py:604
+#: ../semanage/seobject.py:534
 #, python-format
 msgid "SELinux user %s is already defined"
 msgstr "SELinux ਉਪਭੋਗੀ %s ਪਹਿਲਾਂ ਹੀ ਪਰਿਭਾਸ਼ਿਤ ਹੈ"
 
-#: ../semanage/seobject.py:608
+#: ../semanage/seobject.py:538
 #, python-format
 msgid "Could not create SELinux user for %s"
 msgstr "%s ਲਈ SELinux ਉਪਭੋਗੀ ਨਹੀਂ ਬਣਾ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:617
+#: ../semanage/seobject.py:547
 #, python-format
 msgid "Could not add role %s for %s"
 msgstr "ਰੋਲ %s ਨੂੰ %s ਲਈ ਸ਼ਾਮਿਲ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:626
+#: ../semanage/seobject.py:556
 #, python-format
 msgid "Could not set MLS level for %s"
 msgstr "%s ਲਈ MLS ਲੈਵਲ ਨਿਰਧਾਰਤ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:629
+#: ../semanage/seobject.py:559
 #, python-format
 msgid "Could not add prefix %s for %s"
 msgstr "ਅਗੇਤਰ %s ਨੂੰ %s ਲਈ ਸ਼ਾਮਿਲ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:632
+#: ../semanage/seobject.py:562
 #, python-format
 msgid "Could not extract key for %s"
 msgstr "%s ਲਈ ਕੁੰਜੀ ਪਤਾ ਨਹੀਂ ਲਗਾ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:636
+#: ../semanage/seobject.py:566
 #, python-format
 msgid "Could not add SELinux user %s"
 msgstr "SELinux ਉਪਭੋਗੀ %s ਸ਼ਾਮਿਲ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:659
+#: ../semanage/seobject.py:589
 msgid "Requires prefix, roles, level or range"
 msgstr "ਅਗੇਤਰ, ਰੋਲ, ਲੈਵਲ ਜਾਂ ਰੇਂਜ ਦੀ ਲੋੜ ਹੈ"
 
-#: ../semanage/seobject.py:661
+#: ../semanage/seobject.py:591
 msgid "Requires prefix or roles"
 msgstr "ਅਗੇਤਰ ਜਾਂ ਰੋਲ ਦੀ ਲੋੜ ਹੈ"
 
-#: ../semanage/seobject.py:671 ../semanage/seobject.py:729
+#: ../semanage/seobject.py:601 ../semanage/seobject.py:659
 #, python-format
 msgid "SELinux user %s is not defined"
 msgstr "SELinux ਉਪਭੋਗੀ %s ਪਰਿਭਾਸ਼ਿਤ ਨਹੀਂ ਹੈ"
 
-#: ../semanage/seobject.py:675
+#: ../semanage/seobject.py:605
 #, python-format
 msgid "Could not query user for %s"
 msgstr "%s ਲਈ ਉਪਭੋਗੀ ਕਿਊਰੀ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:702
+#: ../semanage/seobject.py:632
 #, python-format
 msgid "Could not modify SELinux user %s"
 msgstr "SELinux ਉਪਭੋਗੀ %s ਤਬਦੀਲ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:735
+#: ../semanage/seobject.py:665
 #, python-format
 msgid "SELinux user %s is defined in policy, cannot be deleted"
 msgstr "SELinux ਉਪਭੋਗੀ %s ਨੂੰ ਪਾਲਿਸੀ ਵਿੱਚ ਪਰਿਭਾਸ਼ਿਤ ਕੀਤਾ ਹੈ, ਹਟਾਈ ਨਹੀਂ ਜਾ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:739
+#: ../semanage/seobject.py:669
 #, python-format
 msgid "Could not delete SELinux user %s"
 msgstr "SELinux ਉਪਭੋਗੀ ਨੂੰ ਹਟਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ %s"
 
-#: ../semanage/seobject.py:762
+#: ../semanage/seobject.py:692
 msgid "Could not list SELinux users"
 msgstr "SELinux ਉਪਭੋਗੀਆਂ ਨੂੰ ਵੇਖਾ ਨਹੀਂ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:768
+#: ../semanage/seobject.py:698
 #, python-format
 msgid "Could not list roles for user %s"
 msgstr "ਉਪਭੋਗੀ %s ਲਈ ਰੋਲ ਨਹੀਂ ਵੇਖਾ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:781
+#: ../semanage/seobject.py:711
 msgid "Labeling"
 msgstr "ਲੇਬਲਿੰਗ"
 
-#: ../semanage/seobject.py:781
+#: ../semanage/seobject.py:711
 msgid "MLS/"
 msgstr "MLS/"
 
-#: ../semanage/seobject.py:782
+#: ../semanage/seobject.py:712
 msgid "Prefix"
 msgstr "ਅਗੇਤਰ"
 
-#: ../semanage/seobject.py:782
+#: ../semanage/seobject.py:712
 msgid "MCS Level"
 msgstr "MCS ਲੈਵਲ"
 
-#: ../semanage/seobject.py:782
+#: ../semanage/seobject.py:712
 msgid "MCS Range"
 msgstr "MCS ਰੇਂਜ"
 
-#: ../semanage/seobject.py:782 ../semanage/seobject.py:787
+#: ../semanage/seobject.py:712 ../semanage/seobject.py:717
 msgid "SELinux Roles"
 msgstr "SELinux ਰੋਲ"
 
-#: ../semanage/seobject.py:802
+#: ../semanage/seobject.py:732
 msgid "Protocol udp or tcp is required"
 msgstr "ਪਰੋਟੋਕਾਲ udp ਜਾਂ tcp ਦੀ ਲੋੜ ਹੈ"
 
-#: ../semanage/seobject.py:804
+#: ../semanage/seobject.py:734
 msgid "Port is required"
 msgstr "ਪੋਰਟ ਦੀ ਲੋੜ ਹੈ"
 
-#: ../semanage/seobject.py:815
+#: ../semanage/seobject.py:745
 #, python-format
 msgid "Could not create a key for %s/%s"
 msgstr "%s/%s ਲਈ ਕੁੰਜੀ ਨਹੀਂ ਬਣਾ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:826
+#: ../semanage/seobject.py:756
 msgid "Type is required"
 msgstr "ਕਿਸਮ ਦੀ ਲੋੜ ਹੈ"
 
-#: ../semanage/seobject.py:832 ../semanage/seobject.py:891
-#: ../semanage/seobject.py:946 ../semanage/seobject.py:952
+#: ../semanage/seobject.py:762 ../semanage/seobject.py:821
+#: ../semanage/seobject.py:876 ../semanage/seobject.py:882
 #, python-format
 msgid "Could not check if port %s/%s is defined"
 msgstr "ਜਾਂਚ ਨਹੀਂ ਕਰ ਸਕਦਾ ਜੇ ਪੋਰਟ %s/%s ਪਰਿਭਾਸ਼ਿਤ ਹੈ"
 
-#: ../semanage/seobject.py:834
+#: ../semanage/seobject.py:764
 #, python-format
 msgid "Port %s/%s already defined"
 msgstr "ਪੋਰਟ %s/%s ਪਹਿਲਾਂ ਹੀ ਪਰਿਭਾਸ਼ਿਤ ਹੈ"
 
-#: ../semanage/seobject.py:838
+#: ../semanage/seobject.py:768
 #, python-format
 msgid "Could not create port for %s/%s"
 msgstr "%s/%s ਲਈ ਪੋਰਟ ਨਹੀਂ ਬਣਾ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:844
+#: ../semanage/seobject.py:774
 #, python-format
 msgid "Could not create context for %s/%s"
 msgstr "%s/%s ਲਈ ਪ੍ਰਸੰਗ ਨਹੀਂ ਬਣਾ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:848
+#: ../semanage/seobject.py:778
 #, python-format
 msgid "Could not set user in port context for %s/%s"
 msgstr "%s/%s ਲਈ ਪੋਰਟ ਪ੍ਰਸੰਗ ਵਿੱਚ ਉਪਭੋਗੀ ਨਹੀਂ ਨਿਰਧਾਰਤ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:852
+#: ../semanage/seobject.py:782
 #, python-format
 msgid "Could not set role in port context for %s/%s"
 msgstr "%s/%s ਲਈ ਪੋਰਟ ਪ੍ਰਸੰਗ ਵਿੱਚ ਰੋਲ ਨਹੀਂ ਦੇ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:856
+#: ../semanage/seobject.py:786
 #, python-format
 msgid "Could not set type in port context for %s/%s"
 msgstr "%s/%s ਲਈ ਪੋਰਟ ਪ੍ਰਸੰਗ ਵਿੱਚ ਕਿਸਮ ਨਿਰਧਾਰਤ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:861
+#: ../semanage/seobject.py:791
 #, python-format
 msgid "Could not set mls fields in port context for %s/%s"
 msgstr "%s/%s ਲਈ ਪੋਰਟ ਪ੍ਰਸੰਗ ਵਿੱਚ mls ਖੇਤਰ ਨਿਰਧਾਰਤ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:865
+#: ../semanage/seobject.py:795
 #, python-format
 msgid "Could not set port context for %s/%s"
 msgstr "%s/%s ਲਈ ਪੋਰਟ ਪ੍ਰਸੰਗ ਨਿਰਧਾਰਤ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:869
+#: ../semanage/seobject.py:799
 #, python-format
 msgid "Could not add port %s/%s"
 msgstr "ਪੋਰਟ %s/%s ਸ਼ਾਮਿਲ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:883 ../semanage/seobject.py:1129
-#: ../semanage/seobject.py:1317
+#: ../semanage/seobject.py:813 ../semanage/seobject.py:1059
+#: ../semanage/seobject.py:1247
 msgid "Requires setype or serange"
 msgstr "setype ਜਾਂ serange ਦੀ ਲੋੜ ਹੈ"
 
-#: ../semanage/seobject.py:885
+#: ../semanage/seobject.py:815
 msgid "Requires setype"
 msgstr "setype ਲੋੜੀਂਦਾ ਹੈ"
 
-#: ../semanage/seobject.py:893 ../semanage/seobject.py:948
+#: ../semanage/seobject.py:823 ../semanage/seobject.py:878
 #, python-format
 msgid "Port %s/%s is not defined"
 msgstr "ਪੋਰਟ %s/%s ਦਿੱਤੀ ਨਹੀਂ ਗਈ"
 
-#: ../semanage/seobject.py:897
+#: ../semanage/seobject.py:827
 #, python-format
 msgid "Could not query port %s/%s"
 msgstr "ਪੋਰਟ %s/%s ਕਿਊਰੀ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:908
+#: ../semanage/seobject.py:838
 #, python-format
 msgid "Could not modify port %s/%s"
 msgstr "ਪੋਰਟ %s/%s ਨੂੰ ਤਬਦੀਲ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:921
+#: ../semanage/seobject.py:851
 msgid "Could not list the ports"
 msgstr "ਪੋਰਟਾਂ ਨਹੀਂ ਵੇਖਾ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:937
+#: ../semanage/seobject.py:867
 #, python-format
 msgid "Could not delete the port %s"
 msgstr "ਪੋਰਟ %s ਹਟਾਈ ਨਹੀਂ ਜਾ ਸਕਦੀ"
 
-#: ../semanage/seobject.py:954
+#: ../semanage/seobject.py:884
 #, python-format
 msgid "Port %s/%s is defined in policy, cannot be deleted"
 msgstr "ਪੋਰਟ %s/%s ਪਾਲਿਸੀ ਵਿੱਚ ਪਰਿਭਾਸ਼ਿਤ ਹੈ, ਹਟਾਈ ਨਹੀਂ ਜਾ ਸਕਦੀ"
 
-#: ../semanage/seobject.py:958
+#: ../semanage/seobject.py:888
 #, python-format
 msgid "Could not delete port %s/%s"
 msgstr "ਪੋਰਟ %s/%s ਹਟਾਈ ਨਹੀਂ ਜਾ ਸਕਦੀ"
 
-#: ../semanage/seobject.py:974 ../semanage/seobject.py:996
+#: ../semanage/seobject.py:904 ../semanage/seobject.py:926
 msgid "Could not list ports"
 msgstr "ਪੋਰਟਾਂ ਨਹੀਂ ਵੇਖਾ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1017
+#: ../semanage/seobject.py:947
 msgid "SELinux Port Type"
 msgstr "SELinux ਪੋਰਟ ਕਿਸਮ"
 
-#: ../semanage/seobject.py:1017
+#: ../semanage/seobject.py:947
 msgid "Proto"
 msgstr "ਪਰੋਟੋ"
 
-#: ../semanage/seobject.py:1017
+#: ../semanage/seobject.py:947
 msgid "Port Number"
 msgstr "ਪੋਰਟ ਨੰਬਰ"
 
-#: ../semanage/seobject.py:1034 ../semanage/seobject.py:1116
-#: ../semanage/seobject.py:1166
+#: ../semanage/seobject.py:964 ../semanage/seobject.py:1046
+#: ../semanage/seobject.py:1096
 #, fuzzy
 msgid "Node Address is required"
 msgstr "ਪੋਰਟ ਦੀ ਲੋੜ ਹੈ"
 
-#: ../semanage/seobject.py:1037 ../semanage/seobject.py:1119
-#: ../semanage/seobject.py:1169
+#: ../semanage/seobject.py:967 ../semanage/seobject.py:1049
+#: ../semanage/seobject.py:1099
 #, fuzzy
 msgid "Node Netmask is required"
 msgstr "ਪੋਰਟ ਦੀ ਲੋੜ ਹੈ"
 
-#: ../semanage/seobject.py:1044 ../semanage/seobject.py:1125
-#: ../semanage/seobject.py:1176
+#: ../semanage/seobject.py:974 ../semanage/seobject.py:1055
+#: ../semanage/seobject.py:1106
 msgid "Unknown or missing protocol"
 msgstr ""
 
-#: ../semanage/seobject.py:1054 ../semanage/seobject.py:1256
-#: ../semanage/seobject.py:1445
+#: ../semanage/seobject.py:984 ../semanage/seobject.py:1186
+#: ../semanage/seobject.py:1375
 msgid "SELinux Type is required"
 msgstr "SELinux ਕਿਸਮ ਦੀ ਲੋੜ ਹੈ"
 
-#: ../semanage/seobject.py:1058 ../semanage/seobject.py:1133
-#: ../semanage/seobject.py:1180 ../semanage/seobject.py:1260
-#: ../semanage/seobject.py:1321 ../semanage/seobject.py:1355
-#: ../semanage/seobject.py:1449
+#: ../semanage/seobject.py:988 ../semanage/seobject.py:1063
+#: ../semanage/seobject.py:1110 ../semanage/seobject.py:1190
+#: ../semanage/seobject.py:1251 ../semanage/seobject.py:1285
+#: ../semanage/seobject.py:1379
 #, python-format
 msgid "Could not create key for %s"
 msgstr "%s ਲਈ ਕੁੰਜੀ ਬਣਾਈ ਨਹੀਂ ਜਾ ਸਕੀ"
 
-#: ../semanage/seobject.py:1060 ../semanage/seobject.py:1137
-#: ../semanage/seobject.py:1184 ../semanage/seobject.py:1190
+#: ../semanage/seobject.py:990 ../semanage/seobject.py:1067
+#: ../semanage/seobject.py:1114 ../semanage/seobject.py:1120
 #, fuzzy, python-format
 msgid "Could not check if addr %s is defined"
 msgstr "ਜਾਂਚ ਨਹੀਂ ਕਰ ਸਕਦਾ ਜੇ ਪੋਰਟ %s/%s ਪਰਿਭਾਸ਼ਿਤ ਹੈ"
 
-#: ../semanage/seobject.py:1064
+#: ../semanage/seobject.py:994
 #, fuzzy, python-format
 msgid "Addr %s already defined"
 msgstr "ਪੋਰਟ %s/%s ਪਹਿਲਾਂ ਹੀ ਪਰਿਭਾਸ਼ਿਤ ਹੈ"
 
-#: ../semanage/seobject.py:1068
+#: ../semanage/seobject.py:998
 #, fuzzy, python-format
 msgid "Could not create addr for %s"
 msgstr "%s ਲਈ ਕੁੰਜੀ ਨਹੀਂ ਬਣਾ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1073 ../semanage/seobject.py:1275
-#: ../semanage/seobject.py:1415
+#: ../semanage/seobject.py:1003 ../semanage/seobject.py:1205
+#: ../semanage/seobject.py:1345
 #, python-format
 msgid "Could not create context for %s"
 msgstr "%s ਲਈ ਪ੍ਰਸੰਗ ਨਹੀਂ ਬਣਾ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1077
+#: ../semanage/seobject.py:1007
 #, fuzzy, python-format
 msgid "Could not set mask for %s"
 msgstr "%s ਲਈ ਨਾਂ ਨਿਰਧਾਰਤ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1082
+#: ../semanage/seobject.py:1012
 #, fuzzy, python-format
 msgid "Could not set user in addr context for %s"
 msgstr "%s ਲਈ ਫਾਇਲ ਪ੍ਰਸੰਗ ਵਿੱਚ ਉਪਭੋਗੀ ਨਿਰਧਾਰਤ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1086
+#: ../semanage/seobject.py:1016
 #, fuzzy, python-format
 msgid "Could not set role in addr context for %s"
 msgstr "%s ਲਈ ਫਾਇਲ ਪ੍ਰਸੰਗ ਵਿੱਚ ਰੋਲ ਨਹੀਂ ਦੇ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1090
+#: ../semanage/seobject.py:1020
 #, fuzzy, python-format
 msgid "Could not set type in addr context for %s"
 msgstr "%s ਲਈ ਫਾਇਲ ਪ੍ਰਸੰਗ ਵਿੱਚ ਕਿਸਮ ਨਿਰਧਾਰਤ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1095
+#: ../semanage/seobject.py:1025
 #, fuzzy, python-format
 msgid "Could not set mls fields in addr context for %s"
 msgstr "%s ਲਈ ਫਾਇਲ ਪ੍ਰਸੰਗ ਵਿੱਚ mlf ਖੇਤਰ ਨਿਰਧਾਰਤ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1099
+#: ../semanage/seobject.py:1029
 #, fuzzy, python-format
 msgid "Could not set addr context for %s"
 msgstr "%s ਲਈ ਫਾਇਲ ਪ੍ਰਸੰਗ ਨਿਰਧਾਰਤ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1103
+#: ../semanage/seobject.py:1033
 #, fuzzy, python-format
 msgid "Could not add addr %s"
 msgstr "ਪੋਰਟ %s/%s ਸ਼ਾਮਿਲ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1139 ../semanage/seobject.py:1186
+#: ../semanage/seobject.py:1069 ../semanage/seobject.py:1116
 #, fuzzy, python-format
 msgid "Addr %s is not defined"
 msgstr "ਪੋਰਟ %s/%s ਦਿੱਤੀ ਨਹੀਂ ਗਈ"
 
-#: ../semanage/seobject.py:1143
+#: ../semanage/seobject.py:1073
 #, fuzzy, python-format
 msgid "Could not query addr %s"
 msgstr "ਪੋਰਟ %s/%s ਕਿਊਰੀ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1154
+#: ../semanage/seobject.py:1084
 #, fuzzy, python-format
 msgid "Could not modify addr %s"
 msgstr "ਪੋਰਟ %s/%s ਨੂੰ ਤਬਦੀਲ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1192
+#: ../semanage/seobject.py:1122
 #, fuzzy, python-format
 msgid "Addr %s is defined in policy, cannot be deleted"
 msgstr "ਪੋਰਟ %s/%s ਪਾਲਿਸੀ ਵਿੱਚ ਪਰਿਭਾਸ਼ਿਤ ਹੈ, ਹਟਾਈ ਨਹੀਂ ਜਾ ਸਕਦੀ"
 
-#: ../semanage/seobject.py:1196
+#: ../semanage/seobject.py:1126
 #, fuzzy, python-format
 msgid "Could not delete addr %s"
 msgstr "%s ਨੂੰ ਹਟਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1212
+#: ../semanage/seobject.py:1142
 #, fuzzy
 msgid "Could not list addrs"
 msgstr "ਪੋਰਟਾਂ ਨਹੀਂ ਵੇਖਾ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1264 ../semanage/seobject.py:1325
-#: ../semanage/seobject.py:1359 ../semanage/seobject.py:1365
+#: ../semanage/seobject.py:1194 ../semanage/seobject.py:1255
+#: ../semanage/seobject.py:1289 ../semanage/seobject.py:1295
 #, python-format
 msgid "Could not check if interface %s is defined"
 msgstr "ਜਾਂਚ ਨਹੀਂ ਕਰ ਸਕਦਾ ਜੇ ਇੰਟਰਫੇਸ %s ਪਰਿਭਾਸ਼ਿਤ ਹੈ"
 
-#: ../semanage/seobject.py:1266
+#: ../semanage/seobject.py:1196
 #, python-format
 msgid "Interface %s already defined"
 msgstr "ਇੰਟਰਫੇਸ %s ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ"
 
-#: ../semanage/seobject.py:1270
+#: ../semanage/seobject.py:1200
 #, python-format
 msgid "Could not create interface for %s"
 msgstr "%s ਲਈ ਇੰਟਰਫੇਸ ਬਣਾਇਆ ਨਹੀਂ ਜਾ ਸਕਿਆ"
 
-#: ../semanage/seobject.py:1279
+#: ../semanage/seobject.py:1209
 #, python-format
 msgid "Could not set user in interface context for %s"
 msgstr "%s ਲਈ ਇੰਟਰਫੇਸ ਪ੍ਰਸੰਗ ਵਿੱਚ ਉਪਭੋਗੀ ਨਿਰਧਾਰਤ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1283
+#: ../semanage/seobject.py:1213
 #, python-format
 msgid "Could not set role in interface context for %s"
 msgstr "%s ਲਈ ਇੰਟਰਫੇਸ ਪ੍ਰਸੰਗ ਵਿੱਚ ਰੋਲ ਨਹੀਂ ਦੇ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1287
+#: ../semanage/seobject.py:1217
 #, python-format
 msgid "Could not set type in interface context for %s"
 msgstr "%s ਲਈ ਇੰਟਰਫੇਸ ਪ੍ਰਸੰਗ ਵਿੱਚ ਕਿਸਮ ਨਿਰਧਾਰਤ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1292
+#: ../semanage/seobject.py:1222
 #, python-format
 msgid "Could not set mls fields in interface context for %s"
 msgstr "%s ਲਈ ਇੰਟਰਫੇਸ ਪ੍ਰਸੰਗ ਵਿੱਚ mls ਖੇਤਰ ਨਿਰਧਾਰਤ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1296
+#: ../semanage/seobject.py:1226
 #, python-format
 msgid "Could not set interface context for %s"
 msgstr "%s ਲਈ ਇੰਟਰਫੇਸ ਪ੍ਰਸੰਗ ਨਿਰਧਾਰਤ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1300
+#: ../semanage/seobject.py:1230
 #, python-format
 msgid "Could not set message context for %s"
 msgstr "%s ਲਈ ਸੁਨੇਹਾ ਪ੍ਰਸੰਗ ਨਿਰਧਾਰਤ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1304
+#: ../semanage/seobject.py:1234
 #, python-format
 msgid "Could not add interface %s"
 msgstr "ਇੰਟਰਫੇਸ %s ਸ਼ਾਮਿਲ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1327 ../semanage/seobject.py:1361
+#: ../semanage/seobject.py:1257 ../semanage/seobject.py:1291
 #, python-format
 msgid "Interface %s is not defined"
 msgstr "ਇੰਟਰਫੇਸ %s ਦਿੱਤਾ ਨਹੀਂ ਗਿਆ"
 
-#: ../semanage/seobject.py:1331
+#: ../semanage/seobject.py:1261
 #, python-format
 msgid "Could not query interface %s"
 msgstr "ਇੰਟਰਫੇਸ %s ਨੂੰ ਕਿਊਰੀ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1342
+#: ../semanage/seobject.py:1272
 #, python-format
 msgid "Could not modify interface %s"
 msgstr "ਇੰਟਰਫੇਸ %s ਨੂੰ ਤਬਦੀਲ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1367
+#: ../semanage/seobject.py:1297
 #, python-format
 msgid "Interface %s is defined in policy, cannot be deleted"
 msgstr "ਇੰਟਰਫੇਸ %s ਪਾਲਿਸੀ ਵਿੱਚ ਪਰਿਭਾਸ਼ਿਤ ਹੈ, ਹਟਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1371
+#: ../semanage/seobject.py:1301
 #, python-format
 msgid "Could not delete interface %s"
 msgstr "ਇੰਟਰਫੇਸ %s ਹਟਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1387
+#: ../semanage/seobject.py:1317
 msgid "Could not list interfaces"
 msgstr "ਇੰਟਰਫੇਸ ਸੂਚੀ ਨਹੀਂ ਵੇਖਾ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1397
+#: ../semanage/seobject.py:1327
 msgid "SELinux Interface"
 msgstr "SELinux ਇੰਟਰਫੇਸ"
 
-#: ../semanage/seobject.py:1397 ../semanage/seobject.py:1636
+#: ../semanage/seobject.py:1327 ../semanage/seobject.py:1566
 msgid "Context"
 msgstr "ਪ੍ਰਸੰਗ"
 
-#: ../semanage/seobject.py:1421
+#: ../semanage/seobject.py:1351
 #, python-format
 msgid "Could not set user in file context for %s"
 msgstr "%s ਲਈ ਫਾਇਲ ਪ੍ਰਸੰਗ ਵਿੱਚ ਉਪਭੋਗੀ ਨਿਰਧਾਰਤ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1425
+#: ../semanage/seobject.py:1355
 #, python-format
 msgid "Could not set role in file context for %s"
 msgstr "%s ਲਈ ਫਾਇਲ ਪ੍ਰਸੰਗ ਵਿੱਚ ਰੋਲ ਨਹੀਂ ਦੇ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1430 ../semanage/seobject.py:1478
+#: ../semanage/seobject.py:1360 ../semanage/seobject.py:1408
 #, python-format
 msgid "Could not set mls fields in file context for %s"
 msgstr "%s ਲਈ ਫਾਇਲ ਪ੍ਰਸੰਗ ਵਿੱਚ mlf ਖੇਤਰ ਨਿਰਧਾਰਤ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1436
+#: ../semanage/seobject.py:1366
 msgid "Invalid file specification"
 msgstr "ਗਲਤ ਫਾਇਲ ਨਿਰਧਾਰਨ"
 
-#: ../semanage/seobject.py:1453 ../semanage/seobject.py:1458
-#: ../semanage/seobject.py:1510 ../semanage/seobject.py:1586
-#: ../semanage/seobject.py:1590
+#: ../semanage/seobject.py:1383 ../semanage/seobject.py:1388
+#: ../semanage/seobject.py:1440 ../semanage/seobject.py:1516
+#: ../semanage/seobject.py:1520
 #, python-format
 msgid "Could not check if file context for %s is defined"
 msgstr "ਜਾਂਚ ਨਹੀਂ ਕਰ ਸਕਦਾ ਜੇ %s ਲਈ ਪ੍ਰਸੰਗ ਪਰਿਭਾਸ਼ਿਤ ਹੈ"
 
-#: ../semanage/seobject.py:1461
+#: ../semanage/seobject.py:1391
 #, python-format
 msgid "File context for %s already defined"
 msgstr "%s ਲਈ ਫਾਇਲ ਪ੍ਰਸੰਗ ਪਹਿਲਾਂ ਹੀ ਪਰਿਭਾਸ਼ਿਤ ਹੈ"
 
-#: ../semanage/seobject.py:1465
+#: ../semanage/seobject.py:1395
 #, python-format
 msgid "Could not create file context for %s"
 msgstr "%s ਲਈ ਫਾਇਲ ਪ੍ਰਸੰਗ ਨਹੀਂ ਬਣਾ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1473
+#: ../semanage/seobject.py:1403
 #, python-format
 msgid "Could not set type in file context for %s"
 msgstr "%s ਲਈ ਫਾਇਲ ਪ੍ਰਸੰਗ ਵਿੱਚ ਕਿਸਮ ਨਿਰਧਾਰਤ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1481 ../semanage/seobject.py:1538
-#: ../semanage/seobject.py:1542
+#: ../semanage/seobject.py:1411 ../semanage/seobject.py:1468
+#: ../semanage/seobject.py:1472
 #, python-format
 msgid "Could not set file context for %s"
 msgstr "%s ਲਈ ਫਾਇਲ ਪ੍ਰਸੰਗ ਨਿਰਧਾਰਤ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1487
+#: ../semanage/seobject.py:1417
 #, python-format
 msgid "Could not add file context for %s"
 msgstr "%s ਲਈ ਫਾਇਲ ਪ੍ਰਸੰਗ ਸ਼ਾਮਿਲ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1501
+#: ../semanage/seobject.py:1431
 msgid "Requires setype, serange or seuser"
 msgstr "setype, serange ਜਾਂ seuser ਦੀ ਲੋੜ ਹੈ"
 
-#: ../semanage/seobject.py:1514 ../semanage/seobject.py:1594
+#: ../semanage/seobject.py:1444 ../semanage/seobject.py:1524
 #, python-format
 msgid "File context for %s is not defined"
 msgstr "%s ਲਈ ਫਾਇਲ ਪ੍ਰਸੰਗ ਪਰਿਭਾਸ਼ਿਤ ਨਹੀਂ ਹੈ"
 
-#: ../semanage/seobject.py:1520
+#: ../semanage/seobject.py:1450
 #, python-format
 msgid "Could not query file context for %s"
 msgstr "%s ਲਈ ਫਾਇਲ ਪ੍ਰਸੰਗ ਕਿਊਰੀ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1546
+#: ../semanage/seobject.py:1476
 #, python-format
 msgid "Could not modify file context for %s"
 msgstr "%s ਲਈ ਫਾਇਲ ਪ੍ਰਸੰਗ ਤਬਦੀਲ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1560
+#: ../semanage/seobject.py:1490
 msgid "Could not list the file contexts"
 msgstr "ਫਾਇਲ ਪ੍ਰਸੰਗ ਵੇਖਾ ਨਹੀਂ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1574
+#: ../semanage/seobject.py:1504
 #, python-format
 msgid "Could not delete the file context %s"
 msgstr "ਫਾਇਲ ਪ੍ਰਸੰਗ %s ਨੂੰ ਹਟਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1592
+#: ../semanage/seobject.py:1522
 #, python-format
 msgid "File context for %s is defined in policy, cannot be deleted"
 msgstr "%s ਲਈ ਫਾਇਲ ਪ੍ਰਸੰਗ ਪਾਲਿਸੀ ਵਿੱਚ ਪਰਿਭਾਸ਼ਿਤ ਹੈ, ਹਟਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1598
+#: ../semanage/seobject.py:1528
 #, python-format
 msgid "Could not delete file context for %s"
 msgstr "%s ਲਈ ਫਾਇਲ ਪ੍ਰਸੰਗ ਹਟਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1613
+#: ../semanage/seobject.py:1543
 msgid "Could not list file contexts"
 msgstr "ਫਾਇਲ ਪ੍ਰਸੰਗ ਵੇਖਾ ਨਹੀਂ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1617
+#: ../semanage/seobject.py:1547
 msgid "Could not list local file contexts"
 msgstr "ਲੋਕਲ ਫਾਇਲ ਪ੍ਰਸੰਗ ਵੇਖਾ ਨਹੀਂ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1636
+#: ../semanage/seobject.py:1566
 msgid "SELinux fcontext"
 msgstr "SELinux fcontext"
 
-#: ../semanage/seobject.py:1636
+#: ../semanage/seobject.py:1566
 msgid "type"
 msgstr "ਕਿਸਮ"
 
-#: ../semanage/seobject.py:1666 ../semanage/seobject.py:1717
-#: ../semanage/seobject.py:1723
+#: ../semanage/seobject.py:1596 ../semanage/seobject.py:1647
+#: ../semanage/seobject.py:1653
 #, python-format
 msgid "Could not check if boolean %s is defined"
 msgstr "ਜਾਂਚ ਨਹੀਂ ਕਰ ਸਕਦਾ ਜੇ ਬੂਲੀਅਨ %s ਪਰਿਭਾਸ਼ਿਤ ਹੈ"
 
-#: ../semanage/seobject.py:1668 ../semanage/seobject.py:1719
+#: ../semanage/seobject.py:1598 ../semanage/seobject.py:1649
 #, python-format
 msgid "Boolean %s is not defined"
 msgstr "ਬੂਲੀਅਨ %s ਪਰਿਭਾਸ਼ਿਤ ਨਹੀਂ ਹੈ"
 
-#: ../semanage/seobject.py:1672
+#: ../semanage/seobject.py:1602
 #, python-format
 msgid "Could not query file context %s"
 msgstr "ਫਾਇਲ ਪ੍ਰਸੰਗ %s ਕਿਊਰੀ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1677
+#: ../semanage/seobject.py:1607
 #, fuzzy, python-format
 msgid "You must specify one of the following values: %s"
 msgstr "ਤੁਹਾਨੂੰ ਇੱਕ ਮੁੱਲ ਦੇਣਾ ਚਾਹੀਦਾ ਹੈ"
 
-#: ../semanage/seobject.py:1681
+#: ../semanage/seobject.py:1611
 #, fuzzy, python-format
 msgid "Could not set active value of boolean %s"
 msgstr "ਬੂਲੀਅਨ %s ਨੂੰ ਹਟਾ ਨਹੀਂ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1684
+#: ../semanage/seobject.py:1614
 #, python-format
 msgid "Could not modify boolean %s"
 msgstr "ਬੂਲੀਅਨ %s ਨੂੰ ਤਬਦੀਲ ਨਹੀਂ ਕਰ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1702
+#: ../semanage/seobject.py:1632
 #, python-format
 msgid "Bad format %s: Record %s"
 msgstr ""
 
-#: ../semanage/seobject.py:1725
+#: ../semanage/seobject.py:1655
 #, python-format
 msgid "Boolean %s is defined in policy, cannot be deleted"
 msgstr "ਬੂਲੀਅਨ %s ਪਾਲਿਸੀ ਵਿੱਚ ਪਰਿਭਾਸ਼ਿਤ ਹੈ, ਹਟਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1729
+#: ../semanage/seobject.py:1659
 #, python-format
 msgid "Could not delete boolean %s"
 msgstr "ਬੂਲੀਅਨ %s ਨੂੰ ਹਟਾ ਨਹੀਂ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1741 ../semanage/seobject.py:1758
+#: ../semanage/seobject.py:1671 ../semanage/seobject.py:1688
 msgid "Could not list booleans"
 msgstr "ਬੂਲੀਅਨ ਵੇਖਾ ਨਹੀਂ ਸਕਦਾ"
 
-#: ../semanage/seobject.py:1777
+#: ../semanage/seobject.py:1707
 msgid "unknown"
 msgstr "ਅਣਜਾਣ"
 
-#: ../semanage/seobject.py:1780
+#: ../semanage/seobject.py:1710
 msgid "off"
 msgstr "ਬੰਦ"
 
-#: ../semanage/seobject.py:1780
+#: ../semanage/seobject.py:1710
 msgid "on"
 msgstr "on"
 
-#: ../semanage/seobject.py:1789
+#: ../semanage/seobject.py:1719
 msgid "SELinux boolean"
 msgstr "SELinux ਬੂਲੀਅਨ"
 
-#: ../semanage/seobject.py:1789
+#: ../semanage/seobject.py:1719
 msgid "Description"
 msgstr "ਵੇਰਵਾ"
 
@@ -1171,12 +1142,12 @@ msgstr "ਵਰਣਨ ਕਰਤਾ ਨੂੰ ਬੰਦ ਨਹੀਂ ਕਰ ਸਕ
 msgid "Error allocating shell's argv0.\n"
 msgstr "ਸ਼ੈੱਲ ਦੇ argv0 ਨੂੰ ਜਾਰੀ ਕਰਨ ਵਿੱਚ ਗਲਤੀ।\n"
 
-#: ../newrole/newrole.c:1346
+#: ../newrole/newrole.c:1344
 #, c-format
 msgid "Unable to restore the environment, aborting\n"
 msgstr "ਵਾਤਾਵਰਨ ਮੁੜ-ਪ੍ਰਾਪਤ ਨਹੀਂ ਸਕਦਾ, ਅਧੂਰਾ ਛੱਡ ਰਿਹਾ\n"
 
-#: ../newrole/newrole.c:1357
+#: ../newrole/newrole.c:1355
 msgid "failed to exec shell\n"
 msgstr "ਸ਼ੈੱਲ ਚਲਾਉਣ ਵਿੱਚ ਫੇਲ\n"
 
@@ -1283,6 +1254,28 @@ msgstr "chcat -l +CompanyConfidential juser"
 #, c-format
 msgid "Options Error %s "
 msgstr "ਚੋਣ ਗਲਤੀ %s "
+
+#~ msgid ""
+#~ "Unable to open %s: translations not supported on non-MLS machines: %s"
+#~ msgstr "%s ਨੂੰ ਖੋਲ ਨਹੀਂ ਸਕਦਾ: ਅਨੁਵਾਦ ਨੂੰ ਨਾਨ-MLS ਮਸ਼ੀਨਾਂ ਉੱਪਰ ਸਹਿਯੋਗ ਨਹੀਂ ਹੈ: %s"
+
+#~ msgid "Level"
+#~ msgstr "ਲੈਵਲ"
+
+#~ msgid "Translation"
+#~ msgstr "ਅਨੁਵਾਦ"
+
+#~ msgid "Translations can not contain spaces '%s' "
+#~ msgstr "ਅਨੁਵਾਦ ਵਿੱਚ ਸਪੇਸ '%s' ਨਹੀਂ ਹੈ"
+
+#~ msgid "Invalid Level '%s' "
+#~ msgstr "ਗਲਤ ਲੈਵਲ '%s' "
+
+#~ msgid "%s already defined in translations"
+#~ msgstr "%s ਪਹਿਲਾਂ ਹੀ ਅਨੁਵਾਦ ਵਿੱਚ ਪਰਿਭਾਸ਼ਤ ਹੈ"
+
+#~ msgid "%s not defined in translations"
+#~ msgstr "%s ਅਨੁਵਾਦ ਵਿੱਚ ਪਰਿਭਾਸ਼ਤ ਨਹੀਂ ਹੈ"
 
 #~ msgid "translations not supported on non-MLS machines"
 #~ msgstr "ਅਨੁਵਾਦ ਨੂੰ ਨਾਨ-MLS ਮਸ਼ੀਨਾਂ ਉੱਪਰ ਸਹਿਯੋਗ ਨਹੀਂ ਹੈ"

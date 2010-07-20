@@ -91,7 +91,7 @@ if [ -f ${PREFC} -a -x /usr/bin/diff ]; then
 		      ! \( -fstype ext2 -o -fstype ext3 -o -fstype ext4 -o -fstype ext4dev  -o -fstype gfs2 -o -fstype jfs -o -fstype xfs -o -fstype btrfs \) -prune  -o \
 		      \( -wholename /home -o -wholename /root -o -wholename /tmp -wholename /dev \) -prune -o -print0"; \
 		      done 2> /dev/null | \
-	 ${RESTORECON} $* -0 -f - 
+	 ${RESTORECON} $* -0 -p -f - 
 	rm -f ${TEMPFILE} ${PREFCTEMPFILE}
 fi
 }
@@ -121,7 +121,7 @@ if [ ! -z "$PREFC" ]; then
 fi
 if [ ! -z "$RPMFILES" ]; then
     for i in `echo "$RPMFILES" | sed 's/,/ /g'`; do
-	rpmlist $i | ${RESTORECON} ${FORCEFLAG} $* -R -i -f - 2>&1 >> $LOGFILE
+	rpmlist $i | ${RESTORECON} ${FORCEFLAG} $* -R -i -p -f - 2>&1 >> $LOGFILE
     done
     exit $?
 fi
@@ -129,24 +129,29 @@ if [ ! -z "$FILEPATH" ]; then
     if [ -x /usr/bin/find ]; then
 	/usr/bin/find "$FILEPATH" \
 	    ! \( -fstype ext2 -o -fstype ext3 -o -fstype ext4 -o -fstype ext4dev -o -fstype gfs2 -o -fstype jfs -o -fstype xfs -o -fstype btrfs \) -prune  -o -print0 | \
-	    ${RESTORECON} ${FORCEFLAG} $* -0 -f - 2>&1 >> $LOGFILE
+	    ${RESTORECON} ${FORCEFLAG} $* -0 -p -f - 2>&1 >> $LOGFILE
     else
-	${RESTORECON} ${FORCEFLAG} -R $* $FILEPATH 2>&1 >> $LOGFILE
+	${RESTORECON} ${FORCEFLAG} -R -p $* $FILEPATH 2>&1 >> $LOGFILE
     fi
     return
 fi
 [ -x /usr/sbin/genhomedircon ] && /usr/sbin/genhomedircon
 LogReadOnly
-${SETFILES} -q ${SYSLOGFLAG} ${FORCEFLAG} $* ${FC} ${FILESYSTEMSRW} 2>&1 >> $LOGFILE
+if [  -n "${FILESYSTEMSRW}" ]; then
+    echo "Relabeling `echo ${FILESYSTEMSRW}`"
+    ${SETFILES} -q -p ${SYSLOGFLAG} ${FORCEFLAG} $* ${FC} ${FILESYSTEMSRW} 2>&1 >> $LOGFILE
+else
+    echo >&2 "fixfiles: No suitable file systems found"
+fi
 rm -rf /tmp/gconfd-* /tmp/pulse-* /tmp/orbit-*
-find /tmp \( -context "*:file_t*" -o -context "*:unlabeled_t*" \) -exec chcon -t tmp_t {} \;
-find /var/tmp \( -context "*:file_t*" -o -context "*:unlabeled_t*" \) -exec chcon -t tmp_t {} \;
+find /tmp \( -context "*:file_t*" -o -context "*:unlabeled_t*" \) -exec chcon -t tmp_t {} \; || true
+find /var/tmp \( -context "*:file_t*" -o -context "*:unlabeled_t*" \) -exec chcon -t tmp_t {} \; || true
 exit $?
 }
 
 fullrelabel() {
     logit "Cleaning out /tmp"
-    find /tmp/ -mindepth 1 -print0 | xargs -0 /bin/rm -f
+    find /tmp/ -mindepth 1 -print0 | xargs -0 /bin/rm -rf
     LogReadOnly
     restore
 }

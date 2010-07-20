@@ -1,0 +1,1180 @@
+policycoreutils (2.0.82-3) unstable; urgency=low
+
+  * Update the man page for semanage to document -i for command files.
+
+ -- Russell Coker <russell@coker.com.au>  Tue, 20 Jul 2010 12:33:36 +1000
+
+policycoreutils (2.0.82-2) unstable; urgency=low
+
+  * Use "rm -rf" when cleaning out /tmp.
+  * Documented the -0 option in restorecon(8), noted in restorecon(8) and
+    setfiles(8) that they are the same program and documented the -p option.
+  * Removed the newlines when displaying the progress of setfiles/restorecon.
+  * Made fixfiles display the progress.
+
+ -- Russell Coker <russell@coker.com.au>  Mon, 21 Jun 2010 22:35:00 +1000
+
+policycoreutils (2.0.82-1) unstable; urgency=low
+
+  * New upstream release
+    + Add avc's since boot from Dan Walsh.
+    + Add dontaudit flag to audit2allow from Dan Walsh.
+    + Module enable/disable support from Dan Walsh.
+    + Fix double-free in newrole
+    + Remove non-working OUTFILE from fixfiles from Dan Walsh.
+    + Additional exception handling in chcat from Dan Walsh.
+
+ -- Manoj Srivastava <srivasta@debian.org>  Sun, 28 Mar 2010 10:13:19 -0700
+
+policycoreutils (2.0.77-1) unstable; urgency=low
+
+  * New upstream version.
+    + Fixed bug preventing semanage node -a from working
+      from Chad Sellers
+    + Fixed bug preventing semanage fcontext -l from working
+      from Chad Sellers
+    + Remove setrans management from semanage, as it does not work
+      from Dan Walsh.
+    + Move load_policy from /usr/sbin to /sbin from Dan Walsh.
+
+ -- Manoj Srivastava <srivasta@debian.org>  Fri, 20 Nov 2009 01:53:37 -0600
+
+policycoreutils (2.0.75-1) unstable; urgency=low
+
+  * New upstream point release
+    + Factor out restoring logic from setfiles.c into restore.c
+
+ -- Manoj Srivastava <srivasta@debian.org>  Tue, 17 Nov 2009 16:34:11 -0600
+
+policycoreutils (2.0.74-1) unstable; urgency=low
+
+  * New upstream point release
+    + Change semodule upgrade behavior to install even if the module
+    + is not present from Dan Walsh.
+    + Make setfiles label if selinux is disabled and a seclabel aware
+    + kernel is running from Caleb Case.
+    + Clarify forkpty() error message in run_init from Manoj Srivastava.
+    + Add semanage dontaudit to turn off dontaudits from Dan Walsh.
+    + Fix semanage to set correct mode for setrans file from Dan Walsh.
+    + Fix malformed dictionary in portRecord from Dan Walsh.
+  * Added patch from Martin Orr to fix a loop in the inotify watch code
+    when installing a watch on utmp.
+  * [863fb62]: topic--debian: Improve error messages on forkpty failure
+    The current error message when forkpty() fails is not clear or
+    useful. The following patch makes indicate what went wrong. 
+    Bug fix: "The error message on forkpty() failure is not clear or
+    useful.", thanks to Russell Coker              (Closes: #515710).
+
+ -- Manoj Srivastava <srivasta@debian.org>  Wed, 14 Oct 2009 02:08:04 -0500
+
+policycoreutils (2.0.72-4) UNRELEASED; urgency=low
+
+  * [d42e245]: [topic--restorecond-init-script]: Add to watched files
+    list 
+
+ -- Manoj Srivastava <srivasta@debian.org>  Mon, 14 Sep 2009 08:31:48 -0500
+
+policycoreutils (2.0.72-3) UNRELEASED; urgency=low
+
+  * [863fb62]: topic--debian: Improve error messages on forkpty failure
+    The current error message when forkpty() fails is not clear or
+    useful. The following patch makes indicate what went wrong. 
+    Bug fix: "The error message on forkpty() failure is not clear or
+    useful.", thanks to Russell Coker              (Closes: #515710).
+
+ -- Manoj Srivastava <srivasta@debian.org>  Thu, 10 Sep 2009 13:20:33 -0500
+
+policycoreutils (2.0.72-2) unstable; urgency=low
+
+  * [1e640be]: [topic--restorecond-init-script]: init.d status support
+    Here is a patch to support the "status" action in the init.d script.
+    Note that to make "status" usable even as non-root user some things
+    needed to be rejuggled. Note that the dependency on lsb-base is
+    already missing in the current version.
+    Bug fix: "init.d status support", thanks to Peter Eisentraut
+                                                          (Closes: #528582).
+
+ -- Manoj Srivastava <srivasta@debian.org>  Fri, 04 Sep 2009 00:22:51 -0500
+
+policycoreutils (2.0.72-1) unstable; urgency=low
+
+  * New upstream release
+  * Restore symlink handling support to restorecon based on a patch by
+    Martin Orr.  This fixes the restorecon /dev/stdin performed by Debian
+    udev scripts that was broken by policycoreutils 2.0.70.
+    Bug fix: "/dev/pts not created with policycoreutils 2.0.71", thanks to
+    Martin Orr                                              (Closes: #544215).
+
+ -- Manoj Srivastava <srivasta@debian.org>  Thu, 03 Sep 2009 10:55:30 -0500
+
+policycoreutils (2.0.71-1) unstable; urgency=low
+
+  * New upstream point release
+    + Modify setfiles/restorecon checking of exclude paths.  Only check
+      user-supplied exclude paths (not automatically generated ones based on
+      lack of seclabel support), don't require them to be directories, and
+      ignore permission denied errors on them (it is ok to exclude a path to
+      which the caller lacks permission).
+    + Modify restorecon to only call realpath() on user-supplied pathnames
+      from Stephen Smalley.
+  * Prevent the package from building on non-linux platforms, since they
+    are not supported.
+
+ -- Manoj Srivastava <srivasta@debian.org>  Thu, 27 Aug 2009 13:06:36 -0500
+
+policycoreutils (2.0.69-2) unstable; urgency=low
+
+  * [7f346a4]: [topic--restorecond-init-script] Fix headers in script
+    The list of runlevels in the init.d header do not match the
+    arguments used by update-rc.d. The header say it should start in
+    rcS.d, while update-rc.d uses the defaults argument, saying it
+    should start in runlevels 2-5. Also, it uses files in /usr/ and
+    should depend on $remote_fs instead of $local_fs. Fix thanks to
+    Petter Reinholdtsen
+    Bug fix: "Incorrect runlevels and dependencies in init.d script",
+    thanks to Petter Reinholdtsen                    (Closes: #541871).
+
+ -- Manoj Srivastava <srivasta@debian.org>  Sun, 23 Aug 2009 09:33:48 -0500
+
+policycoreutils (2.0.69-1) unstable; urgency=low
+
+  * New upstream release
+   + Fix typo in fixfiles that prevented it from relabeling btrfs
+     filesystems from Dan Walsh.
+   + Modify setfiles to exclude mounts without seclabel option in
+     /proc/mounts on kernels >= 2.6.30 from Thomas Liu.
+   + Re-enable disable_dontaudit rules upon semodule -B from Christopher
+     Pardy and Dan Walsh.
+   + setfiles converted to fts from Thomas Liu.
+
+ -- Manoj Srivastava <srivasta@debian.org>  Fri, 14 Aug 2009 01:46:15 -0500
+
+policycoreutils (2.0.65-1) unstable; urgency=low
+
+  * New upstream release
+    + Remove gui from po/Makefile and po/POTFILES and regenerate po files
+    + Keep setfiles from spamming console from Dan Walsh.
+    + Fix chcat's category expansion for users from Dan Walsh.
+    + Fix transaction checking from Dan Walsh.
+    + Make fixfiles -R (for rpm) recursive.
+    + Make semanage permissive clean up after itself from Dan Walsh.
+    + add /root/.ssh/* to restorecond.conf
+
+ -- Manoj Srivastava <srivasta@debian.org>  Wed, 24 Jun 2009 18:51:15 -0500
+
+policycoreutils (2.0.62-1) unstable; urgency=low
+
+  * New upstream release
+    + Add btrfs to fixfiles from Dan Walsh.
+    + Remove restorecond error for matching globs with multiple hard links
+      and fix some error messages from Dan Walsh.
+    + Make removing a non-existant module a warning rather than an error
+      from Dan Walsh.
+    + Man page fixes from Dan Walsh.
+    + chcat: cut categories at arbitrary point (25) from Dan Walsh
+    + semodule: use new interfaces in libsemanage for compressed files
+      from Dan Walsh
+    + audit2allow: string changes for usage
+    + semanage: use semanage_mls_enabled() from Stephen Smalley.
+    + fcontext add checked local records twice, fix from Dan Walsh.
+    + Allow local file context entries to override policy entries in
+      semanage from Dan Walsh.
+    + Newrole error message corrections from Dan Walsh.
+    + Add exception to audit2why call in audit2allow from Dan Walsh.
+
+
+ -- Manoj Srivastava <srivasta@debian.org>  Mon, 15 Jun 2009 16:24:38 -0500
+
+policycoreutils (2.0.55-1) unstable; urgency=low
+
+  * New upstream release
+    + Merged semanage node support from Christian Kuester.
+    + Add support for boolean files and group support for seusers from Dan
+      Walsh.
+    + Ensure that setfiles -p output is newline terminated from Russell
+      Coker.
+    + Change setfiles to validate all file_contexts files when using -c
+      from Stephen Smalley.
+    + Add permissive domain capability to semanage from Dan Walsh.
+    + Add onboot option to fixfiles from Dan Walsh.
+    + Change restorecon.init to not run on boot by default from Dan Walsh.
+    + Fix audit2allow generation of role-type rules from Karl MacMillan.
+  * Fix reference to the GPL  license in the copyright file (this is
+    licensed under GPL-2)
+
+ -- Manoj Srivastava <srivasta@debian.org>  Thu, 12 Feb 2009 22:52:54 -0600
+
+policycoreutils (2.0.49-8) unstable; urgency=high
+
+  * [62526b0]: Fix fr.po which causes semanage to fail
+    Bug fix: "list index out of range", thanks to Ezannelli
+    This is an RC bug fix (though the severity should not really be
+    serious, this is not a policy violation [just a mostly useless package
+    for people using the french locale] -- this is a case where a
+    flawed po translation was causing a show stopper bug, and should be
+    interesting to release managers about how even translations can cause
+    show stoppers in some cases)                        (Closes: #506727).
+
+ -- Manoj Srivastava <srivasta@debian.org>  Mon, 05 Jan 2009 15:51:17 -0600
+
+policycoreutils (2.0.49-7) unstable; urgency=low
+
+  * [a415013]: Merge branch 'topic--restorecond-init-script'
+
+    restorecond is started in runlevels "S" and 2 3 4 5.  When started in
+    "S" it works correctly, but when started by one of the others
+    start-stop-daemon exits with code 1 because it's already running. The
+    fix was to simply add --oknodo to the start-stop-daemon invocations.
+
+    Bug fix: "restorecond is started twice and gives an error on boot",
+    thanks to Russell Coker                               (Closes: #506720).
+  * [8b0c36a]: Remove a spurious $ sign in the init script
+    Bug fix: "bashism in /bin/sh script", thanks to Raphael Geissert
+                                                          (Closes: #486055).
+  * [debiandir:1da4d71]: Remove obsolete dependencies
+    This will help in back porting.
+
+ -- Manoj Srivastava <srivasta@debian.org>  Wed, 26 Nov 2008 00:03:49 -0600
+
+policycoreutils (2.0.49-6) unstable; urgency=low
+
+  * Fix conflict between LSB header and update-rc.d options (important
+    bug).                                                  Closes: #493005
+
+ -- Manoj Srivastava <srivasta@debian.org>  Tue, 02 Sep 2008 13:33:10 -0500
+
+policycoreutils (2.0.49-5) unstable; urgency=high
+
+  * Made fixfiles display progress and made the setfiles progress display
+    includes a newline at the end.
+  * Make the package standard.
+
+ -- Russell Coker <russell@coker.com.au>  Fri, 01 Aug 2008 09:41:50 +1000
+
+policycoreutils (2.0.49-4) unstable; urgency=medium
+
+  * Make it depend on python-sepolgen_1.0.11-4 and use the correct module
+    names.
+    Closes: #486120
+
+ -- Russell Coker <russell@coker.com.au>  Wed, 30 Jul 2008 08:08:30 +1000
+
+policycoreutils (2.0.49-3) unstable; urgency=low
+
+  * In the init script source /lib/lsb/init-functions before calling log_*
+    functions.
+  * Take over the package and add Manoj to the Uploaders list.
+  * Change the construction of /etc/selinux/config to match the new names.
+  * Made it recommend the new policy packages.
+
+ -- Russell Coker <russell@coker.com.au>  Tue, 22 Jul 2008 15:03:42 +1000
+
+policycoreutils (2.0.49-2) unstable; urgency=low
+
+  * Fix some more changes for Bug#472351 (missed places where we still
+    referred to sepolgen, not python-sepolgen). In retrospect, perhaps
+    renaming sepolgen was not such a hot idea.
+
+ -- Manoj Srivastava <srivasta@debian.org>  Sat, 07 Jun 2008 16:15:15 -0500
+
+policycoreutils (2.0.49-1) unstable; urgency=low
+
+  * New upstream point release from subversion
+    - Remove security_check_context calls for prefix validation from
+      semanage.
+    - Change setfiles and restorecon to not relabel if the file already
+      has the correct context value even if -F/force is specified.
+    - Update semanage man page for booleans from Dan Walsh.
+    - Add further error checking to seobject.py for setting booleans.
+    - Update audit2allow to report dontaudit cases from Dan Walsh.
+    - Fix semanage port to use --proto from Caleb Case.
+  * Record the fact that this package has moved to a new git repository.
+  * Update the package for the new version of policy
+  * Move to the new, make -j friendly targets in debian/rules.
+  * Bug fix: "policycoreutils: audit2why fails with error", thanks to Max
+    Kosmach. Depend on python-sepolgen (name change)  (Closes: #478489).
+  * Bug fix: "policycoreutils: audit2allow fails with python error",
+    thanks to Laurens Blankers. The dependency above fixes this too
+                                                       (Closes: #472351).
+
+ -- Manoj Srivastava <srivasta@debian.org>  Fri, 06 Jun 2008 13:48:37 -0500
+
+policycoreutils (2.0.44-2) unstable; urgency=low
+
+  * Bug fix: "policycoreutils: bashism in /bin/sh script", thanks to
+    Raphael Geissert.                               Closes: Bug#473689
+  * Bug fix: "/usr/sbin/semanage: python2.5 is needed to run scripts",
+    thanks to Vaclav Ovsik. The heavy lifting was all his.
+                                                    Closes: Bug#471944
+
+ -- Manoj Srivastava <srivasta@debian.org>  Wed, 02 Apr 2008 23:15:31 -0500
+
+policycoreutils (2.0.44-1) unstable; urgency=low
+
+  * New upstream release
+    * Fixed semodule to correctly handle error when unable to create a handle.
+    * Merged fix fixfiles option processing from Vaclav Ovsik.
+    * Make semodule_expand use sepol_set_expand_consume_base to reduce
+      peak memory usage.
+    * Merged audit2why fix and semanage boolean --on/--off/-1/-0 support
+      from Dan Walsh.
+    * Merged a second fixfiles -C fix from Marshall Miller.
+    * Merged fixfiles -C fix from Marshall Miller.
+    * Merged audit2allow cleanups and boolean descriptions from Dan Walsh.
+    * Merged setfiles -0 support by Benny Amorsen via Dan Walsh.
+    * Merged fixfiles fixes and support for ext4 and gfs2 from Dan Walsh.
+    * Merged replacement for audit2why from Dan Walsh.
+    * Merged update to chcat, fixfiles, and semanage scripts from Dan Walsh.
+    * Merged support for non-interactive newrole command invocation from
+      Tim Reed.
+    * Update Makefile to not build restorecond if
+      /usr/include/sys/inotify.h is not present
+    * Drop verbose output on fixfiles -C from Dan Walsh.
+    * Fix argument handling in fixfiles from Dan Walsh.
+    * Enhance boolean support in semanage, including using the .xml
+      description when available, from Dan Walsh.
+    * load_policy initial load option from Chad Sellers.
+    * Fix semodule option handling from Dan Walsh.
+    * Add deleteall support for ports and fcontexts in semanage from Dan Walsh.
+    * Add genhomedircon script to invoke semodule -Bn from Dan Walsh.
+    * Update semodule man page for -D from Dan Walsh.
+    * Add boolean, locallist, deleteall, and store support to semanage
+      from Dan Walsh.
+
+ -- Manoj Srivastava <srivasta@debian.org>  Tue, 18 Mar 2008 02:09:27 -0500
+
+policycoreutils (2.0.27-1) unstable; urgency=low
+
+  * New upstream release
+    * Improve semodule reporting of system errors from Stephen Smalley.
+    * Fix setfiles selabel option flag setting for 64-bit from Stephen
+      Smalley.
+    * Remove genhomedircon script (functionality is now provided
+      within libsemanage) from Todd Miller.
+    * Fix genhomedircon searching for USER from Todd Miller
+    * Install run_init with mode 0755 from Dan Walsh.
+    * Fix chcat from Dan Walsh.
+    * Fix fixfiles pattern expansion and error reporting from Dan Walsh.
+    * Optimize genhomedircon to compile regexes once from Dan Walsh.
+    * Fix semanage gettext call from Dan Walsh.
+    * Disable dontaudits via semodule -D
+    * Rebase setfiles to use new labeling interface.
+    * Fixed setsebool (falling through to error path on success).
+                                                       Closes: Bug#433883
+    * Merged genhomedircon fixes from Dan Walsh.
+    * Merged setfiles -c usage fix from Dan Walsh.
+    * Merged restorecon fix from Yuichi Nakamura.
+    * Dropped -lsepol where no longer needed.
+    * Merge newrole support for alternate pam configs from Ted X Toth.
+    * Merged merging of restorecon into setfiles from Stephen Smalley.
+    * Merged genhomedircon fix to find conflicting directories correctly
+      from Dan Walsh.
+  * Fix the validation template for semanage from
+    system_u:object_r:%s_home_t to system_u:object_r:%s_home_t:s0, since
+    otherwie the context was always invalid.  Reported by Russell Coker.
+                                                        Closes: Bug#446847
+  * Alignment errors reported against policycoreutils were actually bugs
+    in the underlying libselinux, and have been fixed in the latest
+    versions.                                           Closes: Bug#405975
+  * Fixed the wrong path in the example in the man page for audit2why.
+    Reported by Hans Spaans                             Closes: Bug#458511
+  * The new upstream versions also fixes problems in chcat, duplicating
+    the fix in the NMU (thanks) for bug#440474
+  * Fixed typos in se_dpkg man page, thanks to Justin Pryzby.
+                                                        Closes: Bug#437448
+
+ -- Manoj Srivastava <srivasta@debian.org>  Wed, 06 Feb 2008 15:31:30 -0600
+
+policycoreutils (2.0.16-1) unstable; urgency=low
+
+  * New upstream SVN HEAD
+   + Merged updates to sepolgen-ifgen from Karl MacMillan.
+   +  Merged seobject setransRecords patch to return the first alias from
+      Xavier Toth.
+   + Merged chcat, fixfiles, genhomedircon, restorecond, and restorecon
+     patches from Dan Walsh.
+   + Dropped -b option from load_policy in preparation for always
+     preserving booleans across reloads in the kernel.
+   + Merged genhomedircon patch to use the __default__ setting from Dan
+     Walsh.
+   + Merged setsebool patch to only use libsemanage for persistent boolean
+     changes from Stephen Smalley.
+   + Build fix for setsebool.
+   + Merged move of audit2why to /usr/bin from Dan Walsh.
+   + Merged support for modifying the prefix via semanage from Dan Walsh.
+
+ -- Manoj Srivastava <srivasta@debian.org>  Sun,  6 May 2007 18:06:30 -0500
+
+policycoreutils (2.0.7-1) unstable; urgency=low
+
+  * New upstream trunk release
+    * Merged sepolgen and audit2allow patches to leave generated files in
+      the current directory from Karl MacMillan.
+    * Merged small fix to correct include of errcodes.h in semodule_deps
+      from Dan Walsh.
+    * Merged new audit2allow from Karl MacMillan. This audit2allow depends
+      on the new sepolgen python module. Note that you must run the
+      sepolgen-ifgen tool to generate the data needed by audit2allow to
+      generate refpolicy.
+
+  * Added build and runtime dependencies on sepolgen
+  * Fixed watch file to correctly reflect the fact that this is the trunk
+    version.
+
+ -- Manoj Srivastava <srivasta@debian.org>  Fri, 20 Apr 2007 10:53:23 -0500
+
+policycoreutils (1.34.6-1) unstable; urgency=low
+
+  * New upstream release
+    * Merged restorecond init script LSB compliance patch from Steve Grubb.
+    * Merged newrole O_NONBLOCK fix from Linda Knippers.
+    * Merged restorecond memory leak fix from Steve Grubb.
+    * Merged translations update from Dan Walsh.
+    * Merged chcat fixes from Dan Walsh.
+    * Merged man page fixes from Dan Walsh.
+    * Merged seobject prefix validity checking from Dan Walsh.
+    * Merged seobject exception handler fix from Caleb Case.
+    * Merged setfiles memory leak patch from Todd Miller.
+    * Fixed newrole non-pam build.
+    * Updated version for stable branch.
+    * Merged po file updates from Dan Walsh.
+    * Removed update-po from all target in po/Makefile.
+    * Merged unicode-to-string fix for seobject audit from Dan Walsh.
+    * Merged man page updates to make "apropos selinux" work from Dan Walsh.
+    * Merged newrole man page patch from Michael Thompson.
+    * Merged patch to fix python unicode problem from Dan Walsh.
+    * Merged newrole securetty check from Dan Walsh.
+    * Merged semodule patch to generalize list support from Karl MacMillan.
+    * Merged fixfiles and seobject fixes from Dan Walsh.
+    * Merged semodule support for list of modules after -i from Karl MacMillan.
+    * Merged patch to correctly handle a failure during semanage handle
+      creation from Karl MacMillan.
+    * Merged patch to fix seobject role modification from Dan Walsh.
+    * Merged patches from Dan Walsh to:
+      - omit the optional name from audit2allow
+      - use the installed python version in the Makefiles
+      - re-open the tty with O_RDWR in newrole
+    * Patch from Dan Walsh to correctly suppress warnings in load_policy.
+    * Patch from Dan Walsh to add an pam_acct_msg call to run_init
+    * Patch from Dan Walsh to fix error code returns in newrole
+    * Patch from Dan Walsh to remove verbose flag from semanage man page
+    * Patch from Dan Walsh to make audit2allow use refpolicy Makefile
+      in /usr/share/selinux/<SELINUXTYPE>
+    * Merged patch from Michael C Thompson to clean up genhomedircon
+      error handling.
+    * Merged po file updates from Dan Walsh.
+    * Merged setsebool patch from Karl MacMillan.
+      This fixes a bug reported by Yuichi Nakamura with
+      always setting booleans persistently on an unmanaged system.
+    * Merged patch from Dan Walsh (via Karl MacMillan):
+      * Added newrole audit message on login failure
+      * Add /var/log/wtmp to restorecond.conf watch list
+      * Fix genhomedircon, semanage, semodule_expand man pages.
+    * Merged newrole patch set from Michael Thompson.
+  * Added XS-VCS-Arch and XS-VCS-Browse to debian/control, and upgrraded
+    build dependencies.
+
+ -- Manoj Srivastava <srivasta@debian.org>  Thu, 19 Apr 2007 00:57:48 -0500
+
+policycoreutils (1.32-3) unstable; urgency=high
+
+  * Remember to run arch_export from the correct checked out working tree,
+    so as to include the patches that you tested in the upload.
+
+ -- Manoj Srivastava <srivasta@debian.org>  Wed,  7 Mar 2007 16:27:19 -0600
+
+policycoreutils (1.32-2) unstable; urgency=low
+
+  * Bug fix: "policycoreutils: fixfiles should warn if no suitable fs
+    found", thanks to David Härdeman. This was a missing simple check --
+    now fixfiles does not attempt to run setfiles on an empty set if it
+    did not find a valid directory. Low risk, simple test. (Closes: #397198).
+  * Bug fix: "policycoreutils: audit2allow line 135 should refer to debian
+    package", thanks to Russell Coker. It now asks the users to install
+    the checkpolicy package, not the chckpolicy rpm package.
+                                                           (Closes: #401369).
+  * Bug fix: "policycoreutils: patch for semanage.8", thanks to Russell
+    Coker. This adds some options that had been missing from the man page.
+                                                           (Closes: #406702).
+  * Bug fix: "policycoreutils: fixfiles excludes reiserfs", thanks to
+    David Härdeman. Actually, it should: Support for atomic inode labeling
+    has not been implemented in reiserfs, so there is no SELinux support
+    for it.  This is documented in selinux-doc.  Reiser just won't label
+    files when they are created making it basically worthless for xattr
+    labeling.                                              (Closes: #397196).
+
+ -- Manoj Srivastava <srivasta@debian.org>  Sun,  4 Mar 2007 00:06:37 -0600
+
+policycoreutils (1.32-1) unstable; urgency=low
+
+  * New upstream release
+    * Merged newrole auditing of failures due to user actions from Michael
+      Thompson.
+    * Merged audit2allow -l fix from Yuichi Nakamura.
+    * Merged restorecon -i and -o - support from Karl MacMillan.
+    * Merged semanage/seobject fix from Dan Walsh.
+    * Merged fixfiles -R and verify changes from Dan Walsh.
+    * Updated version for release.
+  * Bug fix: "/sbin/fixfiles: bash-ism in /sbin/fixfiles", thanks to Paul
+    Cupis                                                  (Closes: #391674).
+
+ -- Manoj Srivastava <srivasta@debian.org>  Fri, 20 Oct 2006 17:12:58 -0500
+
+policycoreutils (1.30.29-1) unstable; urgency=low
+
+  * New upstream point release
+    * Man page corrections from Dan Walsh
+    * Change all python invocations to /usr/bin/python -E
+    * Add missing getopt flags to genhomedircon
+
+ -- Manoj Srivastava <srivasta@debian.org>  Wed, 20 Sep 2006 15:09:32 -0500
+
+policycoreutils (1.30.28-2) unstable; urgency=low
+
+  * Bug fix: "Is purging of the whole /etc/selinux a good idea?", thanks
+    to Uwe Hermann. Perhaps not.                           (Closes: #386929).
+  * Bug fix: "postinst: /etc/selinux/config: no such file or directory",
+    thanks to Uwe Hermann                                  (Closes: #386927).
+
+ -- Manoj Srivastava <srivasta@debian.org>  Mon, 11 Sep 2006 16:29:44 -0500
+
+policycoreutils (1.30.28-1) unstable; urgency=low
+
+  * New upstream point release
+    * Merged fix for restorecon symlink handling from Erich Schubert.
+    * Merged fix for restorecon // handling from Erich Schubert.
+    * Merged translations update and fixfiles fix from Dan Walsh.
+  * Fix the initial /etc/selinux/config to refer to
+    SELINUXTYPE=refpolicy-targeted to match what we ship (as opposed to
+    paths on red hat installations).
+  * Bug fix: "Can't open '/etc/selinux/targeted/policy/policy.20': No such
+    file or directory", thanks to Uwe Hermann            (Closes: #384852).
+  * Add md5sums
+  * With this version of policycoreutils, the file /etc/selinux/config
+    shall have the variable SELINUXTYPE set to refpolicy-targeted (you may
+    also set it to be refpolicy-strict or refpolicy-src). Only 1.30.26-3
+    created the file with SELINUXTYPE set to targeted (which is
+    appropriate on Red Hat machines and not Debian). We can't
+    automatically change /etc/selinux/config (preserve user changes) since
+    /etc/selinux/targeted/policy/policy.N might be a legitimate local
+    security policy. If it is not, and if any of the files
+    /etc/selinux/refpolicy-targeted/policy/policy.N,
+    /etc/selinux/refpolicy-strict/policy/policy.N, or
+    /etc/selinux/refpolicy-src/policy/policy.N exist, please select one
+    for the  SELINUXTYPE variable in /etc/selinux/config
+
+ -- Manoj Srivastava <srivasta@debian.org>  Thu,  7 Sep 2006 11:37:47 -0500
+
+policycoreutils (1.30.26-3) unstable; urgency=low
+
+  * Create /etc/selinux/config if that file does not exist. We default to
+    targeted permissive.
+  * Recommend on of the new reference policy based policy packages.
+
+ -- Manoj Srivastava <srivasta@debian.org>  Mon, 21 Aug 2006 16:42:22 -0500
+
+policycoreutils (1.30.26-2) unstable; urgency=low
+
+  * Bug fix: "ImportError: No module named seobject", thanks to Erich
+    Schubert. Fix wrong directory the modules were installed in. (Closes: #383101).
+
+ -- Manoj Srivastava <srivasta@debian.org>  Tue, 15 Aug 2006 00:44:57 -0500
+
+policycoreutils (1.30.26-1) unstable; urgency=low
+
+  * New upstream point release
+    * Merged semanage local file contexts patch from Chris PeBenito.
+
+ -- Manoj Srivastava <srivasta@debian.org>  Sun, 13 Aug 2006 00:50:58 -0500
+
+policycoreutils (1.30.25-1) unstable; urgency=low
+
+  * New upstream point release.
+    * Merged patch from Dan Walsh with:
+      * audit2allow: process MAC_POLICY_LOAD events
+      * newrole:  run shell with - prefix to start a login shell
+      * po:  po file updates
+      * restorecond:  bail if SELinux not enabled
+      * fixfiles: omit -q
+      * genhomedircon:  fix exit code if non-root
+      * semodule_deps:  install man page
+    * Merged secon Makefile fix from Joshua Brindle.
+    * Merged netfilter contexts support patch from Chris PeBenito.
+    * Merged restorecond size_t fix from Joshua Brindle.
+    * Merged secon keycreate patch from Michael LeMay.
+    * Merged restorecond fixes from Dan Walsh.
+      Merged updated po files from Dan Walsh.
+    * Merged python gettext patch from Stephen Bennett.
+    * Merged semodule_deps from Karl MacMillan.
+    * Lindent.
+    * Merged patch from Dan Walsh with:
+      * -p option (progress) for setfiles and restorecon.
+      * disable context translation for setfiles and restorecon.
+      * on/off values for setsebool.
+    * Merged setfiles and semodule_link fixes from Joshua Brindle.
+    * Merged fix for setsebool error path from Serge Hallyn.
+    * Merged patch from Dan Walsh with:
+    *    Updated po files.
+    *    Fixes for genhomedircon and seobject.
+    *    Audit message for mass relabel by setfiles.
+    * Updated fixfiles script for new setfiles location in /sbin.
+    * Merged more translations from Dan Walsh.
+    * Merged patch to relocate setfiles to /sbin for early relabel
+      when /usr might not be mounted from Dan Walsh.
+    * Merged semanage/seobject patch to preserve fcontext ordering in list.
+    * Merged secon patch from James Antill.
+    * Merged patch with updates to audit2allow, secon, genhomedircon,
+      and semanage from Dan Walsh.
+    * Fixed audit2allow and po Makefiles for DESTDIR= builds.
+    * Merged .po file patch from Dan Walsh.
+    * Merged bug fix for genhomedircon.
+    * Merged patch from Dan Walsh.
+      This includes audit2allow changes for analysis plugins,
+      internationalization support for several additional programs
+      and added po files, some fixes for semanage, and several cleanups.
+      It also adds a new secon utility.
+    * Merged fix warnings patch from Karl MacMillan.
+    * Merged semanage prefix support from Russell Coker.
+    * Added a test to setfiles to check that the spec file is
+      a regular file.
+    * Merged audit2allow fixes for refpolicy from Dan Walsh.
+    * Merged fixfiles patch from Dan Walsh.
+    * Merged restorecond daemon from Dan Walsh.
+    * Merged semanage non-MLS fixes from Chris PeBenito.
+    * Merged semanage and semodule man page examples from Thomas Bleher.
+    * Merged semanage labeling prefix patch from Ivan Gyurdiev.
+  * Bug fix: "ImportError: No module named semanage", thanks to Uwe
+    Hermann. Since the new semanage package has moved to the new Python
+    policy, and we depend on it, this issue is resolved.  (Closes: #372543).
+  * Bug fix: "policycoreutils: incorrect syntax in genhomedircon", thanks
+    to Piotr Meyer. The new point release fixes this.     (Closes: #369852).
+  * Remove support for restorecond, since we do not have support for
+    inotify in glibc (glibc 2.4 is sitting in experimental)
+
+ -- Manoj Srivastava <srivasta@debian.org>  Sat, 12 Aug 2006 23:52:53 -0500
+
+policycoreutils (1.30-2) unstable; urgency=low
+
+  * Bug fix: "policycoreutils - FTBFS: error: 'SEMANAGE_CAN_READ'
+    undeclared", thanks to Bastian Blank. Tighten dependency on
+    libsemanage1-dev                                (Closes: #361903).
+
+ -- Manoj Srivastava <srivasta@debian.org>  Tue, 11 Apr 2006 09:07:42 -0500
+
+policycoreutils (1.30-1) unstable; urgency=low
+
+  * New upstream release
+      * Updated version for release.
+      * Merged German translations (de.po) by Debian translation team from Manoj Srivastava.
+      * Merged audit2allow -R support, chcat fix, semanage MLS checks
+        and semanage audit calls from Dan Walsh.
+      * Merged semanage bug fix patch from Ivan Gyurdiev.
+      * Merged improve bindings patch from Ivan Gyurdiev.
+      * Merged semanage usage patch from Ivan Gyurdiev.
+      * Merged use PyList patch from Ivan Gyurdiev.
+      * Merged newrole -V/--version support from Glauber de Oliveira Costa.
+      * Merged genhomedircon prefix patch from Dan Walsh.
+      * Merged optionals in base patch from Joshua Brindle.
+      * Merged seuser/user_extra support patch to semodule_package
+        from Joshua Brindle.
+      * Merged getopt type fix for semodule_link/expand and sestatus
+        from Chris PeBenito.
+      * Merged clone record on set_con patch from Ivan Gyurdiev.
+      * Merged genhomedircon fix from Dan Walsh.
+      * Merged seusers.system patch from Ivan Gyurdiev.
+      * Merged improve port/fcontext API patch from Ivan Gyurdiev.
+      * Merged genhomedircon patch from Dan Walsh.
+      * Merged newrole audit patch from Steve Grubb.
+      * Merged seuser -> seuser local rename patch from Ivan Gyurdiev.
+      * Merged semanage and semodule access check patches from Joshua Brindle.
+      * Merged restorecon, chcat, and semanage patches from Dan Walsh.
+      * Modified newrole and run_init to use the loginuid when
+        supported to obtain the Linux user identity to re-authenticate,
+        and to fall back to real uid.  Dropped the use of the SELinux
+        user identity, as Linux users are now mapped to SELinux users
+        via seusers and the SELinux user identity space is separate.
+      * Merged semanage bug fixes from Ivan Gyurdiev.
+      * Merged semanage fixes from Russell Coker.
+      * Merged chcat.8 and genhomedircon patches from Dan Walsh.
+      * Merged chcat, semanage, and setsebool patches from Dan Walsh.
+      * Merged semanage fixes from Ivan Gyurdiev.
+      * Merged semanage fixes from Russell Coker.
+      * Merged chcat, genhomedircon, and semanage diffs from Dan Walsh.
+      * Merged newrole cleanup patch from Steve Grubb.
+      * Merged setfiles/restorecon performance patch from Russell Coker.
+      * Merged genhomedircon and semanage patches from Dan Walsh.
+      * Merged remove add_local/set_local patch from Ivan Gyurdiev.
+      * Added filename to semodule error reporting.
+      * Merged genhomedircon and semanage patch from Dan Walsh.
+      * Changed semodule error reporting to include argv[0].
+      * Merged semanage getpwnam bug fix from Serge Hallyn (IBM).
+      * Merged patch series from Ivan Gyurdiev.
+        This includes patches to:
+        - cleanup setsebool
+        - update setsebool to apply active booleans through libsemanage
+        - update semodule to use the new semanage_set_rebuild() interface
+        - fix various bugs in semanage
+      * Merged patch from Dan Walsh (Red Hat).
+        This includes fixes for restorecon, chcat, fixfiles, genhomedircon,
+        and semanage.
+      * Merged patch for chcat script from Dan Walsh.
+      * Merged fix for audit2allow long option list from Dan Walsh.
+      * Merged -r option for restorecon (alias for -R) from Dan Walsh.
+      * Merged chcat script and man page from Dan Walsh.
+
+
+ -- Manoj Srivastava <srivasta@debian.org>  Mon, 10 Apr 2006 15:11:05 -0500
+
+policycoreutils (1.28-6) unstable; urgency=low
+
+  * Hmm. Actually ship the postrm file, so we really remove setfiles.old
+
+ -- Manoj Srivastava <srivasta@debian.org>  Sun, 12 Mar 2006 10:55:39 -0600
+
+policycoreutils (1.28-5) unstable; urgency=low
+
+  * Bug fix: "policycoreutils: [L10N:DE] German PO file update", thanks to
+    Holger Wansing                                            (Closes: #353069).
+
+ -- Manoj Srivastava <srivasta@debian.org>  Sun, 12 Mar 2006 10:17:22 -0600
+
+policycoreutils (1.28-4) unstable; urgency=low
+
+  * Bug fix: "undeclared conflict with selinux-utils over
+    /usr/sbin/setsebool", thanks to Robert Bihlmeyer       (Closes: #346356).
+
+ -- Manoj Srivastava <srivasta@debian.org>  Mon, 23 Jan 2006 13:38:02 -0600
+
+policycoreutils (1.28-3) unstable; urgency=low
+
+  * Furthe changes to build dependencies; we now need python 2.4, since we
+    use the selinux and semanage python bindings.
+
+ -- Manoj Srivastava <srivasta@debian.org>  Sun,  1 Jan 2006 18:27:15 -0600
+
+policycoreutils (1.28-2) unstable; urgency=low
+
+  * Fix build dependencies; remove debian revisions from the dependency
+    relations to facilitate backports.
+
+ -- Manoj Srivastava <srivasta@debian.org>  Sat, 31 Dec 2005 14:20:08 -0600
+
+policycoreutils (1.28-1) unstable; urgency=low
+
+  * New upstream release
+    * Updated version for release.
+    * Clarified the genhomedircon warning message.
+    * Changed genhomedircon to warn on use of ROLE in homedir_template
+      if using managed policy, as libsemanage does not yet support it.
+    * Merged genhomedircon bug fix from Dan Walsh.
+    * Revised semodule* man pages to refer to checkmodule and
+      to include example sections.
+    * Merged audit2allow --tefile and --fcfile support from Dan Walsh.
+    * Merged genhomedircon fix from Dan Walsh.
+    * Merged semodule* man pages from Dan Walsh, and edited them.
+    * Changed setfiles to set the MATCHPATHCON_VALIDATE flag to
+      retain validation/canonicalization of contexts during init.
+    * Changed genhomedircon to always use user_r for the role in the
+      managed case since user_get_defrole is broken.
+    * Merged sestatus, audit2allow, and semanage patch from Dan Walsh.
+    * Fixed semodule -v option.
+    * Merged audit2allow python script from Dan Walsh.
+      (old script moved to audit2allow.perl, will be removed later).
+    * Merged genhomedircon fixes from Dan Walsh.
+    * Merged semodule quieting patch from Dan Walsh
+      (inverts default, use -v to restore original behavior).
+    * Merged genhomedircon rewrite from Dan Walsh.
+    * Merged setsebool cleanup patch from Ivan Gyurdiev.
+    * Added -B (--build) option to semodule to force a rebuild.
+    * Reverted setsebool patch to call semanage_set_reload_bools().
+    * Changed setsebool to disable policy reload and to call
+      security_set_boolean_list to update the runtime booleans.
+    * Changed setfiles -c to use new flag to set_matchpathcon_flags()
+      to disable context translation by matchpathcon_init().
+    * Changed setfiles for the context canonicalization support.
+    * Changed setsebool to call semanage_is_managed() interface
+      and fall back to security_set_boolean_list() if policy is
+      not managed.
+    * Merged setsebool memory leak fix from Ivan Gyurdiev.
+    * Merged setsebool patch to call semanage_set_reload_bools()
+      interface from Ivan Gyurdiev.
+    * Merged setsebool patch from Ivan Gyurdiev.
+      This moves setsebool from libselinux/utils to policycoreutils,
+      and rewrites it to use libsemanage for permanent boolean changes.
+    * Merged semodule support for reload, noreload, and store options
+      from Joshua Brindle.
+    * Merged semodule_package rewrite from Joshua Brindle.
+    * Cleaned up usage and error messages and releasing of memory by
+      semodule_* utilities.
+    * Corrected error reporting by semodule.
+    * Updated semodule_expand for change to sepol interface.
+    * Merged fixes for make DESTDIR= builds from Joshua Brindle.
+    * Updated semodule_package for sepol interface changes.
+    * Updated semodule_expand/link for sepol interface changes.
+    * Merged non-PAM Makefile support for newrole and run_init from Timothy Wood.
+    * Updated semodule_expand to use get interfaces for hidden sepol_module_package type.
+    * Merged newrole and run_init pam config patches from Dan Walsh (Red Hat).
+    * Merged fixfiles patch from Dan Walsh (Red Hat).
+    * Updated semodule for removal of semanage_strerror.
+    * Updated semodule_link and semodule_expand to use shared libsepol.
+    Fixed audit2why to call policydb_init prior to policydb_read (still
+    uses the static libsepol).
+  * Bug fix: "policycoreutils: doesn't remove /usr/sbin/setfiles.old on
+    purge", thanks to Lars Wirzenius                     (Closes: #341418).
+
+ -- Manoj Srivastava <srivasta@debian.org>  Fri, 30 Dec 2005 00:56:01 -0600
+
+policycoreutils (1.26-1) unstable; urgency=low
+
+  * New upstream release
+     * Updated version for release.
+     * Changed setfiles -c to translate the context to raw format
+       prior to calling libsepol.
+     * Changed semodule to report errors even without -v,
+       to detect extraneous arguments, and corrected usage message.
+     * Merged patch for fixfiles -C from Dan Walsh.
+     * Merged fixes for semodule_link and sestatus from Serge Hallyn (IBM).
+       Bugs found by Coverity.
+     * Merged patch to move module read/write code from libsemanage
+       to libsepol from Jason Tang (Tresys).
+     * Changed semodule* to link with libsemanage.
+     * Merged restorecon patch from Ivan Gyurdiev.
+     * Merged load_policy, newrole, and genhomedircon patches from Red Hat.
+     * Merged loadable module support from Tresys Technology.
+  * Updated build depends.                                  (Closes: #326153).
+  * policycoreutils: run_init blocks sigCHLD but doesn't unblock it before
+    exec, thanks to Erich Schubert                          (Closes: #326152).
+
+ -- Manoj Srivastava <srivasta@debian.org>  Thu, 15 Sep 2005 01:06:11 -0500
+
+policycoreutils (1.24-2) unstable; urgency=low
+
+  * use /etc/adduser.conf as authoritative for the starting UID, and
+    otherwise change genhomedircon to match Debian practice. This had
+    worked while Russell Coker maintained this package, but this patch was
+    lost in transition.
+  * Bug fix: "FTBFS: build-depends not strict enough", thanks to Christian
+    T. Steigies                                           (Closes: #316440).
+
+ -- Manoj Srivastava <srivasta@debian.org>  Thu,  7 Jul 2005 13:11:01 -0500
+
+policycoreutils (1.24-1) unstable; urgency=low
+
+  * New upstream release
+        * Updated version for release.
+        * Merged fixfiles and newrole patch from Dan Walsh.
+        * Merged audit2why man page from Dan Walsh.
+        * Extended audit2why to incorporate booleans and local user
+          settings when analyzing audit messages.
+        * Updated audit2why for sepol_ prefixes on Flask types to
+          avoid namespace collision with libselinux, and to
+          include <selinux/selinux.h> now.
+        * Added audit2why utility.
+        * Merged patch for fixfiles from Dan Walsh.
+          Allow passing -F to force reset of customizable contexts.
+        * Fixed signed/unsigned pointer bug in load_policy.
+        * Reverted context validation patch for genhomedircon.
+        * Reverted load_policy is_selinux_enabled patch from Dan Walsh.
+          Otherwise, an initial policy load cannot be performed using
+          load_policy, e.g. for anaconda.
+        * Merged load_policy is_selinux_enabled patch from Dan Walsh.
+        * Merged restorecon verbose output patch from Dan Walsh.
+        * Merged setfiles altroot patch from Chris PeBenito.
+        * Merged context validation patch for genhomedircon from Eric Paris.
+        * Changed setfiles -c to call set_matchpathcon_flags(3) to
+          turn off processing of .homedirs and .local.
+        * Merged rewrite of genhomedircon by Eric Paris.
+        * Changed fixfiles to relabel jfs since it now supports security xattrs
+          (as of 2.6.11).  Removed reiserfs until 2.6.12 is released with
+          fixed support for reiserfs and selinux.
+
+ -- Manoj Srivastava <srivasta@debian.org>  Mon, 27 Jun 2005 16:00:56 -0500
+
+policycoreutils (1.22+0-2) unstable; urgency=low
+
+  * New upstream release
+  * Bug fix: "policycoreutils: package description typo(s) and the like",
+    thanks to Florian Zumbiehl                         (Closes: #300054).
+
+ -- Manoj Srivastava <srivasta@debian.org>  Thu, 17 Mar 2005 19:54:20 -0600
+
+policycoreutils (1.22+0-1) unstable; urgency=low
+
+  * An release number designed to fix up fix the broken orig.tar.gz in the
+    previous release. This is really the 1.22-2 release, but the
+    1.22.orig.tar.gz in the archive is an incorrect one.
+  * Bug fix: "policycoreutils: FTBFS due to undeclared functions", thanks
+    to Christian T. Steigies. The build dependencies needed to  be
+    versioned as well.                                 (Closes: #299338).
+
+ -- Manoj Srivastava <srivasta@debian.org>  Sun, 13 Mar 2005 13:36:24 -0600
+
+policycoreutils (1.22-1) unstable; urgency=low
+
+  * New upstream release
+    * Merged restorecon and genhomedircon patch from Dan Walsh.
+    * Merged load_policy and genhomedircon patch from Dan Walsh.
+    * Merged fixfiles and genhomedircon patch from Dan Walsh.
+    * Merged several fixes from Ulrich Drepper.
+    * Changed load_policy to fall back to the original policy upon
+      an error from sepol_genusers().
+    * Merged new genhomedircon script from Dan Walsh.
+    * Changed load_policy to call sepol_genusers().
+    * Changed relabel Makefile target to use restorecon.
+    * Merged restorecon patch from Dan Walsh.
+    * Merged sestatus patch from Dan Walsh.
+    * Merged further change to fixfiles -C from Dan Walsh.
+    * Merged further patches for restorecon/setfiles -e and fixfiles -C.
+    * Merged patch for fixfiles -C option from Dan Walsh.
+    * Merged patch -e support for restorecon from Dan Walsh.
+    * Merged updated -e support for setfiles from Dan Walsh.
+    * Merged patch for open_init_pty from Manoj Srivastava.
+    * Merged updated fixfiles script from Dan Walsh.
+    * Merged updated man page for fixfiles from Dan Walsh and re-added unzipped.
+    * Reverted fixfiles patch for file_contexts.local;
+      obsoleted by setfiles rewrite.
+    * Merged error handling patch for restorecon from Dan Walsh.
+    * Merged semi raw mode for open_init_pty helper from Manoj Srivastava.
+    * Rewrote setfiles to use matchpathcon and the new interfaces
+      exported by libselinux (>= 1.21.5).
+    * Prevent overflow of spec array in setfiles.
+    * Merged genhomedircon STARTING_UID bug fix from Dan Walsh.
+    * Merged newrole -l support from Darrel Goeddel (TCS).
+    * Merged fixfiles patch for file_contexts.local from Dan Walsh.
+    * Fixed restorecon to not treat errors from is_context_customizable()
+      as a customizable context.
+    * Merged setfiles/restorecon patch to not reset user field unless
+      -F option is specified from Dan Walsh.
+    * Merged open_init_pty helper for run_init from Manoj Srivastava.
+    * Merged audit2allow and genhomedircon man pages from Manoj Srivastava.
+    * Merged customizable contexts patch for restorecon/setfiles from Dan Walsh.
+
+ -- Manoj Srivastava <srivasta@debian.org>  Sat, 12 Mar 2005 18:07:50 -0600
+
+policycoreutils (1.20-3) unstable; urgency=low
+
+  * policycoreutils_1.20-2(ia64/unstable): FTBFS: missing build-depends,
+    thanks to Lamont Jones. I wonder why this builds on my debootstrap
+    installed UML with just build essential ad selinux. (Closes: #291501).
+
+ -- Manoj Srivastava <srivasta@debian.org>  Fri, 21 Jan 2005 10:30:16 -0600
+
+policycoreutils (1.20-2) unstable; urgency=low
+
+  * Arranged to flush stdout and stderr run at all the exit points for the
+    open_init_pty executable. Also, improved comments and man page for
+    genhomedircon, and corrected the default value for STARTING_UID.
+
+ -- Manoj Srivastava <srivasta@debian.org>  Thu, 20 Jan 2005 23:15:13 -0600
+
+policycoreutils (1.20-1) unstable; urgency=low
+
+  * New upstream release.
+        * Merged fixfiles rewrite from Dan Walsh.
+        * Merged restorecon patch from Dan Walsh.
+        * Merged fixfiles and restorecon patches from Dan Walsh.
+        * Changed restorecon to ignore ENOENT errors from matchpathcon.
+        * Merged nonls patch from Chris PeBenito.
+        * Removed fixfiles.cron.
+        * Merged run_init.8 patch from Dan Walsh.
+  * Added man pages for genhomedircon, audit2allow, and all the se_*
+    scripts.
+  * Converted to new build system, and arch.
+  * Bug fix: "policycoreutils: Too heavy dependency on the package
+    expect", thanks to YAMASHITA Junji. rewrote open_init_tty in C, and
+    added man page. I guess it can be moved to /usr/bin, though I don't
+    really see what other purpose it can serve.             (Closes: #255674).
+  * Bug fix: "policycoreutils: error in genhomedircon: doesn't recognize
+    FIRST_UID", thanks to Thomas Bleher. Since this was packaged from
+    scratch, this debian specific flaw has been corrected.  (Closes: #281988).
+
+ -- Manoj Srivastava <srivasta@debian.org>  Thu, 20 Jan 2005 01:53:32 -0600
+
+policycoreutils (1.18-1) unstable; urgency=low
+
+  * New upstream version.  Setfiles now works with policy Makefile.
+
+ -- Russell Coker <russell@coker.com.au>  Sat,  6 Nov 2004 02:31:00 +1100
+
+policycoreutils (1.16-2) unstable; urgency=low
+
+  * Depends on libsepol for load_polixy.
+
+ -- Russell Coker <russell@coker.com.au>  Mon, 23 Aug 2004 19:25:00 +1000
+
+policycoreutils (1.16-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Russell Coker <russell@coker.com.au>  Fri, 20 Aug 2004 22:48:00 +1000
+
+policycoreutils (1.14-6) unstable; urgency=low
+
+  * Minor newrole bugfix from Chad Hanson <chanson@TrustedCS.com>.
+
+ -- Russell Coker <russell@coker.com.au>  Tue, 10 Aug 2004 16:23:00 +1000
+
+policycoreutils (1.14-5) unstable; urgency=low
+
+  * Fixed a couple of minor bugs in error handling for genhomedircon.
+
+ -- Russell Coker <russell@coker.com.au>  Sun,  8 Aug 2004 22:39:00 +1000
+
+policycoreutils (1.14-4) unstable; urgency=low
+
+  * Made it depend on the latest sed, genhomedircon doesn't seem to work with
+    older versions.
+
+ -- Russell Coker <russell@coker.com.au>  Sun,  1 Aug 2004 17:50:00 +1000
+
+policycoreutils (1.14-3) unstable; urgency=low
+
+  * Changed genhomedircon to search /etc/adduser.conf for the first UID for a
+    non-system user.  The previous version really stuffed up a system that had
+    a system user with a home directory under /var/run.
+
+ -- Russell Coker <russell@coker.com.au>  Mon, 19 Jul 2004 22:56:00 +1000
+
+policycoreutils (1.14-2) unstable; urgency=low
+
+  * Made it build-depend on the latest libselinux1-dev.
+    Closes: #257351
+
+ -- Russell Coker <russell@coker.com.au>  Sat,  3 Jul 2004 22:54:00 +1000
+
+policycoreutils (1.14-1) unstable; urgency=low
+
+  * New upstream version, adds -o option to setfiles and a few other features.
+
+ -- Russell Coker <russell@coker.com.au>  Wed, 30 Jun 2004 15:21:00 +1000
+
+policycoreutils (1.12-5) unstable; urgency=low
+
+  * Add better error messages to genhomedircon and make it not abort when only
+    one role is specified for a user without {}.
+
+ -- Russell Coker <russell@coker.com.au>  Sun, 20 Jun 2004 14:03:00 +1000
+
+policycoreutils (1.12-4) unstable; urgency=low
+
+  * Use the upstream genhomedircon and patch it to use DHOME from
+    /etc/adduser.conf
+
+ -- Russell Coker <russell@coker.com.au>  Thu, 10 Jun 2004 17:59:00 +1000
+
+policycoreutils (1.12-3) unstable; urgency=low
+
+  * Made setfiles -s use lstat() instead of stat() so it can label sym-links.
+
+ -- Russell Coker <russell@coker.com.au>  Sun, 30 May 2004 14:08:00 +1000
+
+policycoreutils (1.12-2) unstable; urgency=low
+
+  * Added /selinux directory.
+
+ -- Russell Coker <russell@coker.com.au>  Sat, 29 May 2004 13:48:00 +1000
+
+policycoreutils (1.12-1) unstable; urgency=low
+
+  * New upstream version and taking over the package.
+
+  * Newrole patch and added fixfiles.
+
+ -- Russell Coker <russell@coker.com.au>  Sat, 15 May 2004 16:34:00 +1000
+
+policycoreutils (1.10-0.1) unstable; urgency=low
+
+  * NMU for new upstream version.
+
+ -- Russell Coker <russell@coker.com.au>  Fri,  9 Apr 2004 15:09:00 +1000
+
+policycoreutils (1.8-0.1) unstable; urgency=low
+
+  * NMU for new upstream version.
+
+  * Moved load_policy back to /usr/sbin.
+
+ -- Russell Coker <russell@coker.com.au>  Tue, 16 Mar 2004 19:05:00 +1100
+
+policycoreutils (1.6-0.3) unstable; urgency=low
+
+  * New upload because of rejected build-depends.
+
+ -- Russell Coker <russell@coker.com.au>  Thu, 26 Feb 2004 22:56:00 +1100
+
+policycoreutils (1.6-0.1) unstable; urgency=low
+
+  * NMU to upload new upstream version.
+
+ -- Russell Coker <russell@coker.com.au>  Thu, 26 Feb 2004 21:46:00 +1100
+
+policycoreutils (1.4-4) unstable; urgency=low
+
+  * debian/patches/setfiles-order.patch:
+   - New patch to fix ordering of file context regexps, from
+     Stephen Smalley.
+
+ -- Colin Walters <walters@debian.org>  Mon, 23 Feb 2004 04:43:36 +0000
+
+policycoreutils (1.4-3) unstable; urgency=low
+
+  * Rebuild with fixed tar to remove /DEBIAN (Closes: #231541)
+  * Apply (modified) patch from Robert Bihlmeyer to handle
+    regexps with starting metacharacters (Closes: #231561)
+
+ -- Colin Walters <walters@debian.org>  Sun, 15 Feb 2004 03:46:17 +0000
+
+policycoreutils (1.4-2) unstable; urgency=low
+
+  * debian/genhomedircon:
+    - New file, used to set contexts in home directories.
+  * debian/control:
+    - Conflict with selinux-policy-default (<< 1:1.4-5).
+
+ -- Colin Walters <walters@debian.org>  Wed,  4 Feb 2004 13:46:23 +0000
+
+policycoreutils (1.4-1) unstable; urgency=low
+
+  * debian/control:
+    - Build-Depend on libpam0g-dev (Closes: #225727)
+    - Depend on expect (Closes: #225880)
+
+ -- Colin Walters <walters@debian.org>  Sun,  4 Jan 2004 00:16:55 +0000
+
+policycoreutils (1.4-0.2) unstable; urgency=low
+
+  * Fixed a the help for audit2allow to have the right name.
+
+ -- Russell Coker <russell@coker.com.au>  Fri, 26 Dec 2003 10:37:00 +1100
+
+policycoreutils (1.4-0.1) unstable; urgency=low
+
+  * New upstream, no significant change as mostly I had included the changes
+    already.
+
+ -- Russell Coker <russell@coker.com.au>  Sat,  6 Dec 2003 22:59:00 +1100
+
+policycoreutils (1.2-0.2) unstable; urgency=low
+
+  * Put in a symlink for /usr/sbin/load_policy so existing scripts will work.
+
+ -- Russell Coker <russell@coker.com.au>  Fri, 21 Nov 2003 12:43:00 +1100
+
+policycoreutils (1.2-0.1) unstable; urgency=low
+
+  * Patches from CVS upstream version, makes setfiles slightly faster and
+    adds audit2allow.
+
+ -- Russell Coker <russell@coker.com.au>  Fri, 21 Nov 2003 01:20:00 +1100
+
+policycoreutils (1.2-0) unstable; urgency=low
+
+  * New upstream version (NMU).  Setfiles is now a lot faster.
+
+ -- Russell Coker <russell@coker.com.au>  Wed, 19 Nov 2003 18:18:00 +1100
+
+policycoreutils (1.0-1) unstable; urgency=low
+
+  * Initial version.
+
+ -- Colin Walters <walters@debian.org>  Thu,  3 Jul 2003 17:16:19 -0400

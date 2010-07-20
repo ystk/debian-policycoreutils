@@ -1,0 +1,4 @@
+policycoreutils: script-in-etc-init.d-not-registered-via-update-rc.d /etc/init.d/policycoreutils
+policycoreutils: non-standard-toplevel-dir selinux/
+policycoreutils: package-contains-empty-directory selinux/
+policycoreutils: init.d-script-does-not-provide-itself /etc/init.d/policycoreutils
