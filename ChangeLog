@@ -1,3 +1,177 @@
+2.1.10 2011-12-21
+	* Remove excess whitespace
+	* sandbox: Add back in . functions to sandbox.init script
+	* Fix Makefile to match other policycoreutils Makefiles
+	* semanage: drop unused translation getopt
+
+2.1.9 2011-12-05
+	* sandbox: move sandbox.conf.5 to just sandbox.5
+	* po: Makefile use -p to preserve times to allow multilib simultatious installs
+	* of po files
+	* sandbox: Allow user to specify the DPI value for X in a sandbox
+	* sandbox: make sure the domain launching sandbox has at least 100 categories
+	* sandbox: do not try forever to find available category set
+	* sandbox: only complain if sandbox unable to launch
+	* sandbox: init script run twice is still successful
+	* semanage: print local and dristo equiv rules
+	* semanage: check file equivalence rules for conflict
+	* semanage: Make sure semanage fcontext -l -C prints even if local keys
+	* are not defined
+	* semanage: change src,dst to target,substitute for equivalency
+	* sestatus: Updated sestatus and man pages.
+	* Added SELinux config file man page.
+	* add clean target to man Makefile
+
+2.1.8 2011-11-03
+	* sandbox: Maintain the LANG environment into the sandbox
+	* audit2allow: use audit2why internally
+	* fixfiles: label /root but not /var/lib/BackupPC
+	* semanage: update local boolean settings is dealing with localstore
+	* semanage: missing modify=True
+	* semanage: set modified correctly
+	* restorecond: make restorecond dbuss-able
+	* restorecon: Always check return code on asprintf
+	* restorecond: make restorecond -u exit when terminal closes
+	* sandbox: introduce package name and language stuff
+	* semodule_package: remove semodule_unpackage on clean
+	* fix sandbox Makefile to support DESTDIR
+	* semanage: Add -o description to the semanage man page
+	* make use of the new realpath_not_final function
+	* setfiles: close /proc/mounts file when finished
+	* semodule: Document semodule -p in man page
+	* setfiles: fix use before initialized
+	* restorecond: Add .local/share as a directory to watch
+
+2.1.7 2011-09-27
+	* semanage: fix indentation error in seobject
+
+2.1.6 2011-09-15
+	* sepolgen-ifgen: new attr-helper does something
+	* audit2allow: use alternate policy file
+	* audit2allow: sepolgen-ifgen use the attr helper
+	* setfiles: switch from stat to stat64
+	* setfiles: Fix potential crash using dereferenced ftsent
+	* setfiles: do not wrap * output at 80 characters
+	* sandbox: add -Wall and -Werror to makefile
+	* sandbox: add sandbox cgroup support
+	* sandbox: rewrite /tmp handling
+	* sandbox: do not bind mount so much
+	* sandbox: add level based kill option
+	* sandbox: cntrl-c should kill entire process control group
+	* Create a new preserve_tunables flag in sepol_handle_t.
+	* semanage: show running and disk setting for booleans
+	* semanage: Dont print heading if no items selected
+	* sepolgen: audit2allow is mistakakenly not allowing valid module names
+	* semanage: Catch RuntimeErrors, that can be generated when SELinux is disabled
+	* More files to ignore
+	* tree: default make target to all not install
+	* sandbox: do not load unused generic init functions
+
+2.1.5 2011-08-26
+	* setfiles: Fix process_glob to handle error situations
+	* sandbox: Allow seunshare to run as root
+	* sandbox: trap sigterm to make sure sandbox
+	* sandbox: pass DPI from the desktop
+	* sandbox: seunshare: introduce helper spawn_command
+	* sandbox: seunshare: introduce new filesystem helpers
+	* sandbox: add -C option to not drop
+	* sandbox: split seunshare caps dropping
+	* sandbox: use dbus-launch
+	* sandbox: numerous simple updates to sandbox
+	* sandbox: do not require selinux context
+	* sandbox: Makefile: new man pages
+	* sandbox: rename dir to srcdir
+	* sandbox: allow users specify sandbox window size
+	* sandbox: check for paths up front
+	* sandbox: use defined values for paths rather
+	* sandbox: move seunshare globals to the top
+	* sandbox: whitespace fix
+	* semodule_package: Add semodule_unpackage executable
+	* setfiles: get rid of some stupid globals
+	* setfiles: move exclude_non_seclabel_mounts to a generic location
+
+2.1.4 2011-08-17
+	* run_init: clarification of the usage in the
+	* semanage: fix usage header around booleans
+	* semanage: remove useless empty lines
+	* semanage: update man page with new examples
+	* semanage: update usage text
+	* semanage: introduce file context equivalencies
+	* semanage: enable and disable modules
+	* semanage: output all local modifications
+	* semanage: introduce extraction of local configuration
+	* semanage: cleanup error on invalid operation
+	* semanage: handle being called with no arguments
+	* semanage: return sooner to save CPU time
+	* semanage: surround getopt with try/except
+	* semanage: use define/raise instead of lots of
+	* semanage: some options are only valid for
+	* semanage: introduce better deleteall support
+	* semanage: do not allow spaces in file
+	* semanage: distinguish between builtin and local permissive
+	* semanage: centralized ip node handling
+	* setfiles: make the restore function exclude() non-static
+	* setfiles: use glob to handle ~ and
+	* fixfiles: do not hard code types
+	* fixfiles: stop trying to be smart about
+	* fixfiles: use new kernel seclabel option
+	* fixfiles: pipe everything to cat before sending
+	* fixfiles: introduce /etc/selinux/fixfiles_exclude_dirs
+	* semodule: support for alternative root paths
+
+2.1.3 2011-08-03
+	* semanage: fix indention
+	* semodule_package: fix man page typo
+	* semodule_expand: update man page with -a
+	* semanage: handle os errors
+	* semanage: fix traceback with bad options
+	* semanage: show usage on -h or --help
+	* semanage: introduce more deleteall options
+	* semanage: verify ports < 65536
+	* transaction into semanageRecords
+	* make get_handle a method of semanageRecords
+	* remove a needless blank line
+	* make process_one error if not initialized correctly
+	* fixfiles: correct usage for r_opts.rootpath
+	* put -p in help for restorecon and
+	* fixfiles: do not try to only label
+	* fixfiles clean up /var/run and /var/lib/debug
+	* fixfiles delete tmp sockets and pipes rather
+	* fixfile use find -delete instead of pipe
+	* chcat man page typo
+	* add man page for genhomedircon
+	* setfiles fix typo
+	* setsebool should inform users they need to
+	* setsebool typos
+	* open_init_tty man page typos
+	* Don't add user site directory to sys.path
+	* newrole retain CAP_SETPCAP
+
+2.1.2 2011-08-02
+	* seunshare: define _GNU_SOURCE earlier
+	* make ignore_enoent do something
+	* restorecond: first user logged in is not noticed
+	* Repo: update .gitignore
+
+2.1.1 2011-08-01
+	* Man page updates
+	* restorecon fix for bad inotify assumptions
+
+2.1.0 2011-07-27
+	* Release, minor version bump
+
+2.0.86 2011-04-11
+	* Use correct color range in mcstrand by Richard Haines.
+
+2.0.85 2010-12-20
+	* Move newrole to use libcap-ng from Dan Walsh
+
+2.0.84 2010-11-16
+	* Add mcstrans support from Ted Toth with modifications from Steve Lawrence.
+
+2.0.83 2010-06-10
+	* Add sandbox support from Dan Walsh with modifications from Steve Lawrence.
+
 2.0.82 2010-03-12
 	* Add avc's since boot from Dan Walsh.
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: new_policycoreutils.HEAD.te\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-28 17:28+0000\n"
+"POT-Creation-Date: 2009-06-24 10:53-0400\n"
 "PO-Revision-Date: 2008-03-24 13:20+0530\n"
 "Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
 "Language-Team: Telugu <en@li.org>\n"
@@ -87,11 +87,11 @@ msgstr "దృవీకరణ విఫలమైంది.\n"
 msgid "Could not set exec context to %s.\n"
 msgstr "%s కు exec సందర్భమును అమర్చలేకపోయింది.\n"
 
-#: ../audit2allow/audit2allow:228
+#: ../audit2allow/audit2allow:217
 msgid "******************** IMPORTANT ***********************\n"
 msgstr "******************** ముఖ్యమైన ***********************\n"
 
-#: ../audit2allow/audit2allow:229
+#: ../audit2allow/audit2allow:218
 msgid "To make this policy package active, execute:"
 msgstr "ఈ విధాన సంకలనంను క్రియాశీలం చేయుటకు, నిర్వర్తించుము:"
 
@@ -120,774 +120,803 @@ msgstr "%s కొరకు MLS స్థాయిని అమర్చలేక
 msgid "global"
 msgstr "సార్వత్రిక"
 
-#: ../semanage/seobject.py:209
+#: ../semanage/seobject.py:206
+#, python-format
+msgid "Unable to open %s: translations not supported on non-MLS machines: %s"
+msgstr "%s ను తెరువలేక పోయింది: అనువాదములు non-MLS మిషన్స్‍ పైన మద్దతీయబడువు:%s"
+
+#: ../semanage/seobject.py:239
+msgid "Level"
+msgstr "స్థాయి"
+
+#: ../semanage/seobject.py:239
+msgid "Translation"
+msgstr "అనువాదము"
+
+#: ../semanage/seobject.py:247 ../semanage/seobject.py:261
+#, python-format
+msgid "Translations can not contain spaces '%s' "
+msgstr "అనువాదములు ఖాళీలు '%s' ను కలిగి ఉండలేవు"
+
+#: ../semanage/seobject.py:250
+#, python-format
+msgid "Invalid Level '%s' "
+msgstr "సరికాని స్థాయి '%s' "
+
+#: ../semanage/seobject.py:253
+#, python-format
+msgid "%s already defined in translations"
+msgstr "%s ఇప్పటికే అనువాదములనందు నిర్వచించబడినది"
+
+#: ../semanage/seobject.py:265
+#, python-format
+msgid "%s not defined in translations"
+msgstr "అనువాదములనందు %s నిర్వచించబడలేదు"
+
+#: ../semanage/seobject.py:290
 msgid "Not yet implemented"
 msgstr "ఇంకా మెరుగుపరచ లేదు"
 
-#: ../semanage/seobject.py:213
+#: ../semanage/seobject.py:294
 msgid "Semanage transaction already in progress"
 msgstr ""
 
-#: ../semanage/seobject.py:222
+#: ../semanage/seobject.py:303
 msgid "Could not start semanage transaction"
 msgstr "semanage వ్యవహారాన్ని ప్రారంభించ లేకపోయింది"
 
-#: ../semanage/seobject.py:228
+#: ../semanage/seobject.py:309
 #, fuzzy
 msgid "Could not commit semanage transaction"
 msgstr "semanage వ్యవహారాన్ని ప్రారంభించ లేకపోయింది"
 
-#: ../semanage/seobject.py:232
+#: ../semanage/seobject.py:313
 msgid "Semanage transaction not in progress"
 msgstr ""
 
-#: ../semanage/seobject.py:242
-msgid "dontaudit requires either 'on' or 'off'"
-msgstr ""
-
-#: ../semanage/seobject.py:255
+#: ../semanage/seobject.py:325
 #, fuzzy
 msgid "Could not list SELinux modules"
 msgstr "SELinux వినియోగదారులను జాబితా చేయలేకపోయింది"
 
-#: ../semanage/seobject.py:266
+#: ../semanage/seobject.py:336
 #, fuzzy
 msgid "Permissive Types"
 msgstr "అనుమతిగల"
 
-#: ../semanage/seobject.py:308
+#: ../semanage/seobject.py:378
 #, python-format
 msgid "Could not set permissive domain %s (module installation failed)"
 msgstr ""
 
-#: ../semanage/seobject.py:314
+#: ../semanage/seobject.py:384
 #, python-format
 msgid "Could not remove permissive domain %s (remove failed)"
 msgstr ""
 
-#: ../semanage/seobject.py:340 ../semanage/seobject.py:400
-#: ../semanage/seobject.py:446 ../semanage/seobject.py:528
-#: ../semanage/seobject.py:595 ../semanage/seobject.py:653
-#: ../semanage/seobject.py:863 ../semanage/seobject.py:1436
-#: ../semanage/seobject.py:1500 ../semanage/seobject.py:1512
-#: ../semanage/seobject.py:1593 ../semanage/seobject.py:1644
+#: ../semanage/seobject.py:410 ../semanage/seobject.py:470
+#: ../semanage/seobject.py:516 ../semanage/seobject.py:598
+#: ../semanage/seobject.py:665 ../semanage/seobject.py:723
+#: ../semanage/seobject.py:933 ../semanage/seobject.py:1506
+#: ../semanage/seobject.py:1570 ../semanage/seobject.py:1582
+#: ../semanage/seobject.py:1663 ../semanage/seobject.py:1714
 #, python-format
 msgid "Could not create a key for %s"
 msgstr "%s కొరకు కీను సృష్టించలేకపోయింది"
 
-#: ../semanage/seobject.py:344 ../semanage/seobject.py:404
-#: ../semanage/seobject.py:450 ../semanage/seobject.py:456
+#: ../semanage/seobject.py:414 ../semanage/seobject.py:474
+#: ../semanage/seobject.py:520 ../semanage/seobject.py:526
 #, python-format
 msgid "Could not check if login mapping for %s is defined"
 msgstr "%s కొరకు లాగిన్ మాపింగ్ నిర్వచించబడివుంటే పరిశీలించకుండా ఉండేది"
 
-#: ../semanage/seobject.py:346
+#: ../semanage/seobject.py:416
 #, python-format
 msgid "Login mapping for %s is already defined"
 msgstr "%s కొరకు లాగిన్ మాపింగ్ ఇప్పటికే నిర్వచించబడివుంది"
 
-#: ../semanage/seobject.py:351
+#: ../semanage/seobject.py:421
 #, fuzzy, python-format
 msgid "Linux Group %s does not exist"
 msgstr "లినక్స్‍ వినియోగదారి %s లేడు"
 
-#: ../semanage/seobject.py:356
+#: ../semanage/seobject.py:426
 #, python-format
 msgid "Linux User %s does not exist"
 msgstr "లినక్స్‍ వినియోగదారి %s లేడు"
 
-#: ../semanage/seobject.py:360
+#: ../semanage/seobject.py:430
 #, python-format
 msgid "Could not create login mapping for %s"
 msgstr "%s కొరకు లాగిన్ మాపింగ్‌ను సృష్టించలేదు"
 
-#: ../semanage/seobject.py:364 ../semanage/seobject.py:542
+#: ../semanage/seobject.py:434 ../semanage/seobject.py:612
 #, python-format
 msgid "Could not set name for %s"
 msgstr "%s కొరకు నామమును అమర్చలేక పోయింది"
 
-#: ../semanage/seobject.py:369 ../semanage/seobject.py:552
+#: ../semanage/seobject.py:439 ../semanage/seobject.py:622
 #, python-format
 msgid "Could not set MLS range for %s"
 msgstr "%s కొరకు MLS స్థాయిని అమర్చలేకపోయింది"
 
-#: ../semanage/seobject.py:373
+#: ../semanage/seobject.py:443
 #, python-format
 msgid "Could not set SELinux user for %s"
 msgstr "%s కొరకు SELinux వినియోగదారిని అమర్చలేక పోయింది"
 
-#: ../semanage/seobject.py:377
+#: ../semanage/seobject.py:447
 #, python-format
 msgid "Could not add login mapping for %s"
 msgstr "%s కొరకు లాగిన్ మాపింగ్‌ను జతచేయ లేకపోయింది"
 
-#: ../semanage/seobject.py:389 ../semanage/seobject.py:392
+#: ../semanage/seobject.py:459 ../semanage/seobject.py:462
 msgid "add SELinux user mapping"
 msgstr "SELinux వినియోగదారి మాపింగ్‌ను జతచేయి"
 
-#: ../semanage/seobject.py:396
+#: ../semanage/seobject.py:466
 msgid "Requires seuser or serange"
 msgstr "seuser లేదా serange అవసరము"
 
-#: ../semanage/seobject.py:406 ../semanage/seobject.py:452
+#: ../semanage/seobject.py:476 ../semanage/seobject.py:522
 #, python-format
 msgid "Login mapping for %s is not defined"
 msgstr "%s కొరకు లాగిన్ మాపింగ్ నిర్వచించబడలేదు"
 
-#: ../semanage/seobject.py:410
+#: ../semanage/seobject.py:480
 #, python-format
 msgid "Could not query seuser for %s"
 msgstr "%s కొరకు seuser ను క్వరీ చేయలేకపోయింది"
 
-#: ../semanage/seobject.py:426
+#: ../semanage/seobject.py:496
 #, python-format
 msgid "Could not modify login mapping for %s"
 msgstr "%s కొరకు లాగిన్ మాపింగ్‌ను సవరించ లేకపోయింది"
 
-#: ../semanage/seobject.py:458
+#: ../semanage/seobject.py:528
 #, python-format
 msgid "Login mapping for %s is defined in policy, cannot be deleted"
 msgstr "%s కొరకు లాగిన్ మాపింగ్ విధానంనందు నిర్వచించబడినది, తొలగించబడలేదు"
 
-#: ../semanage/seobject.py:462
+#: ../semanage/seobject.py:532
 #, python-format
 msgid "Could not delete login mapping for %s"
 msgstr "%s కు లాగిన్ మాపింగ్‌ను తొలగించలేక పోయింది"
 
-#: ../semanage/seobject.py:485
+#: ../semanage/seobject.py:555
 msgid "Could not list login mappings"
 msgstr "లాగిన్ మాపింగ్స్‍‌ను జాబితా చేయలేకపోయింది"
 
-#: ../semanage/seobject.py:498 ../semanage/seobject.py:503
+#: ../semanage/seobject.py:568 ../semanage/seobject.py:573
 msgid "Login Name"
 msgstr "లాగిన్ నామము"
 
-#: ../semanage/seobject.py:498 ../semanage/seobject.py:503
-#: ../semanage/seobject.py:712 ../semanage/seobject.py:717
+#: ../semanage/seobject.py:568 ../semanage/seobject.py:573
+#: ../semanage/seobject.py:782 ../semanage/seobject.py:787
 msgid "SELinux User"
 msgstr "SELinux వినియోగదారి"
 
-#: ../semanage/seobject.py:498
+#: ../semanage/seobject.py:568
 msgid "MLS/MCS Range"
 msgstr "MLS/MCS వ్యాప్తి"
 
-#: ../semanage/seobject.py:524
+#: ../semanage/seobject.py:594
 #, fuzzy, python-format
 msgid "You must add at least one role for %s"
 msgstr "%s కొరకు దస్త్రము సందర్భంను జతచేయలేకపోయింది"
 
-#: ../semanage/seobject.py:532 ../semanage/seobject.py:599
-#: ../semanage/seobject.py:657 ../semanage/seobject.py:663
+#: ../semanage/seobject.py:602 ../semanage/seobject.py:669
+#: ../semanage/seobject.py:727 ../semanage/seobject.py:733
 #, python-format
 msgid "Could not check if SELinux user %s is defined"
 msgstr "SELinux వినియోగదారి %s నిర్వచించబడివుంటే పరిశీలించకుండా ఉండేది"
 
-#: ../semanage/seobject.py:534
+#: ../semanage/seobject.py:604
 #, python-format
 msgid "SELinux user %s is already defined"
 msgstr "SELinux వినియోగదారి %s ఇప్పటికే నిర్వచించబడివుంది"
 
-#: ../semanage/seobject.py:538
+#: ../semanage/seobject.py:608
 #, python-format
 msgid "Could not create SELinux user for %s"
 msgstr "%s కొరకు SELinux వినియోగదారిని సృష్టించ లేకపోయింది"
 
-#: ../semanage/seobject.py:547
+#: ../semanage/seobject.py:617
 #, python-format
 msgid "Could not add role %s for %s"
 msgstr "పాత్ర %s ను %s కొరకు జతచేయ లేకపోయింది"
 
-#: ../semanage/seobject.py:556
+#: ../semanage/seobject.py:626
 #, python-format
 msgid "Could not set MLS level for %s"
 msgstr "%s కు MLS స్థాయిని అమర్చ లేకపోయింది"
 
-#: ../semanage/seobject.py:559
+#: ../semanage/seobject.py:629
 #, python-format
 msgid "Could not add prefix %s for %s"
 msgstr "ప్రిఫిక్స్‍ %s ను %s కు జతచేయ లేకపోయింది"
 
-#: ../semanage/seobject.py:562
+#: ../semanage/seobject.py:632
 #, python-format
 msgid "Could not extract key for %s"
 msgstr "%s కొరకు కీను బయల్పరచ లేకపోయింది"
 
-#: ../semanage/seobject.py:566
+#: ../semanage/seobject.py:636
 #, python-format
 msgid "Could not add SELinux user %s"
 msgstr "SELinux వినియోగదారి %s ను జతచేయలేకపోయింది"
 
-#: ../semanage/seobject.py:589
+#: ../semanage/seobject.py:659
 msgid "Requires prefix, roles, level or range"
 msgstr "ప్రిఫిక్స్‍, పాత్రలు, స్థాయి లేదా వ్యాప్తి అవసరము"
 
-#: ../semanage/seobject.py:591
+#: ../semanage/seobject.py:661
 msgid "Requires prefix or roles"
 msgstr "ప్రిఫిక్స్‍ లేదా పాత్రలు అవసరము"
 
-#: ../semanage/seobject.py:601 ../semanage/seobject.py:659
+#: ../semanage/seobject.py:671 ../semanage/seobject.py:729
 #, python-format
 msgid "SELinux user %s is not defined"
 msgstr "SELinux వినియోగదారి %s నిర్వచించబడలేదు"
 
-#: ../semanage/seobject.py:605
+#: ../semanage/seobject.py:675
 #, python-format
 msgid "Could not query user for %s"
 msgstr "%s కొరకు వినియోగదారిని క్వరీ చేయలేకపోయింది"
 
-#: ../semanage/seobject.py:632
+#: ../semanage/seobject.py:702
 #, python-format
 msgid "Could not modify SELinux user %s"
 msgstr "SELinux వినియోగదారి %s ను సవరించలేదు"
 
-#: ../semanage/seobject.py:665
+#: ../semanage/seobject.py:735
 #, python-format
 msgid "SELinux user %s is defined in policy, cannot be deleted"
 msgstr "SELinux వినియోగదారి %s విధానం లో నిర్వచించబడినది, తొలగింపబడలేదు"
 
-#: ../semanage/seobject.py:669
+#: ../semanage/seobject.py:739
 #, python-format
 msgid "Could not delete SELinux user %s"
 msgstr "SELinux వినియోగదారి %s ను తొలగించ లేకపోయింది"
 
-#: ../semanage/seobject.py:692
+#: ../semanage/seobject.py:762
 msgid "Could not list SELinux users"
 msgstr "SELinux వినియోగదారులను జాబితా చేయలేకపోయింది"
 
-#: ../semanage/seobject.py:698
+#: ../semanage/seobject.py:768
 #, python-format
 msgid "Could not list roles for user %s"
 msgstr "వినియోగదారి %s కొరకు పాత్రలను జాబితా చేయలేకపోయింది"
 
-#: ../semanage/seobject.py:711
+#: ../semanage/seobject.py:781
 msgid "Labeling"
 msgstr "లేబిలింగ్"
 
-#: ../semanage/seobject.py:711
+#: ../semanage/seobject.py:781
 msgid "MLS/"
 msgstr "MLS/"
 
-#: ../semanage/seobject.py:712
+#: ../semanage/seobject.py:782
 msgid "Prefix"
 msgstr "ప్రిఫిక్స్‍"
 
-#: ../semanage/seobject.py:712
+#: ../semanage/seobject.py:782
 msgid "MCS Level"
 msgstr "MCS స్థాయి"
 
-#: ../semanage/seobject.py:712
+#: ../semanage/seobject.py:782
 msgid "MCS Range"
 msgstr "MCS వ్యాప్తి"
 
-#: ../semanage/seobject.py:712 ../semanage/seobject.py:717
+#: ../semanage/seobject.py:782 ../semanage/seobject.py:787
 msgid "SELinux Roles"
 msgstr "SELinux పాత్రలు"
 
-#: ../semanage/seobject.py:732
+#: ../semanage/seobject.py:802
 msgid "Protocol udp or tcp is required"
 msgstr "నియమం udp లేదా tcp అవసరము"
 
-#: ../semanage/seobject.py:734
+#: ../semanage/seobject.py:804
 msgid "Port is required"
 msgstr "పోర్ట్‍ అవసరము"
 
-#: ../semanage/seobject.py:745
+#: ../semanage/seobject.py:815
 #, python-format
 msgid "Could not create a key for %s/%s"
 msgstr "%s/%s కొరకు కీను సృష్టించ లేకపోయింది"
 
-#: ../semanage/seobject.py:756
+#: ../semanage/seobject.py:826
 msgid "Type is required"
 msgstr "రకము అవసరము"
 
-#: ../semanage/seobject.py:762 ../semanage/seobject.py:821
-#: ../semanage/seobject.py:876 ../semanage/seobject.py:882
+#: ../semanage/seobject.py:832 ../semanage/seobject.py:891
+#: ../semanage/seobject.py:946 ../semanage/seobject.py:952
 #, python-format
 msgid "Could not check if port %s/%s is defined"
 msgstr "పోర్ట్‍ %s/%s నిర్వచించివుంటే పరిశీలించకుండా ఉండేది"
 
-#: ../semanage/seobject.py:764
+#: ../semanage/seobject.py:834
 #, python-format
 msgid "Port %s/%s already defined"
 msgstr "పోర్ట్‍ %s/%s ఇప్పటికే నిర్వచించబడివుంది"
 
-#: ../semanage/seobject.py:768
+#: ../semanage/seobject.py:838
 #, python-format
 msgid "Could not create port for %s/%s"
 msgstr "%s/%s కొరకు పోర్ట్‍‌ను సృష్టించ లేకపోయింది"
 
-#: ../semanage/seobject.py:774
+#: ../semanage/seobject.py:844
 #, python-format
 msgid "Could not create context for %s/%s"
 msgstr "%s/%s కొరకు సందర్భంను సృష్టించలేకపోయింది"
 
-#: ../semanage/seobject.py:778
+#: ../semanage/seobject.py:848
 #, python-format
 msgid "Could not set user in port context for %s/%s"
 msgstr "%s/%s కొరకు పొర్ట్‍ సందర్భంనందు వినియోగదారిని అమర్చ లేకపోయింది"
 
-#: ../semanage/seobject.py:782
+#: ../semanage/seobject.py:852
 #, python-format
 msgid "Could not set role in port context for %s/%s"
 msgstr "%s/%s కొరకు పోర్ట్‍ సందర్భంనందు పాత్రను అమర్చ లేకపోయింది"
 
-#: ../semanage/seobject.py:786
+#: ../semanage/seobject.py:856
 #, python-format
 msgid "Could not set type in port context for %s/%s"
 msgstr "%s/%s కొరకు పోర్ట్‍ సందర్భంనందు రకంను అమర్చ లేకపోయింది"
 
-#: ../semanage/seobject.py:791
+#: ../semanage/seobject.py:861
 #, python-format
 msgid "Could not set mls fields in port context for %s/%s"
 msgstr "%s/%s కొరకు పోర్ట్‍ సందర్భంనందు mls క్షేత్రాలను అమర్చ లేకపోయింది"
 
-#: ../semanage/seobject.py:795
+#: ../semanage/seobject.py:865
 #, python-format
 msgid "Could not set port context for %s/%s"
 msgstr "%s/%s కొరకు పోర్ట్‍ సందర్భంను అమర్చ లేకపోయింది"
 
-#: ../semanage/seobject.py:799
+#: ../semanage/seobject.py:869
 #, python-format
 msgid "Could not add port %s/%s"
 msgstr "పోర్ట్‍ %s/%s ను జతచేయలేకపోయింది"
 
-#: ../semanage/seobject.py:813 ../semanage/seobject.py:1059
-#: ../semanage/seobject.py:1247
+#: ../semanage/seobject.py:883 ../semanage/seobject.py:1129
+#: ../semanage/seobject.py:1317
 msgid "Requires setype or serange"
 msgstr "setype లేదా serange అవసరము"
 
-#: ../semanage/seobject.py:815
+#: ../semanage/seobject.py:885
 msgid "Requires setype"
 msgstr "setype అవసరము"
 
-#: ../semanage/seobject.py:823 ../semanage/seobject.py:878
+#: ../semanage/seobject.py:893 ../semanage/seobject.py:948
 #, python-format
 msgid "Port %s/%s is not defined"
 msgstr "పోర్ట్‍ %s/%s నిర్వచించబడిలేదు"
 
-#: ../semanage/seobject.py:827
+#: ../semanage/seobject.py:897
 #, python-format
 msgid "Could not query port %s/%s"
 msgstr "పోర్ట్‍ %s/%s ను క్వరీ చేయలేకపోయింది"
 
-#: ../semanage/seobject.py:838
+#: ../semanage/seobject.py:908
 #, python-format
 msgid "Could not modify port %s/%s"
 msgstr "పోర్ట్‍ %s/%s ను సవరించలేకపోయింది"
 
-#: ../semanage/seobject.py:851
+#: ../semanage/seobject.py:921
 msgid "Could not list the ports"
 msgstr "పోర్ట్స్‍ ను జాబితాచేయలేకపోయింది"
 
-#: ../semanage/seobject.py:867
+#: ../semanage/seobject.py:937
 #, python-format
 msgid "Could not delete the port %s"
 msgstr "పోర్ట్‍ %s ను తోలగించలేకపోయింది"
 
-#: ../semanage/seobject.py:884
+#: ../semanage/seobject.py:954
 #, python-format
 msgid "Port %s/%s is defined in policy, cannot be deleted"
 msgstr "పోర్ట్‍ %s/%s విధానం నందు నిర్వచించబడింది, తొలగింపబడలేదు"
 
-#: ../semanage/seobject.py:888
+#: ../semanage/seobject.py:958
 #, python-format
 msgid "Could not delete port %s/%s"
 msgstr "పోర్ట్‍ %s/%s ను తోలగించలేకపోయింది"
 
-#: ../semanage/seobject.py:904 ../semanage/seobject.py:926
+#: ../semanage/seobject.py:974 ../semanage/seobject.py:996
 msgid "Could not list ports"
 msgstr "పోర్ట్స్‍ ను జాబితాచేయలేకపోయింది"
 
-#: ../semanage/seobject.py:947
+#: ../semanage/seobject.py:1017
 msgid "SELinux Port Type"
 msgstr "SELinux పోర్ట్‍ రకము"
 
-#: ../semanage/seobject.py:947
+#: ../semanage/seobject.py:1017
 msgid "Proto"
 msgstr "Proto"
 
-#: ../semanage/seobject.py:947
+#: ../semanage/seobject.py:1017
 msgid "Port Number"
 msgstr "పోర్ట్‍ సంఖ్య"
 
-#: ../semanage/seobject.py:964 ../semanage/seobject.py:1046
-#: ../semanage/seobject.py:1096
+#: ../semanage/seobject.py:1034 ../semanage/seobject.py:1116
+#: ../semanage/seobject.py:1166
 #, fuzzy
 msgid "Node Address is required"
 msgstr "పోర్ట్‍ అవసరము"
 
-#: ../semanage/seobject.py:967 ../semanage/seobject.py:1049
-#: ../semanage/seobject.py:1099
+#: ../semanage/seobject.py:1037 ../semanage/seobject.py:1119
+#: ../semanage/seobject.py:1169
 #, fuzzy
 msgid "Node Netmask is required"
 msgstr "పోర్ట్‍ అవసరము"
 
-#: ../semanage/seobject.py:974 ../semanage/seobject.py:1055
-#: ../semanage/seobject.py:1106
+#: ../semanage/seobject.py:1044 ../semanage/seobject.py:1125
+#: ../semanage/seobject.py:1176
 msgid "Unknown or missing protocol"
 msgstr ""
 
-#: ../semanage/seobject.py:984 ../semanage/seobject.py:1186
-#: ../semanage/seobject.py:1375
+#: ../semanage/seobject.py:1054 ../semanage/seobject.py:1256
+#: ../semanage/seobject.py:1445
 msgid "SELinux Type is required"
 msgstr "SELinux రకము అవసరము"
 
-#: ../semanage/seobject.py:988 ../semanage/seobject.py:1063
-#: ../semanage/seobject.py:1110 ../semanage/seobject.py:1190
-#: ../semanage/seobject.py:1251 ../semanage/seobject.py:1285
-#: ../semanage/seobject.py:1379
+#: ../semanage/seobject.py:1058 ../semanage/seobject.py:1133
+#: ../semanage/seobject.py:1180 ../semanage/seobject.py:1260
+#: ../semanage/seobject.py:1321 ../semanage/seobject.py:1355
+#: ../semanage/seobject.py:1449
 #, python-format
 msgid "Could not create key for %s"
 msgstr "%s కొరకు కీను సృష్టించలేకపోయింది"
 
-#: ../semanage/seobject.py:990 ../semanage/seobject.py:1067
-#: ../semanage/seobject.py:1114 ../semanage/seobject.py:1120
+#: ../semanage/seobject.py:1060 ../semanage/seobject.py:1137
+#: ../semanage/seobject.py:1184 ../semanage/seobject.py:1190
 #, fuzzy, python-format
 msgid "Could not check if addr %s is defined"
 msgstr "పోర్ట్‍ %s/%s నిర్వచించివుంటే పరిశీలించకుండా ఉండేది"
 
-#: ../semanage/seobject.py:994
+#: ../semanage/seobject.py:1064
 #, fuzzy, python-format
 msgid "Addr %s already defined"
 msgstr "పోర్ట్‍ %s/%s ఇప్పటికే నిర్వచించబడివుంది"
 
-#: ../semanage/seobject.py:998
+#: ../semanage/seobject.py:1068
 #, fuzzy, python-format
 msgid "Could not create addr for %s"
 msgstr "%s కొరకు కీను సృష్టించలేకపోయింది"
 
-#: ../semanage/seobject.py:1003 ../semanage/seobject.py:1205
-#: ../semanage/seobject.py:1345
+#: ../semanage/seobject.py:1073 ../semanage/seobject.py:1275
+#: ../semanage/seobject.py:1415
 #, python-format
 msgid "Could not create context for %s"
 msgstr "%s కొరకు సందర్భంను సృష్టించలేకపోయింది"
 
-#: ../semanage/seobject.py:1007
+#: ../semanage/seobject.py:1077
 #, fuzzy, python-format
 msgid "Could not set mask for %s"
 msgstr "%s కొరకు నామమును అమర్చలేక పోయింది"
 
-#: ../semanage/seobject.py:1012
+#: ../semanage/seobject.py:1082
 #, fuzzy, python-format
 msgid "Could not set user in addr context for %s"
 msgstr "%s కొరకు దస్త్ర సందర్భంనందు వినియోగదారిని అమర్చలేకపోయింది"
 
-#: ../semanage/seobject.py:1016
+#: ../semanage/seobject.py:1086
 #, fuzzy, python-format
 msgid "Could not set role in addr context for %s"
 msgstr "%s కొరకు దస్త్ర సందర్భంనందు పాత్రను అమర్చలేకపోయింది"
 
-#: ../semanage/seobject.py:1020
+#: ../semanage/seobject.py:1090
 #, fuzzy, python-format
 msgid "Could not set type in addr context for %s"
 msgstr "%s కొరకు దస్త్ర సందర్భంనందు రకమును అమర్చలేకపోయింది"
 
-#: ../semanage/seobject.py:1025
+#: ../semanage/seobject.py:1095
 #, fuzzy, python-format
 msgid "Could not set mls fields in addr context for %s"
 msgstr "%s కొరకు దస్త్ర సందర్భంనందు mls క్షేత్రాలను అమర్చలేకపోయింది"
 
-#: ../semanage/seobject.py:1029
+#: ../semanage/seobject.py:1099
 #, fuzzy, python-format
 msgid "Could not set addr context for %s"
 msgstr "%s కొరకు దస్త్రము సందర్భంను అమర్చలేకపోయింది"
 
-#: ../semanage/seobject.py:1033
+#: ../semanage/seobject.py:1103
 #, fuzzy, python-format
 msgid "Could not add addr %s"
 msgstr "పోర్ట్‍ %s/%s ను జతచేయలేకపోయింది"
 
-#: ../semanage/seobject.py:1069 ../semanage/seobject.py:1116
+#: ../semanage/seobject.py:1139 ../semanage/seobject.py:1186
 #, fuzzy, python-format
 msgid "Addr %s is not defined"
 msgstr "పోర్ట్‍ %s/%s నిర్వచించబడిలేదు"
 
-#: ../semanage/seobject.py:1073
+#: ../semanage/seobject.py:1143
 #, fuzzy, python-format
 msgid "Could not query addr %s"
 msgstr "పోర్ట్‍ %s/%s ను క్వరీ చేయలేకపోయింది"
 
-#: ../semanage/seobject.py:1084
+#: ../semanage/seobject.py:1154
 #, fuzzy, python-format
 msgid "Could not modify addr %s"
 msgstr "పోర్ట్‍ %s/%s ను సవరించలేకపోయింది"
 
-#: ../semanage/seobject.py:1122
+#: ../semanage/seobject.py:1192
 #, fuzzy, python-format
 msgid "Addr %s is defined in policy, cannot be deleted"
 msgstr "పోర్ట్‍ %s/%s విధానం నందు నిర్వచించబడింది, తొలగింపబడలేదు"
 
-#: ../semanage/seobject.py:1126
+#: ../semanage/seobject.py:1196
 #, fuzzy, python-format
 msgid "Could not delete addr %s"
 msgstr "%s ను తొలగించలేకపోయింది"
 
-#: ../semanage/seobject.py:1142
+#: ../semanage/seobject.py:1212
 #, fuzzy
 msgid "Could not list addrs"
 msgstr "పోర్ట్స్‍ ను జాబితాచేయలేకపోయింది"
 
-#: ../semanage/seobject.py:1194 ../semanage/seobject.py:1255
-#: ../semanage/seobject.py:1289 ../semanage/seobject.py:1295
+#: ../semanage/seobject.py:1264 ../semanage/seobject.py:1325
+#: ../semanage/seobject.py:1359 ../semanage/seobject.py:1365
 #, python-format
 msgid "Could not check if interface %s is defined"
 msgstr "అంతర్‌ఫలకం %s నిర్వచించివుంటే పరిశీలించకుండా ఉండేది"
 
-#: ../semanage/seobject.py:1196
+#: ../semanage/seobject.py:1266
 #, python-format
 msgid "Interface %s already defined"
 msgstr "అంతర్‌ఫలకం %s ఇప్పటికే నిర్వచించబడివుంది"
 
-#: ../semanage/seobject.py:1200
+#: ../semanage/seobject.py:1270
 #, python-format
 msgid "Could not create interface for %s"
 msgstr "%s కొరకు అంతర్‌ఫలకంను సృష్టించ లేకపోయింది"
 
-#: ../semanage/seobject.py:1209
+#: ../semanage/seobject.py:1279
 #, python-format
 msgid "Could not set user in interface context for %s"
 msgstr "%s కొరకు అంతర్‌ఫలకం సందర్భంనందు వినియోగదారిని అమర్చ లేకపోయింది"
 
-#: ../semanage/seobject.py:1213
+#: ../semanage/seobject.py:1283
 #, python-format
 msgid "Could not set role in interface context for %s"
 msgstr "%s కొరకు అంతర్‌ఫలకం సందర్భంనందు పాత్రను అమర్చ లేకపోయింది"
 
-#: ../semanage/seobject.py:1217
+#: ../semanage/seobject.py:1287
 #, python-format
 msgid "Could not set type in interface context for %s"
 msgstr "%s కొరకు అంతర్‌ఫలకం సందర్భంనందు రకమును అమర్చ లేకపోయింది"
 
-#: ../semanage/seobject.py:1222
+#: ../semanage/seobject.py:1292
 #, python-format
 msgid "Could not set mls fields in interface context for %s"
 msgstr "%s కొరకు అంతర్‌ఫలకం సందర్భంనందు mls క్షేత్రములను అమర్చ లేకపోయింది"
 
-#: ../semanage/seobject.py:1226
+#: ../semanage/seobject.py:1296
 #, python-format
 msgid "Could not set interface context for %s"
 msgstr "%s కొరకు అంతర్‌ఫలకం సందర్భం ను అమర్చ లేకపోయింది"
 
-#: ../semanage/seobject.py:1230
+#: ../semanage/seobject.py:1300
 #, python-format
 msgid "Could not set message context for %s"
 msgstr "%s కొరకు సందేశం సందర్భంను అమర్చ లేకపోయింది"
 
-#: ../semanage/seobject.py:1234
+#: ../semanage/seobject.py:1304
 #, python-format
 msgid "Could not add interface %s"
 msgstr "అంతర్‌ఫలకం %s ను జతచేయలేకపోయింది"
 
-#: ../semanage/seobject.py:1257 ../semanage/seobject.py:1291
+#: ../semanage/seobject.py:1327 ../semanage/seobject.py:1361
 #, python-format
 msgid "Interface %s is not defined"
 msgstr "అంతర్‌ఫలకం %s నిర్వచించబడిలేదు"
 
-#: ../semanage/seobject.py:1261
+#: ../semanage/seobject.py:1331
 #, python-format
 msgid "Could not query interface %s"
 msgstr "అంతర్‌ఫలకం %s ను క్వరీ చేయలేకపోయింది"
 
-#: ../semanage/seobject.py:1272
+#: ../semanage/seobject.py:1342
 #, python-format
 msgid "Could not modify interface %s"
 msgstr "అంతర్‌ఫలకం %s ను సవరించలేకపోయింది"
 
-#: ../semanage/seobject.py:1297
+#: ../semanage/seobject.py:1367
 #, python-format
 msgid "Interface %s is defined in policy, cannot be deleted"
 msgstr "అంతర్‌ఫలకం %s విధానంనందు నిర్వచించబడివుంది, తోలగింపబడలేదు"
 
-#: ../semanage/seobject.py:1301
+#: ../semanage/seobject.py:1371
 #, python-format
 msgid "Could not delete interface %s"
 msgstr "అంతర్‌ఫలకం %s ను తొలగించలేకపోయింది"
 
-#: ../semanage/seobject.py:1317
+#: ../semanage/seobject.py:1387
 msgid "Could not list interfaces"
 msgstr "అంతర్‌ఫలకంలను జాబీతా చేయలేకపోయింది"
 
-#: ../semanage/seobject.py:1327
+#: ../semanage/seobject.py:1397
 msgid "SELinux Interface"
 msgstr "SELinux అంతర్‌ఫలకం"
 
-#: ../semanage/seobject.py:1327 ../semanage/seobject.py:1566
+#: ../semanage/seobject.py:1397 ../semanage/seobject.py:1636
 msgid "Context"
 msgstr "సందర్భము"
 
-#: ../semanage/seobject.py:1351
+#: ../semanage/seobject.py:1421
 #, python-format
 msgid "Could not set user in file context for %s"
 msgstr "%s కొరకు దస్త్ర సందర్భంనందు వినియోగదారిని అమర్చలేకపోయింది"
 
-#: ../semanage/seobject.py:1355
+#: ../semanage/seobject.py:1425
 #, python-format
 msgid "Could not set role in file context for %s"
 msgstr "%s కొరకు దస్త్ర సందర్భంనందు పాత్రను అమర్చలేకపోయింది"
 
-#: ../semanage/seobject.py:1360 ../semanage/seobject.py:1408
+#: ../semanage/seobject.py:1430 ../semanage/seobject.py:1478
 #, python-format
 msgid "Could not set mls fields in file context for %s"
 msgstr "%s కొరకు దస్త్ర సందర్భంనందు mls క్షేత్రాలను అమర్చలేకపోయింది"
 
-#: ../semanage/seobject.py:1366
+#: ../semanage/seobject.py:1436
 msgid "Invalid file specification"
 msgstr "సరికాని దస్త్రము విశదీకరణము"
 
-#: ../semanage/seobject.py:1383 ../semanage/seobject.py:1388
-#: ../semanage/seobject.py:1440 ../semanage/seobject.py:1516
-#: ../semanage/seobject.py:1520
+#: ../semanage/seobject.py:1453 ../semanage/seobject.py:1458
+#: ../semanage/seobject.py:1510 ../semanage/seobject.py:1586
+#: ../semanage/seobject.py:1590
 #, python-format
 msgid "Could not check if file context for %s is defined"
 msgstr "%s కొరకు దస్త్ర సందర్భం నిర్వచించబడివుంటే పరిశీలించకుండా ఉండేది"
 
-#: ../semanage/seobject.py:1391
+#: ../semanage/seobject.py:1461
 #, python-format
 msgid "File context for %s already defined"
 msgstr "%s కొరకు దస్త్ర సందర్భం ఇప్పటికే నిర్వచించబడివుంది"
 
-#: ../semanage/seobject.py:1395
+#: ../semanage/seobject.py:1465
 #, python-format
 msgid "Could not create file context for %s"
 msgstr "%s కొరకు దస్త్ర సందర్భంను సృష్టించలేకపోయింది"
 
-#: ../semanage/seobject.py:1403
+#: ../semanage/seobject.py:1473
 #, python-format
 msgid "Could not set type in file context for %s"
 msgstr "%s కొరకు దస్త్ర సందర్భంనందు రకమును అమర్చలేకపోయింది"
 
-#: ../semanage/seobject.py:1411 ../semanage/seobject.py:1468
-#: ../semanage/seobject.py:1472
+#: ../semanage/seobject.py:1481 ../semanage/seobject.py:1538
+#: ../semanage/seobject.py:1542
 #, python-format
 msgid "Could not set file context for %s"
 msgstr "%s కొరకు దస్త్రము సందర్భంను అమర్చలేకపోయింది"
 
-#: ../semanage/seobject.py:1417
+#: ../semanage/seobject.py:1487
 #, python-format
 msgid "Could not add file context for %s"
 msgstr "%s కొరకు దస్త్రము సందర్భంను జతచేయలేకపోయింది"
 
-#: ../semanage/seobject.py:1431
+#: ../semanage/seobject.py:1501
 msgid "Requires setype, serange or seuser"
 msgstr "setype, serange లేదా seuser అవసరము"
 
-#: ../semanage/seobject.py:1444 ../semanage/seobject.py:1524
+#: ../semanage/seobject.py:1514 ../semanage/seobject.py:1594
 #, python-format
 msgid "File context for %s is not defined"
 msgstr "%s కొరకు దస్త్రము సందర్భం నిర్వచించబడిలేదు"
 
-#: ../semanage/seobject.py:1450
+#: ../semanage/seobject.py:1520
 #, python-format
 msgid "Could not query file context for %s"
 msgstr "%s కొరకు దస్త్రము సందర్భంను క్వరీచేయలేకపోయింది"
 
-#: ../semanage/seobject.py:1476
+#: ../semanage/seobject.py:1546
 #, python-format
 msgid "Could not modify file context for %s"
 msgstr "దస్త్రము సందర్భంను %s కొరకు సవరించలేదు"
 
-#: ../semanage/seobject.py:1490
+#: ../semanage/seobject.py:1560
 msgid "Could not list the file contexts"
 msgstr "దస్త్రము సందర్భంలను జాబితా చేయలేకపోయింది"
 
-#: ../semanage/seobject.py:1504
+#: ../semanage/seobject.py:1574
 #, python-format
 msgid "Could not delete the file context %s"
 msgstr "దస్త్రము సందర్భం %sను తొలగించలేకపోయింది"
 
-#: ../semanage/seobject.py:1522
+#: ../semanage/seobject.py:1592
 #, python-format
 msgid "File context for %s is defined in policy, cannot be deleted"
 msgstr "%s కొరకు దస్త్రము సందర్భం విధానంలో నిర్వచించబడివుంది, తొలగింపబడలేదు"
 
-#: ../semanage/seobject.py:1528
+#: ../semanage/seobject.py:1598
 #, python-format
 msgid "Could not delete file context for %s"
 msgstr "%s కొరకు దస్త్రము సందర్భంను తొలగించలేకపోయింది"
 
-#: ../semanage/seobject.py:1543
+#: ../semanage/seobject.py:1613
 msgid "Could not list file contexts"
 msgstr "దస్త్రము సందర్భంలను జాబితా చేయలేకపోయింది"
 
-#: ../semanage/seobject.py:1547
+#: ../semanage/seobject.py:1617
 msgid "Could not list local file contexts"
 msgstr "స్థానిక దస్త్ర సందర్భంలను జాబితాచేయలేకపోయింది"
 
-#: ../semanage/seobject.py:1566
+#: ../semanage/seobject.py:1636
 msgid "SELinux fcontext"
 msgstr "SELinux fcontext"
 
-#: ../semanage/seobject.py:1566
+#: ../semanage/seobject.py:1636
 msgid "type"
 msgstr "రకము"
 
-#: ../semanage/seobject.py:1596 ../semanage/seobject.py:1647
-#: ../semanage/seobject.py:1653
+#: ../semanage/seobject.py:1666 ../semanage/seobject.py:1717
+#: ../semanage/seobject.py:1723
 #, python-format
 msgid "Could not check if boolean %s is defined"
 msgstr "బూలియన్ %s నిర్వచించబడితే పరిశీలించి ఉండేదికాదు"
 
-#: ../semanage/seobject.py:1598 ../semanage/seobject.py:1649
+#: ../semanage/seobject.py:1668 ../semanage/seobject.py:1719
 #, python-format
 msgid "Boolean %s is not defined"
 msgstr "బూలియన్ %s నిర్వచించబడిలేదు"
 
-#: ../semanage/seobject.py:1602
+#: ../semanage/seobject.py:1672
 #, python-format
 msgid "Could not query file context %s"
 msgstr "దస్త్రము సందర్భం %s ను క్వరీ చేయలేకపోయింది"
 
-#: ../semanage/seobject.py:1607
+#: ../semanage/seobject.py:1677
 #, fuzzy, python-format
 msgid "You must specify one of the following values: %s"
 msgstr "మీరు తప్పక ఒక విలువను తెలుపవలెను"
 
-#: ../semanage/seobject.py:1611
+#: ../semanage/seobject.py:1681
 #, fuzzy, python-format
 msgid "Could not set active value of boolean %s"
 msgstr "బూలియన్ %s తొలగింపలేకపోయింది"
 
-#: ../semanage/seobject.py:1614
+#: ../semanage/seobject.py:1684
 #, python-format
 msgid "Could not modify boolean %s"
 msgstr "బూలియన్ %s ను సవరించలేకపోయింది"
 
-#: ../semanage/seobject.py:1632
+#: ../semanage/seobject.py:1702
 #, python-format
 msgid "Bad format %s: Record %s"
 msgstr ""
 
-#: ../semanage/seobject.py:1655
+#: ../semanage/seobject.py:1725
 #, python-format
 msgid "Boolean %s is defined in policy, cannot be deleted"
 msgstr "బూలియన్ %s విధానంనందు నిర్వచించబడివుంది, తొలగింపబడలేదు"
 
-#: ../semanage/seobject.py:1659
+#: ../semanage/seobject.py:1729
 #, python-format
 msgid "Could not delete boolean %s"
 msgstr "బూలియన్ %s తొలగింపలేకపోయింది"
 
-#: ../semanage/seobject.py:1671 ../semanage/seobject.py:1688
+#: ../semanage/seobject.py:1741 ../semanage/seobject.py:1758
 msgid "Could not list booleans"
 msgstr "బూలియన్స్‍ ను జాబితాచేయలేకపోయింది"
 
-#: ../semanage/seobject.py:1707
+#: ../semanage/seobject.py:1777
 msgid "unknown"
 msgstr "తెలియని"
 
-#: ../semanage/seobject.py:1710
+#: ../semanage/seobject.py:1780
 msgid "off"
 msgstr "ఆఫ్"
 
-#: ../semanage/seobject.py:1710
+#: ../semanage/seobject.py:1780
 msgid "on"
 msgstr "ఆన్"
 
-#: ../semanage/seobject.py:1719
+#: ../semanage/seobject.py:1789
 msgid "SELinux boolean"
 msgstr "SELinux బూలియన్"
 
-#: ../semanage/seobject.py:1719
+#: ../semanage/seobject.py:1789
 msgid "Description"
 msgstr "వివరణ"
 
@@ -1146,12 +1175,12 @@ msgstr "వివరణిలను మూయులేక పోయింది.
 msgid "Error allocating shell's argv0.\n"
 msgstr "షెల్ యొక్క argvo కేటాయించుటలో దోషము.\n"
 
-#: ../newrole/newrole.c:1344
+#: ../newrole/newrole.c:1346
 #, c-format
 msgid "Unable to restore the environment, aborting\n"
 msgstr "వాతావరణాన్ని తిరిగివుంచలేక పోయింది, బహిష్కరిస్తోంది\n"
 
-#: ../newrole/newrole.c:1355
+#: ../newrole/newrole.c:1357
 msgid "failed to exec shell\n"
 msgstr "షెల్ నిర్వర్తించుటలో విఫలమైంది\n"
 
@@ -1258,28 +1287,6 @@ msgstr "chcat -l +CompanyConfidential juser"
 #, c-format
 msgid "Options Error %s "
 msgstr "ఐచ్చికముల దోషము %s "
-
-#~ msgid ""
-#~ "Unable to open %s: translations not supported on non-MLS machines: %s"
-#~ msgstr "%s ను తెరువలేక పోయింది: అనువాదములు non-MLS మిషన్స్‍ పైన మద్దతీయబడువు:%s"
-
-#~ msgid "Level"
-#~ msgstr "స్థాయి"
-
-#~ msgid "Translation"
-#~ msgstr "అనువాదము"
-
-#~ msgid "Translations can not contain spaces '%s' "
-#~ msgstr "అనువాదములు ఖాళీలు '%s' ను కలిగి ఉండలేవు"
-
-#~ msgid "Invalid Level '%s' "
-#~ msgstr "సరికాని స్థాయి '%s' "
-
-#~ msgid "%s already defined in translations"
-#~ msgstr "%s ఇప్పటికే అనువాదములనందు నిర్వచించబడినది"
-
-#~ msgid "%s not defined in translations"
-#~ msgstr "అనువాదములనందు %s నిర్వచించబడలేదు"
 
 #~ msgid "translations not supported on non-MLS machines"
 #~ msgstr "non-MLS మిషన్స్‍ పైన అనువాదములు మద్దతీయబడవు"

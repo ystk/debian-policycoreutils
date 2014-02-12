@@ -1,0 +1,140 @@
+From: Russell Coker <russell@coker.com.au>
+Date: Sun, 26 Feb 2012 19:39:24 +0100
+Subject: build system
+
+---
+ Makefile                |    6 ++++--
+ mcstrans/src/Makefile   |    3 ++-
+ mcstrans/utils/Makefile |    2 +-
+ restorecond/Makefile    |    6 +++---
+ run_init/Makefile       |    2 +-
+ sandbox/Makefile        |    4 ++--
+ semodule_deps/Makefile  |    2 +-
+ sepolgen-ifgen/Makefile |    2 +-
+ 8 files changed, 15 insertions(+), 12 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 9cfe3bc..42e1e99 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1,11 +1,13 @@
+ SUBDIRS = setfiles semanage load_policy newrole run_init sandbox secon audit2allow audit2why scripts sestatus semodule_package semodule semodule_link semodule_expand semodule_deps sepolgen-ifgen setsebool po man
+ 
+-INOTIFYH = $(shell ls /usr/include/sys/inotify.h 2>/dev/null)
++INOTIFYH = $(shell ls /usr/include/$(DEB_HOST_MULTIARCH)/sys/inotify.h 2>/dev/null)
+ 
+-ifeq (${INOTIFYH}, /usr/include/sys/inotify.h)
++ifneq (${INOTIFYH},)
+ 	SUBDIRS += restorecond
+ endif
+ 
++SUBDIRS += restorecond mcstrans
++
+ all install relabel clean indent:
+ 	@for subdir in $(SUBDIRS); do \
+ 		(cd $$subdir && $(MAKE) $@) || exit 1; \
+diff --git a/mcstrans/src/Makefile b/mcstrans/src/Makefile
+index fb44490..dd0452b 100644
+--- a/mcstrans/src/Makefile
++++ b/mcstrans/src/Makefile
+@@ -13,10 +13,11 @@ ifeq "$(ARCH)" "i386"
+ endif
+ endif
+ endif
++LIBDIR=/usr/lib/$(DEB_HOST_MULTIARCH)
+ # Installation directories.
+ PREFIX  ?= $(DESTDIR)/usr
+ SBINDIR ?= $(DESTDIR)/sbin
+-INITDIR ?= $(DESTDIR)/etc/rc.d/init.d
++INITDIR ?= $(DESTDIR)/etc/init.d
+ 
+ PROG_SRC=mcstrans.c  mcscolor.c  mcstransd.c  mls_level.c
+ PROG_OBJS= $(patsubst %.c,%.o,$(PROG_SRC))
+diff --git a/mcstrans/utils/Makefile b/mcstrans/utils/Makefile
+index 1ffb027..1e91d78 100644
+--- a/mcstrans/utils/Makefile
++++ b/mcstrans/utils/Makefile
+@@ -17,7 +17,7 @@ ifeq "$(ARCH)" "i386"
+ endif
+ endif
+ endif
+-
++LIBDIR=/usr/lib/$(DEB_HOST_MULTIARCH)
+ 
+ CFLAGS ?= -Wall
+ override CFLAGS += -I../src -D_GNU_SOURCE
+diff --git a/restorecond/Makefile b/restorecond/Makefile
+index 3074542..9fe62c6 100644
+--- a/restorecond/Makefile
++++ b/restorecond/Makefile
+@@ -7,14 +7,14 @@ AUTOSTARTDIR = $(DESTDIR)/etc/xdg/autostart
+ DBUSSERVICEDIR = $(DESTDIR)/usr/share/dbus-1/services
+ 
+ autostart_DATA = sealertauto.desktop
+-INITDIR = $(DESTDIR)/etc/rc.d/init.d
++INITDIR = $(DESTDIR)/etc/init.d
+ SELINUXDIR = $(DESTDIR)/etc/selinux
+ 
+-DBUSFLAGS = -DHAVE_DBUS -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/lib/dbus-1.0/include
++DBUSFLAGS = -DHAVE_DBUS -I/usr/include/dbus-1.0 -I/usr/lib/$(DEB_HOST_MULTIARCH)/dbus-1.0/include -I/usr/lib/dbus-1.0/include
+ DBUSLIB = -ldbus-glib-1 -ldbus-1
+ 
+ CFLAGS ?= -g -Werror -Wall -W
+-override CFLAGS += -I$(PREFIX)/include $(DBUSFLAGS) -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/lib/glib-2.0/include
++override CFLAGS += -I$(PREFIX)/include $(DBUSFLAGS) -I/usr/include/glib-2.0 -I/usr/lib/$(DEB_HOST_MULTIARCH)/glib-2.0/include -I/usr/lib/glib-2.0/include
+ 
+ LDLIBS += -lselinux $(DBUSLIB) -lglib-2.0 -L$(LIBDIR)
+ 
+diff --git a/run_init/Makefile b/run_init/Makefile
+index 12b39b4..5815a08 100644
+--- a/run_init/Makefile
++++ b/run_init/Makefile
+@@ -33,7 +33,7 @@ open_init_pty: open_init_pty.c
+ 
+ install: all
+ 	test -d $(SBINDIR)      || install -m 755 -d $(SBINDIR)
+-	test -d $(MANDIR)/man1 || install -m 755 -d $(MANDIR)/man1
++	test -d $(MANDIR)/man8 || install -m 755 -d $(MANDIR)/man8
+ 	install -m 755 run_init $(SBINDIR)
+ 	install -m 755 open_init_pty $(SBINDIR)
+ 	install -m 644 run_init.8 $(MANDIR)/man8/
+diff --git a/sandbox/Makefile b/sandbox/Makefile
+index b817364..4479816 100644
+--- a/sandbox/Makefile
++++ b/sandbox/Makefile
+@@ -1,7 +1,7 @@
+ # Installation directories.
+ PREFIX ?= $(DESTDIR)/usr
+-INITDIR ?= $(DESTDIR)/etc/rc.d/init.d/
+-SYSCONFDIR ?= $(DESTDIR)/etc/sysconfig
++INITDIR ?= $(DESTDIR)/etc/init.d/
++SYSCONFDIR ?= $(DESTDIR)/etc/default
+ LIBDIR ?= $(PREFIX)/lib
+ BINDIR ?= $(PREFIX)/bin
+ SBINDIR ?= $(PREFIX)/sbin
+diff --git a/semodule_deps/Makefile b/semodule_deps/Makefile
+index 28d667e..546e65d 100644
+--- a/semodule_deps/Makefile
++++ b/semodule_deps/Makefile
+@@ -2,7 +2,7 @@
+ PREFIX ?= $(DESTDIR)/usr
+ INCLUDEDIR ?= $(PREFIX)/include
+ BINDIR ?= $(PREFIX)/bin
+-LIBDIR ?= $(PREFIX)/lib
++LIBDIR ?= $(PREFIX)/lib/$(DEB_HOST_MULTIARCH)
+ MANDIR ?= $(PREFIX)/share/man
+ 
+ CFLAGS ?= -Werror -Wall -W
+diff --git a/sepolgen-ifgen/Makefile b/sepolgen-ifgen/Makefile
+index 07af599..9b4bb95 100644
+--- a/sepolgen-ifgen/Makefile
++++ b/sepolgen-ifgen/Makefile
+@@ -1,7 +1,7 @@
+ # Installation directories.
+ PREFIX ?= $(DESTDIR)/usr
+ BINDIR ?= $(PREFIX)/bin
+-LIBDIR ?= $(PREFIX)/lib
++LIBDIR ?= $(PREFIX)/lib/$(DEB_HOST_MULTIARCH)
+ INCLUDEDIR ?= $(PREFIX)/include
+ 
+ CFLAGS ?= -Werror -Wall -W

@@ -1,0 +1,21 @@
+From: Laurent Bigonville <bigon@bigon.be>
+Date: Mon, 27 Feb 2012 00:07:22 +0100
+Subject: legacy
+
+---
+ run_init/open_init_pty.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/run_init/open_init_pty.c b/run_init/open_init_pty.c
+index 4f04e72..8bbf83b 100644
+--- a/run_init/open_init_pty.c
++++ b/run_init/open_init_pty.c
+@@ -162,7 +162,7 @@ int main(int argc, char *argv[])
+ 		/* in the child */
+ 		struct termios s_tty_attr;
+ 		if (tcgetattr(fileno(stdin), &s_tty_attr)) {
+-			perror("Child:");
++			perror("forkpty child:");
+ 			fflush(stdout);
+ 			fflush(stderr);
+ 			exit(EXIT_FAILURE);

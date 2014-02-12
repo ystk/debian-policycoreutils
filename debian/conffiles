@@ -1,5 +1,0 @@
-/etc/pam.d/newrole
-/etc/pam.d/run_init
-/etc/sestatus.conf
-/etc/init.d/policycoreutils
-/etc/selinux/restorecond.conf

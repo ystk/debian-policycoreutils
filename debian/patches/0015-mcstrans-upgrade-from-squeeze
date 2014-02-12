@@ -1,0 +1,20 @@
+Description: Patch for mcstrans to not abort when it sees a squeeze config file
+Author: Russell Coker <russell@coker.com.au>
+Last-Update: 2012-06-19
+
+--- policycoreutils-2.1.10.orig/mcstrans/src/mcstrans.c
++++ policycoreutils-2.1.10/mcstrans/src/mcstrans.c
+@@ -745,6 +745,13 @@ process_trans(char *buffer) {
+ 
+ 	if (*buffer == 0) return 0;
+ 
++	/* special case for old format */
++	if(!strcmp("s0=", buffer))
++	{
++		syslog(LOG_ERR, "Ignoring old format line \"s0=\".");
++		return 0;
++	}
++
+ 	char *delim = strpbrk (buffer, "=!>");
+ 	if (! delim) {
+ 		syslog(LOG_ERR, "invalid line (no !, = or >) %d", lineno);

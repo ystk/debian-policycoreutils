@@ -1,21 +1,51 @@
 Source: policycoreutils
-VCS-Git: git://git.debian.org/~srivasta/debian/policycoreutils.git
-VCS-Browser: http://git.debian.org/git/?p=users/srivasta/debian/policycoreutils.git
+VCS-Git: git://anonscm.debian.org/git/selinux/policycoreutils.git
+VCS-Browser: http://anonscm.debian.org/gitweb/?p=selinux/policycoreutils.git;a=summary
 Priority: optional
 Section: utils
-Maintainer: Russell Coker <russell@coker.com.au>
-Uploaders: Manoj Srivastava <srivasta@debian.org>
-Standards-Version: 3.8.4.0
-Build-Depends: libselinux1-dev (>= 2.0.94), libpam0g-dev,
- libsepol1-dev (>= 2.0.40), file, gettext, libsemanage1-dev (>= 2.0.45),
- python-sepolgen, libaudit-dev
-XS-Python-Version: >= 2.5
+Maintainer: Debian SELinux maintainers <selinux-devel@lists.alioth.debian.org>
+Uploaders: Manoj Srivastava <srivasta@debian.org>,
+           Russell Coker <russell@coker.com.au>
+Standards-Version: 3.9.3
+Build-Depends: debhelper (>= 9),
+               dpkg-dev (>= 1.16.0),
+               file,
+               gettext,
+               libaudit-dev,
+               libcap-dev,
+               libcap-ng-dev,
+               libcgroup-dev,
+               libdbus-1-dev,
+               libdbus-glib-1-dev,
+               libglib2.0-dev,
+               libpam0g-dev,
+               libpcre3-dev,
+               libselinux1-dev (>= 2.1.9),
+               libsemanage1-dev (>= 2.1.6),
+               libsepol1-dev (>= 2.1.4),
+               python (>= 2.6.6-3~),
+               python-sepolgen (>= 1.1.5)
+X-Python-Version: >= 2.5
+Homepage: http://userspace.selinuxproject.org/
 
 Package: policycoreutils
-Architecture: any
-Depends: ${shlibs:Depends}, lsb-base (>= 3.2-13), python (>= 2.5),
-  python-semanage, python-selinux, python-sepolgen (>=1.0.11-4)
+Architecture: linux-any
+Depends: lsb-base (>= 3.2-13),
+         psmisc,
+         python-ipy,
+         python-selinux,
+         python-semanage,
+         python-sepolgen (>= 1.1.0),
+         python-setools (>= 3.3.7-2),
+         ${misc:Depends},
+         ${python:Depends},
+         ${shlibs:Depends}
+Conflicts: mcstrans
+Provides: mcstrans
+Replaces: mcstrans
 Recommends: selinux-policy-default
+Suggests: selinux-policy-dev
+Pre-Depends: ${misc:Pre-Depends}
 Description: SELinux core policy utilities
  Security-enhanced Linux is a patch of the Linux® kernel and a number
  of utilities with enhanced security functionality designed to add
@@ -30,5 +60,15 @@ Description: SELinux core policy utilities
  This package contains the core policy utilities that are required
  for basic operation of an SELinux system.  These utilities include
  load_policy to load policies, setfiles to label filesystems, newrole
- to switch roles, and run_init to run /etc/init.d scripts in the proper
- context.
+ to switch roles, run_init to run /etc/init.d scripts in the proper
+ context, and restorecond to restore contexts of files that often get the
+ wrong context.
+ .
+ It also includes the mcstransd to map a maching readable sensitivity label to
+ a human readable form.  The sensitivity label is comprised of a sensitivity
+ level (always s0 for MCS and anything from s0 to s15 for MLS) and a set of
+ categories.  A ranged sensitivity label will have a low level and a high level
+ where the high level will dominate the low level.  Categories are numbered
+ from c0 to c1023.  Names such as s0 and c1023 and not easily readable by
+ humans, so mcstransd translated them to human readable labels such as
+ SystemLow and SystemHigh.

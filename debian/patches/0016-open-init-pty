@@ -1,0 +1,466 @@
+Description: Add new open_init_pty that doesn't waste CPU time
+Origin: Václav Ovsík <vaclav.ovsik@i.cz>
+Author: Russell Coker <russell@coker.com.au>
+Last-Update: 2012-06-26
+
+--- policycoreutils-2.1.10.orig/run_init/Makefile
++++ policycoreutils-2.1.10/run_init/Makefile
+@@ -8,8 +8,9 @@ LOCALEDIR ?= /usr/share/locale
+ PAMH = $(shell ls /usr/include/security/pam_appl.h 2>/dev/null)
+ AUDITH = $(shell ls /usr/include/libaudit.h 2>/dev/null)
+ 
+-CFLAGS ?= -Werror -Wall -W
++CFLAGS ?= -Werror -Wall -W -g -O2
+ override CFLAGS += -I$(PREFIX)/include -DUSE_NLS -DLOCALEDIR="\"$(LOCALEDIR)\"" -DPACKAGE="\"policycoreutils\""
++CPPFLAGS ?= $(CFLAGS)
+ LDLIBS += -lselinux -L$(PREFIX)/lib
+ ifeq ($(PAMH), /usr/include/security/pam_appl.h)
+ 	override CFLAGS += -DUSE_PAM
+@@ -23,17 +24,17 @@ ifeq ($(AUDITH), /usr/include/libaudit.h
+ 	LDLIBS += -laudit
+ endif
+ 
+-TARGETS=$(patsubst %.c,%,$(wildcard *.c))
++TARGETS=open_init_pty run_init
+ 
+ all: $(TARGETS)
+ 
+-open_init_pty: open_init_pty.c
+-	$(LINK.c) $^ -ldl -lutil -o $@
++open_init_pty: open_init_pty.cpp
++	$(LINK.cpp) $^ -ldl -lutil -o $@
+ 
+ 
+ install: all
+ 	test -d $(SBINDIR)      || install -m 755 -d $(SBINDIR)
+-	test -d $(MANDIR)/man8 || install -m 755 -d $(MANDIR)/man8
++	test -d $(MANDIR)/man1 || install -m 755 -d $(MANDIR)/man1
+ 	install -m 755 run_init $(SBINDIR)
+ 	install -m 755 open_init_pty $(SBINDIR)
+ 	install -m 644 run_init.8 $(MANDIR)/man8/
+--- /dev/null
++++ policycoreutils-2.1.10/run_init/open_init_pty.cpp
+@@ -0,0 +1,423 @@
++/*                               -*- Mode: C -*- 
++ * open_init_pty.c --- 
++ * Author           : Manoj Srivastava ( srivasta@glaurung.internal.golden-gryphon.com ) 
++ * Created On       : Fri Jan 14 10:48:28 2005
++ * Created On Node  : glaurung.internal.golden-gryphon.com
++ * Last Modified By : Manoj Srivastava
++ * Last Modified On : Thu Sep 15 00:57:00 2005
++ * Last Machine Used: glaurung.internal.golden-gryphon.com
++ * Update Count     : 92
++ * Status           : Unknown, Use with caution!
++ * HISTORY          : 
++ * Description      : 
++ *
++ * Distributed under the terms of the GNU General Public License v2
++ *
++ * open_init_pty
++ *
++ * SYNOPSIS:
++ *
++ * This program allows a systems administrator to execute daemons
++ * which need to work in the initrc domain, and which need to have
++ * pty's as system_u:system_r:initrc_t
++ *
++ * USAGE:
++ *
++ * * arch-tag: a5583d39-72b9-4cdf-ba1b-5678ea4cbe20
++ */
++
++#include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
++#include <unistd.h>
++#include <signal.h>
++#include <errno.h>
++
++#include <sysexits.h>
++
++#include <pty.h>    /* for openpty and forkpty */
++#include <utmp.h>    /* for login_tty */
++#include <termios.h>
++#include <fcntl.h>
++
++#include <sys/select.h>
++#include <sys/wait.h>
++
++
++#define MAXRETR 3    /* The max number of IO retries on a fd */
++#define BUFSIZE 2048  /* The ring buffer size */
++
++static struct termios saved_termios;
++static int saved_fd = -1;
++static enum { RESET, RAW, CBREAK } tty_state = RESET;
++
++static int tty_semi_raw(int fd)
++{
++  struct termios buf;
++
++  if (tty_state == RESET) {
++    if (tcgetattr(fd, &saved_termios) < 0) {
++      return -1;
++    }
++  }
++
++  buf = saved_termios;
++  /*
++   * echo off, canonical mode off, extended input processing off,
++   * signal chars off 
++   */
++  buf.c_lflag &= ~(ECHO | ICANON | IEXTEN | ISIG);
++  /*
++   * no SIGINT on break, CR-to-NL off, input parity check off, do not
++   * strip 8th bit on input,output flow control off
++   */
++  buf.c_iflag &= ~(BRKINT | ICRNL | INPCK | ISTRIP | IXON);
++  /* Clear size bits, parity checking off */
++  buf.c_cflag &= ~(CSIZE | PARENB);
++  /* set 8 bits/char */
++  buf.c_cflag |= CS8;
++  /* Output processing off 
++     buf.c_oflag    &= ~(OPOST); */
++
++  buf.c_cc[VMIN] = 1;  /* one byte at a time, no timer */
++  buf.c_cc[VTIME] = 0;
++  if (tcsetattr(fd, TCSANOW, &buf) < 0) {
++    return -1;
++  }
++  tty_state = RAW;
++  saved_fd = fd;
++  return 0;
++}
++
++static void tty_atexit(void)
++{
++  if (tty_state != CBREAK && tty_state != RAW) {
++    return;
++  }
++
++  if (tcsetattr(saved_fd, TCSANOW, &saved_termios) < 0) {
++    return;
++  }
++  tty_state = RESET;
++  return;
++}
++
++
++/* The simple ring buffer */
++class ring_buffer
++{
++public:
++  ring_buffer(char *buf, size_t size)
++  {
++    m_buf = m_wptr = m_rptr = buf;
++    m_size = size;
++    m_count = 0;
++  }
++
++  size_t get_count() { return m_count; }
++  int isempty() { return m_count == 0; }
++
++  // return the unused space size in the buffer
++  size_t space()
++  {
++    if(m_rptr > m_wptr)
++      return m_rptr - m_wptr;
++    if(m_rptr < m_wptr || m_count == 0)
++      return m_buf + m_size - m_wptr;
++    return 0; // should not hit this
++  }
++
++  // return the used space in the buffer
++  size_t chunk_size()
++  {
++    if(m_rptr < m_wptr)
++      return m_wptr - m_rptr;
++    if(m_rptr > m_wptr || m_count > 0)
++      return m_buf + m_size - m_rptr;
++    return 0; // should not hit this
++  }
++
++  // read from fd and write to buffer memory
++  ssize_t rb_read(int fd)
++  {
++    ssize_t n = read(fd, m_wptr, space());
++    if(n <= 0)
++      return n;
++    m_wptr += n;
++    m_count += n;
++    if(m_buf + m_size <= m_wptr)
++      m_wptr = m_buf;
++    return n;
++  }
++
++  ssize_t rb_write(int fd)
++  {
++    ssize_t n = write(fd, m_rptr, chunk_size());
++    if(n <= 0)
++      return n;
++    m_rptr += n;
++    m_count -= n;
++    if(m_buf + m_size <= m_rptr)
++      m_rptr = m_buf;
++    return n;
++  }
++
++private:
++    char *m_buf; /* pointer to buffer memory */
++    char *m_wptr;
++    char *m_rptr;
++    size_t m_size; /* the number of bytes allocated for buf */
++    size_t m_count;
++};
++
++static void setfd_nonblock(int fd)
++{
++  int fsflags = fcntl(fd, F_GETFL);
++
++  if (fsflags < 0) {
++    fprintf(stderr, "fcntl(%d, F_GETFL): %s\n",
++        fd, strerror(errno));
++    exit(EX_IOERR);
++  }
++
++  if (fcntl(STDIN_FILENO, F_SETFL, fsflags | O_NONBLOCK) < 0) {
++    fprintf(stderr, "fcntl(%d, F_SETFL, ... | O_NONBLOCK): %s\n",
++        fd, strerror(errno));
++    exit(EX_IOERR);
++  }
++}
++
++static void sigchld_handler(int asig __attribute__ ((unused)))
++{
++}
++
++int main(int argc, char *argv[])
++{
++  pid_t child_pid;
++  int child_exit_status;
++  struct termios tty_attr;
++  struct winsize window_size;
++  int pty_master;
++  char inbuf_mem[BUFSIZE];
++  char outbuf_mem[BUFSIZE];
++  ring_buffer inbuf(inbuf_mem, sizeof(inbuf_mem));
++  ring_buffer outbuf(outbuf_mem, sizeof(outbuf_mem));
++
++  if (argc == 1) {
++    printf("usage: %s PROGRAM [ARGS]...\n", argv[0]);
++    exit(1);
++  }
++
++  /* Wee need I/O calls to fail with EINTR on SIGCHLD... */
++  if ( signal(SIGCHLD, sigchld_handler) == SIG_ERR ) {
++    perror("signal(SIGCHLD,...)");
++    exit(EX_OSERR);
++  }
++
++  if (isatty(STDIN_FILENO)) {
++    /* get terminal parameters associated with stdout */
++    if (tcgetattr(STDOUT_FILENO, &tty_attr) < 0) {
++      perror("tcgetattr(stdout,...)");
++      exit(EX_OSERR);
++    }
++
++    /* end of if(tcsetattr(&tty_attr)) */
++    /* get window size */
++    if (ioctl(STDOUT_FILENO, TIOCGWINSZ, &window_size) < 0) {
++      perror("ioctl(stdout,...)");
++      exit(1);
++    }
++
++    child_pid = forkpty(&pty_master, NULL, &tty_attr, &window_size);
++  } /* end of if(isatty(STDIN_FILENO)) */
++  else {      /* not interactive */
++    child_pid = forkpty(&pty_master, NULL, NULL, NULL);
++  }
++
++  if (child_pid < 0) {
++    perror("forkpty()");
++    fflush(stdout);
++    fflush(stderr);
++    exit(EX_OSERR);
++  }      /* end of if(child_pid < 0) */
++  if (child_pid == 0) {
++    /* in the child */
++    struct termios s_tty_attr;
++    if (tcgetattr(STDIN_FILENO, &s_tty_attr)) {
++      perror("tcgetattr(stdin,...)");
++      exit(EXIT_FAILURE);
++    }
++    /* Turn off echo */
++    s_tty_attr.c_lflag &= ~(ECHO | ECHOE | ECHOK | ECHONL);
++    /* Also turn of NL to CR?LF on output */
++    s_tty_attr.c_oflag &= ~(ONLCR);
++    if (tcsetattr(STDIN_FILENO, TCSANOW, &s_tty_attr)) {
++      perror("tcsetattr(stdin,...)");
++      exit(EXIT_FAILURE);
++    }
++
++    if (execvp(argv[1], argv + 1)) {
++      perror("execvp()");
++      exit(EXIT_FAILURE);
++    }
++  }
++
++  /*
++   * Non blocking mode for all file descriptors.
++   */
++  setfd_nonblock(pty_master);
++  setfd_nonblock(STDIN_FILENO);
++  setfd_nonblock(STDOUT_FILENO);
++
++  if (isatty(STDIN_FILENO)) {
++    if (tty_semi_raw(STDIN_FILENO) < 0) {
++      perror("tty_semi_raw(stdin)");
++    }
++    if (atexit(tty_atexit) < 0) {
++      perror("atexit()");
++    }
++  }
++
++  /* for select()... */
++  fd_set readfds;
++  fd_set writefds;
++  fd_set exceptfds;
++  FD_ZERO(&readfds);
++  FD_ZERO(&writefds);
++  FD_ZERO(&exceptfds);
++
++  unsigned err_n_rpty = 0;
++  unsigned err_n_wpty = 0;
++  unsigned err_n_stdin = 0;
++  unsigned err_n_stdout = 0;
++
++  int done = 0;
++
++  do {
++    /* Accept events only on fds, that we can handle now. */
++    int do_select = 0;
++
++    if ( outbuf.space() > 0  &&  err_n_rpty < MAXRETR ) {
++      FD_SET(pty_master, &readfds);
++      do_select = 1;
++    } else
++      FD_CLR(pty_master, &readfds);
++
++    if ( ! inbuf.isempty()  &&  err_n_wpty < MAXRETR ) {
++      FD_SET(pty_master, &writefds);
++      do_select = 1;
++    } else
++      FD_CLR(pty_master, &writefds);
++        
++    if ( inbuf.space() > 0  &&  err_n_stdin < MAXRETR ) {
++      FD_SET(STDIN_FILENO, &readfds);
++      do_select = 1;
++    } else
++      FD_CLR(STDIN_FILENO, &readfds);
++        
++    if ( ! outbuf.isempty()  &&  err_n_stdout < MAXRETR ) {
++      FD_SET(STDOUT_FILENO, &writefds);
++      do_select = 1;
++    } else
++      FD_CLR(STDOUT_FILENO, &writefds);
++
++    if ( ! do_select )
++    {
++#ifdef DEBUG
++      fprintf(stderr, "No I/O job for us, calling waitpid()...\n");
++#endif
++        while ( waitpid(child_pid, &child_exit_status, 0) < 0 )
++        ;
++      break;
++    }
++
++    int select_rc = select(pty_master + 1,
++        &readfds, &writefds, &exceptfds, NULL);
++    if ( select_rc < 0 ) {
++      perror("select()");
++      exit(EX_IOERR);
++    }
++#ifdef DEBUG
++    fprintf(stderr, "select() returned %d\n", select_rc);
++#endif
++
++    if (FD_ISSET(STDOUT_FILENO, &writefds)) {
++#ifdef DEBUG
++        fprintf(stderr, "stdout can be written\n");
++#endif
++        ssize_t n = outbuf.rb_write(STDOUT_FILENO);
++        if ( n <= 0 && n != EINTR && n != EAGAIN )
++        err_n_stdout++;
++#ifdef DEBUG
++        if ( n >= 0 )
++        fprintf(stderr, "%d bytes written into stdout\n", n);
++        else
++        perror("write(stdout,...)");
++#endif
++    }
++    if (FD_ISSET(pty_master, &writefds)) {
++#ifdef DEBUG
++        fprintf(stderr, "pty_master can be written\n");
++#endif
++        ssize_t n = inbuf.rb_write(pty_master);
++        if ( n <= 0 && n != EINTR && n != EAGAIN )
++        err_n_wpty++;
++#ifdef DEBUG
++        if ( n >= 0 )
++        fprintf(stderr, "%d bytes written into pty_master\n", n);
++        else
++        perror("write(pty_master,...)");
++#endif
++    }
++    if (FD_ISSET(STDIN_FILENO, &readfds)) {
++#ifdef DEBUG
++        fprintf(stderr, "stdin can be read\n");
++#endif
++        ssize_t n = inbuf.rb_read(STDIN_FILENO);
++        if ( n <= 0 && n != EINTR && n != EAGAIN )
++        err_n_stdin++;
++#ifdef DEBUG
++        if ( n >= 0 )
++        fprintf(stderr, "%d bytes read from stdin\n", n);
++        else
++        perror("read(stdin,...)");
++#endif
++    }
++    if (FD_ISSET(pty_master, &readfds)) {
++#ifdef DEBUG
++        fprintf(stderr, "pty_master can be read\n");
++#endif
++        ssize_t n = outbuf.rb_read(pty_master);
++        if ( n <= 0 && n != EINTR && n != EAGAIN )
++        err_n_rpty++;
++#ifdef DEBUG
++        if ( n >= 0 )
++        fprintf(stderr, "%d bytes read from pty_master\n", n);
++        else
++        perror("read(pty_master,...)");
++#endif
++    }
++
++    if ( ! done )
++        if ( waitpid(child_pid, &child_exit_status, WNOHANG) > 0 )
++        done = 1;
++
++  } while ( !done
++      || !(inbuf.isempty() || err_n_wpty >= MAXRETR)
++        || !(outbuf.isempty() || err_n_stdout >= MAXRETR) );
++
++#ifdef DEBUG
++  fprintf(stderr, "inbuf: %u bytes left, outbuf: %u bytes left\n",
++      inbuf.get_count(), outbuf.get_count());
++  fprintf(stderr, "err_n_rpty=%u, err_n_wpty=%u, "
++      "err_n_stdin=%u, err_n_stdout=%u\n",
++      err_n_rpty, err_n_wpty, err_n_stdin, err_n_stdout);
++#endif
++  if ( WIFEXITED(child_exit_status) )
++    exit(WEXITSTATUS(child_exit_status));
++  exit(EXIT_FAILURE);
++}        /* end of main() */
++
++/*
++ * vim:ts=4:
++ */

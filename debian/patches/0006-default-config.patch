@@ -1,0 +1,47 @@
+From: Russell Coker <russell@coker.com.au>
+Date: Sun, 26 Feb 2012 19:39:24 +0100
+Subject: default config
+
+---
+ restorecond/restorecond.conf |    5 +++++
+ sandbox/sandbox.conf         |    2 ++
+ sandbox/sandbox.config       |    2 ++
+ 3 files changed, 9 insertions(+), 0 deletions(-)
+
+diff --git a/restorecond/restorecond.conf b/restorecond/restorecond.conf
+index 58b723a..4b93077 100644
+--- a/restorecond/restorecond.conf
++++ b/restorecond/restorecond.conf
+@@ -2,6 +2,11 @@
+ /etc/resolv.conf
+ /etc/samba/secrets.tdb
+ /etc/mtab
++/var/run/cups
++/var/run/dbus
++/var/run/network
++/var/run/network/ifstate
++/var/run/PolicyKit
+ /var/run/utmp
+ /var/log/wtmp
+ /root/*
+diff --git a/sandbox/sandbox.conf b/sandbox/sandbox.conf
+index 7c35808..c408260 100644
+--- a/sandbox/sandbox.conf
++++ b/sandbox/sandbox.conf
+@@ -1,5 +1,7 @@
+ # Space separate list of homedirs
+ HOMEDIRS="/home"
++# Comment out the following line to enable the sandbox
++RUN=NO
+ # Control group configuration
+ NAME=sandbox
+ CPUAFFINITY=ALL
+diff --git a/sandbox/sandbox.config b/sandbox/sandbox.config
+index f9f059a..659a68f 100644
+--- a/sandbox/sandbox.config
++++ b/sandbox/sandbox.config
+@@ -1,2 +1,4 @@
+ # Space separate list of homedirs
+ HOMEDIRS="/home"
++# Comment out the following line to enable the sandbox
++RUN=NO

@@ -1,0 +1,2 @@
+./mcstrans/share/examples/* usr/share/doc/policycoreutils/mcstrans-examples/
+debian/se_dpkg /usr/sbin/

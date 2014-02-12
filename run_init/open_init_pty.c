@@ -162,7 +162,7 @@ int main(int argc, char *argv[])
 		/* in the child */
 		struct termios s_tty_attr;
 		if (tcgetattr(fileno(stdin), &s_tty_attr)) {
-			perror("forkpty child:");
+			perror("Child:");
 			fflush(stdout);
 			fflush(stderr);
 			exit(EXIT_FAILURE);

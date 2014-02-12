@@ -1,0 +1,25 @@
+Description: Make restorecon return 0 when a file has changed context with no error
+Author: Russell Coker <russell@coker.com.au>
+Last-Update: 2012-03-07
+Bug-Debian: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=662990
+
+---
+ setfiles/restore.c |    3 +--
+ 1 files changed, 1 insertions(+), 2 deletions(-)
+
+diff --git a/setfiles/restore.c b/setfiles/restore.c
+index 9a7d315..a378af0 100644
+--- a/setfiles/restore.c
++++ b/setfiles/restore.c
+@@ -218,10 +218,9 @@ static int restore(FTSENT *ftsent)
+ 			r_opts->progname, my_file, newcon, strerror(errno));
+ 		goto skip;
+ 	}
+-	ret = 1;
+ out:
+ 	freecon(newcon);
+-	return ret;
++	return 0;
+ skip:
+ 	freecon(newcon);
+ 	return SKIP;

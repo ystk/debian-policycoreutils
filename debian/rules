@@ -1,67 +1,33 @@
-#! /usr/bin/make -f
-############################ -*- Mode: Makefile; coding: utf-8 -*- ###########################
-## rules --- 
-## Author           : Manoj Srivastava ( srivasta@glaurung.green-gryphon.com ) 
-## Created On       : Fri Nov 14 12:33:34 2003
-## Created On Node  : glaurung.green-gryphon.com
-## Last Modified By : Manoj Srivastava
-## Last Modified On : Tue Nov 18 17:46:22 2003
-## Last Machine Used: glaurung.green-gryphon.com
-## Update Count     : 70
-## Status           : Unknown, Use with caution!
-## HISTORY          : 
-## Description      : 
-## 
-## arch-tag: 9a5063f4-1e20-4fff-b22a-de94c1e3d954
-## 
-## This program is free software; you can redistribute it and/or modify
-## it under the terms of the GNU General Public License as published by
-## the Free Software Foundation; either version 2 of the License, or
-## (at your option) any later version.
-##
-## This program is distributed in the hope that it will be useful,
-## but WITHOUT ANY WARRANTY; without even the implied warranty of
-## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-## GNU General Public License for more details.
-##
-## You should have received a copy of the GNU General Public License
-## along with this program; if not, write to the Free Software
-## Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
-##
-###############################################################################
+#!/usr/bin/make -f
+# -*- makefile -*-
+#
+#  # Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
 
-# Include dpkg-architecture generated variables
-include debian/common/archvars.mk
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+export LIBDIR=$${DESTDIR}/usr/lib/${DEB_HOST_MULTIARCH}
+export PYTHONLIBDIR=$${DESTDIR}/usr/lib/$(shell pyversions -d)
+#export SHLIBDIR=$${DESTDIR}/lib/${DEB_HOST_MULTIARCH}
+#export LIBBASE=lib/${DEB_HOST_MULTIARCH}
 
-ifneq ($(DEB_HOST_ARCH_OS),linux)
-$(error This is a linux only package. Aborting build.)
-endif
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
-# Set variables with information extracted from control and changelog files
-include debian/common/pkgvars.mk
+# The build system doesn't use CPPFLAGS, pass them to CFLAGS to enable the
+# missing (hardening) flags. dpkg_buildflags is necessary because $(shell ..)
+# doesn't use local environment variables.
+dpkg_buildflags = DEB_BUILD_MAINT_OPTIONS=$(DEB_BUILD_MAINT_OPTIONS) dpkg-buildflags
+export DEB_CFLAGS_MAINT_APPEND = $(shell $(dpkg_buildflags) --get CPPFLAGS)
 
-# variables useful for perl packages
-include debian/common/perlvars.mk
+%:
+	dh $@ --with python2
 
-# Install commands
-include debian/common/install_cmds.mk
+override_dh_fixperms:
+	dh_fixperms -Xusr/sbin/seunshare
 
-include debian/local-vars.mk
+override_dh_installinit:
+	dh_installinit --onlyscripts --name=mcstrans
+	dh_installinit --onlyscripts --name=restorecond
 
-include debian/common/copt.mk
-
-include debian/common/automake.mk
-
-
-
-all:
-	@echo nothing to be done
-
-include debian/common/targets.mk
-
-include debian/local.mk
-
-
-#Local variables:
-#mode: makefile
-#End:
+override_dh_installpam:
+	dh_installpam --name=newrole
+	dh_installpam --name=run_init

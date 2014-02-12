@@ -1,0 +1,27 @@
+From: Manoj Srivastava <srivasta@debian.org>
+Date: Thu, 5 Jun 2008 22:07:22 -0500
+Subject: Only run setfiles if we found read-write filesystems to run it on
+
+Signed-off-by: Manoj Srivastava <srivasta@debian.org>
+---
+ scripts/fixfiles |    7 ++++++-
+ 1 files changed, 6 insertions(+), 1 deletions(-)
+
+diff --git a/scripts/fixfiles b/scripts/fixfiles
+index 310fccf..0db4558 100755
+--- a/scripts/fixfiles
++++ b/scripts/fixfiles
+@@ -234,7 +234,12 @@ then
+ 	done
+ FC=$TEMPFCFILE
+ fi
+-${SETFILES} -q ${SYSLOGFLAG} ${FORCEFLAG} $* ${FC} ${FILESYSTEMSRW} 2>&1 | cat >> $LOGFILE
++if [  -n "${FILESYSTEMSRW}" ]; then
++    echo "Relabeling `echo ${FILESYSTEMSRW}`"
++    ${SETFILES} -q -p ${SYSLOGFLAG} ${FORCEFLAG} $* ${FC} ${FILESYSTEMSRW} 2>&1 | cat >> $LOGFILE
++else
++    echo >&2 "fixfiles: No suitable file systems found"
++fi
+ rm -rf /tmp/gconfd-* /tmp/pulse-* /tmp/orbit-* $TEMPFCFILE
+ 
+ UNDEFINED=`get_undefined_type` || exit $?

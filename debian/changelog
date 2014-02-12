@@ -1,3 +1,148 @@
+policycoreutils (2.1.10-9) unstable; urgency=high
+
+  * Revert the munging of setrans.conf which was introduced in 2.1.10-7.
+    Closes: #677759
+  * Made mcstrans ignore a line containing "s0=" to properly solve the
+    original problem.
+  * Made the mcstrans init script not return an error when you stop it twice.
+  * Included a new version of open_init_pty that doesn't take 100% CPU time.
+    Closes: #474956
+  * Removed sandbox because it's a new feature that we never had working, also
+    removed seunshare because it's not needed and brought in an annoying
+    dependency on libcgroup1
+    Closes: #678590
+
+ -- Russell Coker <russell@coker.com.au>  Tue, 26 Jun 2012 17:22:05 +1000
+
+policycoreutils (2.1.10-8) unstable; urgency=low
+
+  * Drop /selinux directory, we are planning to move to /sys/fs/selinux, and
+    it's already created by libselinux1 package anyway.
+    From Laurent Bigonville
+
+ -- Russell Coker <russell@coker.com.au>  Sat, 16 Jun 2012 23:37:05 +1000
+
+policycoreutils (2.1.10-7) unstable; urgency=low
+
+  * Correctly label /run/setrans.
+  * Fix /etc/selinux/default/setrans.conf if it contains old syntax so we
+    can start the new version of mcstrans.
+
+ -- Russell Coker <russell@coker.com.au>  Sat, 16 Jun 2012 17:59:24 +1000
+
+policycoreutils (2.1.10-6) unstable; urgency=low
+
+  * Team upload.
+  * debian/control, debian/patches/0013-use_dpkg_buildflags.patch: Enable
+    hardening flags for all components of the package (Closes: #665320)
+  * debian/control: Fix Vcs-Browser URL
+  * debian/patches/0014-po-file-update.patch: Update the po files, this allows
+    the package to build twice in a row again (Closes: #662514)
+  * debian/rules: Install the right pam files
+
+ -- Laurent Bigonville <bigon@debian.org>  Tue, 27 Mar 2012 17:45:36 +0200
+
+policycoreutils (2.1.10-5) unstable; urgency=low
+
+  * Team upload.
+  * Switch to dh sequence and debhelper 9
+  * Merge my missing patches
+  * d/p/fix-ftbfs-hardening-flags.patch: Fix FTBFS with hardening flags
+  * d/policycoreutils.lintian-overrides: Drop non-standard-toplevel-dir selinux/
+  * debian/patches/0006-default-config.patch: Properly disable sandbox by
+    default
+  * Rewrite maintainer scripts to use debhelper generated stanza.
+    (Should closes: #660345)
+  * debian/control: Update Vcs-* fields
+  * Add debian/gbp.conf file
+  * debian/control:
+    - Add Pre-Depends: ${misc:Pre-Depends} field
+    - Make policycoreutils arch:linux-any
+    - Put under the Debian SELinux team maintenance
+    - Bump python-setools dependency to >= 3.3.7-2
+
+ -- Laurent Bigonville <bigon@debian.org>  Tue, 20 Mar 2012 19:50:46 +0100
+
+policycoreutils (2.1.10-4) unstable; urgency=low
+
+  * Made it depend on python-setools for audit2allow
+
+ -- Russell Coker <russell@coker.com.au>  Mon, 19 Mar 2012 16:00:12 +1100
+
+policycoreutils (2.1.10-2) unstable; urgency=low
+
+  * Depend on python-ipy for semanage
+  * Fix command not found error in init.d/sandbox
+    Closes: #663419
+  * Added patch from Martin Orr to make restorecon not return 1 (error) when
+    it relabels a file.
+    Closes: #662990
+
+ -- Russell Coker <russell@coker.com.au>  Thu, 15 Mar 2012 10:52:29 +1100
+
+policycoreutils (2.1.10-1) unstable; urgency=low
+
+  * New upstream version
+  * Made it build-depend on libcgroup-dev, libdbus-1-dev, libdbus-glib-1-dev,
+    and libglib2.0-dev
+  * Lots of multiarch related changes
+  * Rename /etc/init.d/policycoreutils to /etc/init.d/restorecond
+  * Added per-user configuration for restorecond
+
+ -- Russell Coker <russell@coker.com.au>  Mon, 05 Mar 2012 17:28:46 +1100
+
+policycoreutils (2.1.0-3.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Adjust package to multiarch: export/use DEB_HOST_MULTIARCH in
+    debian/common/* and in some Makefiles; build-depend on dpkg-dev (>=
+    1.16.0). Based on patches from Mitsuya Shibata and Hideki Yamane.
+    Closes: #640630, #652758
+    LP: #832802
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 15 Feb 2012 19:10:41 +0100
+
+policycoreutils (2.1.0-3) unstable; urgency=low
+
+  * Add mcstrans examples in /usr/share/doc/policycoreutils/mcstrans-examples
+  * Added dependency on psmisc for killall in mcstrans init script
+
+ -- Russell Coker <russell@coker.com.au>  Wed, 02 Nov 2011 15:06:07 +1100
+
+policycoreutils (2.1.0-2) unstable; urgency=low
+
+  * New upstream version, included mcstrans and added sandbox.
+  * The new mcstrans won't work with the policy from Squeeze, it will abort on
+    startup and you won't get the names mapped.  IMHO this is acceptable for
+    a partially upgraded system and when the system is fully upgraded it will
+    all work.
+  * Made it build-depend on the latest libselinux1-dev, libsepol1-dev,
+    libsemanage1-dev, and python-sepolgen.
+  * Added libcap-ng-dev to the build-depends for sandbox.
+  * Added libcap-dev to the build-depends for mcstrans.
+  * Hard-coded LIBDIR in mcstrans/src/Makefile and mcstrans/utils/Makefile as
+    uname -i doesn't work.
+  * Added dependency on python-support.
+  * Made it depend on latest python-sepolgen and on python-support.
+  * s/\.p/\.P/ on mcs.8
+  * Added lintian override for suid binary /usr/sbin/seunshare .
+  * Made this version -2 because version -1 got lost.
+
+ -- Russell Coker <russell@coker.com.au>  Mon, 31 Oct 2011 16:35:30 +1100
+
+policycoreutils (2.0.82-5) unstable; urgency=low
+
+  * Make it suggest selinux-policy-dev which is needed by sepolgen-ifgen.
+
+ -- Russell Coker <russell@coker.com.au>  Wed, 16 Feb 2011 00:22:13 +1100
+
+policycoreutils (2.0.82-4) unstable; urgency=low
+
+  * Depend on the latest version of python-sepolgen, audit2allow won't work
+    otherwise.
+
+ -- Russell Coker <russell@coker.com.au>  Sat, 20 Nov 2010 23:40:52 +1100
+
 policycoreutils (2.0.82-3) unstable; urgency=low
 
   * Update the man page for semanage to document -i for command files.

@@ -1,0 +1,1 @@
+policycoreutils: setuid-binary usr/sbin/seunshare 4755 root/root
