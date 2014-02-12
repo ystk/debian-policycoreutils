@@ -1,4 +1,4 @@
-#! /usr/bin/python -E
+#! /usr/bin/python -Es
 # Authors: Karl MacMillan <kmacmillan@mentalrootkit.com>
 #
 # Copyright (C) 2006-2007  Red Hat
@@ -28,6 +28,7 @@ import sepolgen.objectmodel as objectmodel
 import sepolgen.defaults as defaults
 import sepolgen.module as module
 from sepolgen.sepolgeni18n import _
+import selinux.audit2why as audit2why
 
 class AuditToPolicy:
     VERSION = "%prog .1"
@@ -46,6 +47,7 @@ class AuditToPolicy:
                           help="audit messages since last boot conflicts with -i")
         parser.add_option("-a", "--all", action="store_true", dest="audit", default=False,
                           help="read input from audit log - conflicts with -i")
+        parser.add_option("-p", "--policy", dest="policy", default=None, help="Policy file to use for analysis")
         parser.add_option("-d", "--dmesg", action="store_true", dest="dmesg", default=False,
                           help="read input from dmesg - conflicts with --all and --input")
         parser.add_option("-i", "--input", dest="input",
@@ -102,7 +104,7 @@ class AuditToPolicy:
         if name:
             options.requires = True
             if not module.is_valid_name(name):
-                sys.stderr.write("only letters and numbers allowed in module names\n")
+                sys.stderr.write('error: module names must begin with a letter, optionally followed by letters, numbers, "-", "_", "."\n')
                 sys.exit(2)
 
         # Make -M and -o conflict
@@ -231,29 +233,12 @@ class AuditToPolicy:
 
     def __output_audit2why(self):
             import selinux
-            import selinux.audit2why as audit2why
             import seobject
-            audit2why.init()
             for i in self.__parser.avc_msgs:
-                rc, bools = audit2why.analyze(i.scontext.to_string(), i.tcontext.to_string(), i.tclass, i.accesses)
+                rc = i.type
+                bools = i.bools
                 if rc >= 0:
                     print "%s\n\tWas caused by:" % i.message
-                if rc == audit2why.NOPOLICY:
-                    raise RuntimeError("Must call policy_init first")
-                if rc == audit2why.BADTCON:
-                    print "Invalid Target Context %s\n" % i.tcontext
-                    continue
-                if rc == audit2why.BADSCON:
-                    print "Invalid Source Context %s\n" % i.scontext
-                    continue
-                if rc == audit2why.BADSCON:
-                    print "Invalid Type Class %s\n" % i.tclass
-                    continue
-                if rc == audit2why.BADPERM:
-                    print "Invalid permission %s\n" % i.accesses
-                    continue
-                if rc == audit2why. BADCOMPUTE:
-                    raise RuntimeError("Error during access vector computation")
                 if rc == audit2why.ALLOW:
                     print "\t\tUnknown - would be allowed by active policy\n",
                     print "\t\tPossible mismatch between this policy and the one under which the audit message was generated.\n"
@@ -350,11 +335,19 @@ class AuditToPolicy:
     def main(self):
         try:
             self.__parse_options()
+            if self.__options.policy:
+                audit2why.init(self.__options.policy)
+            else:
+                audit2why.init()
+
             self.__read_input()
             self.__process_input()
             self.__output()
         except KeyboardInterrupt:
             sys.exit(0)
+        except ValueError, e:
+            print e
+            sys.exit(1)
 
 if __name__ == "__main__":
     app = AuditToPolicy()

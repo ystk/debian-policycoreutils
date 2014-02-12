@@ -5,7 +5,6 @@
 #include <ctype.h>
 #include <regex.h>
 #include <sys/vfs.h>
-#include <sys/utsname.h>
 #define __USE_XOPEN_EXTENDED 1	/* nftw */
 #include <libgen.h>
 #ifdef USE_AUDIT
@@ -15,8 +14,6 @@
 #define AUDIT_FS_RELABEL 2309
 #endif
 #endif
-static int mass_relabel;
-static int mass_relabel_errs;
 
 
 /* cmdline opts*/
@@ -24,8 +21,6 @@ static int mass_relabel_errs;
 static char *policyfile = NULL;
 static int warn_no_match = 0;
 static int null_terminated = 0;
-static int errors;
-static int ignore_enoent;
 static struct restore_opts r_opts;
 
 #define STAT_BLOCK_SIZE 1
@@ -44,13 +39,13 @@ void usage(const char *const name)
 {
 	if (iamrestorecon) {
 		fprintf(stderr,
-			"usage:  %s [-iFnrRv0] [-e excludedir ] [-o filename ] [-f filename | pathname... ]\n",
+			"usage:  %s [-iFnprRv0] [-e excludedir ] [-o filename ] [-f filename | pathname... ]\n",
 			name);
 	} else {
 		fprintf(stderr,
 			"usage:  %s [-dnpqvW] [-o filename] [-r alt_root_path ] spec_file pathname...\n"
 			"usage:  %s -c policyfile spec_file\n"
-			"usage:  %s -s [-dnqvW] [-o filename ] spec_file\n", name, name,
+			"usage:  %s -s [-dnpqvW] [-o filename ] spec_file\n", name, name,
 			name);
 	}
 	exit(1);
@@ -109,10 +104,11 @@ int canoncon(char **contextp)
 }
 
 #ifndef USE_AUDIT
-static void maybe_audit_mass_relabel(void)
+static void maybe_audit_mass_relabel(int mass_relabel __attribute__((unused)),
+				     int mass_relabel_errs __attribute__((unused)))
 {
 #else
-static void maybe_audit_mass_relabel(void)
+static void maybe_audit_mass_relabel(int mass_relabel, int mass_relabel_errs)
 {
 	int audit_fd = -1;
 	int rc = 0;
@@ -138,69 +134,6 @@ static void maybe_audit_mass_relabel(void)
 #endif
 }
 
-/*
-   Search /proc/mounts for all file systems that do not support extended
-   attributes and add them to the exclude directory table.  File systems
-   that support security labels have the seclabel option.
-*/
-static void exclude_non_seclabel_mounts()
-{
-	struct utsname uts;
-	FILE *fp;
-	size_t len;
-	ssize_t num;
-	int index = 0, found = 0;
-	char *mount_info[4];
-	char *buf = NULL, *item;
-
-	/* Check to see if the kernel supports seclabel */
-	if (uname(&uts) == 0 && strverscmp(uts.release, "2.6.30") < 0)
-		return;
-	if (is_selinux_enabled() <= 0)
-		return;
-
-	fp = fopen("/proc/mounts", "r");
-	if (!fp)
-		return;
-
-	while ((num = getline(&buf, &len, fp)) != -1) {
-		found = 0;
-		index = 0;
-		item = strtok(buf, " ");
-		while (item != NULL) {
-			mount_info[index] = item;
-			if (index == 3)
-				break;
-			index++;
-			item = strtok(NULL, " ");
-		}
-		if (index < 3) {
-			fprintf(stderr,
-				"/proc/mounts record \"%s\" has incorrect format.\n",
-				buf);
-			continue;
-		}
-
-		/* remove pre-existing entry */
-		remove_exclude(mount_info[1]);
-
-		item = strtok(mount_info[3], ",");
-		while (item != NULL) {
-			if (strcmp(item, "seclabel") == 0) {
-				found = 1;
-				break;
-			}
-			item = strtok(NULL, ",");
-		}
-
-		/* exclude mount points without the seclabel option */
-		if (!found)
-			add_exclude(mount_info[1]);
-	}
-
-	free(buf);
-}
-
 int main(int argc, char **argv)
 {
 	struct stat sb;
@@ -211,6 +144,7 @@ int main(int argc, char **argv)
 	size_t buf_len;
 	int recurse; /* Recursive descent. */
 	char *base;
+	int mass_relabel = 0, errors = 0;
 	
 	memset(&r_opts, 0, sizeof(r_opts));
 
@@ -335,7 +269,7 @@ int main(int argc, char **argv)
 			r_opts.debug = 1;
 			break;
 		case 'i':
-			ignore_enoent = 1;
+			r_opts.ignore_enoent = 1;
 			break;
 		case 'l':
 			r_opts.logging = 1;
@@ -371,7 +305,7 @@ int main(int argc, char **argv)
 				break;
 			}
 			if (optind + 1 >= argc) {
-				fprintf(stderr, "usage:  %s -r r_opts.rootpath\n",
+				fprintf(stderr, "usage:  %s -r rootpath\n",
 					argv[0]);
 				exit(1);
 			}
@@ -475,7 +409,7 @@ int main(int argc, char **argv)
 			buf[len - 1] = 0;
 			if (!strcmp(buf, "/"))
 				mass_relabel = 1;
-			errors |= process_one_realpath(buf, recurse) < 0;
+			errors |= process_glob(buf, recurse);
 		}
 		if (strcmp(input_filename, "-") != 0)
 			fclose(f);
@@ -483,13 +417,12 @@ int main(int argc, char **argv)
 		for (i = optind; i < argc; i++) {
 			if (!strcmp(argv[i], "/"))
 				mass_relabel = 1;
-			errors |= process_one_realpath(argv[i], recurse) < 0;
+
+			errors |= process_glob(argv[i], recurse);
 		}
 	}
 	
-	if (mass_relabel)
-		mass_relabel_errs = errors;
-	maybe_audit_mass_relabel();
+	maybe_audit_mass_relabel(mass_relabel, errors);
 
 	if (warn_no_match)
 		selabel_stats(r_opts.hnd);

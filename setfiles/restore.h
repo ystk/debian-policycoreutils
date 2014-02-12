@@ -27,6 +27,7 @@ struct restore_opts {
 	int hard_links;
 	int verbose;
 	int logging;
+	int ignore_enoent;
 	char *rootpath;
 	int rootpathlen;
 	char *progname;
@@ -44,7 +45,10 @@ struct restore_opts {
 void restore_init(struct restore_opts *opts);
 void restore_finish();
 int add_exclude(const char *directory);
+int exclude(const char *path);
 void remove_exclude(const char *directory);
 int process_one_realpath(char *name, int recurse);
+int process_glob(char *name, int recurse);
+void exclude_non_seclabel_mounts();
 
 #endif
