@@ -1,0 +1,47 @@
+Subject: The sandbox configuration file is located in /etc/default/sandbox not in /etc/sysconfig/sandbox.
+Author: Laurent Bigonville <bigon@debian.org>
+Date: Sat, 29 Sep 2012 14:07:12 +0200
+Forwarded: not-needed
+
+--- a/sandbox/sandbox.8
++++ b/sandbox/sandbox.8
+@@ -85,7 +85,7 @@ $HOME and /tmp, secondary Xserver, defau
+ Set the DPI value for the sandbox X Server. Defaults to the current X Sever DPI.
+ .TP
+ \fB\-c\fR \fB\-\-cgroups\fR
+-Use control groups to control this copy of sandbox.  Specify parameters in /etc/sysconfig/sandbox. Max memory usage and cpu usage are to be specified in percent. You can specify which CPUs to use by numbering them 0,1,2... etc.
++Use control groups to control this copy of sandbox.  Specify parameters in /etc/default/sandbox. Max memory usage and cpu usage are to be specified in percent. You can specify which CPUs to use by numbering them 0,1,2... etc.
+ .TP
+ \fB\-C\fR \fB\-\-capabilities\fR Use capabilities within the
+ sandbox. By default applications executed within the sandbox will not
+--- a/sandbox/seunshare.8
++++ b/sandbox/seunshare.8
+@@ -19,7 +19,7 @@ Alternate homedir to be used by the appl
+ Use alternate tempory directory to mount on /tmp.  tmpdir must be owned by the user.
+ .TP
+ \fB\-c --cgroups\fR
+-Use cgroups to control this copy of seunshare.  Specify parameters in /etc/sysconfig/sandbox.  Max memory usage and cpu usage are to be specified in percent.  You can specify which CPUs to use by numbering them 0,1,2... etc.
++Use cgroups to control this copy of seunshare.  Specify parameters in /etc/default/sandbox.  Max memory usage and cpu usage are to be specified in percent.  You can specify which CPUs to use by numbering them 0,1,2... etc.
+ .TP
+ \fB\-C --capabilities\fR
+ Allow apps executed within the namespace to use capabilities.  Default is no capabilities.
+--- a/sandbox/seunshare.c
++++ b/sandbox/seunshare.c
+@@ -319,7 +319,7 @@ static int match(const char *string, cha
+ }
+ 
+ /**
+- * Apply cgroups settings from the /etc/sysconfig/sandbox config file.
++ * Apply cgroups settings from the /etc/default/sandbox config file.
+  */
+ static int setup_cgroups()
+ {
+@@ -333,7 +333,7 @@ static int setup_cgroups()
+ 	char *tok = NULL;
+ 	int rc = -1;
+ 	char *str = NULL;
+-	const char* fname = "/etc/sysconfig/sandbox";
++	const char* fname = "/etc/default/sandbox";
+ 
+ 	if ((fp = fopen(fname, "rt")) == NULL) {
+ 		fprintf(stderr, "Error opening sandbox config file.");

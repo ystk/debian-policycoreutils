@@ -1,3 +1,118 @@
+policycoreutils (2.3-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - debian/control: Bump {build-}dependencies to match the new release
+    - Drop d/p/0025-restorecon-service.patch, d/p/0024-fix-manpages.patch,
+      applied upstream
+    - Drop debian/policycoreutils.mcstrans.service, merged upstream
+    - debian/policycoreutils.install: Install mcstrans.service from upstream
+  * Drop d/p/0002-Made-fixfiles-display-the-progress.patch: the -d flag is
+    already passed to restoreconf and setfiles and the patch is breaking the
+    verbose mode as -v and -p are mutually exclusive.
+
+ -- Laurent Bigonville <bigon@debian.org>  Sat, 17 May 2014 12:09:09 +0200
+
+policycoreutils (2.2.5-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+  * debian/control: Bump Standards-Version to 3.9.5 (no further changes)
+
+ -- Laurent Bigonville <bigon@debian.org>  Sun, 29 Dec 2013 14:43:17 +0100
+
+policycoreutils (2.2.4-1) unstable; urgency=low
+
+  * Team upload.
+  * New upstream release
+    - Drop d/p/0023-semanage_default_encoding.patch: Merged upstream
+
+ -- Laurent Bigonville <bigon@debian.org>  Mon, 02 Dec 2013 20:02:14 +0100
+
+policycoreutils (2.2.1-1) unstable; urgency=low
+
+  * Team upload.
+  * New upstream release
+    - debian/control: Bump {build-}dependencies to match the release
+    - debian/control: Add python-dev, libapol-dev and libqpol-dev to the
+      build-depencencies
+    - Add new python-sepolicy package
+    - d/p/0002-Made-fixfiles-display-the-progress.patch: Refreshed
+    - Drop d/p/0004-manpages.patch: Fixed upstream
+    - d/p/0005-build-system.patch: Refreshed
+    - d/p/0006-default-config.patch: Refreshed
+    - d/p/0009-find-does-not-have-a-context-switch.patch: Refreshed
+    - Drop d/p/0013-use_dpkg_buildflags.patch: Fixed upstream
+    - Drop d/p/0014-po-file-update.patch: .po files are not updated during
+      build anymore
+    - d/p/0017-no-sandbox: Refreshed
+    - d/p/0018-sandbox-config.patch: Refreshed
+  * debian/rules: bash-completion script are now properly installed
+  * debian/patches/0022-sepolicy-path.patch: Install sepolicy modules in the
+    correct location
+  * debian/rules: Fix /usr/sbin/load_policy symlink creation
+  * debian/rules: Set $SYSTEMDDIR variable to /lib/systemd, so systemd units
+    files are installed in the correct directory
+  * debian/control, debian/rules: Add calls to dh_systemd tools
+  * debian/rules, debian/policycoreutils.install: Pass --destdir option to
+    dh_auto_install and list files to install in the package
+  * Add debian/patches/0023-semanage_default_encoding.patch: Remove import for
+    not upstreamed module
+  * Add debian/patches/0024-fix-manpages.patch: Fix some minor manpages issues
+  * debian/control: Use canonical URL in VCS-Git field
+  * d/p/0025-restorecon-service.patch: Improve restorecond service file
+
+ -- Laurent Bigonville <bigon@debian.org>  Wed, 06 Nov 2013 22:32:23 +0100
+
+policycoreutils (2.1.13-2) unstable; urgency=low
+
+  * Team upload.
+  * debian/control:
+    - Add gawk to the build-dependencies, this is needed for some manpages
+      generation
+    - Add python-audit to the Recommends
+    - Bump Standards-Version to 3.9.4 (no further changes)
+
+ -- Laurent Bigonville <bigon@debian.org>  Sat, 25 May 2013 01:44:10 +0200
+
+policycoreutils (2.1.13-1) experimental; urgency=low
+
+  * Team upload.
+  * New upstream release
+    - Bump {build-}dependencies
+    - debian/patches/0002-Made-fixfiles-display-the-progress.patch: Refreshed
+    - debian/patches/0004-manpages.patch: Refreshed
+    - debian/patches/0005-build-system.patch: Refreshed
+    - debian/patches/0006-default-config.patch: Refreshed
+    - d/p/0007-Fix-infinite-loop-i-watch-code.patch: Dropped, applied upstream
+    - d/p/0008-Only-run-setfiles-if-we-found-read-write-filesystems.patch:
+      Dropped, applied upstream
+    - d/p/0010-fix-ftbfs-with-hardening-flags.patch: Dropped, applied upstream
+    - debian/patches/0011-restorecon-no-error.patch: Dropped, applied upstream
+    - debian/patches/0013-use_dpkg_buildflags.patch: Refreshed
+    - debian/patches/0014-po-file-update.patch: Refreshed
+    - debian/patches/0017-no-sandbox: Refreshed
+  * debian/watch: Fix watch file URL
+  * debian/gbp.conf: Change default git-buildpackage build-directory and the
+    debian-branch to "debian" instead of "upstream"
+  * debian/rules: Move bash completion scripts to the new location
+  * Override INITDIR and SYSCONFDIR from debian/rules instead of patching
+    Makefiles directly
+  * debian/policycoreutils.dirs: Install /var/lib/selinux/ directory, this is
+    needed for some operations of semanage (Closes: #668174)
+  * Add debian/patches/0017-sandbox-config.patch: The sandbox configuration
+    file is located in /etc/default/sandbox
+  * Do not install system-config-selinux for now, it needs some adjustements
+    for debian
+  * debian/policycoreutils.maintscript: Properly remove /etc/init.d/sandbox
+    and /etc/default/sandbox that were dropped previous version
+    (Closes: #689048)
+  * Rework initscripts using /etc/init.d/skeleton as a template
+  * Include common-* files in newrole and run_init pam services
+  * Add dependency against selinux-utils for selinuxenabled executable
+
+ -- Laurent Bigonville <bigon@debian.org>  Sat, 29 Sep 2012 23:16:16 +0200
+
 policycoreutils (2.1.10-9) unstable; urgency=high
 
   * Revert the munging of setrans.conf which was introduced in 2.1.10-7.

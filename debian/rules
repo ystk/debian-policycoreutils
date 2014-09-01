@@ -7,6 +7,9 @@
 DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 export LIBDIR=$${DESTDIR}/usr/lib/${DEB_HOST_MULTIARCH}
 export PYTHONLIBDIR=$${DESTDIR}/usr/lib/$(shell pyversions -d)
+export INITDIR=$${DESTDIR}/etc/init.d
+export SYSCONFDIR=$${DESTDIR}/etc/default
+export SYSTEMDDIR=$${DESTDIR}/lib/systemd
 #export SHLIBDIR=$${DESTDIR}/lib/${DEB_HOST_MULTIARCH}
 #export LIBBASE=lib/${DEB_HOST_MULTIARCH}
 
@@ -19,14 +22,24 @@ dpkg_buildflags = DEB_BUILD_MAINT_OPTIONS=$(DEB_BUILD_MAINT_OPTIONS) dpkg-buildf
 export DEB_CFLAGS_MAINT_APPEND = $(shell $(dpkg_buildflags) --get CPPFLAGS)
 
 %:
-	dh $@ --with python2
+	dh $@ --with python2 --with systemd
+
+override_dh_auto_install:
+	dh_auto_install --destdir=debian/tmp
+
+override_dh_install:
+	dh_install --list-missing
+
+# Fix symlink
+	rm -f $(CURDIR)/debian/policycoreutils/usr/sbin/load_policy
+	ln -s /sbin/load_policy $(CURDIR)/debian/policycoreutils/usr/sbin/load_policy
 
 override_dh_fixperms:
 	dh_fixperms -Xusr/sbin/seunshare
 
 override_dh_installinit:
-	dh_installinit --onlyscripts --name=mcstrans
-	dh_installinit --onlyscripts --name=restorecond
+	dh_installinit --name=mcstrans
+	dh_installinit --name=restorecond
 
 override_dh_installpam:
 	dh_installpam --name=newrole

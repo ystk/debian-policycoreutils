@@ -19,6 +19,7 @@
 #include <sys/mman.h>
 #include <sys/stat.h>
 #include <sys/types.h>
+#include <libgen.h>
 
 #include <semanage/modules.h>
 
@@ -114,7 +115,7 @@ static void usage(char *progname)
 	    ("  -l,--list-modules         display list of installed modules\n");
 	printf("Other options:\n");
 	printf("  -s,--store	   name of the store to operate on\n");
-	printf("  -n,--noreload	   do not reload policy after commit\n");
+	printf("  -N,-n,--noreload do not reload policy after commit\n");
 	printf("  -h,--help        print this message and quit\n");
 	printf("  -v,--verbose     be verbose\n");
 	printf("  -D,--disable_dontaudit	Remove dontaudits from policy\n");
@@ -175,7 +176,7 @@ static void parse_command_line(int argc, char **argv)
 	no_reload = 0;
 	create_store = 0;
 	while ((i =
-		getopt_long(argc, argv, "p:s:b:hi:lvqe:d:r:u:RnBDP", opts,
+		getopt_long(argc, argv, "p:s:b:hi:lvqe:d:r:u:RnNBDP", opts,
 			    NULL)) != -1) {
 		switch (i) {
 		case 'b':
@@ -216,6 +217,9 @@ static void parse_command_line(int argc, char **argv)
 			reload = 1;
 			break;
 		case 'n':
+			no_reload = 1;
+			break;
+		case 'N':
 			no_reload = 1;
 			break;
 		case 'B':
@@ -281,8 +285,12 @@ int main(int argc, char *argv[])
 	int i, commit = 0;
 	int result;
 	int status = EXIT_FAILURE;
-
+	char *genhomedirconargv[] = { "genhomedircon", "-B", "-n" };
 	create_signal_handlers();
+	if (strcmp(basename(argv[0]), "genhomedircon") == 0) {
+		argc = 3;
+		argv=genhomedirconargv;
+	}
 	parse_command_line(argc, argv);
 
 	if (build)

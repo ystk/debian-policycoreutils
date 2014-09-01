@@ -1,0 +1,27 @@
+Description: Fix installation path for the python module
+Author: Laurent Bigonville <bigon@debian.org>
+
+--- a/sepolicy/Makefile
++++ b/sepolicy/Makefile
+@@ -30,7 +30,7 @@ test:
+ 	@python test_sepolicy.py -v
+ 
+ install:
+-	$(PYTHON) setup.py install `test -n "$(DESTDIR)" && echo --root $(DESTDIR)`
++	$(PYTHON) setup.py install --prefix='/usr' --install-layout=deb `test -n "$(DESTDIR)" && echo --root $(DESTDIR)`
+ 	[ -d $(BINDIR) ] || mkdir -p $(BINDIR)
+ 	install -m 755 sepolicy.py $(BINDIR)/sepolicy
+ 	(cd $(BINDIR); ln -sf sepolicy sepolgen)
+--- a/semanage/Makefile
++++ b/semanage/Makefile
+@@ -18,8 +18,8 @@ install: all
+ 	-mkdir -p $(SBINDIR)
+ 	install -m 755 semanage $(SBINDIR)
+ 	install -m 644 *.8 $(MANDIR)/man8
+-	test -d $(PYTHONLIBDIR)/site-packages || install -m 755 -d $(PYTHONLIBDIR)/site-packages
+-	install -m 755 seobject.py $(PYTHONLIBDIR)/site-packages
++	test -d $(PYTHONLIBDIR)/dist-packages || install -m 755 -d $(PYTHONLIBDIR)/dist-packages
++	install -m 755 seobject.py $(PYTHONLIBDIR)/dist-packages
+ 	-mkdir -p $(BASHCOMPLETIONDIR)
+ 	install -m 644 $(BASHCOMPLETIONS) $(BASHCOMPLETIONDIR)/semanage
+ 

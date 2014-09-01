@@ -15,9 +15,10 @@ INSTALL_DIR	= /usr/bin/install -d
 INSTALL_NLS_DIR = $(DESTDIR)/usr/share/locale
 
 # PO catalog handling
-MSGMERGE	= msgmerge -v
+MSGMERGE	= msgmerge
+MSGMERGE_FLAGS	= -q
 XGETTEXT	= xgettext --default-domain=$(NLSPACKAGE)
-MSGFMT		= msgfmt --statistics --verbose
+MSGFMT		= msgfmt
 
 # What do we need to do
 POFILES		= $(wildcard *.po)
@@ -45,13 +46,53 @@ POTFILES = \
 	../restorecond/stringslist.h \
 	../restorecond/restorecond.c \
 	../restorecond/utmpwatcher.c \
+	../gui/booleansPage.py \
+	../gui/fcontextPage.py \
+	../gui/loginsPage.py \
+	../gui/mappingsPage.py \
+	../gui/modulesPage.py \
+	../gui/polgen.glade \
+	../gui/polgengui.py \
+	../gui/portsPage.py \
+	../gui/semanagePage.py \
+	../gui/statusPage.py \
+	../gui/system-config-selinux.glade \
+	../gui/system-config-selinux.py \
+	../gui/usersPage.py \
 	../secon/secon.c \
+	booleans.py \
+	../sepolicy/info.c \
+	../sepolicy/search.c \
+	../sepolicy/sepolicy.py \
+	../sepolicy/sepolicy/communicate.py \
+	../sepolicy/sepolicy/__init__.py \
+	../sepolicy/sepolicy/network.py \
+	../sepolicy/sepolicy/generate.py \
+	../sepolicy/sepolicy/sepolicy.glade \
+	../sepolicy/sepolicy/gui.py \
+	../sepolicy/sepolicy/manpage.py \
+	../sepolicy/sepolicy/transition.py \
+	../sepolicy/sepolicy/templates/executable.py \
+	../sepolicy/sepolicy/templates/__init__.py \
+	../sepolicy/sepolicy/templates/network.py \
+	../sepolicy/sepolicy/templates/rw.py \
+	../sepolicy/sepolicy/templates/script.py \
+	../sepolicy/sepolicy/templates/semodule.py \
+	../sepolicy/sepolicy/templates/tmp.py \
+	../sepolicy/sepolicy/templates/user.py \
+	../sepolicy/sepolicy/templates/var_lib.py \
+	../sepolicy/sepolicy/templates/var_log.py \
+	../sepolicy/sepolicy/templates/var_run.py \
+	../sepolicy/sepolicy/templates/var_spool.py
 
 #default:: clean
 
-all::  update-po $(MOFILES)
+all::  $(MOFILES)
 
-$(POTFILE): $(POTFILES) 
+booleans.py:
+	sepolicy booleans -a > booleans.py
+
+$(POTFILE): $(POTFILES) booleans.py
 	$(XGETTEXT) --keyword=_ --keyword=N_ $(POTFILES)
 	@if cmp -s $(NLSPACKAGE).po $(POTFILE); then \
 	    rm -f $(NLSPACKAGE).po; \
@@ -60,11 +101,12 @@ $(POTFILE): $(POTFILES)
 	fi; \
 
 update-po: Makefile $(POTFILE) refresh-po
+	@rm -f booleans.py
 
 refresh-po: Makefile
 	for cat in $(POFILES); do \
 		lang=`basename $$cat .po`; \
-		if $(MSGMERGE) $$lang.po $(POTFILE) > $$lang.pot ; then \
+		if $(MSGMERGE) $(MSGMERGE_FLAGS) $$lang.po $(POTFILE) > $$lang.pot ; then \
 			mv -f $$lang.pot $$lang.po ; \
 			echo "$(MSGMERGE) of $$lang succeeded" ; \
 		else \

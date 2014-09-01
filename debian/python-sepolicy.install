@@ -1,0 +1,11 @@
+usr/lib/python*/*-packages/sepolicy/*so
+usr/lib/python*/*-packages/sepolicy/templates/
+usr/lib/python*/*-packages/sepolicy/help/
+usr/lib/python*/*-packages/sepolicy/__init__.py
+usr/lib/python*/*-packages/sepolicy/booleans.py
+usr/lib/python*/*-packages/sepolicy/communicate.py
+usr/lib/python*/*-packages/sepolicy/interface.py
+usr/lib/python*/*-packages/sepolicy/manpage.py
+usr/lib/python*/*-packages/sepolicy/network.py
+usr/lib/python*/*-packages/sepolicy/transition.py
+#usr/lib/python*/*-packages/sepolicy/sedbus.py

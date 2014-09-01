@@ -9,11 +9,9 @@ Signed-Off-By: Manoj Srivastava <srivasta@debian.org>
  scripts/fixfiles |   10 +++++-----
  1 files changed, 5 insertions(+), 5 deletions(-)
 
-diff --git a/scripts/fixfiles b/scripts/fixfiles
-index 0db4558..bdffc49 100755
 --- a/scripts/fixfiles
 +++ b/scripts/fixfiles
-@@ -244,11 +244,11 @@ rm -rf /tmp/gconfd-* /tmp/pulse-* /tmp/orbit-* $TEMPFCFILE
+@@ -268,11 +268,11 @@ rm -rf /tmp/gconfd-* /tmp/pulse-* /tmp/o
  
  UNDEFINED=`get_undefined_type` || exit $?
  UNLABELED=`get_unlabeled_type` || exit $?
@@ -21,12 +19,12 @@ index 0db4558..bdffc49 100755
 -find /tmp \( -context "*:${UNLABELED}*" -o -context "*:${UNDEFINED}*" \) -exec chcon --reference /tmp {} \;
 -find /var/tmp \( -context "*:${UNLABELED}*" -o -context "*:${UNDEFINED}*" \) -exec chcon --reference /var/tmp {} \;
 -find /var/run \( -context "*:${UNLABELED}*" -o -context "*:${UNDEFINED}*" \) -exec chcon --reference /var/run {} \;
--[ -e /var/lib/debug ] && find /var/lib/debug \( -context "*:${UNLABELED}*" -o -context "*:${UNDEFINED}*" \) -exec chcon --reference /lib {} \;
+-[ ! -e /var/lib/debug ] || find /var/lib/debug \( -context "*:${UNLABELED}*" -o -context "*:${UNDEFINED}*" \) -exec chcon --reference /lib {} \;
 +find /tmp \( -context "*:${UNLABELED}*" -o -context "*:${UNDEFINED}*" \) \( -type s -o -type p \) -delete || true
 +find /tmp \( -context "*:${UNLABELED}*" -o -context "*:${UNDEFINED}*" \) -exec chcon --reference /tmp {} \; || true
 +find /var/tmp \( -context "*:${UNLABELED}*" -o -context "*:${UNDEFINED}*" \) -exec chcon --reference /var/tmp {} \; || true
 +find /var/run \( -context "*:${UNLABELED}*" -o -context "*:${UNDEFINED}*" \) -exec chcon --reference /var/run {} \; || true
-+[ -e /var/lib/debug ] && find /var/lib/debug \( -context "*:${UNLABELED}*" -o -context "*:${UNDEFINED}*" \) -exec chcon --reference /lib {} \; || true
- exit $?
++[ ! -e /var/lib/debug ] || find /var/lib/debug \( -context "*:${UNLABELED}*" -o -context "*:${UNDEFINED}*" \) -exec chcon --reference /lib {} \; || true
+ exit 0
  }
  
