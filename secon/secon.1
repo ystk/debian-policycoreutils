@@ -30,6 +30,9 @@ shows the usage information for secon
 \fB\-P\fR, \fB\-\-prompt\fR
 outputs data in a format suitable for a prompt
 .TP
+\fB\-C\fR, \fB\-\-color\fR
+outputs data with the associated ANSI color codes (requires \-P)
+.TP
 \fB\-u\fR, \fB\-\-user\fR
 show the user of the security context
 .TP
@@ -88,12 +91,12 @@ Additional argument
 .I CONTEXT
 may be provided and will be used if no options have been specified to make
 .B secon
-get it's context from another source.
+get its context from another source.
 If that argument is
 .I -
 then the context will be read from stdin.
 .br
-If there is no arugment, 
+If there is no argument,
 .B secon
 will try reading a context from stdin, if that is not a tty, otherwise 
 .B secon

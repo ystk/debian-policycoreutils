@@ -43,8 +43,8 @@
 #define MS_REC 1<<14
 #endif
 
-#ifndef MS_PRIVATE
-#define MS_PRIVATE 1<<18
+#ifndef MS_SLAVE
+#define MS_SLAVE 1<<19
 #endif
 
 #ifndef PACKAGE
@@ -58,7 +58,7 @@
 static int verbose = 0;
 static int child = 0;
 
-static capng_select_t cap_set = CAPNG_SELECT_BOTH;
+static capng_select_t cap_set = CAPNG_SELECT_CAPS;
 
 /**
  * This function will drop all capabilities.
@@ -255,7 +255,7 @@ static int verify_shell(const char *shell_name)
  */
 static int seunshare_mount(const char *src, const char *dst, struct stat *src_st)
 {
-	int flags = MS_REC;
+	int flags = 0;
 	int is_tmp = 0;
 
 	if (verbose)
@@ -267,14 +267,6 @@ static int seunshare_mount(const char *src, const char *dst, struct stat *src_st
 	}
 
 	/* mount directory */
-	if (mount(dst, dst,  NULL, MS_BIND | flags, NULL) < 0) {
-		fprintf(stderr, _("Failed to mount %s on %s: %s\n"), dst, dst, strerror(errno));
-		return -1;
-	}
-	if (mount(dst, dst, NULL, MS_PRIVATE | flags, NULL) < 0) {
-		fprintf(stderr, _("Failed to make %s private: %s\n"), dst, strerror(errno));
-		return -1;
-	}
 	if (mount(src, dst, NULL, MS_BIND | flags, NULL) < 0) {
 		fprintf(stderr, _("Failed to mount %s on %s: %s\n"), src, dst, strerror(errno));
 		return -1;
@@ -288,14 +280,6 @@ static int seunshare_mount(const char *src, const char *dst, struct stat *src_st
 		if (verbose)
 			printf(_("Mounting /tmp on /var/tmp\n"));
 
-		if (mount("/var/tmp", "/var/tmp",  NULL, MS_BIND | flags, NULL) < 0) {
-			fprintf(stderr, _("Failed to mount /var/tmp on /var/tmp: %s\n"), strerror(errno));
-			return -1;
-		}
-		if (mount("/var/tmp", "/var/tmp", NULL, MS_PRIVATE | flags, NULL) < 0) {
-			fprintf(stderr, _("Failed to make /var/tmp private: %s\n"), strerror(errno));
-			return -1;
-		}
 		if (mount("/tmp", "/var/tmp",  NULL, MS_BIND | flags, NULL) < 0) {
 			fprintf(stderr, _("Failed to mount /tmp on /var/tmp: %s\n"), strerror(errno));
 			return -1;
@@ -311,8 +295,8 @@ static int seunshare_mount(const char *src, const char *dst, struct stat *src_st
  */
 static int sandbox_error(const char *string)
 {
-	fprintf(stderr, string);
-	syslog(LOG_AUTHPRIV | LOG_ALERT, string);
+	fprintf(stderr, "%s", string);
+	syslog(LOG_AUTHPRIV | LOG_ALERT, "%s", string);
 	exit(-1);
 }
 
@@ -633,12 +617,19 @@ static int cleanup_tmpdir(const char *tmpdir, const char *src,
 	free(cmdbuf); cmdbuf = NULL;
 
 	/* remove runtime temporary directory */
-	setfsuid(0);
+	if ((uid_t)setfsuid(0) != 0) {
+		/* setfsuid does not return errror, but this check makes code checkers happy */
+		rc++;
+	}
+
 	if (rmdir(tmpdir) == -1)
 		fprintf(stderr, _("Failed to remove directory %s: %s\n"), tmpdir, strerror(errno));
-	setfsuid(pwd->pw_uid);
+	if ((uid_t)setfsuid(pwd->pw_uid) != 0) {
+		fprintf(stderr, _("unable to switch back to user after clearing tmp dir\n"));
+		rc++;
+	}
 
-	return 0;
+	return rc;
 }
 
 /**
@@ -658,7 +649,9 @@ static char *create_tmpdir(const char *src, struct stat *src_st,
 
 	/* get selinux context */
 	if (execcon) {
-		setfsuid(pwd->pw_uid);
+		if ((uid_t)setfsuid(pwd->pw_uid) != 0)
+			goto err;
+
 		if ((fd_s = open(src, O_RDONLY)) < 0) {
 			fprintf(stderr, _("Failed to open directory %s: %s\n"), src, strerror(errno));
 			goto err;
@@ -677,7 +670,8 @@ static char *create_tmpdir(const char *src, struct stat *src_st,
 		}
 
 		/* ok to not reach this if there is an error */
-		setfsuid(0);
+		if ((uid_t)setfsuid(0) != pwd->pw_uid)
+			goto err;
 	}
 
 	if (asprintf(&tmpdir, "/tmp/.sandbox-%s-XXXXXX", pwd->pw_name) == -1) {
@@ -732,14 +726,16 @@ static char *create_tmpdir(const char *src, struct stat *src_st,
 		}
 	}
 
-	setfsuid(pwd->pw_uid);
+	if ((uid_t)setfsuid(pwd->pw_uid) != 0)
+		goto err;
 
 	if (rsynccmd(src, tmpdir, &cmdbuf) < 0) {
 		goto err;
 	}
 
 	/* ok to not reach this if there is an error */
-	setfsuid(0);
+	if ((uid_t)setfsuid(0) != pwd->pw_uid)
+		goto err;
 
 	if (cmdbuf && spawn_command(cmdbuf, pwd->pw_uid) != 0) {
 		fprintf(stderr, _("Failed to populate runtime temporary directory\n"));
@@ -790,10 +786,13 @@ killall (security_context_t execcon)
 			continue;
 
 		if (pids == max_pids) {
-			if (!(pid_table = realloc(pid_table, 2*pids*sizeof(pid_t)))) {
+			pid_t *new_pid_table = realloc(pid_table, 2*pids*sizeof(pid_t));
+			if (!new_pid_table) {
+				free(pid_table);
 				(void)closedir(dir);
 				return -1;
 			}
+			pid_table = new_pid_table;
 			max_pids *= 2;
 		}
 		pid_table[pids++] = pid;
@@ -834,6 +833,7 @@ int main(int argc, char **argv) {
 	char *tmpdir_s = NULL;	/* tmpdir spec'd by user in argv[] */
 	char *tmpdir_r = NULL;	/* tmpdir created by seunshare */
 
+	struct stat st_curhomedir;
 	struct stat st_homedir;
 	struct stat st_tmpdir_s;
 	struct stat st_tmpdir_r;
@@ -932,7 +932,11 @@ int main(int argc, char **argv) {
 	/* Changing fsuid is usually required when user-specified directory is
 	 * on an NFS mount.  It's also desired to avoid leaking info about
 	 * existence of the files not accessible to the user. */
-	setfsuid(uid);
+	if (((uid_t)setfsuid(uid) != 0)   && (errno != 0)) {
+		fprintf(stderr, _("Error: unable to setfsuid %m\n"));
+
+		return -1;
+	}
 
 	/* verify homedir and tmpdir */
 	if (homedir_s && (
@@ -941,7 +945,7 @@ int main(int argc, char **argv) {
 	if (tmpdir_s && (
 		verify_directory(tmpdir_s, NULL, &st_tmpdir_s) < 0 ||
 		check_owner_uid(uid, tmpdir_s, &st_tmpdir_s))) return -1;
-	setfsuid(0);
+	if ((uid_t)setfsuid(0) != uid) return -1;
 
 	/* create runtime tmpdir */
 	if (tmpdir_s && (tmpdir_r = create_tmpdir(tmpdir_s, &st_tmpdir_s,
@@ -961,17 +965,33 @@ int main(int argc, char **argv) {
 		char *display = NULL;
 		char *LANG = NULL;
 		int rc = -1;
+		char *resolved_path = NULL;
 
 		if (unshare(CLONE_NEWNS) < 0) {
 			perror(_("Failed to unshare"));
 			goto childerr;
 		}
 
+		/* Remount / as SLAVE so that nothing mounted in the namespace 
+		   shows up in the parent */
+		if (mount("none", "/", NULL, MS_SLAVE | MS_REC , NULL) < 0) {
+			perror(_("Failed to make / a SLAVE mountpoint\n"));
+			goto childerr;
+		}
+
 		/* assume fsuid==ruid after this point */
-		setfsuid(uid);
+		if ((uid_t)setfsuid(uid) != 0) goto childerr;
+
+		resolved_path = realpath(pwd->pw_dir,NULL);
+		if (! resolved_path) goto childerr;
+
+		if (verify_directory(resolved_path, NULL, &st_curhomedir) < 0)
+			goto childerr;
+		if (check_owner_uid(uid, resolved_path, &st_curhomedir) < 0)
+			goto childerr;
 
 		/* mount homedir and tmpdir, in this order */
-		if (homedir_s && seunshare_mount(homedir_s, pwd->pw_dir,
+		if (homedir_s && seunshare_mount(homedir_s, resolved_path,
 			&st_homedir) != 0) goto childerr;
 		if (tmpdir_s &&	seunshare_mount(tmpdir_r, "/tmp",
 			&st_tmpdir_r) != 0) goto childerr;
@@ -985,7 +1005,7 @@ int main(int argc, char **argv) {
 				goto childerr;
 			}
 		}
-		
+
 		/* construct a new environment */
 		if ((LANG = getenv("LANG")) != NULL) {
 			if ((LANG = strdup(LANG)) == NULL) {
@@ -993,14 +1013,14 @@ int main(int argc, char **argv) {
 				goto childerr;
 			}
 		}
-		
+
 		if ((rc = clearenv()) != 0) {
 			perror(_("Failed to clear environment"));
 			goto childerr;
 		}
 		if (display)
 			rc |= setenv("DISPLAY", display, 1);
-		if (LANG) 
+		if (LANG)
 			rc |= setenv("LANG", LANG, 1);
 		rc |= setenv("HOME", pwd->pw_dir, 1);
 		rc |= setenv("SHELL", pwd->pw_shell, 1);
@@ -1014,7 +1034,7 @@ int main(int argc, char **argv) {
 
 		/* selinux context */
 		if (execcon && setexeccon(execcon) != 0) {
-			fprintf(stderr, _("Could not set exec context to %s.\n"), execcon);
+			fprintf(stderr, _("Could not set exec context to %s. %s\n"), execcon, strerror(errno));
 			goto childerr;
 		}
 
@@ -1026,6 +1046,7 @@ int main(int argc, char **argv) {
 		execv(argv[optind], argv + optind);
 		fprintf(stderr, _("Failed to execute command %s: %s\n"), argv[optind], strerror(errno));
 childerr:
+		free(resolved_path);
 		free(display);
 		free(LANG);
 		exit(-1);

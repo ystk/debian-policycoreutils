@@ -10,20 +10,26 @@ override CFLAGS += -I$(INCLUDEDIR)
 LDLIBS = -lsepol -lselinux -lsemanage -L$(LIBDIR)
 SEMODULE_OBJS = semodule.o
 
-all: semodule
+all: semodule genhomedircon
 
 semodule: $(SEMODULE_OBJS)
+	$(CC) $(LDFLAGS) -o $@ $^ $(LDLIBS)
+
+genhomedircon:
+	ln -sf semodule genhomedircon
 
 install: all
 	-mkdir -p $(SBINDIR)
 	install -m 755 semodule $(SBINDIR)
+	(cd $(SBINDIR); ln -sf semodule genhomedircon)
 	test -d $(MANDIR)/man8 || install -m 755 -d $(MANDIR)/man8
 	install -m 644 semodule.8 $(MANDIR)/man8/
+	install -m 644 genhomedircon.8 $(MANDIR)/man8/
 
 relabel:
 
 clean:
-	-rm -f semodule *.o
+	-rm -f semodule *.o genhomedircon
 
 indent:
 	../../scripts/Lindent $(wildcard *.[ch])

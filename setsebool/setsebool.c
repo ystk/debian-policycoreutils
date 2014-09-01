@@ -6,30 +6,35 @@
 #include <fcntl.h>
 #include <errno.h>
 #include <syslog.h>
+#include <getopt.h>
 #include <pwd.h>
 #include <selinux/selinux.h>
 #include <semanage/handle.h>
+#include <semanage/debug.h>
+#include <semanage/booleans_policy.h>
 #include <semanage/booleans_local.h>
 #include <semanage/booleans_active.h>
 #include <semanage/boolean_record.h>
 #include <errno.h>
 
 int permanent = 0;
+int reload = 1;
+int verbose = 0;
 
 int setbool(char **list, size_t start, size_t end);
 
 void usage(void)
 {
 	fputs
-	    ("\nUsage:  setsebool [ -P ] boolean value | bool1=val1 bool2=val2...\n\n",
+	    ("\nUsage:  setsebool [ -NPV ] boolean value | bool1=val1 bool2=val2...\n\n",
 	     stderr);
 	exit(1);
 }
 
 int main(int argc, char **argv)
 {
-	size_t rc, start;
-
+	size_t rc;
+	int clflag;		/* holds codes for command line flags */
 	if (argc < 2)
 		usage();
 
@@ -38,37 +43,55 @@ int main(int argc, char **argv)
 		return 1;
 	}
 
-	if (strcmp(argv[1], "-P") == 0) {
-		permanent = 1;
-		if (argc < 3)
+	while (1) {
+		clflag = getopt(argc, argv, "PNV");
+		if (clflag == -1)
+			break;
+
+		switch (clflag) {
+		case 'P':
+			permanent = 1;
+			break;
+		case 'N':
+			reload = 0;
+			break;
+		case 'V':
+			verbose = 1;
+			break;
+		default:
 			usage();
-		start = 2;
-	} else
-		start = 1;
+			break;
+		}
+	}
+
+	if (argc - optind < 1) {
+		fprintf(stderr, "Error: boolean name required\n");
+		usage();
+	}
 
 	/* Check to see which way we are being called. If a '=' is passed,
 	   we'll enforce the list syntax. If not we'll enforce the original
 	   syntax for backward compatibility. */
-	if (strchr(argv[start], '=') == 0) {
+	if (strchr(argv[optind], '=') == 0) {
 		int len;
 		char *bool_list[1];
 
-		if ((argc - start) != 2)
+		if ((argc - optind) != 2)
 			usage();
 
 		/* Add 1 for the '=' */
-		len = strlen(argv[start]) + strlen(argv[start + 1]) + 2;
+		len = strlen(argv[optind]) + strlen(argv[optind + 1]) + 2;
 		bool_list[0] = (char *)malloc(len);
 		if (bool_list[0] == 0) {
 			fputs("Out of memory - aborting\n", stderr);
 			return 1;
 		}
-		snprintf(bool_list[0], len, "%s=%s", argv[start],
-			 argv[start + 1]);
+		snprintf(bool_list[0], len, "%s=%s", argv[optind],
+			 argv[optind + 1]);
 		rc = setbool(bool_list, 0, 1);
 		free(bool_list[0]);
 	} else
-		rc = setbool(argv, start, argc);
+		rc = setbool(argv, optind, argc);
 
 	return rc;
 }
@@ -106,11 +129,16 @@ static int semanage_set_boolean_list(size_t boolcnt,
 	semanage_bool_t *boolean = NULL;
 	semanage_bool_key_t *bool_key = NULL;
 	int managed;
+	int result;
 
 	handle = semanage_handle_create();
 	if (handle == NULL) {
 		fprintf(stderr, "Could not create semanage library handle\n");
 		goto err;
+	}
+
+	if (! verbose) {
+		semanage_msg_set_callback(handle,NULL, NULL);
 	}
 
 	managed = semanage_is_managed(handle);
@@ -150,12 +178,21 @@ static int semanage_set_boolean_list(size_t boolcnt,
 		if (semanage_bool_key_extract(handle, boolean, &bool_key) < 0)
 			goto err;
 
+		semanage_bool_exists(handle, bool_key, &result);
+		if ( !result ) {
+			semanage_bool_exists_local(handle, bool_key, &result);
+			if ( !result ) {
+				fprintf(stderr, "Boolean %s is not defined\n", boollist[j].name);
+				goto err;
+			}
+		}
+
 		if (semanage_bool_modify_local(handle, bool_key,
 						  boolean) < 0)
 			goto err;
 
 		if (semanage_bool_set_active(handle, bool_key, boolean) < 0) {
-			fprintf(stderr, "Could not change boolean %s\n",
+			fprintf(stderr, "Failed to change boolean %s: %m\n",
 				boollist[j].name);
 			goto err;
 		}
@@ -165,7 +202,7 @@ static int semanage_set_boolean_list(size_t boolcnt,
 		boolean = NULL;
 	}
 
-	semanage_set_reload(handle, 0);
+	semanage_set_reload(handle, reload);
 	if (semanage_commit(handle) < 0)
 		goto err;
 
@@ -177,7 +214,6 @@ static int semanage_set_boolean_list(size_t boolcnt,
 	semanage_bool_key_free(bool_key);
 	semanage_bool_free(boolean);
 	semanage_handle_destroy(handle);
-	fprintf(stderr, "Could not change policy booleans\n");
 	return -1;
 }
 
